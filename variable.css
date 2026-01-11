@@ -1,0 +1,17 @@
+:root {
+    /* font color */
+    --heroHeadingColor: #ffffff;
+    --descHeadingColor: #ffffff;
+    --primaryTextColor: #000;
+    --secondaryTextColor: #000;
+
+    /* font size */
+    --heroHeadingTextSize: 3.5rem;
+    --descHeadingTextSize: 1.2rem;
+    --primaryTextSize: #000;
+    --secondaryTextSize: #000;
+}
+
+[data-theme="dark"] {
+    --primaryHeading: #fff;
+}
