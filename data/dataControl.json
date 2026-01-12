@@ -1,0 +1,376 @@
+{
+    "Header_Title": "Hi, I am Capitano781",
+    "Header_Description": "Frontend Engineer specializing in building scalable React.js applications and maintainable UI systems.",
+    "Project_Section": {
+        "Title": "Projects",
+        "Projects": [
+            {
+                "Title": "UST Portfolio Market Risk VaR Calculator",
+                "OnelineDescription": "A robust tool for calculating Value at Risk (VaR) for an UST (United States Treasury) Portfolio, employing a C# thick client GUI with a Python FastAPI ",
+                "indexPageButtonLabel": "Learn more",
+                "BriefDescription": "A robust tool for calculating Value at Risk (VaR) for an UST (United States Treasury) Portfolio, employing a C# thick client GUI with a Python FastAPI server backend and SQL Server database. This application helps investors analyze and optimize their portfolio's market risk.",
+                "Overview": [
+                    {
+                        "name": "",
+                        "Description": "The application is designed to allow users to construct a portfolio of US Treasury securities and analyze its market risk using Value at Risk (VaR) calculations. The following UST data is downloaded from the US Treasury portal: 4-Week, 8-Week, 13-Week, 26-Week, and 52-Week securities."
+                    },
+                    {
+                        "name": "",
+                        "Description": "Users can define a fixed income portfolio by assigning weights to these different securities, ensuring the sum of the weights equals 1.0. The C# GUI then instructs the Python API server to calculate VaR for this portfolio using two methods:"
+                    },
+                    {
+                        "name": "Historical Simulation:",
+                        "Description": "A non-parametric approach using historical price data."
+                    },
+                    {
+                        "name": "Parametric Method:",
+                        "Description": "A statistical approach assuming a normal distribution of returns."
+                    }
+                ],
+                "KeyFeatures": [
+                    {
+                        "Name": "C# Thick Client GUI",
+                        "Description": "User-friendly interface for easy portfolio construction, data input, and result visualization."
+                    },
+                    {
+                        "Name": "Python FastAPI Backend:",
+                        "Description": "High-performance API for serving VaR calculations and data retrieval."
+                    },
+                    {
+                        "Name": "SQL Server Database:",
+                        "Description": "Secure and scalable data storage for instrument data, portfolio information, and historical market data."
+                    },
+                    {
+                        "Name": "Comprehensive VaR Calculations:",
+                        "Description": "Supports Historical Simulation and Parametric VaR methodologies with adjustable confidence levels."
+                    }
+                ],
+                "TechnologiesUsed": [
+                    {
+                        "Category": "Frontend:",
+                        "Description": [
+                            "C#",
+                            "(Windows Forms)"
+                        ]
+                    },
+                    {
+                        "Category": "Backend:",
+                        "Description": [
+                            "Python",
+                            "FastAPI",
+                            "Uvicorn"
+                        ]
+                    },
+                    {
+                        "Category": "Database:",
+                        "Description": [
+                            "SQL",
+                            "Server"
+                        ]
+                    },
+                    {
+                        "Category": "API Architecture:",
+                        "Description": ["RESTful APIs"]
+                    }
+                ],
+                "Challenges&Learnings": [
+                    {
+                        "Name": "Cross-Platform Integration:",
+                        "Description": "Integrating C# GUI with Python backend required efficient data serialization and API design."
+                    },
+                    {
+                        "Name": "Performance Optimization:",
+                        "Description": "Optimizing Python code for efficient VaR calculations to provide near-real-time results."
+                    },
+                    {
+                        "Name": "Data Handling:",
+                        "Description": "Designing a robust database schema in SQL Server to store and retrieve large amounts of historical market data."
+                    },
+                    {
+                        "Name": "User Interface:",
+                        "Description": "Building a user-friendly C# interface for interacting with the VaR calculator and visualizing results."
+                    }
+                ],
+                "showScreenshotSection": true,
+                "ScreenShots": [
+                    {
+                        "url": ""
+                    }
+                ],
+                "SourceCodeLink": ""
+            },
+            {
+                "Title": "UST Portfolio Market Risk VaR Calculator",
+                "OnelineDescription": "A robust tool for calculating Value at Risk (VaR) for an UST (United States Treasury) Portfolio, employing a C# thick client GUI with a Python FastAPI ",
+                "indexPageButtonLabel": "Learn more",
+                "BriefDescription": "A robust tool for calculating Value at Risk (VaR) for an UST (United States Treasury) Portfolio, employing a C# thick client GUI with a Python FastAPI server backend and SQL Server database. This application helps investors analyze and optimize their portfolio's market risk.",
+                "Overview": [
+                    {
+                        "name": "",
+                        "Description": "The application is designed to allow users to construct a portfolio of US Treasury securities and analyze its market risk using Value at Risk (VaR) calculations. The following UST data is downloaded from the US Treasury portal: 4-Week, 8-Week, 13-Week, 26-Week, and 52-Week securities."
+                    },
+                    {
+                        "name": "",
+                        "Description": "Users can define a fixed income portfolio by assigning weights to these different securities, ensuring the sum of the weights equals 1.0. The C# GUI then instructs the Python API server to calculate VaR for this portfolio using two methods:"
+                    },
+                    {
+                        "name": "Historical Simulation:",
+                        "Description": "A non-parametric approach using historical price data."
+                    },
+                    {
+                        "name": "Parametric Method:",
+                        "Description": "A statistical approach assuming a normal distribution of returns."
+                    }
+                ],
+                "KeyFeatures": [
+                    {
+                        "Name": "C# Thick Client GUI",
+                        "Description": "User-friendly interface for easy portfolio construction, data input, and result visualization."
+                    },
+                    {
+                        "Name": "Python FastAPI Backend:",
+                        "Description": "High-performance API for serving VaR calculations and data retrieval."
+                    },
+                    {
+                        "Name": "SQL Server Database:",
+                        "Description": "Secure and scalable data storage for instrument data, portfolio information, and historical market data."
+                    },
+                    {
+                        "Name": "Comprehensive VaR Calculations:",
+                        "Description": "Supports Historical Simulation and Parametric VaR methodologies with adjustable confidence levels."
+                    }
+                ],
+                "TechnologiesUsed": [
+                    {
+                        "Category": "Frontend:",
+                        "Description": [
+                            "C#",
+                            "(Windows Forms)"
+                        ]
+                    },
+                    {
+                        "Category": "Backend:",
+                        "Description": [
+                            "Python",
+                            "FastAPI",
+                            "Uvicorn"
+                        ]
+                    },
+                    {
+                        "Category": "Database:",
+                        "Description": [
+                            "SQL",
+                            "Server"
+                        ]
+                    },
+                    {
+                        "Category": "API Architecture:",
+                        "Description": ["RESTful APIs"]
+                    }
+                ],
+                "Challenges&Learnings": [
+                    {
+                        "Name": "Cross-Platform Integration:",
+                        "Description": "Integrating C# GUI with Python backend required efficient data serialization and API design."
+                    },
+                    {
+                        "Name": "Performance Optimization:",
+                        "Description": "Optimizing Python code for efficient VaR calculations to provide near-real-time results."
+                    },
+                    {
+                        "Name": "Data Handling:",
+                        "Description": "Designing a robust database schema in SQL Server to store and retrieve large amounts of historical market data."
+                    },
+                    {
+                        "Name": "User Interface:",
+                        "Description": "Building a user-friendly C# interface for interacting with the VaR calculator and visualizing results."
+                    }
+                ],
+                "showScreenshotSection": true,
+                "ScreenShots": [
+                    {
+                        "url": ""
+                    }
+                ],
+                "SourceCodeLink": ""
+            },
+            {
+                "Title": "UST Portfolio Market Risk VaR Calculator",
+                "OnelineDescription": "A robust tool for calculating Value at Risk (VaR) for an UST (United States Treasury) Portfolio, employing a C# thick client GUI with a Python FastAPI ",
+                "indexPageButtonLabel": "Learn more",
+                "BriefDescription": "A robust tool for calculating Value at Risk (VaR) for an UST (United States Treasury) Portfolio, employing a C# thick client GUI with a Python FastAPI server backend and SQL Server database. This application helps investors analyze and optimize their portfolio's market risk.",
+                "Overview": [
+                    {
+                        "name": "",
+                        "Description": "The application is designed to allow users to construct a portfolio of US Treasury securities and analyze its market risk using Value at Risk (VaR) calculations. The following UST data is downloaded from the US Treasury portal: 4-Week, 8-Week, 13-Week, 26-Week, and 52-Week securities."
+                    },
+                    {
+                        "name": "",
+                        "Description": "Users can define a fixed income portfolio by assigning weights to these different securities, ensuring the sum of the weights equals 1.0. The C# GUI then instructs the Python API server to calculate VaR for this portfolio using two methods:"
+                    },
+                    {
+                        "name": "Historical Simulation:",
+                        "Description": "A non-parametric approach using historical price data."
+                    },
+                    {
+                        "name": "Parametric Method:",
+                        "Description": "A statistical approach assuming a normal distribution of returns."
+                    }
+                ],
+                "KeyFeatures": [
+                    {
+                        "Name": "C# Thick Client GUI",
+                        "Description": "User-friendly interface for easy portfolio construction, data input, and result visualization."
+                    },
+                    {
+                        "Name": "Python FastAPI Backend:",
+                        "Description": "High-performance API for serving VaR calculations and data retrieval."
+                    },
+                    {
+                        "Name": "SQL Server Database:",
+                        "Description": "Secure and scalable data storage for instrument data, portfolio information, and historical market data."
+                    },
+                    {
+                        "Name": "Comprehensive VaR Calculations:",
+                        "Description": "Supports Historical Simulation and Parametric VaR methodologies with adjustable confidence levels."
+                    }
+                ],
+                "TechnologiesUsed": [
+                    {
+                        "Category": "Frontend:",
+                        "Description": [
+                            "C#",
+                            "(Windows Forms)"
+                        ]
+                    },
+                    {
+                        "Category": "Backend:",
+                        "Description": [
+                            "Python",
+                            "FastAPI",
+                            "Uvicorn"
+                        ]
+                    },
+                    {
+                        "Category": "Database:",
+                        "Description": [
+                            "SQL",
+                            "Server"
+                        ]
+                    },
+                    {
+                        "Category": "API Architecture:",
+                        "Description": ["RESTful APIs"]
+                    }
+                ],
+                "Challenges&Learnings": [
+                    {
+                        "Name": "Cross-Platform Integration:",
+                        "Description": "Integrating C# GUI with Python backend required efficient data serialization and API design."
+                    },
+                    {
+                        "Name": "Performance Optimization:",
+                        "Description": "Optimizing Python code for efficient VaR calculations to provide near-real-time results."
+                    },
+                    {
+                        "Name": "Data Handling:",
+                        "Description": "Designing a robust database schema in SQL Server to store and retrieve large amounts of historical market data."
+                    },
+                    {
+                        "Name": "User Interface:",
+                        "Description": "Building a user-friendly C# interface for interacting with the VaR calculator and visualizing results."
+                    }
+                ],
+                "showScreenshotSection": true,
+                "ScreenShots": [
+                    {
+                        "url": ""
+                    }
+                ],
+                "SourceCodeLink": ""
+            }
+    ]
+    },
+    "About_Section": {
+        "Title": "About me",
+        "Descriptions": [
+            {
+                "DescriptionPara": "I’m a Frontend Engineer with 6 years of IT experience and 4+ years working with React.js, focused on building scalable, maintainable user interfaces. I enjoy working with component-driven architecture, state management, and clean UI systems while integrating REST APIs in real-world applications."
+            },
+            {
+                "DescriptionPara": "Currently at Tata Consultancy Services, I work on enterprise-scale React applications and complex legacy codebases. I’m also expanding into the MERN stack through personal projects, aiming to grow as a product-focused engineer who builds reliable and scalable solutions."
+            }
+        ]
+    },
+    "Technical_Skills_Section": {
+        "Title": "Technical Skills",
+        "Categories": [
+            {
+                "Category": "Languages:",
+                "Descriptions": [
+                    "JavaScript (ES6+)",
+                    "HTML5",
+                    "CSS3"
+                ]
+            },
+            {
+                "Category": "Frontend:",
+                "Descriptions": [
+                    "React.js",
+                    "Hooks",
+                    "Redux",
+                    "Bootstrap"
+                ]
+            },
+            {
+                "Category": "Backend:",
+                "Descriptions": [
+                    "Node.js",
+                    "Express.js",
+                    "REST APIs"
+                ]
+            },
+            {
+                "Category": "Database:",
+                "Descriptions": ["MongoDB"]
+            },
+            {
+                "Category": "Tools:",
+                "Descriptions": [
+                    "Git",
+                    "Postman",
+                    "Chrome DevTools",
+                    "GitHub Copilot",
+                    "Research Tools",
+                    "AI-assisted Debugging"
+                ]
+            },
+            {
+                "Category": "Methodologies:",
+                "Descriptions": [
+                    "Agile",
+                    "Scrum"
+                ]
+            }
+        ]
+    },
+    "Contact_Section": {
+        "Title": "Contact",
+        "Descriptions": [
+            {
+                "text": "Feel free to reach out to me via email at ",
+                "link": "mailto:quantuy@gmail.com",
+                "hyperlink_Label_Text": "quantuy@gmail.com"
+            },
+            {
+                "text": "Check out my github profile at ",
+                "link": "quantuy@gmail.com",
+                "hyperlink_Label_Text": "quantuy@gmail.com"
+            }
+        ]
+    },
+    "Footer_Section": {
+        "copyrightText": "© 2026 Capitano781. All rights reserved."
+    }
+}
+

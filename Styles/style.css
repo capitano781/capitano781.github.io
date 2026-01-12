@@ -1,0 +1,242 @@
+@import "variable.css";
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Utility classes start */
+
+.hideElement {
+    display: none !important;
+}
+
+.showElement {
+    display: block !important;
+}
+
+/* Utility classes start */
+
+html,
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* background: #333; */
+}
+
+.loaderOverlay {
+    background: #333;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.rootContainer {
+}
+
+/* -- Header section start -- */
+.header {
+    height: 20rem;
+    width: 100%;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerContainer {
+    border: 1px solid #fff;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.headerTitle {
+    color: var(--heroHeadingColor);
+    font-size: var(--heroHeadingTextSize);
+}
+
+.headerDescription {
+    color: var(--descHeadingColor);
+    font-size: var(--descHeadingTextSize);
+}
+/* -- Header section End -- */
+
+/* -- mainContainer section start -- */
+.mainContainer {
+    max-width: 80rem;
+    border: 1px solid #333;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1.5rem;
+}
+
+/* -- project section start -- */
+.projectSection {
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.projectGrid {
+    width: 100%;
+    display: grid;
+    align-items: center;
+    /* justify-content: center; */
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.projectBox {
+    width: 100%;
+}
+
+.projectBoxWrapper {
+    border: 1px solid #000;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.5rem;
+}
+/* -- project section end -- */
+
+/* -- summery section start -- */
+.summery {
+    width: 100%;
+    border: 1px solid #333;
+    display: flex;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+/* -- aboutMe section start -- */
+.aboutMeContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #333;
+}
+
+.aboutContent {
+    width: 100%;
+}
+
+.aboutSummeryDescription {
+    width: 100%;
+}
+
+.aboutSummeryDescriptionWrapper {
+    display: block;
+    /* border: 1px solid; */
+}
+
+/* -- aboutMe section end -- */
+
+/* -- techSkill section start -- */
+.techSkillContainer {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #333;
+}
+
+.techSkillContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0rem;
+    width: 100%;
+}
+
+.skillGroup {
+    width: 100%;
+}
+
+.skillGroupWrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* gap: 1rem; */
+    width: 100%;
+    border: 1px solid #d4d4d4;
+    border-left: none;
+    border-right: none;
+    padding: 0.5rem;
+}
+
+.skillCategory {
+    width: 175px;
+}
+
+.skillTags {
+    width: 100%;
+}
+
+.skillTag {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.skillTagWrapper {
+    background: #eeefed;
+    border: 1px solid #b6b7b1;
+    padding: 0rem 0.5rem;
+    text-wrap: nowrap;
+}
+/* -- techSkill section end -- */
+/* -- summery section end -- */
+
+/* -- contact section start -- */
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+    border: 1px solid #333;
+    width: 100%;
+}
+/* -- contact section end -- */
+
+/* -- mainContainer section end -- */
+
+/* -- footer section end -- */
+.footer {
+    width: 100%;
+    border: 2px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background: #333;
+    color: #fff;
+}
+/* -- footer section end -- */

@@ -3,50 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Folio_Capitano</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <script type="module" src="scripts/script.js"></script>
+    <title>Capitano781 | MERN Stack Developer</title>
 </head>
 <body>
-    <main id="rootContainer" class="rootContainer">
+    <div class="loaderOverlay" id="loaderOverlay"></div>
+    <main class="rootContainer hideElement" id="rootContainer">
         <header class="header" id="header">
-            <div class="headerContainer">
-                <div class="title">Hi, I am Capitano781</div>
-                <div class="description">Frontend Engineer specializing in building scalable React.js applications and maintainable UI systems.</div>
+            <div class="headerContainer" id="headerContainer">
+                <div class="headerTitle" id="headerTitle"></div>
+                <div class="headerDescription" id="headerDescription"></div>
             </div>
         </header>
         <section class="mainContainer" id="mainContainer">
-            <section class="content" id="content">
-                <div class="projectBox" id="projectBox">
-                    <div class="projectTitle" id="projectTitle">Project 1</div>
-                    <div class="projectDetails" id="projectDetails">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt, iusto, quaerat architecto non fugit praesentium blanditiis.</div>
-                    <div class="projectStack" id="projectStack">Stack: BSNL, XYZ, BBC framework, Xtreme X44, nitrox-VVD Framework</div>
+            <div class="projectSection" id="projectSection">
+                <div class="projectHeader" id="projectHeader">
+                    <div class="projectTitle" id="projectTitle"></div>
                 </div>
-                <div class="projectBox" id="projectBox">
-                    <div class="projectTitle" id="projectTitle">Project 1</div>
-                    <div class="projectDetails" id="projectDetails">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt, iusto, quaerat architecto non fugit praesentium blanditiis.</div>
-                    <div class="projectStack" id="projectStack">Stack: BSNL, XYZ, BBC framework, Xtreme X44, nitrox-VVD Framework</div>
+                <div class="projectGrid" id="projectGrid">
+                    <template class="projectBox" id="projectBox">
+                        <div class="projectBoxWrapper" id="projectBoxWrapper">
+                            <div class="projectTitle" id="projectTitle"></div>
+                            <div class="projectDescText" id="projectDescText"></div>
+                            <button id="projectDetailsIndexPageButton" class="projectDetailsIndexPageButton"></button>
+                        </div>
+                    </template>
                 </div>
-                <div class="projectBox" id="projectBox">
-                    <div class="projectTitle" id="projectTitle">Project 1</div>
-                    <div class="projectDetails" id="projectDetails">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt, iusto, quaerat architecto non fugit praesentium blanditiis.</div>
-                    <div class="projectStack" id="projectStack">Stack: BSNL, XYZ, BBC framework, Xtreme X44, nitrox-VVD Framework</div>
+            </div>
+            <div class="summery" id="summery">
+                <div class="aboutMeContainer" id="aboutMeContainer">
+                    <div class="aboutHeader" id="aboutHeader">
+                        <div class="aboutTitle" id="aboutTitle"></div>
+                    </div>
+                    <div class="aboutContent" id="aboutContent">
+                            <template class="aboutSummeryDescription" id="aboutSummeryDescription">
+                                <div class="aboutSummeryDescriptionWrapper" id="aboutSummeryDescriptionWrapper"></div>
+                            </template>
+                    </div>
                 </div>
-                <div class="projectBox" id="projectBox">
-                    <div class="projectTitle" id="projectTitle">Project 1</div>
-                    <div class="projectDetails" id="projectDetails">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt, iusto, quaerat architecto non fugit praesentium blanditiis.</div>
-                    <div class="projectStack" id="projectStack">Stack: BSNL, XYZ, BBC framework, Xtreme X44, nitrox-VVD Framework</div>
+                <div class="techSkillContainer" id="techSkillContainer">
+                    <div class="techSkillHeader" id="techSkillHeader">
+                        <div class="techSkillTitle" id="techSkillTitle"></div>
+                    </div>
+                    <div class="techSkillContent" id="techSkillContent">
+                        <template class="skillGroup" id="skillGroup">
+                            <div class="skillGroupWrapper" id="skillGroupWrapper">
+                                <div class="skillCategory" id="skillCategory"></div>
+                                <div class="skillTags" id="skillTags">
+                                    <template class="skillTag" id="skillTag">
+                                        <span class="skillTagWrapper" id="skillTagWrapper"></span>
+                                    </template>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
                 </div>
-                <div class="projectBox" id="projectBox">
-                    <div class="projectTitle" id="projectTitle">Project 1</div>
-                    <div class="projectDetails" id="projectDetails">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nesciunt, iusto, quaerat architecto non fugit praesentium blanditiis.</div>
-                    <div class="projectStack" id="projectStack">Stack: BSNL, XYZ, BBC framework, Xtreme X44, nitrox-VVD Framework</div>
+            </div>
+            <div class="contact" id="contact">
+                <div class="contactHeader" id="contentHeader">
+                    <div class="contactTitle" id="contactTitle"></div>
                 </div>
-            </section>
-            <section class="summery" id="summery"></section>
-            <section class="contact" id="contact"></section>
+                <div class="contactContent" id="contactContent">
+                    <template class="contactDescription" id="contactDescription">
+                        <div class="contactDescriptionWrapper" id="contactDescriptionWrapper">
+                            <span class="contactText" id="contactText"></span>
+                            <a class="contactLink" id="contactLink" href="" target="_blank"></a>
+                        </div>
+                    </template>
+                </div>
+            </div>
         </section>
-        <footer class="footer" id="footer"></footer>
+        <footer class="footer" id="footer">
+            <div id="copyrightSection" class="copyrightSection"></div>
+        </footer>
     </main>
-    <script src="script.js"></script>
 </body>
 </html>
