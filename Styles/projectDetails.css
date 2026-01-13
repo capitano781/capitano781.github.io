@@ -1,0 +1,447 @@
+/* =============================================
+   PROJECT DETAILS PAGE STYLESHEET
+   ============================================= */
+
+/* Import existing styles if needed */
+@import url('/styles/style.css');
+@import url('/styles/variable.css');
+
+.rootContainer {
+    /* margin: 1rem; */
+    padding: 1rem;
+}
+
+/* =============================================
+   LAYOUT & CONTAINER
+   ============================================= */
+
+.backToHomeButtonContainer {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    /* display: none; */
+}
+
+.backToHomeButton {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.backToHomeButton:hover {
+    background-color: #e0e0e0;
+    transform: translateX(-5px);
+}
+
+/*  */
+
+.mainContainer2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+    gap: 1rem;
+    max-width: 80rem;
+    border: 1px solid #333;
+    margin: 1rem auto;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+/* =============================================
+   HERO SECTION
+   ============================================= */
+
+.projectDetailHeroSection {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    height: 20rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.projectDetailTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+    line-height: 1.3;
+}
+
+.projectDetailBriefDescription {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* =============================================
+   SECTION STYLING
+   ============================================= */
+
+.sectionTitle {
+    font-size: 2rem;
+    font-weight: 600;
+    /* margin-bottom: 30px; */
+    color: #333;
+    /* padding-bottom: 10px; */
+    /* border-bottom: 3px solid #007bff; */
+    display: inline-block;
+}
+
+/* .sectionGroup {
+    border: 1px solid red;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start\;
+} */
+
+/* =============================================
+   OVERVIEW SECTION
+   ============================================= */
+
+.projectOverviewSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+    border: 1px solid;
+    padding: 1rem;
+}
+
+.overviewContent {
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.overviewItemWrapper {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid #007bff;
+    transition: all 0.3s ease;
+}
+
+.overviewItemWrapper:hover {
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px); */
+}
+
+.overviewItemName {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.overviewItemDescription {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* =============================================
+   KEY FEATURES SECTION
+   ============================================= */
+.keyFeaturesSection {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid;
+}
+
+
+.featuresContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.featureItemWrapper {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 30px;
+    border-radius: 8px;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.featureItemWrapper:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.5);
+}
+
+.featureName {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.featureDescription {
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+/* =============================================
+   TECHNOLOGIES SECTION
+   ============================================= */
+
+.technologiesContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.technologyCategoryWrapper {
+    background-color: #f5f5f5;
+    padding: 25px;
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+}
+
+.technologyCategoryName {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.technologyCategoryName::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #007bff;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.technologyList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.technologyItemName {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.technologyItemName:hover {
+    background-color: #0056b3;
+    transform: scale(1.10);
+}
+
+/* =============================================
+   CHALLENGES SECTION
+   ============================================= */
+
+.challengesContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.challengeItemWrapper {
+    background-color: #fff3cd;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid #ffc107;
+    transition: all 0.3s ease;
+}
+
+.challengeItemWrapper:hover {
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+}
+
+.challengeName {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.challengeDescription {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* =============================================
+   SCREENSHOTS SECTION
+   ============================================= */
+
+.screenshotsContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.screenshotItemWrapper {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.screenshotItemWrapper:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.screenshotImage {
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: #f0f0f0;
+    min-height: 200px;
+}
+
+/* =============================================
+   SOURCE CODE SECTION
+   ============================================= */
+
+.sourceCodeSection {
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.sourceCodeLink {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    border: 2px solid #28a745;
+}
+
+.sourceCodeLink:hover {
+    background-color: #218838;
+    border-color: #218838;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+}
+
+.sourceCodeLink:active {
+    transform: translateY(-1px);
+}
+
+/* =============================================
+   LOADER STYLING
+   ============================================= */
+
+.loaderOverlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.loaderOverlay.hideElement {
+    display: none;
+}
+
+/* =============================================
+   RESPONSIVE DESIGN
+   ============================================= */
+
+@media (max-width: 768px) {
+    .projectDetailTitle {
+        font-size: 2rem;
+    }
+
+    .projectDetailBriefDescription {
+        font-size: 1rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.5rem;
+    }
+
+    .overviewContent,
+    .featuresContent,
+    .technologiesContent,
+    .challengesContent,
+    .screenshotsContent {
+        grid-template-columns: 1fr;
+    }
+
+    .projectDetailHeroSection {
+        padding: 30px 20px;
+    }
+
+    .backToHomeButton {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .projectDetailTitle {
+        font-size: 1.5rem;
+    }
+
+    .projectDetailBriefDescription {
+        font-size: 0.95rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.3rem;
+    }
+
+    .overviewItemWrapper,
+    .featureItemWrapper,
+    .technologyCategoryWrapper,
+    .challengeItemWrapper {
+        padding: 15px;
+    }
+}
+
+/* =============================================
+   UTILITY CLASSES
+   ============================================= */
+
+.hideElement {
+    display: none !important;
+}
+
+.showElement {
+    display: block !important;
+}

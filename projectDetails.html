@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/projectDetails.css">
+    <script type="module" src="./scripts/projectDetailsScript.js"></script>
+    <title>Project Details | Capitano781</title>
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loaderOverlay" id="projectDetailsPageLoaderOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="rootContainer hideElement" id="projectDetailsPageRootContainer">
+        
+        <!-- Back Button -->
+        <div class="backToHomeButtonContainer" id="backToHomeButtonContainer">
+            <button id="backToHomeButton" class="backToHomeButton"></button>
+        </div>
+
+        <!-- Hero Section with Project Title -->
+        <header class="projectDetailHeroSection" id="projectDetailHeroSection">
+            <div id="projectDetailTitle" class="projectDetailTitle"></div>
+            <div id="projectDetailBriefDescription" class="projectDetailBriefDescription"></div>
+        </header>
+
+        <!-- Main content wrapper -->
+        <div class="mainContainer2" id="mainContainer2">
+           
+            <!-- <div class="sectionGroup"> -->
+                 <!-- Overview Section -->
+                <section class="projectOverviewSection" id="projectOverviewSection">
+                    <div class="sectionTitle" id="overviewSectionTitle"></div>
+                    <div class="overviewContent" id="overviewContent">
+                        <template id="overviewItemTemplate">
+                            <div class="overviewItemWrapper" id="overviewItemWrapper">
+                                <div id="overviewItemName" class="overviewItemName"></div>
+                                <div id="overviewItemDescription" class="overviewItemDescription"></div>
+                            </div>
+                        </template>
+                    </div>
+                </section>
+
+                <!-- Key Features Section -->
+                <section class="keyFeaturesSection" id="keyFeaturesSection">
+                    <div class="sectionTitle" id="keyFeaturesSectionTitle"></div>
+                    <div class="featuresContent" id="featuresContent">
+                        <template id="featureItemTemplate">
+                            <div class="featureItemWrapper" id="featureItemWrapper">
+                                <div id="featureName" class="featureName"></div>
+                                <div id="featureDescription" class="featureDescription"></div>
+                            </div>
+                        </template>
+                    </div>
+                </section>
+            <!-- </div> -->
+
+            <!-- Technologies Used Section -->
+            <section class="technologiesSection" id="technologiesSection">
+                <div class="technologiesSectionHeader" id="technologiesSectionHeader">
+                    <div class="technologiesSectionTitle" id="technologiesSectionTitle"></div>
+                </div>
+                <div class="technologiesContent" id="technologiesContent">
+                    <template id="technologyCategoryTemplate">
+                        <div class="technologyCategoryWrapper" id="technologyCategoryWrapper">
+                            <div id="technologyCategoryName" class="technologyCategoryName"></div>
+                            <div id="technologyList" class="technologyList">
+                                <template id="technologyItemTemplate">
+                                    <span id="technologyItemName" class="technologyItemName"></span>
+                                </template>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </section>
+
+            <!-- Challenges & Learnings Section -->
+            <section class="challengesSection" id="challengesSection">
+                <div class="sectionTitle" id="challengesSectionTitle"></div>
+                <div class="challengesContent" id="challengesContent">
+                    <template id="challengeItemTemplate">
+                        <div class="challengeItemWrapper" id="challengeItemWrapper">
+                            <div id="challengeName" class="challengeName"></div>
+                            <div id="challengeDescription" class="challengeDescription"></div>
+                        </div>
+                    </template>
+                </div>
+            </section>
+
+            <!-- Screenshots Section -->
+            <section class="screenshotsSection" id="screenshotsSection">
+                <div class="sectionTitle" id="screenshotsSectionTitle"></div>
+                <div class="screenshotsContent" id="screenshotsContent">
+                    <template id="screenshotItemTemplate">
+                        <div class="screenshotItemWrapper" id="screenshotItemWrapper">
+                            <img id="screenshotImage" class="screenshotImage" src="" alt="Project Screenshot">
+                        </div>
+                    </template>
+                </div>
+            </section>
+
+            <!-- Source Code Link Section -->
+            <section class="sourceCodeSection" id="sourceCodeSection">
+                <a id="sourceCodeLink" class="sourceCodeLink" href="" target="_blank"></a>
+            </section>
+        </div>
+
+        <!-- Copyright footer -->
+         <footer class="footer" id="footer">
+            <div id="copyrightSection" class="copyrightSection"></div>
+        </footer>
+
+    </main>
+</body>
+</html>

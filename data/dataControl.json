@@ -3,27 +3,35 @@
     "Header_Description": "Frontend Engineer specializing in building scalable React.js applications and maintainable UI systems.",
     "Project_Section": {
         "Title": "Projects",
+        "ProjectSectionLabels": {
+            "ChallengesAndLearningsSectionTitle": "ChallengesAndLearnings",
+            "TechnologiesUsedSectionTitle": "TechnologiesUsed",
+            "KeyFeaturesSectionTitle": "KeyFeatures",
+            "OverviewSectionTitle": "Overview",
+            "ScreenShotsSectionTitle": "ScreenShots"
+        },
         "Projects": [
             {
                 "Title": "UST Portfolio Market Risk VaR Calculator",
                 "OnelineDescription": "A robust tool for calculating Value at Risk (VaR) for an UST (United States Treasury) Portfolio, employing a C# thick client GUI with a Python FastAPI ",
                 "indexPageButtonLabel": "Learn more",
+                "backToHomeButtonLabel": "Back to Portfolio",
                 "BriefDescription": "A robust tool for calculating Value at Risk (VaR) for an UST (United States Treasury) Portfolio, employing a C# thick client GUI with a Python FastAPI server backend and SQL Server database. This application helps investors analyze and optimize their portfolio's market risk.",
                 "Overview": [
                     {
-                        "name": "",
+                        "Name": "",
                         "Description": "The application is designed to allow users to construct a portfolio of US Treasury securities and analyze its market risk using Value at Risk (VaR) calculations. The following UST data is downloaded from the US Treasury portal: 4-Week, 8-Week, 13-Week, 26-Week, and 52-Week securities."
                     },
                     {
-                        "name": "",
+                        "Name": "",
                         "Description": "Users can define a fixed income portfolio by assigning weights to these different securities, ensuring the sum of the weights equals 1.0. The C# GUI then instructs the Python API server to calculate VaR for this portfolio using two methods:"
                     },
                     {
-                        "name": "Historical Simulation:",
+                        "Name": "Historical Simulation:",
                         "Description": "A non-parametric approach using historical price data."
                     },
                     {
-                        "name": "Parametric Method:",
+                        "Name": "Parametric Method:",
                         "Description": "A statistical approach assuming a normal distribution of returns."
                     }
                 ],
@@ -48,14 +56,14 @@
                 "TechnologiesUsed": [
                     {
                         "Category": "Frontend:",
-                        "Description": [
+                        "Descriptions": [
                             "C#",
                             "(Windows Forms)"
                         ]
                     },
                     {
                         "Category": "Backend:",
-                        "Description": [
+                        "Descriptions": [
                             "Python",
                             "FastAPI",
                             "Uvicorn"
@@ -63,17 +71,17 @@
                     },
                     {
                         "Category": "Database:",
-                        "Description": [
+                        "Descriptions": [
                             "SQL",
                             "Server"
                         ]
                     },
                     {
                         "Category": "API Architecture:",
-                        "Description": ["RESTful APIs"]
+                        "Descriptions": ["RESTful APIs"]
                     }
                 ],
-                "Challenges&Learnings": [
+                "ChallengesAndLearnings": [
                     {
                         "Name": "Cross-Platform Integration:",
                         "Description": "Integrating C# GUI with Python backend required efficient data serialization and API design."
@@ -94,31 +102,35 @@
                 "showScreenshotSection": true,
                 "ScreenShots": [
                     {
-                        "url": ""
+                        "src": "/assets/images/screenshots/initialPageSkeleton.png"
                     }
                 ],
-                "SourceCodeLink": ""
+                "SourceCodeData": {
+                    "SourceCodeLink": "",
+                    "SourceCodeLinkLabel": ""
+                }
             },
             {
                 "Title": "UST Portfolio Market Risk VaR Calculator",
                 "OnelineDescription": "A robust tool for calculating Value at Risk (VaR) for an UST (United States Treasury) Portfolio, employing a C# thick client GUI with a Python FastAPI ",
                 "indexPageButtonLabel": "Learn more",
+                "backToHomeButtonLabel": "Back to Portfolio",
                 "BriefDescription": "A robust tool for calculating Value at Risk (VaR) for an UST (United States Treasury) Portfolio, employing a C# thick client GUI with a Python FastAPI server backend and SQL Server database. This application helps investors analyze and optimize their portfolio's market risk.",
                 "Overview": [
                     {
-                        "name": "",
+                        "Name": "",
                         "Description": "The application is designed to allow users to construct a portfolio of US Treasury securities and analyze its market risk using Value at Risk (VaR) calculations. The following UST data is downloaded from the US Treasury portal: 4-Week, 8-Week, 13-Week, 26-Week, and 52-Week securities."
                     },
                     {
-                        "name": "",
+                        "Name": "",
                         "Description": "Users can define a fixed income portfolio by assigning weights to these different securities, ensuring the sum of the weights equals 1.0. The C# GUI then instructs the Python API server to calculate VaR for this portfolio using two methods:"
                     },
                     {
-                        "name": "Historical Simulation:",
+                        "Name": "Historical Simulation:",
                         "Description": "A non-parametric approach using historical price data."
                     },
                     {
-                        "name": "Parametric Method:",
+                        "Name": "Parametric Method:",
                         "Description": "A statistical approach assuming a normal distribution of returns."
                     }
                 ],
@@ -143,14 +155,14 @@
                 "TechnologiesUsed": [
                     {
                         "Category": "Frontend:",
-                        "Description": [
+                        "Descriptions": [
                             "C#",
                             "(Windows Forms)"
                         ]
                     },
                     {
                         "Category": "Backend:",
-                        "Description": [
+                        "Descriptions": [
                             "Python",
                             "FastAPI",
                             "Uvicorn"
@@ -158,17 +170,17 @@
                     },
                     {
                         "Category": "Database:",
-                        "Description": [
+                        "Descriptions": [
                             "SQL",
                             "Server"
                         ]
                     },
                     {
                         "Category": "API Architecture:",
-                        "Description": ["RESTful APIs"]
+                        "Descriptions": ["RESTful APIs"]
                     }
                 ],
-                "Challenges&Learnings": [
+                "ChallengesAndLearnings": [
                     {
                         "Name": "Cross-Platform Integration:",
                         "Description": "Integrating C# GUI with Python backend required efficient data serialization and API design."
@@ -189,31 +201,38 @@
                 "showScreenshotSection": true,
                 "ScreenShots": [
                     {
-                        "url": ""
+                        "src": "/assets/images/screenshots/initialPageSkeleton.png"
+                    },
+                    {
+                        "src": "/assets/images/logos/EL2.png"
                     }
                 ],
-                "SourceCodeLink": ""
+                "SourceCodeData": {
+                    "SourceCodeLink": "https://www.google.com",
+                    "SourceCodeLinkLabel": "view source code"
+                }
             },
             {
                 "Title": "UST Portfolio Market Risk VaR Calculator",
                 "OnelineDescription": "A robust tool for calculating Value at Risk (VaR) for an UST (United States Treasury) Portfolio, employing a C# thick client GUI with a Python FastAPI ",
                 "indexPageButtonLabel": "Learn more",
+                "backToHomeButtonLabel": "Back to Portfolio",
                 "BriefDescription": "A robust tool for calculating Value at Risk (VaR) for an UST (United States Treasury) Portfolio, employing a C# thick client GUI with a Python FastAPI server backend and SQL Server database. This application helps investors analyze and optimize their portfolio's market risk.",
                 "Overview": [
                     {
-                        "name": "",
+                        "Name": "",
                         "Description": "The application is designed to allow users to construct a portfolio of US Treasury securities and analyze its market risk using Value at Risk (VaR) calculations. The following UST data is downloaded from the US Treasury portal: 4-Week, 8-Week, 13-Week, 26-Week, and 52-Week securities."
                     },
                     {
-                        "name": "",
+                        "Name": "",
                         "Description": "Users can define a fixed income portfolio by assigning weights to these different securities, ensuring the sum of the weights equals 1.0. The C# GUI then instructs the Python API server to calculate VaR for this portfolio using two methods:"
                     },
                     {
-                        "name": "Historical Simulation:",
+                        "Name": "Historical Simulation:",
                         "Description": "A non-parametric approach using historical price data."
                     },
                     {
-                        "name": "Parametric Method:",
+                        "Name": "Parametric Method:",
                         "Description": "A statistical approach assuming a normal distribution of returns."
                     }
                 ],
@@ -238,14 +257,14 @@
                 "TechnologiesUsed": [
                     {
                         "Category": "Frontend:",
-                        "Description": [
+                        "Descriptions": [
                             "C#",
                             "(Windows Forms)"
                         ]
                     },
                     {
                         "Category": "Backend:",
-                        "Description": [
+                        "Descriptions": [
                             "Python",
                             "FastAPI",
                             "Uvicorn"
@@ -253,17 +272,17 @@
                     },
                     {
                         "Category": "Database:",
-                        "Description": [
+                        "Descriptions": [
                             "SQL",
                             "Server"
                         ]
                     },
                     {
                         "Category": "API Architecture:",
-                        "Description": ["RESTful APIs"]
+                        "Descriptions": ["RESTful APIs"]
                     }
                 ],
-                "Challenges&Learnings": [
+                "ChallengesAndLearnings": [
                     {
                         "Name": "Cross-Platform Integration:",
                         "Description": "Integrating C# GUI with Python backend required efficient data serialization and API design."
@@ -284,18 +303,27 @@
                 "showScreenshotSection": true,
                 "ScreenShots": [
                     {
-                        "url": ""
+                        "src": ""
                     }
                 ],
-                "SourceCodeLink": ""
+                "SourceCodeData": {
+                    "SourceCodeLink": "",
+                    "SourceCodeLinkLabel": "view source code"
+                }
             }
-    ]
+        ]
     },
     "About_Section": {
         "Title": "About me",
         "Descriptions": [
             {
                 "DescriptionPara": "I’m a Frontend Engineer with 6 years of IT experience and 4+ years working with React.js, focused on building scalable, maintainable user interfaces. I enjoy working with component-driven architecture, state management, and clean UI systems while integrating REST APIs in real-world applications."
+            },
+            {
+                "DescriptionPara": "Currently at Tata Consultancy Services, I work on enterprise-scale React applications and complex legacy codebases. I’m also expanding into the MERN stack through personal projects, aiming to grow as a product-focused engineer who builds reliable and scalable solutions."
+            },
+            {
+                "DescriptionPara": "Currently at Tata Consultancy Services, I work on enterprise-scale React applications and complex legacy codebases. I’m also expanding into the MERN stack through personal projects, aiming to grow as a product-focused engineer who builds reliable and scalable solutions."
             },
             {
                 "DescriptionPara": "Currently at Tata Consultancy Services, I work on enterprise-scale React applications and complex legacy codebases. I’m also expanding into the MERN stack through personal projects, aiming to grow as a product-focused engineer who builds reliable and scalable solutions."
@@ -349,7 +377,16 @@
                 "Category": "Methodologies:",
                 "Descriptions": [
                     "Agile",
-                    "Scrum"
+                    "Scrum",
+                    "dasdasdasd"
+                ]
+            },
+            {
+                "Category": "Hobbies:",
+                "Descriptions": [
+                    "adwd",
+                    "Sawdadcrum",
+                    "dasdaawdawdwasdasd"
                 ]
             }
         ]

@@ -1,24 +1,58 @@
-can you add error messages as i have added - the null checks
-if (!headerDescription) throwElementNullError('#headerDescription');
+___________________________________________________________________
 
-also, for some reason, the eslint is not working, can you to eslint checks
+Minor changes to get done by AI - 
 
-also, can you add json structure type validation like
-if (!data?.Project_Section?.Title) {
-  console.error('Invalid data structure: missing Project_Section.Title');
-  return;
-}
+- prepare a nice readme.md file
 
-can you add data validation like
+- modify partition comments in 
+	- main page style css file to same as in projects details style partitions 
+	- index.html
+	- constant.js
 
-const validateProjectData = (project) => {
-    const required = ['Title', 'OnelineDescription'];
-    return required.every(field => project?.[field]);
-}; 
+- meaning full code comments every where in code
 
-but isn't it redundant as json structure type validation - maybe not needed if json structure type validation is there
+- entire code review by chatgpt
 
-about u said - 
+- ask ai - how to determine if to add script tag or not for multiple html and js files
 
-createSectionRenderer - the reason i did not do this because, my different sections have different children and tags in them, so, a generic renderer would be problematic i thought
+- 
+
+
+
+
+___________________________________________________________________
+
+- add location href in learn more handle click - test
+
+- receive url params in project details page
+
+- setup for loader
+
+- fetch data json and null check and send project data to data projectDataplug script
+
+- begin data plug
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

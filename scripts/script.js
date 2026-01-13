@@ -1,27 +1,37 @@
+import { validatePortfolioData } from './validator.js';
+import { CONFIG, CLASSES, SELECTORS, MESSAGES } from './constants.js';
 import { setStaticPageData } from './dataPlugScript.js';
+import { getElement } from './utilityScripts.js';
 
-const LOADER_DELAY = 500; // ms
+window.location.href = './projectDetails.html';
 
 const exitLoader = () => {
-    const loaderOverlay = document.getElementById('loaderOverlay');
-    const rootContainer = document.getElementById('rootContainer');
-    loaderOverlay.classList.add('hideElement');
-    rootContainer.classList.remove('hideElement');
+    const loaderOverlay = getElement(SELECTORS.loaderOverlay);
+    const rootContainer = getElement(SELECTORS.rootContainer);
+    loaderOverlay.classList.add(CLASSES.hidden);
+    rootContainer.classList.remove(CLASSES.hidden);
 };
 
 (async () => {
     try {
-        await new Promise(resolve => setTimeout(resolve, LOADER_DELAY));
+        await new Promise(resolve => setTimeout(resolve, CONFIG.LOADER_DELAY));
 
-        const response = await fetch('./data/dataControl.json');
+        const response = await fetch(CONFIG.DATA_FILE_PATH);
         const data = await response.json();
+        const validateData = validatePortfolioData(data);
+
+        if (!validateData.isValid) {
+            console.error(`${MESSAGES.dataValidationFailed}`, validateData.allErrors);
+            return;
+        }
 
         if (data) {
             exitLoader();
             setStaticPageData(data);
+            return;
         }
     } catch (e) {
-        console.log(`Could not load Folio Data, ERROR: '${e}'`);
+        console.error(`Could not load Folio Data, ERROR: '${e}'`);
         exitLoader();
         return;
     }
