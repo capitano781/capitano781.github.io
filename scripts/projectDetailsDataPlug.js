@@ -13,8 +13,26 @@ import {
 } from './utilityScripts.js';
 import { isValidArray } from './validator.js';
 
+const setCommonHandler = (eventType, fieldType, handlerElementId) => {
+    if (fieldType === 'button') {
+        if (eventType === 'click') {
+            if (SELECTORS.backToHomeButton === handlerElementId) {
+                window.location.href = `/index.html`;
+            }
+        }
+    }
+};
+
 const setBackToHomeButtonText = (backToHomeButtonLabel) => {
     setElementText(SELECTORS.backToHomeButton, backToHomeButtonLabel);
+
+    const backToHomeButton = getElement(SELECTORS.backToHomeButton);
+
+    backToHomeButton.addEventListener('click', event => {
+        if (event.type === 'click') {
+            setCommonHandler(event.type, 'button', SELECTORS.backToHomeButton);
+        }
+    });
 };
 
 const setProjectHeaderdata = (projectData) => {
@@ -134,7 +152,6 @@ const setScreenshotsSectionData = (ScreenShotsSectionTitle, screenShotdata) => {
             setTemplateElementAttribute(screenshotItemTemplateClone, SELECTORS.screenshotImage, 'src', screenshot?.src);
 
             screenshotsContent.appendChild(screenshotItemTemplateClone);
-
         });
     }
 };

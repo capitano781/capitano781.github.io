@@ -3,7 +3,7 @@ import { CONFIG, CLASSES, SELECTORS, MESSAGES } from './constants.js';
 import { setStaticPageData } from './dataPlugScript.js';
 import { getElement } from './utilityScripts.js';
 
-window.location.href = './projectDetails.html';
+// window.location.href = './projectDetails.html';
 
 const exitLoader = () => {
     const loaderOverlay = getElement(SELECTORS.loaderOverlay);

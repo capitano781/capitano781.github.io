@@ -6,8 +6,7 @@ import { setProjectDetailsPageData } from './projectDetailsDataPlug.js';
 import { validatePortfolioData } from './validator.js';
 
 const params = new URLSearchParams(window.location.search);
-// const selectedProjectId = params.get('id');
-const  selectedProjectId = 1;
+const selectedProjectId = params.get('id');
 
 const exitProjectDetailsPageLoader = () => {
     const projectDetailsPageLoaderOverlay = getElement(SELECTORS.projectDetailsPageLoaderOverlay);

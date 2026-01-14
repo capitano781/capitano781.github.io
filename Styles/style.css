@@ -1,228 +1,491 @@
 @import "variable.css";
 
 * {
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 /* Utility classes start */
 
 .hideElement {
-    display: none !important;
+  display: none !important;
 }
 
 .showElement {
-    display: block !important;
+  display: block !important;
 }
 
 /* Utility classes start */
 
 html,
 body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    /* background: #333; */
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  /* background: #333; */
 }
+
+/* .spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-left-color: #008080;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+} */
+
+/* @keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+/* .neubrutalist-card {
+  display: block;
+  width: 400px;
+  height: 200px;
+  background-color: #008080;
+  border: 3px solid #000000;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 8px 8px 0px #000000;
+  transition: all 0.2s ease;
+  cursor: pointer;
+} */
+
+/* .neubrutalist-card:hover {
+  transform: translate(4px, 4px);
+  box-shadow: 4px 4px 0px #000000;
+} */
+
+/* .glass-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 200px;
+  background: rgb(51 0 56 / 10%);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(13px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgb(0 0 0), inset 0 1px 0px rgb(4 255 248),
+    inset 0 3px 0 0 rgb(232 16 16 / 30%), inset 0 0 0px 0px rgb(124 10 10);
+  position: relative;
+  transform: skewX(-15deg);
+  overflow: hidden;
+} */
+
+/* .innerGlass {
+  transform: skewX(15deg);
+  border: 1px solid #fff;
+} */
+
+/* .glass-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
+} */
+
+/* .glass-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8),
+    transparent,
+    rgba(255, 255, 255, 0.3)
+  );
+} */
+
+/* 4. Un-skew the content so text stays upright */
+/* .glass-content {
+  transform: skewX(15deg);
+  color: #ffffff;
+  font-family: "Segoe UI", sans-serif;
+} */
+
+/* .glass-content h2 {
+  margin-top: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--teal-accent);
+} */
+
+/* .loader-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* 1. The Glass Circle */
+/* .loader-glass {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+} */
+
+/* 2. The Orbiting Orbs */
+/* .orb {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  filter: blur(15px);
+  z-index: 1;
+  animation: orbit 2.5s infinite linear;
+} */
+
+/* .orb-teal {
+  background: var(--teal);
+  top: 0;
+}
+
+.orb-violet {
+  background: var(--violet);
+  bottom: 0;
+  animation-delay: -1.25s; 
+} */
+
+/* @keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(45px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(45px) rotate(-360deg);
+  }
+} */
+
+/* 3. Minimal Center Icon (Optional) */
+/* .loader-wrapper::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  z-index: 3;
+  box-shadow: 0 0 15px white;
+  animation: pulse 1.5s infinite ease-in-out;
+} */
+
+/* @keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+} */
 
 .loaderOverlay {
-    background: #333;
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    left: 0;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /* background-color: #00191f;
+    background-image: radial-gradient(at 59% 8%, rgb(87 189 199 / 30%) 0px, transparent 50%), radial-gradient(at 27% 67%, rgb(83 215 237 / 20%) 0px, transparent 50%); */
+
+  /* background-image: url('../assets/images/bg/un1.jpg'); */
+  /* background-image: url('../assets/images/bg/un1.jpg'); */
+
+  background-position: center;
+  background-size: cover;
+
+  background-attachment: fixed;
+  position: relative;
+  background-attachment: fixed;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.loaderBg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  /* background: #333; */
+  background-image: url("../assets/images/bg/un1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  filter: blur(30px);
+  /* Scale it up slightly to hide the blurred edges of the screen */
+  transform: scale(1.1);
+}
+
+.rootContainerBg {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* background-image: url("../assets/images/bg/un1.jpg"); */
+  background-color: #fff;
+  /* background-image: radial-gradient(
+      at 59% 8%,
+      rgba(87, 189, 199, 0.3) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 27% 67%, rgba(83, 215, 237, 0.2) 0px, transparent 50%),
+    radial-gradient(at 84% 87%, rgba(0, 255, 221, 0.15) 0px, transparent 40%),
+    radial-gradient(at 12% 15%, rgba(42, 103, 110, 0.4) 0px, transparent 50%); */
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  filter: blur(1rem);
+  transform: scale(1.1);
+  z-index: -100;
+}
+
+/* ====================================================
+  Main CSS START
+=======================================================*/
+
 .rootContainer {
+  /* background: var(--darkBg); */
+  /* background-color: #00191f;
+  background-image: radial-gradient(
+      at 59% 8%,
+      rgb(87 189 199 / 30%) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 27% 67%, rgb(83 215 237 / 20%) 0px, transparent 50%); */
+
+  /* background-image: url("../assets/images/bg/un1.jpg"); */
+  /* background-image: url('../assets/images/bg/un1.jpg'); */
+
+  /* background-position: center;
+  background-size: cover;
+
+  background-attachment: fixed; */
+
+  background-color: var(--darkBg);
 }
 
 /* -- Header section start -- */
 .header {
-    height: 20rem;
-    width: 100%;
-    background: #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 20rem;
+  width: 100%;
+  /* background: var(--darkBg); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .headerContainer {
-    border: 1px solid #fff;
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+  color: var(--darkBg);
+  /* border: 1px solid #fff; */
+  background: var(--whiteGradient);
+  /* box-shadow: 20px 20px 60px #878787, -20px -20px 60px #cfcfcf; */
+
+  border: none;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  /* width: 100%; */
 }
 
 .headerTitle {
-    color: var(--heroHeadingColor);
-    font-size: var(--heroHeadingTextSize);
+  /* color: var(--heroHeadingColor); */
+  font-size: var(--heroHeadingTextSize);
 }
 
 .headerDescription {
-    color: var(--descHeadingColor);
-    font-size: var(--descHeadingTextSize);
+  /* color: var(--descHeadingColor); */
+  font-size: var(--descHeadingTextSize);
 }
 /* -- Header section End -- */
 
 /* -- mainContainer section start -- */
 .mainContainer {
-    max-width: 80rem;
-    border: 1px solid #333;
-    margin: 1rem auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    gap: 1.5rem;
+  max-width: 80rem;
+  border: 1px solid #333;
+  /* background-color: var(--greenFeint); */
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1.5rem;
 }
 
 /* -- project section start -- */
 .projectSection {
-    border: 1px solid #333;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 1rem;
-    gap: 1rem;
+  border: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
 }
 
 .projectGrid {
-    width: 100%;
-    display: grid;
-    align-items: center;
-    /* justify-content: center; */
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  /* justify-content: center; */
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
 }
 
 .projectBox {
-    width: 100%;
+  width: 100%;
 }
 
 .projectBoxWrapper {
-    border: 1px solid #000;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 0.5rem;
+  border: 1px solid #000;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5rem;
 }
 /* -- project section end -- */
 
 /* -- summery section start -- */
 .summery {
-    width: 100%;
-    border: 1px solid #333;
-    display: flex;
-    align-items: stretch;
-    gap: 1rem;
+  width: 100%;
+  border: 1px solid #333;
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
 }
 
 /* -- aboutMe section start -- */
 .aboutMeContainer {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 1rem;
-    padding: 1rem;
-    border: 1px solid #333;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #333;
 }
 
 .aboutContent {
-    width: 100%;
+  width: 100%;
 }
 
 .aboutSummeryDescription {
-    width: 100%;
+  width: 100%;
 }
 
 .aboutSummeryDescriptionWrapper {
-    display: block;
-    /* border: 1px solid; */
+  display: block;
+  /* border: 1px solid; */
 }
 
 /* -- aboutMe section end -- */
 
 /* -- techSkill section start -- */
 .techSkillContainer {
-    flex: 1.5;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 1rem;
-    padding: 1rem;
-    border: 1px solid #333;
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #333;
 }
 
 .techSkillContent {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 0rem;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0rem;
+  width: 100%;
 }
 
 .skillGroup {
-    width: 100%;
+  width: 100%;
 }
 
 .skillGroupWrapper {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    /* gap: 1rem; */
-    width: 100%;
-    border: 1px solid #d4d4d4;
-    border-left: none;
-    border-right: none;
-    padding: 0.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  /* gap: 1rem; */
+  width: 100%;
+  border: 1px solid #d4d4d4;
+  border-left: none;
+  border-right: none;
+  padding: 0.5rem;
 }
 
 .skillCategory {
-    width: 175px;
+  width: 175px;
 }
 
 .skillTags {
-    width: 100%;
+  width: 100%;
 }
 
 .skillTag {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.5rem;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  width: 100%;
 }
 
 .skillTagWrapper {
-    background: #eeefed;
-    border: 1px solid #b6b7b1;
-    padding: 0rem 0.5rem;
-    text-wrap: nowrap;
+  background: #eeefed;
+  border: 1px solid #b6b7b1;
+  padding: 0rem 0.5rem;
+  text-wrap: nowrap;
 }
 /* -- techSkill section end -- */
 /* -- summery section end -- */
 
 /* -- contact section start -- */
 .contact {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 1rem;
-    gap: 1rem;
-    border: 1px solid #333;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+  border: 1px solid #333;
+  width: 100%;
 }
 /* -- contact section end -- */
 
@@ -230,13 +493,13 @@ body {
 
 /* -- footer section end -- */
 .footer {
-    width: 100%;
-    border: 2px solid #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem;
-    background: #333;
-    color: #fff;
+  width: 100%;
+  border: 2px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: #333;
+  color: #fff;
 }
 /* -- footer section end -- */

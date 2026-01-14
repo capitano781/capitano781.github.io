@@ -1,17 +1,44 @@
 :root {
-    /* font color */
-    --heroHeadingColor: #ffffff;
-    --descHeadingColor: #ffffff;
-    --primaryTextColor: #000;
-    --secondaryTextColor: #000;
+  --bg-dark: #05070a;
+  --teal: #008080;
+  --violet: #8a2be2;
 
-    /* font size */
-    --heroHeadingTextSize: 3.5rem;
-    --descHeadingTextSize: 1.2rem;
-    --primaryTextSize: #000;
-    --secondaryTextSize: #000;
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --teal-accent: #008080;
+
+  /* =====================
+=======================*/
+
+  /* Theme colors */
+  --darkBg: #36384e;
+  --tealDark: #93bfc7;
+  --greenDark: #abe7b2;
+  --greenLight: #cbf3bb;
+  --greenFeint: #ecf4e8;
+  --white: #fff;
+  --whiteGradient: linear-gradient(
+    49deg,
+    rgba(242, 242, 242, 1) 0%,
+    rgba(255, 255, 255, 1) 19%,
+    rgba(242, 242, 242, 1) 30%,
+    rgba(255, 255, 255, 1) 77%,
+    rgba(242, 242, 242, 1) 100%
+  );
+
+  /* font color */
+  --heroHeadingColor: #ffffff;
+  --descHeadingColor: #ffffff;
+  --primaryTextColor: #000;
+  --secondaryTextColor: #000;
+
+  /* font size */
+  --heroHeadingTextSize: 3.5rem;
+  --descHeadingTextSize: 1.2rem;
+  --primaryTextSize: #000;
+  --secondaryTextSize: #000;
 }
 
 [data-theme="dark"] {
-    --primaryHeading: #fff;
+  --primaryHeading: #fff;
 }

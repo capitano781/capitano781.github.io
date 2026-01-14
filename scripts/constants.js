@@ -10,7 +10,7 @@
 // ============================================
 
 export const CONFIG = {
-    LOADER_DELAY: 1000, // milliseconds
+    LOADER_DELAY: 100, // milliseconds
     DATA_FILE_PATH: './data/dataControl.json',
     ERROR_FALLBACK_TEXT: 'Data Plug Error'
 };

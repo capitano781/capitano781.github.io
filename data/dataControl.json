@@ -300,7 +300,7 @@
                         "Description": "Building a user-friendly C# interface for interacting with the VaR calculator and visualizing results."
                     }
                 ],
-                "showScreenshotSection": true,
+                "showScreenshotSection": false,
                 "ScreenShots": [
                     {
                         "src": ""
@@ -318,12 +318,6 @@
         "Descriptions": [
             {
                 "DescriptionPara": "I’m a Frontend Engineer with 6 years of IT experience and 4+ years working with React.js, focused on building scalable, maintainable user interfaces. I enjoy working with component-driven architecture, state management, and clean UI systems while integrating REST APIs in real-world applications."
-            },
-            {
-                "DescriptionPara": "Currently at Tata Consultancy Services, I work on enterprise-scale React applications and complex legacy codebases. I’m also expanding into the MERN stack through personal projects, aiming to grow as a product-focused engineer who builds reliable and scalable solutions."
-            },
-            {
-                "DescriptionPara": "Currently at Tata Consultancy Services, I work on enterprise-scale React applications and complex legacy codebases. I’m also expanding into the MERN stack through personal projects, aiming to grow as a product-focused engineer who builds reliable and scalable solutions."
             },
             {
                 "DescriptionPara": "Currently at Tata Consultancy Services, I work on enterprise-scale React applications and complex legacy codebases. I’m also expanding into the MERN stack through personal projects, aiming to grow as a product-focused engineer who builds reliable and scalable solutions."
