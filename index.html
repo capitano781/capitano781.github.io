@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/Styles//styleUtilities.css" />
     <script type="module" src="scripts/script.js"></script>
     <title>Capitano781 | MERN Stack Developer</title>
   </head>
@@ -23,18 +24,30 @@
       </div>
       <!-- <div class="neubrutalist-card"></div> -->
     </div>
-    <!-- <div class="rootContainerBg"></div> -->
     <main class="rootContainer hideElement" id="rootContainer">
       <header class="header" id="header">
-        <div
-          class="headerContainer"
-          id="headerContainer"
-          data-tilt
-          data-tilt-glare
-          data-tilt-max-glare="0.8"
-        >
-          <div class="headerTitle" id="headerTitle"></div>
-          <div class="headerDescription" id="headerDescription"></div>
+        <div class="headerContainer hero epic-orange" id="headerContainer">
+          <div class="headerTitle" id="headerTitle">
+            <span
+              class="headerTitlePart1 primary-hero-heading"
+              id="headerTitlePart1"
+            ></span>
+            <span
+              class="headerTitlePart2 primary-hero-heading red-highlight"
+              id="headerTitlePart2"
+            ></span>
+          </div>
+          <div class="headerTag secondary-hero-heading" id="headerTag"></div>
+          <!-- <div class="divider"></div> -->
+          <div
+            class="headerDescription description-hero-heading"
+            id="headerDescription"
+          ></div>
+          <button
+            class="headerViewWorkButton btn-primary"
+            id="headerViewWorkButton"
+          ></button>
+          <!-- <img class="headerImage" id="headerImage" /> -->
         </div>
       </header>
       <section class="mainContainer" id="mainContainer">

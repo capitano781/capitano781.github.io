@@ -1,0 +1,39 @@
+@import "variable.css";
+
+.epic-orange {
+  --accent: #ff5a3c;
+  --accent-hover: #ff4a2a;
+  --text-accent: #f4f1de;
+}
+
+.warm-yellow {
+  --accent: #ffd400;
+  --accent-hover: #ffcc00;
+  --text-accent: #1f1f1f;
+}
+
+.electric-blue {
+  --accent: #2d6cff;
+  --accent-hover: #1f5cff;
+  --text-accent: #f4f1de;
+}
+.lime-green {
+  --accent: #7cff00;
+  --accent-hover: #6ae000;
+  --text-accent: #1f1f1f;
+}
+.hot-pink {
+  --accent: #ff3fa4;
+  --accent-hover: #ff2f96;
+  --text-accent: #1f1f1f;
+}
+.deep-red {
+  --accent: #c81d25;
+  --accent-hover: #b81a22;
+  --text-accent: #1f1f1f;
+}
+.cool-teal {
+  --accent: #1fb6aa;
+  --accent-hover: #18a39a;
+  --text-accent: #f4f1de;
+}

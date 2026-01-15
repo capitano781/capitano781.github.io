@@ -1,6 +1,13 @@
 {
     "Header_Title": "Hi, I am Capitano781",
-    "Header_Description": "Frontend Engineer specializing in building scalable React.js applications and maintainable UI systems.",
+    "Header_Title": {
+        "Header_Title_Part1": "Hi, I am ",
+        "Header_Title_Part2": "Capitano781"
+    },
+    "Header_Tag": "Frontend Engineer | MERN Stack",
+    "Header_Description": "I build scalable React applications and maintainable UI systems that prioritize clean architecture, performance, and real-world product needs.",
+    "Header_ViewWorkButtonLabel": "View my work",
+    "Header_Image_Url": "/assets/images/illustrations/lp1-clipped.png",
     "Project_Section": {
         "Title": "Projects",
         "ProjectSectionLabels": {

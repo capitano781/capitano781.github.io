@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 @import "variable.css";
 
 * {
@@ -7,21 +8,17 @@
 
 /* Utility classes start */
 
-.hideElement {
-  display: none !important;
-}
-
-.showElement {
-  display: block !important;
-}
-
 /* Utility classes start */
 
 html,
 body {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  /* background: #333; */
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: var(--darkBg);
+  color: var(--text-light);
+  /* cursor: url("/assets/images/illustrations/p1.png") 4 4, auto !important; */
+  scroll-behavior: smooth;
 }
 
 /* .spinner {
@@ -233,7 +230,7 @@ body {
   height: 100%;
   width: 100%;
   /* background: #333; */
-  background-image: url("../assets/images/bg/un1.jpg");
+  /* background-image: url("../assets/images/bg/un1.jpg"); */
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -242,90 +239,59 @@ body {
   transform: scale(1.1);
 }
 
-.rootContainerBg {
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  left: 0;
-  /* background-image: url("../assets/images/bg/un1.jpg"); */
-  background-color: #fff;
-  /* background-image: radial-gradient(
-      at 59% 8%,
-      rgba(87, 189, 199, 0.3) 0px,
-      transparent 50%
-    ),
-    radial-gradient(at 27% 67%, rgba(83, 215, 237, 0.2) 0px, transparent 50%),
-    radial-gradient(at 84% 87%, rgba(0, 255, 221, 0.15) 0px, transparent 40%),
-    radial-gradient(at 12% 15%, rgba(42, 103, 110, 0.4) 0px, transparent 50%); */
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  filter: blur(1rem);
-  transform: scale(1.1);
-  z-index: -100;
-}
-
 /* ====================================================
   Main CSS START
 =======================================================*/
 
 .rootContainer {
-  /* background: var(--darkBg); */
-  /* background-color: #00191f;
-  background-image: radial-gradient(
-      at 59% 8%,
-      rgb(87 189 199 / 30%) 0px,
-      transparent 50%
-    ),
-    radial-gradient(at 27% 67%, rgb(83 215 237 / 20%) 0px, transparent 50%); */
-
-  /* background-image: url("../assets/images/bg/un1.jpg"); */
-  /* background-image: url('../assets/images/bg/un1.jpg'); */
-
-  /* background-position: center;
-  background-size: cover;
-
-  background-attachment: fixed; */
-
-  background-color: var(--darkBg);
+  width: 100%;
 }
 
 /* -- Header section start -- */
 .header {
-  height: 20rem;
-  width: 100%;
-  /* background: var(--darkBg); */
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .headerContainer {
-  color: var(--darkBg);
-  /* border: 1px solid #fff; */
-  background: var(--whiteGradient);
-  /* box-shadow: 20px 20px 60px #878787, -20px -20px 60px #cfcfcf; */
-
-  border: none;
-  padding: 2rem 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  flex-direction: column;
+  width: 60%;
+  min-width: 23rem;
+  position: relative;
   gap: 1rem;
-  /* width: 100%; */
 }
 
 .headerTitle {
-  /* color: var(--heroHeadingColor); */
-  font-size: var(--heroHeadingTextSize);
+}
+
+.headerTag {
+  /* padding: 2rem 0; */
 }
 
 .headerDescription {
-  /* color: var(--descHeadingColor); */
-  font-size: var(--descHeadingTextSize);
+  /* max-width: 33rem; */
+  /* border: 1px solid red; */
+  padding: 0.5rem 0;
 }
+
+.headerViewWorkButton {
+  font-size: clamp(1rem, 6vw, 1.5rem);
+  font-weight: 600;
+  padding: 1rem;
+}
+
+.headerImage {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
 /* -- Header section End -- */
 
 /* -- mainContainer section start -- */
@@ -333,7 +299,7 @@ body {
   max-width: 80rem;
   border: 1px solid #333;
   /* background-color: var(--greenFeint); */
-  margin: 1rem auto;
+  /* margin: 1rem auto; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -344,7 +310,8 @@ body {
 
 /* -- project section start -- */
 .projectSection {
-  border: 1px solid #333;
+  width: 80%;
+  border: 1px solid #11aa86;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -354,7 +321,7 @@ body {
 }
 
 .projectGrid {
-  width: 100%;
+  /* width: 100%; */
   display: grid;
   align-items: center;
   /* justify-content: center; */
@@ -367,7 +334,7 @@ body {
 }
 
 .projectBoxWrapper {
-  border: 1px solid #000;
+  border: 1px solid #219ace;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -379,7 +346,7 @@ body {
 
 /* -- summery section start -- */
 .summery {
-  width: 100%;
+  width: 80%;
   border: 1px solid #333;
   display: flex;
   align-items: stretch;
@@ -485,7 +452,7 @@ body {
   padding: 1rem;
   gap: 1rem;
   border: 1px solid #333;
-  width: 100%;
+  width: 80%;
 }
 /* -- contact section end -- */
 
@@ -493,7 +460,7 @@ body {
 
 /* -- footer section end -- */
 .footer {
-  width: 100%;
+  width: 80%;
   border: 2px solid #333;
   display: flex;
   align-items: center;

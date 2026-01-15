@@ -25,8 +25,12 @@ export const SELECTORS = {
     rootContainer: '#rootContainer',
 
     // Header Section
-    headerTitle: '#headerTitle',
+    headerTitlePart1: '#headerTitlePart1',
+    headerTitlePart2: '#headerTitlePart2',
     headerDescription: '#headerDescription',
+    headerTag: '#headerTag',
+    headerViewWorkButton: '#headerViewWorkButton',
+    headerImage: '#headerImage',
 
     // Project Section
     projectTitle: '#projectTitle',

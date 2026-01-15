@@ -1,7 +1,8 @@
 'use strict';
 
 import { getElementTemplateClone, 
-    setTemplateElementText, 
+    setTemplateElementText,
+    setElementAttribute,
     getTemplateElementChild, 
     setTemplateElementAttribute, 
     setElementText, 
@@ -19,8 +20,12 @@ const setCommonHandler = (eventType, handlerFor, handlerElementId, index) => {
 };
 
 const setHeaderSectionData = (data) => {
-    setElementText(SELECTORS.headerTitle, data?.Header_Title);
+    setElementText(SELECTORS.headerTitlePart1, data?.Header_Title?.Header_Title_Part1);
+    setElementText(SELECTORS.headerTitlePart2, data?.Header_Title?.Header_Title_Part2);
     setElementText(SELECTORS.headerDescription, data?.Header_Description);
+    setElementText(SELECTORS.headerTag, data?.Header_Tag);
+    setElementText(SELECTORS.headerViewWorkButton, data?.Header_ViewWorkButtonLabel);
+    // setElementAttribute(SELECTORS.headerImage, 'src', data?.Header_Image_Url);
 };
 
 const setProjectSectionData = (Project_Section) => {
