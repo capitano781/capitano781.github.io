@@ -25,12 +25,16 @@ const setHeaderSectionData = (data) => {
     setElementText(SELECTORS.headerDescription, data?.Header_Description);
     setElementText(SELECTORS.headerTag, data?.Header_Tag);
     setElementText(SELECTORS.headerViewWorkButton, data?.Header_ViewWorkButtonLabel);
-    // setElementAttribute(SELECTORS.headerImage, 'src', data?.Header_Image_Url);
+
+    const headerViewWorkButton = getElement(SELECTORS.headerViewWorkButton);
+    headerViewWorkButton.addEventListener('click', () => {
+
+    });
 };
 
 const setProjectSectionData = (Project_Section) => {
 
-    setElementText(SELECTORS.projectTitle, Project_Section?.Title);
+    setElementText(SELECTORS.projectSectionTitle, Project_Section?.Title);
     
     const projectGrid = getElement(SELECTORS.projectGrid);
     const projectBoxTemplate = getElement(SELECTORS.projectBox);
@@ -44,7 +48,9 @@ const setProjectSectionData = (Project_Section) => {
             setTemplateElementText(projectBoxClone, SELECTORS.projectDetailsIndexPageButton, project?.indexPageButtonLabel);
 
             projectBoxClone.querySelector(SELECTORS.projectDetailsIndexPageButton).addEventListener('click', (event) => {
-                setCommonHandler(event.type, 'button', SELECTORS.projectDetailsIndexPageButton, index);
+                setTimeout(() => {
+                    setCommonHandler(event.type, 'button', SELECTORS.projectDetailsIndexPageButton, index);
+                }, 400);
             });
 
             projectGrid.appendChild(projectBoxClone);

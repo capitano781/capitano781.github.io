@@ -33,10 +33,11 @@ export const SELECTORS = {
     headerImage: '#headerImage',
 
     // Project Section
-    projectTitle: '#projectTitle',
+    projectSectionTitle: '#projectSectionTitle',
     projectGrid: '#projectGrid',
     projectBox: '#projectBox',
     projectBoxWrapper: '#projectBoxWrapper',
+    projectTitle: '#projectTitle',
     projectDescText: '#projectDescText',
     projectDetailsIndexPageButton: '#projectDetailsIndexPageButton',
 

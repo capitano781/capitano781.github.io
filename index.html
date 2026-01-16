@@ -26,49 +26,65 @@
     </div>
     <main class="rootContainer hideElement" id="rootContainer">
       <header class="header" id="header">
-        <div class="headerContainer hero epic-orange" id="headerContainer">
-          <div class="headerTitle" id="headerTitle">
-            <span
-              class="headerTitlePart1 primary-hero-heading"
-              id="headerTitlePart1"
-            ></span>
-            <span
-              class="headerTitlePart2 primary-hero-heading red-highlight"
-              id="headerTitlePart2"
-            ></span>
+        <section class="headerWrapper" id="headerWrapper">
+          <div class="headerContainer hero epic-orange" id="headerContainer">
+            <div class="headerTitle" id="headerTitle">
+              <span
+                class="headerTitlePart1 primary-hero-heading"
+                id="headerTitlePart1"
+              ></span>
+              <span
+                class="headerTitlePart2 primary-hero-heading red-highlight"
+                id="headerTitlePart2"
+              ></span>
+            </div>
+            <div class="headerTag secondary-hero-heading" id="headerTag"></div>
+            <!-- <div class="divider"></div> -->
+            <div
+              class="headerDescription description-hero-heading"
+              id="headerDescription"
+            ></div>
+            <button
+              class="headerViewWorkButton btn-primary"
+              id="headerViewWorkButton"
+            ></button>
+            <!-- <img class="headerImage" id="headerImage" /> -->
           </div>
-          <div class="headerTag secondary-hero-heading" id="headerTag"></div>
-          <!-- <div class="divider"></div> -->
-          <div
-            class="headerDescription description-hero-heading"
-            id="headerDescription"
-          ></div>
-          <button
-            class="headerViewWorkButton btn-primary"
-            id="headerViewWorkButton"
-          ></button>
-          <!-- <img class="headerImage" id="headerImage" /> -->
-        </div>
+        </section>
       </header>
       <section class="mainContainer" id="mainContainer">
-        <div class="projectSection" id="projectSection">
-          <div class="projectHeader" id="projectHeader">
-            <div class="projectTitle" id="projectTitle"></div>
+        <section class="projectSection" id="projectSection">
+          <div class="projectHeader projects-header" id="projectHeader">
+            <div
+              class="projectTitleSectionContainer section-title cool-teal"
+              id="projectTitleSectionContainer"
+            >
+              <div
+                class="projectSectionTitle section-title-wrapper"
+                id="projectSectionTitle"
+              ></div>
+            </div>
           </div>
           <div class="projectGrid" id="projectGrid">
             <template class="projectBox" id="projectBox">
-              <div class="projectBoxWrapper" id="projectBoxWrapper">
-                <div class="projectTitle" id="projectTitle"></div>
+              <div
+                class="projectBoxWrapper card flex-card"
+                id="projectBoxWrapper"
+              >
+                <div
+                  class="projectTitle secondary-heading"
+                  id="projectTitle"
+                ></div>
                 <div class="projectDescText" id="projectDescText"></div>
                 <button
                   id="projectDetailsIndexPageButton"
-                  class="projectDetailsIndexPageButton"
+                  class="projectDetailsIndexPageButton btn-secondary warm-yellow"
                 ></button>
               </div>
             </template>
           </div>
-        </div>
-        <div class="summery" id="summery">
+        </section>
+        <section class="summery" id="summery">
           <div class="aboutMeContainer" id="aboutMeContainer">
             <div class="aboutHeader" id="aboutHeader">
               <div class="aboutTitle" id="aboutTitle"></div>
@@ -102,8 +118,8 @@
               </template>
             </div>
           </div>
-        </div>
-        <div class="contact" id="contact">
+        </section>
+        <section class="contact" id="contact">
           <div class="contactHeader" id="contentHeader">
             <div class="contactTitle" id="contactTitle"></div>
           </div>
@@ -123,7 +139,7 @@
               </div>
             </template>
           </div>
-        </div>
+        </section>
       </section>
       <footer class="footer" id="footer">
         <div id="copyrightSection" class="copyrightSection"></div>

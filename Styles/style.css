@@ -256,12 +256,21 @@ body {
   flex-direction: column;
 }
 
+.headerWrapper {
+  height: 100vh;
+  max-width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .headerContainer {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  width: 60%;
+  width: 70%;
   min-width: 23rem;
   position: relative;
   gap: 1rem;
@@ -275,9 +284,9 @@ body {
 }
 
 .headerDescription {
-  /* max-width: 33rem; */
+  max-width: 95%;
   /* border: 1px solid red; */
-  padding: 0.5rem 0;
+  padding: 0.7rem 0;
 }
 
 .headerViewWorkButton {
@@ -296,51 +305,41 @@ body {
 
 /* -- mainContainer section start -- */
 .mainContainer {
-  max-width: 80rem;
-  border: 1px solid #333;
-  /* background-color: var(--greenFeint); */
-  /* margin: 1rem auto; */
+  max-width: 80%;
+  margin: auto;
+  /* border: 1px solid #d41717; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
   gap: 1.5rem;
 }
 
 /* -- project section start -- */
 .projectSection {
-  width: 80%;
-  border: 1px solid #11aa86;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   padding: 1rem;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .projectGrid {
-  /* width: 100%; */
+  width: 100%;
   display: grid;
   align-items: center;
-  /* justify-content: center; */
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
-}
-
-.projectBox {
-  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  gap: 3rem;
 }
 
 .projectBoxWrapper {
-  border: 1px solid #219ace;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 0.5rem;
+}
+
+.projectDescText {
+  font-size: clamp(1rem, 2vw, 1rem);
+  color: var(--text-dark);
 }
 /* -- project section end -- */
 
