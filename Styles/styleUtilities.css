@@ -25,6 +25,11 @@
   box-shadow: 16px 16px 0px var(--shadow);
 }
 
+.card:hover .number-box {
+  padding: 21px 5px 3px 23px;
+  box-shadow: inset 16px 16px 0px var(--shadow);
+}
+
 .flex-card {
   padding: 2rem;
   display: flex;
@@ -164,6 +169,7 @@
   font-weight: 600;
   padding: 17px 9px 7px 19px;
   transform: translate(23.5px, -5px);
+  transition: padding 300ms linear, box-shadow 300ms linear;
 }
 
 .label-box-highlight {
