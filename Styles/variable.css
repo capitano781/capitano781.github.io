@@ -1,6 +1,7 @@
 :root {
   /* Theme colors */
   --darkBg: #36384e;
+  --transparent: #00000000;
 
   --primary: #f4f1de; /* off-white / cards background */
   --accent: #f95738; /* strong coral-red */
@@ -12,6 +13,9 @@
   --text-dark: #1f1f1f;
   --text-light: #f4f1de;
   --border: #000000;
+  --shadow: #000000;
+
+  --card-altL: #f4f1de;
 
   /* Button colors */
 

@@ -7,7 +7,7 @@
     "Header_Tag": "Frontend Engineer | MERN Stack",
     "Header_Description": "I build scalable React applications and maintainable UI systems that prioritize clean architecture, performance, and real-world product needs.",
     "Header_ViewWorkButtonLabel": "View my work",
-    "Header_Image_Url": "/assets/images/illustrations/lp1-clipped.png",
+    "Header_Image_Url": "/assets/images/illustrations/RE.png",
     "Project_Section": {
         "Title": "Projects",
         "ProjectSectionLabels": {
@@ -19,7 +19,7 @@
         },
         "Projects": [
             {
-                "Title": "UST Portfolio Market Risk VaR Calculator",
+                "Title": "Risk VaR Calculator",
                 "OnelineDescription": "A robust tool for calculating Value at Risk (VaR) for an UST (United States Treasury) Portfolio, employing a C# thick client GUI with a Python FastAPI ",
                 "indexPageButtonLabel": "Learn more",
                 "backToHomeButtonLabel": "Back to Portfolio",
@@ -317,6 +317,105 @@
                     "SourceCodeLink": "",
                     "SourceCodeLinkLabel": "view source code"
                 }
+            },
+            {
+                "Title": "UST Portfolio Market Risk VaR Calculator",
+                "OnelineDescription": "A robust tool for calculating Value at Risk (VaR) for an UST (United States Treasury) Portfolio, employing a C# thick client GUI with a Python FastAPI ",
+                "indexPageButtonLabel": "Learn more",
+                "backToHomeButtonLabel": "Back to Portfolio",
+                "BriefDescription": "A robust tool for calculating Value at Risk (VaR) for an UST (United States Treasury) Portfolio, employing a C# thick client GUI with a Python FastAPI server backend and SQL Server database. This application helps investors analyze and optimize their portfolio's market risk.",
+                "Overview": [
+                    {
+                        "Name": "",
+                        "Description": "The application is designed to allow users to construct a portfolio of US Treasury securities and analyze its market risk using Value at Risk (VaR) calculations. The following UST data is downloaded from the US Treasury portal: 4-Week, 8-Week, 13-Week, 26-Week, and 52-Week securities."
+                    },
+                    {
+                        "Name": "",
+                        "Description": "Users can define a fixed income portfolio by assigning weights to these different securities, ensuring the sum of the weights equals 1.0. The C# GUI then instructs the Python API server to calculate VaR for this portfolio using two methods:"
+                    },
+                    {
+                        "Name": "Historical Simulation:",
+                        "Description": "A non-parametric approach using historical price data."
+                    },
+                    {
+                        "Name": "Parametric Method:",
+                        "Description": "A statistical approach assuming a normal distribution of returns."
+                    }
+                ],
+                "KeyFeatures": [
+                    {
+                        "Name": "C# Thick Client GUI",
+                        "Description": "User-friendly interface for easy portfolio construction, data input, and result visualization."
+                    },
+                    {
+                        "Name": "Python FastAPI Backend:",
+                        "Description": "High-performance API for serving VaR calculations and data retrieval."
+                    },
+                    {
+                        "Name": "SQL Server Database:",
+                        "Description": "Secure and scalable data storage for instrument data, portfolio information, and historical market data."
+                    },
+                    {
+                        "Name": "Comprehensive VaR Calculations:",
+                        "Description": "Supports Historical Simulation and Parametric VaR methodologies with adjustable confidence levels."
+                    }
+                ],
+                "TechnologiesUsed": [
+                    {
+                        "Category": "Frontend:",
+                        "Descriptions": [
+                            "C#",
+                            "(Windows Forms)"
+                        ]
+                    },
+                    {
+                        "Category": "Backend:",
+                        "Descriptions": [
+                            "Python",
+                            "FastAPI",
+                            "Uvicorn"
+                        ]
+                    },
+                    {
+                        "Category": "Database:",
+                        "Descriptions": [
+                            "SQL",
+                            "Server"
+                        ]
+                    },
+                    {
+                        "Category": "API Architecture:",
+                        "Descriptions": ["RESTful APIs"]
+                    }
+                ],
+                "ChallengesAndLearnings": [
+                    {
+                        "Name": "Cross-Platform Integration:",
+                        "Description": "Integrating C# GUI with Python backend required efficient data serialization and API design."
+                    },
+                    {
+                        "Name": "Performance Optimization:",
+                        "Description": "Optimizing Python code for efficient VaR calculations to provide near-real-time results."
+                    },
+                    {
+                        "Name": "Data Handling:",
+                        "Description": "Designing a robust database schema in SQL Server to store and retrieve large amounts of historical market data."
+                    },
+                    {
+                        "Name": "User Interface:",
+                        "Description": "Building a user-friendly C# interface for interacting with the VaR calculator and visualizing results."
+                    }
+                ],
+                "showScreenshotSection": false,
+                "ScreenShots": [
+                    {
+                        "src": ""
+                    }
+                ],
+                "SourceCodeData": {
+                    "SourceCodeLink": "",
+                    "SourceCodeLinkLabel": "view source code"
+                }
             }
         ]
     },
@@ -378,16 +477,7 @@
                 "Category": "Methodologies:",
                 "Descriptions": [
                     "Agile",
-                    "Scrum",
-                    "dasdasdasd"
-                ]
-            },
-            {
-                "Category": "Hobbies:",
-                "Descriptions": [
-                    "adwd",
-                    "Sawdadcrum",
-                    "dasdaawdawdwasdasd"
+                    "Scrum"
                 ]
             }
         ]

@@ -16,6 +16,9 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   background-color: var(--darkBg);
+  /* background: url(/assets/images/bg/tealMEsh.jpg) center center;
+  background-attachment: fixed;
+  background-size: cover; */
   color: var(--text-light);
   /* cursor: url("/assets/images/illustrations/p1.png") 4 4, auto !important; */
   scroll-behavior: smooth;
@@ -245,6 +248,10 @@ body {
 
 .rootContainer {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* -- Header section start -- */
@@ -306,13 +313,11 @@ body {
 /* -- mainContainer section start -- */
 .mainContainer {
   max-width: 80%;
-  margin: auto;
-  /* border: 1px solid #d41717; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 7rem;
 }
 
 /* -- project section start -- */
@@ -322,34 +327,115 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 1rem;
+  padding: 0rem;
   gap: 2rem;
 }
 
 .projectGrid {
   width: 100%;
   display: grid;
-  align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  align-items: stretch;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
   gap: 3rem;
 }
 
 .projectBoxWrapper {
 }
 
+.projectWrapperRow1 {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  position: relative;
+}
+
+.projectNumber {
+  /* position: absolute;
+  top: -50px;
+  right: -70px; */
+}
+
+.projectTitleBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  /* padding-top: 2rem; */
+}
+
+.projectTitlImage {
+  width: clamp(4rem, 2vw, 5rem);
+}
+
+.projectTitlImage {
+}
+
+.projectTitle {
+  /* width: 70%; */
+}
+
+.projectWrapperRow2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.projectImage {
+}
+
 .projectDescText {
   font-size: clamp(1rem, 2vw, 1rem);
   color: var(--text-dark);
 }
+
+.projectWrapperRow3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.projectMadeWithBox,
+.projectRoleBox {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  border-bottom: 2px solid;
+  flex-wrap: wrap;
+}
+
+.projectMadeWithItems,
+.projectRoleItems {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  /* grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr)); */
+}
+
+.projectWrapperRow4 {
+  margin-top: 0.5rem;
+}
+
 /* -- project section end -- */
 
 /* -- summery section start -- */
 .summery {
-  width: 80%;
+  width: 100%;
   border: 1px solid #333;
   display: flex;
   align-items: stretch;
-  gap: 1rem;
+  gap: 3rem;
 }
 
 /* -- aboutMe section start -- */
@@ -359,8 +445,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 1rem;
-  padding: 1rem;
+  gap: 2rem;
   border: 1px solid #333;
 }
 
@@ -386,8 +471,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 1rem;
-  padding: 1rem;
+  gap: 2rem;
   border: 1px solid #333;
 }
 
@@ -448,10 +532,9 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 1rem;
-  gap: 1rem;
+  gap: 2rem;
   border: 1px solid #333;
-  width: 80%;
+  width: 100%;
 }
 /* -- contact section end -- */
 
