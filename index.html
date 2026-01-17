@@ -59,10 +59,7 @@
               class="projectTitleSectionContainer section-title cool-teal"
               id="projectTitleSectionContainer"
             >
-              <div
-                class="projectSectionTitle section-title-wrapper"
-                id="projectSectionTitle"
-              ></div>
+              <div class="projectSectionTitle" id="projectSectionTitle"></div>
             </div>
           </div>
           <div class="projectGrid" id="projectGrid">
@@ -71,25 +68,63 @@
                 class="projectBoxWrapper card flex-card"
                 id="projectBoxWrapper"
               >
-                <div
-                  class="projectTitle secondary-heading"
-                  id="projectTitle"
-                ></div>
-                <div class="projectDescText" id="projectDescText"></div>
-                <button
-                  id="projectDetailsIndexPageButton"
-                  class="projectDetailsIndexPageButton btn-secondary warm-yellow"
-                ></button>
+                <div class="projectWrapperRow1">
+                  <div class="projectNumber number-box">01</div>
+                  <div class="projectTitleBox">
+                    <img
+                      class="projectTitlImage"
+                      id="projectTitlImage"
+                      src="/assets/images/illustrations/RE.png"
+                    />
+                    <div
+                      class="projectTitle secondary-heading"
+                      id="projectTitle"
+                    ></div>
+                  </div>
+                </div>
+                <div class="projectWrapperRow2">
+                  <!-- <img
+                    class="projectImage"
+                    id="projectImage"
+                    src="/assets/images/illustrations/RE.png"
+                  /> -->
+                  <div class="projectDescText" id="projectDescText"></div>
+                </div>
+                <div class="projectWrapperRow3">
+                  <div class="projectMadeWithBox">
+                    <div class="projectMadeWithLabel label-box-highlight">
+                      Made with:
+                    </div>
+                    <div class="projectMadeWithItems">
+                      <div class="projectMadeWithItem label-highlight">
+                        Javascript
+                      </div>
+                      <div class="projectMadeWithItem label-highlight">
+                        HTML
+                      </div>
+                      <div class="projectMadeWithItem label-highlight">CSS</div>
+                      <div class="projectMadeWithItem label-highlight">
+                        Google Fonts
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="projectWrapperRow4">
+                  <button
+                    id="projectDetailsIndexPageButton"
+                    class="projectDetailsIndexPageButton btn-secondary warm-yellow"
+                  ></button>
+                </div>
               </div>
             </template>
           </div>
         </section>
         <section class="summery" id="summery">
           <div class="aboutMeContainer" id="aboutMeContainer">
-            <div class="aboutHeader" id="aboutHeader">
+            <div class="aboutHeader section-title cool-teal" id="aboutHeader">
               <div class="aboutTitle" id="aboutTitle"></div>
             </div>
-            <div class="aboutContent" id="aboutContent">
+            <div class="aboutContent card flex-card" id="aboutContent">
               <template
                 class="aboutSummeryDescription"
                 id="aboutSummeryDescription"
@@ -102,10 +137,13 @@
             </div>
           </div>
           <div class="techSkillContainer" id="techSkillContainer">
-            <div class="techSkillHeader" id="techSkillHeader">
+            <div
+              class="techSkillHeader section-title cool-teal"
+              id="techSkillHeader"
+            >
               <div class="techSkillTitle" id="techSkillTitle"></div>
             </div>
-            <div class="techSkillContent" id="techSkillContent">
+            <div class="techSkillContent card flex-card" id="techSkillContent">
               <template class="skillGroup" id="skillGroup">
                 <div class="skillGroupWrapper" id="skillGroupWrapper">
                   <div class="skillCategory" id="skillCategory"></div>
@@ -120,10 +158,10 @@
           </div>
         </section>
         <section class="contact" id="contact">
-          <div class="contactHeader" id="contentHeader">
+          <div class="contactHeader section-title cool-teal" id="contentHeader">
             <div class="contactTitle" id="contactTitle"></div>
           </div>
-          <div class="contactContent" id="contactContent">
+          <div class="contactContent card flex-card" id="contactContent">
             <template class="contactDescription" id="contactDescription">
               <div
                 class="contactDescriptionWrapper"
