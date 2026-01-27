@@ -1,29 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap");
+
 :root {
   /* Theme colors */
-  --darkBg: #36384e;
-  --transparent: #00000000;
+  --bg-main: #eef1f5;
+  --card-bg: #f8fafc;
 
-  --primary: #f4f1de; /* off-white / cards background */
-  --accent: #f95738; /* strong coral-red */
-  --secondary: #43bccd; /* cyan-blue */
-  --highlight: #ffd166; /* warm yellow */
-
-  --text-accent: #f4f1de;
-
-  --text-dark: #1f1f1f;
-  --text-light: #f4f1de;
-  --border: #000000;
-  --shadow: #000000;
-
-  --card-altL: #f4f1de;
+  --text-primary: #2e3440; /* headings */
+  --text-secondary: #5f6775; /* body text */
+  --text-muted: #8a92a3; /* meta, tech stack */
 
   /* Button colors */
+  --accent-primary: #5b7cfa; /* soft blue */
+  --accent-secondary: #f2a365; /* warm orange - infographics */
+  --accent-tertiary: #5fb3a2; /* muted teal */
+
+  /* shadows */
+  --shadow-soft: 8px 8px 16px rgba(0, 0, 0, 0.08),
+    -8px -8px 16px rgba(255, 255, 255, 0.9);
+  --shadow-hover: 12px 12px 24px rgba(0, 0, 0, 0.12),
+    -12px -12px 24px rgba(255, 255, 255, 1);
+  --shadow-inset: inset 4px 4px 8px rgba(0, 0, 0, 0.12),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.9);
+
+  /* Fonts */
+  --ff-heading: "Space Grotesk", sans-serif;
+  --ff-base: "Inter", sans-serif;
 
   /* Font weight */
-  --light: 300;
-  --slightly-bold: 400;
-  --bold: 500;
-  --very-bold: 600;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* Font size */
+  --fs-100: 0.75rem;
+  --fs-200: 0.875rem;
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.5rem;
+  --fs-700: 1.875rem;
+  --fs-800: 2.25rem;
+  --fs-900: 3rem;
+
+  /* Line height */
+  --lh-tight: 1.1;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.7;
+
+  /* Letter spacing */
+  --ls-tight: -0.02em;
+  --ls-normal: 0;
+  --ls-wide: 0.05em;
+  --ls-wider: 0.1em;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+
+  /* core spacings */
+  --pad-card: var(--space-4);
+  --pad-section: var(--space-6);
+  --mar-section: var(--space-6);
 }
 
 [data-theme="dark"] {

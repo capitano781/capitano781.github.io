@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 @import "variable.css";
 
 * {
@@ -6,201 +5,14 @@
   box-sizing: border-box;
 }
 
-/* Utility classes start */
-
-/* Utility classes start */
-
 html,
 body {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: var(--ff-base);
   font-optical-sizing: auto;
-  font-style: normal;
-  background-color: var(--darkBg);
-  /* background: url(/assets/images/bg/tealMEsh.jpg) center center;
-  background-attachment: fixed;
-  background-size: cover; */
-  color: var(--text-light);
-  /* cursor: url("/assets/images/illustrations/p1.png") 4 4, auto !important; */
+  color: var(--text-secondary);
+  background-color: var(--bg-main);
   scroll-behavior: smooth;
 }
-
-/* .spinner {
-  width: 50px;
-  height: 50px;
-  border: 4px solid rgba(255, 255, 255, 0.1);
-  border-left-color: #008080;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-} */
-
-/* @keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-/* .neubrutalist-card {
-  display: block;
-  width: 400px;
-  height: 200px;
-  background-color: #008080;
-  border: 3px solid #000000;
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 8px 8px 0px #000000;
-  transition: all 0.2s ease;
-  cursor: pointer;
-} */
-
-/* .neubrutalist-card:hover {
-  transform: translate(4px, 4px);
-  box-shadow: 4px 4px 0px #000000;
-} */
-
-/* .glass-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 500px;
-  height: 200px;
-  background: rgb(51 0 56 / 10%);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(13px);
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px rgb(0 0 0), inset 0 1px 0px rgb(4 255 248),
-    inset 0 3px 0 0 rgb(232 16 16 / 30%), inset 0 0 0px 0px rgb(124 10 10);
-  position: relative;
-  transform: skewX(-15deg);
-  overflow: hidden;
-} */
-
-/* .innerGlass {
-  transform: skewX(15deg);
-  border: 1px solid #fff;
-} */
-
-/* .glass-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.8),
-    transparent
-  );
-} */
-
-/* .glass-card::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1px;
-  height: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.8),
-    transparent,
-    rgba(255, 255, 255, 0.3)
-  );
-} */
-
-/* 4. Un-skew the content so text stays upright */
-/* .glass-content {
-  transform: skewX(15deg);
-  color: #ffffff;
-  font-family: "Segoe UI", sans-serif;
-} */
-
-/* .glass-content h2 {
-  margin-top: 0;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--teal-accent);
-} */
-
-/* .loader-wrapper {
-  position: relative;
-  width: 120px;
-  height: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-/* 1. The Glass Circle */
-/* .loader-glass {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  z-index: 2;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-} */
-
-/* 2. The Orbiting Orbs */
-/* .orb {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  filter: blur(15px);
-  z-index: 1;
-  animation: orbit 2.5s infinite linear;
-} */
-
-/* .orb-teal {
-  background: var(--teal);
-  top: 0;
-}
-
-.orb-violet {
-  background: var(--violet);
-  bottom: 0;
-  animation-delay: -1.25s; 
-} */
-
-/* @keyframes orbit {
-  0% {
-    transform: rotate(0deg) translateX(45px) rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg) translateX(45px) rotate(-360deg);
-  }
-} */
-
-/* 3. Minimal Center Icon (Optional) */
-/* .loader-wrapper::after {
-  content: "";
-  width: 10px;
-  height: 10px;
-  background: white;
-  border-radius: 50%;
-  z-index: 3;
-  box-shadow: 0 0 15px white;
-  animation: pulse 1.5s infinite ease-in-out;
-} */
-
-/* @keyframes pulse {
-  0%,
-  100% {
-    transform: scale(1);
-    opacity: 0.5;
-  }
-  50% {
-    transform: scale(1.5);
-    opacity: 1;
-  }
-} */
 
 .loaderOverlay {
   height: 100vh;
@@ -257,10 +69,12 @@ body {
 /* -- Header section start -- */
 .header {
   height: 100vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  /* border: 1px solid red; */
 }
 
 .headerWrapper {
@@ -270,6 +84,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  /* border: 1px solid red; */
 }
 
 .headerContainer {
