@@ -12,10 +12,12 @@
 
 html,
 body {
+  margin: 0;
+  padding: 0;
   font-family: "Space Grotesk", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  background-color: var(--darkBg);
+  /* background-color: var(--darkBg); */
   /* background: url(/assets/images/bg/tealMEsh.jpg) center center;
   background-attachment: fixed;
   background-size: cover; */
@@ -24,183 +26,35 @@ body {
   scroll-behavior: smooth;
 }
 
-/* .spinner {
-  width: 50px;
-  height: 50px;
-  border: 4px solid rgba(255, 255, 255, 0.1);
-  border-left-color: #008080;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-} */
-
-/* @keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-/* .neubrutalist-card {
-  display: block;
-  width: 400px;
-  height: 200px;
-  background-color: #008080;
-  border: 3px solid #000000;
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 8px 8px 0px #000000;
-  transition: all 0.2s ease;
-  cursor: pointer;
-} */
-
-/* .neubrutalist-card:hover {
-  transform: translate(4px, 4px);
-  box-shadow: 4px 4px 0px #000000;
-} */
-
-/* .glass-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 500px;
-  height: 200px;
-  background: rgb(51 0 56 / 10%);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(13px);
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px rgb(0 0 0), inset 0 1px 0px rgb(4 255 248),
-    inset 0 3px 0 0 rgb(232 16 16 / 30%), inset 0 0 0px 0px rgb(124 10 10);
-  position: relative;
-  transform: skewX(-15deg);
-  overflow: hidden;
-} */
-
-/* .innerGlass {
-  transform: skewX(15deg);
-  border: 1px solid #fff;
-} */
-
-/* .glass-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.8),
-    transparent
-  );
-} */
-
-/* .glass-card::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1px;
-  height: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.8),
-    transparent,
-    rgba(255, 255, 255, 0.3)
-  );
-} */
-
-/* 4. Un-skew the content so text stays upright */
-/* .glass-content {
-  transform: skewX(15deg);
-  color: #ffffff;
-  font-family: "Segoe UI", sans-serif;
-} */
-
-/* .glass-content h2 {
-  margin-top: 0;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--teal-accent);
-} */
-
-/* .loader-wrapper {
-  position: relative;
-  width: 120px;
-  height: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-/* 1. The Glass Circle */
-/* .loader-glass {
-  position: absolute;
+body {
   width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  z-index: 2;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-} */
-
-/* 2. The Orbiting Orbs */
-/* .orb {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  filter: blur(15px);
-  z-index: 1;
-  animation: orbit 2.5s infinite linear;
-} */
-
-/* .orb-teal {
-  background: var(--teal);
-  top: 0;
+  overflow: hidden;
 }
 
-.orb-violet {
-  background: var(--violet);
-  bottom: 0;
-  animation-delay: -1.25s; 
-} */
+.bg-video {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  /* overflow: hidden; */
+}
 
-/* @keyframes orbit {
-  0% {
-    transform: rotate(0deg) translateX(45px) rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg) translateX(45px) rotate(-360deg);
-  }
-} */
+.bg-video video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 
-/* 3. Minimal Center Icon (Optional) */
-/* .loader-wrapper::after {
-  content: "";
-  width: 10px;
-  height: 10px;
-  background: white;
-  border-radius: 50%;
-  z-index: 3;
-  box-shadow: 0 0 15px white;
-  animation: pulse 1.5s infinite ease-in-out;
-} */
-
-/* @keyframes pulse {
-  0%,
-  100% {
-    transform: scale(1);
-    opacity: 0.5;
-  }
-  50% {
-    transform: scale(1.5);
-    opacity: 1;
-  }
-} */
+.bg-overlay {
+  position: absolute;
+  inset: 1;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  /* background-color: #020e14a3; */
+  background-color: #1402025c;
+  /* background: url(/assets/images/bg/un1.jpg) center center/cover; */
+}
 
 .loaderOverlay {
   height: 100vh;
@@ -243,6 +97,140 @@ body {
 }
 
 /* ====================================================
+  Menu bar CSS START
+=======================================================*/
+
+.menuBar {
+  position: fixed;
+  margin: auto 0;
+  bottom: 7%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  padding: 0 1rem;
+  background: var(--bg-menuBar);
+  backdrop-filter: blur(var(--px-10)) saturate(150%);
+  -webkit-backdrop-filter: blur(var(--px-10)) saturate(150%);
+  border-radius: var(--px-10);
+  border: var(--px-4) solid var(--glass-card-border);
+  box-shadow: var(--bs-menuBar);
+}
+.menuBarContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 2rem;
+}
+.menuItem {
+  width: 120px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  color: var(--text-primary);
+  font-weight: var(--fw-medium);
+  font-family: var(--ff-heading);
+  text-shadow: var(--text-shadow);
+  text-transform: uppercase;
+  letter-spacing: var(--px-2);
+  border-radius: var(--px-5);
+  cursor: pointer;
+  background: var(--transparent);
+  z-index: 1;
+}
+
+.menuActive {
+  box-shadow: var(--bs-active-menuBar);
+}
+
+.menuItem:hover {
+}
+
+.menuSlider {
+  height: 170%;
+  width: 120px;
+  background: var(--bg-menuSlider);
+  position: absolute;
+  top: 50%;
+  left: 304px;
+  transform: translateY(-50%);
+  border-radius: 5px;
+  z-index: -1;
+  transition: left 0.5s ease, background 0.25s ease-in;
+}
+
+/* =======================================================*/
+
+/* ====================================================
+  Menu bar CSS START
+=======================================================*/
+
+.hamburgerIcon {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  width: 3.5rem;
+  height: 3rem;
+  border-radius: 5px;
+  background: var(--bg-menuSlider);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.line {
+  position: absolute;
+  left: 50%;
+  height: 4px;
+  width: 60%;
+  transition: transform 0.8s ease-in-out, background 0.5s ease;
+  background: #051f2a;
+}
+
+.l-up {
+  top: 0;
+
+  transform: translate(-50%, 300%);
+}
+.l-mid {
+  position: absolute;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+}
+.l-dw {
+  position: absolute;
+  bottom: 0;
+
+  transform: translate(-50%, -300%);
+}
+
+.hamburgerIcon:hover .l-up {
+  transform: translate(-16px, 20px) rotateZ(398deg);
+}
+.hamburgerIcon:hover .l-mid {
+  transform: translate(-50%, -50%) rotateZ(-222deg);
+  background: #289ccd;
+}
+.hamburgerIcon:hover .l-dw {
+  transform: translate(-20px, -20px) rotateZ(398deg);
+}
+
+.hamburgerMenu {
+  z-index: 1;
+  position: absolute;
+}
+
+.hamburgerMenuContainer {
+}
+
+.hamburgerMenuItem {
+}
+
+/* =======================================================*/
+
+/* ====================================================
   Main CSS START
 =======================================================*/
 
@@ -252,11 +240,28 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* border: 5px solid red; */
+  overflow: hidden;
+  height: 85vh;
+  position: fixed;
+  inset: 0;
+  /* border: 4px solid red; */
 }
 
-/* -- Header section start -- */
+.view {
+  position: absolute;
+  inset: 0;
+  transform: scale(0.001);
+  opacity: 0;
+  transition: transform 0.5s ease-out;
+}
+
+/* ====================================================
+  Hero Section
+=======================================================*/
+
 .header {
-  height: 100vh;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -264,7 +269,7 @@ body {
 }
 
 .headerWrapper {
-  height: 100vh;
+  height: 100%;
   max-width: 80%;
   display: flex;
   align-items: center;
@@ -284,10 +289,10 @@ body {
 }
 
 .headerTitle {
+  /* color: var(--text-primary); */
 }
 
 .headerTag {
-  /* padding: 2rem 0; */
 }
 
 .headerDescription {
@@ -308,248 +313,123 @@ body {
   bottom: 0;
 }
 
-/* -- Header section End -- */
+/*=======================================================*/
 
-/* -- mainContainer section start -- */
-.mainContainer {
+/* ====================================================
+  Project Section
+=======================================================*/
+
+/* .mainContainer {
   max-width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 7rem;
-}
+} */
 
 /* -- project section start -- */
 .projectSection {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 2px solid #4fca4f; */
+}
+
+.projectSectionContainer {
+  max-width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0rem;
+  gap: 2rem;
+  overflow-y: scroll;
+  /* border: 3px solid #f6ff00; */
+  /* background: #333; */
+}
+
+/* ======================================== */
+
+/* ====================================================
+  About Section
+=======================================================*/
+
+.aboutMeSection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 4px solid #4fca4f; */
+}
+
+.aboutMeContainer {
+  max-width: 80%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   padding: 0rem;
   gap: 2rem;
+  /* border: 3px solid #f6ff00; */
+  /* background: #333; */
 }
 
-.projectGrid {
-  width: 100%;
-  display: grid;
-  align-items: stretch;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-  gap: 3rem;
-}
+/* ======================================== */
 
-.projectBoxWrapper {
-}
+/* ====================================================
+  Technical skill Section
+=======================================================*/
 
-.projectWrapperRow1 {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  width: 100%;
-  position: relative;
-}
-
-.projectNumber {
-  /* position: absolute;
-  top: -50px;
-  right: -70px; */
-}
-
-.projectTitleBox {
+.techSkillSection {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 1rem;
-  /* padding-top: 2rem; */
-}
-
-.projectTitlImage {
-  width: clamp(4rem, 2vw, 5rem);
-}
-
-.projectTitlImage {
-}
-
-.projectTitle {
-  /* width: 70%; */
-}
-
-.projectWrapperRow2 {
-  display: flex;
-  align-items: center;
   justify-content: center;
-  width: 100%;
+  /* border: 4px solid #4fca4f; */
 }
 
-.projectImage {
-}
-
-.projectDescText {
-  font-size: clamp(1rem, 2vw, 1rem);
-  color: var(--text-dark);
-}
-
-.projectWrapperRow3 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  width: 100%;
-  gap: 1rem;
-}
-
-.projectMadeWithBox,
-.projectRoleBox {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 0.5rem;
-  border-bottom: 2px solid;
-  flex-wrap: wrap;
-}
-
-.projectMadeWithItems,
-.projectRoleItems {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  /* grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr)); */
-}
-
-.projectWrapperRow4 {
-  margin-top: 0.5rem;
-}
-
-/* -- project section end -- */
-
-/* -- summery section start -- */
-.summery {
-  width: 100%;
-  border: 1px solid #333;
-  display: flex;
-  align-items: stretch;
-  gap: 3rem;
-}
-
-/* -- aboutMe section start -- */
-.aboutMeContainer {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 2rem;
-  border: 1px solid #333;
-}
-
-.aboutContent {
-  width: 100%;
-}
-
-.aboutSummeryDescription {
-  width: 100%;
-}
-
-.aboutSummeryDescriptionWrapper {
-  display: block;
-  /* border: 1px solid; */
-}
-
-/* -- aboutMe section end -- */
-
-/* -- techSkill section start -- */
 .techSkillContainer {
-  flex: 1.5;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 2rem;
-  border: 1px solid #333;
-}
-
-.techSkillContent {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 0rem;
-  width: 100%;
-}
-
-.skillGroup {
-  width: 100%;
-}
-
-.skillGroupWrapper {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  /* gap: 1rem; */
-  width: 100%;
-  border: 1px solid #d4d4d4;
-  border-left: none;
-  border-right: none;
-  padding: 0.5rem;
-}
-
-.skillCategory {
-  width: 175px;
-}
-
-.skillTags {
-  width: 100%;
-}
-
-.skillTag {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 0.5rem;
-  width: 100%;
-}
-
-.skillTagWrapper {
-  background: #eeefed;
-  border: 1px solid #b6b7b1;
-  padding: 0rem 0.5rem;
-  text-wrap: nowrap;
-}
-/* -- techSkill section end -- */
-/* -- summery section end -- */
-
-/* -- contact section start -- */
-.contact {
+  max-width: 80%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  padding: 0rem;
   gap: 2rem;
-  border: 1px solid #333;
-  width: 100%;
+  /* border: 3px solid #f6ff00; */
+  /* background: #333; */
 }
-/* -- contact section end -- */
 
-/* -- mainContainer section end -- */
+/* ======================================== */
 
-/* -- footer section end -- */
-.footer {
-  width: 80%;
-  border: 2px solid #333;
+/* ====================================================
+  Contact skill Section
+=======================================================*/
+
+.contactSection {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
-  background: #333;
-  color: #fff;
+  /* border: 4px solid #4fca4f; */
 }
-/* -- footer section end -- */
-/* -- footer section end -- */
+
+.contactSectionContainer {
+  max-width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0rem;
+  gap: 2rem;
+  /* border: 3px solid #f6ff00; */
+  /* background: #3333335c; */
+}
+
+/* ======================================== */
