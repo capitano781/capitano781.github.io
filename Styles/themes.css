@@ -1,5 +1,22 @@
 @import "variable.css";
 
+.calm-blue {
+  --accent: var(--accent-calm-blue);
+  --accent-hover: var(--accent-calm-blue-hover);
+  --text-primary-accent: var(--text-calm-blue-primary);
+  --text-secondary-accent: var(--text-calm-blue-secondary);
+}
+
+.calm-blue .btn-glass {
+  --accent: var(--accent-calm-blue);
+  --accent-hover: var(--accent-calm-blue-hover);
+  --text-primary-accent: var(--black);
+  --text-primary-shadow: var(--black);
+  --btn-border: var(--black);
+}
+
+/* ===================== */
+
 .epic-orange {
   --accent: #ff5a3c;
   --accent-hover: #ff4a2a;
