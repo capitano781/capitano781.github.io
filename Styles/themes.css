@@ -3,8 +3,14 @@
 .calm-blue {
   --accent: var(--accent-calm-blue);
   --accent-hover: var(--accent-calm-blue-hover);
+  --accent-transparent: var(--accent-calm-blue-transparent);
+  --accent-secondary: var(--accent-ocean-green);
+  --accent-secondary-hover: var(--accent-ocean-green-hover);
+  --accent-secondary-transparent: var(--accent-ocean-green-transparent);
   --text-primary-accent: var(--text-calm-blue-primary);
   --text-secondary-accent: var(--text-calm-blue-secondary);
+  --bg-transparent-accent: var(--bg-semi-transparent-black);
+  --bg-hamburger-line: var(--bg-hamburger-calm-blue-line);
 }
 
 .calm-blue .btn-glass {

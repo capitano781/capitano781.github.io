@@ -1,218 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/style.css" />
-    <link rel="stylesheet" href="/Styles//styleUtilities.css" />
-    <script type="module" src="scripts/script.js"></script>
-    <title>Capitano781 | MERN Stack Developer</title>
-  </head>
-  <body>
-    <div class="loaderOverlay" id="loaderOverlay">
-      <div class="loaderBg"></div>
-      <div class="glass-card">
-        <div class="innerGlass">
-          <div class="spinner"></div>
-        </div>
-      </div>
-      <!-- <div class="neubrutalist-card"></div> -->
-    </div>
-    <div class="bg-video">
-      <video id="bgVideo" autoplay muted loop playsinline>
-        <source src="/assets/video/vid1.mp4" type="video/mp4" />
-      </video>
-      <div class="bg-overlay"></div>
-    </div>
-    <div class="hamburgerIcon">
-      <div class="line l-up"></div>
-      <div class="line l-mid"></div>
-      <div class="line l-dw"></div>
-    </div>
-    <div class="hamburgerMenu">
-      <div class="hamburgerMenuContainer">
-        <div class="hamburgerMenuItem">Home</div>
-        <div class="hamburgerMenuItem">Work</div>
-        <div class="hamburgerMenuItem">Skill</div>
-        <div class="hamburgerMenuItem">About</div>
-        <div class="hamburgerMenuItem">Contact</div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/styles/style.css" />
+  <link rel="stylesheet" href="/Styles//styleUtilities.css" />
+  <script type="module" src="scripts/script.js"></script>
+  <title>Capitano781 | MERN Stack Developer</title>
+</head>
+
+<body>
+  <div class="loaderOverlay hideElementWithScale" id="loaderOverlay">
+    <div class="loaderBg"></div>
+    <div class="glass-card">
+      <div class="innerGlass">
+        <div class="spinner"></div>
       </div>
     </div>
-    <div class="menuBar" id="menuBar">
-      <div class="menuBarContainer" id="menuBarContainer">
-        <div class="menuSlider" id="menuSlider"></div>
-        <div class="menuItem" id="menuItem">Contact</div>
-        <div class="menuItem" id="menuItem">About</div>
-        <div class="menuItem menuActive" id="menuItem">Home</div>
-        <div class="menuItem" id="menuItem">Work</div>
-        <div class="menuItem" id="menuItem">Skill</div>
-      </div>
+    <!-- <div class="neubrutalist-card"></div> -->
+  </div>
+  <div class="bg-video calm-blue">
+    <video id="bgVideo" autoplay muted loop playsinline>
+      <source src="/assets/video/vid1.mp4" type="video/mp4" />
+    </video>
+    <div class="bg-overlay"></div>
+  </div>
+  <div class="hamburgerIcon calm-blue" id="hamburgerIcon">
+    <div class="line l-up"></div>
+    <div class="line l-mid"></div>
+    <div class="line l-dw"></div>
+  </div>
+  <div class="hamburgerMenu calm-blue hideElementWithOpacity" id="hamburgerMenu">
+    <div class="hamburgerMenuContainer">
+      <button class="hamburgerMenuItem" id="hamburgerMenu_home">Home</button>
+      <button class="hamburgerMenuItem" id="hamburgerMenu_work">Work</button>
+      <button class="hamburgerMenuItem" id="hamburgerMenu_skill">
+        Skill
+      </button>
+      <button class="hamburgerMenuItem" id="hamburgerMenu_about">
+        About
+      </button>
+      <button class="hamburgerMenuItem" id="hamburgerMenu_contact">
+        Contact
+      </button>
     </div>
-    <main class="rootContainer hideElement" id="rootContainer">
-      <section class="view contactSection" id="contact">
-        <div class="contactSectionContainer glass-card">
-          <div class="contactHeader section-title cool-teal" id="contentHeader">
-            <div class="contactTitle" id="contactTitle"></div>
+  </div>
+  <div class="menuBar hideElementWithScale" id="menuBar">
+    <div class="menuBarContainer" id="menuBarContainer">
+      <button class="menuSlider" id="menuSlider"></button>
+      <button class="menuItem" id="menu_contact">Contact</button>
+      <button class="menuItem" id="menu_about">About</button>
+      <button class="menuItem menuActive" id="menu_home">Home</button>
+      <button class="menuItem" id="menu_work">Work</button>
+      <button class="menuItem" id="menu_skill">Skill</button>
+    </div>
+  </div>
+  <main class="rootContainer hideElementWithScale" id="rootContainer">
+    <section class="view header" id="home">
+      <section class="headerWrapper" id="headerWrapper">
+        <div class="headerContainer glass-card calm-blue" id="headerContainer">
+          <div class="headerTitle" id="headerTitle">
+            <span class="headerTitlePart1 primary-hero-heading" id="headerTitlePart1"></span>
+            <span class="headerTitlePart2 primary-hero-heading hero-highlight-text" id="headerTitlePart2"></span>
           </div>
-          <div class="contactContent card flex-card" id="contactContent">
-            <template class="contactDescription" id="contactDescription">
-              <div
-                class="contactDescriptionWrapper"
-                id="contactDescriptionWrapper"
-              >
-                <span class="contactText" id="contactText"></span>
-                <a
-                  class="contactLink"
-                  id="contactLink"
-                  href=""
-                  target="_blank"
-                ></a>
-              </div>
-            </template>
-          </div>
+          <div class="headerTag secondary-hero-heading highlight-secondary-text" id="headerTag"></div>
+          <!-- <div class="divider"></div> -->
+          <div class="headerDescription tertiary-hero-heading" id="headerDescription"></div>
+          <button class="headerViewWorkButton btn-glass" id="headerViewWorkButton"></button>
+          <!-- <img class="headerImage" id="headerImage" /> -->
         </div>
       </section>
-      <section class="view aboutMeSection" id="aboutMeContainer">
-        <div class="aboutMeContainer glass-card">
-          <div class="aboutHeader section-title cool-teal" id="aboutHeader">
-            <div class="aboutTitle" id="aboutTitle"></div>
-          </div>
-          <div class="aboutContent card flex-card" id="aboutContent">
-            <template
-              class="aboutSummeryDescription"
-              id="aboutSummeryDescription"
-            >
-              <div
-                class="aboutSummeryDescriptionWrapper"
-                id="aboutSummeryDescriptionWrapper"
-              ></div>
-            </template>
+    </section>
+    <section class="view projectSection activeSection" id="work">
+      <div class="projectSectionContainer glass-card calm-blue">
+        <div class="projectHeader" id="projectHeader">
+          <div class="projectTitleSectionContainer" id="projectTitleSectionContainer">
+            <div class="projectSectionTitle section-heading" id="projectSectionTitle"></div>
+            <div class="projectSectionSecondaryTitle section-sub-heading" id="projectSectionSecondaryTitle"></div>
           </div>
         </div>
-      </section>
-      <section class="view header activeSection" id="header">
-        <section class="headerWrapper" id="headerWrapper">
-          <div
-            class="headerContainer glass-card calm-blue"
-            id="headerContainer"
-          >
-            <div class="headerTitle" id="headerTitle">
-              <span
-                class="headerTitlePart1 primary-hero-heading"
-                id="headerTitlePart1"
-              ></span>
-              <span
-                class="headerTitlePart2 primary-hero-heading hero-highlight-text"
-                id="headerTitlePart2"
-              ></span>
-            </div>
-            <div class="headerTag secondary-hero-heading" id="headerTag"></div>
-            <!-- <div class="divider"></div> -->
-            <div
-              class="headerDescription tertiary-hero-heading"
-              id="headerDescription"
-            ></div>
-            <button
-              class="headerViewWorkButton btn-glass"
-              id="headerViewWorkButton"
-            ></button>
-            <!-- <img class="headerImage" id="headerImage" /> -->
-          </div>
-        </section>
-      </section>
-      <section class="view projectSection" id="projectSection">
-        <div class="projectSectionContainer glass-card">
-          <div class="projectHeader projects-header" id="projectHeader">
-            <div
-              class="projectTitleSectionContainer section-title cool-teal"
-              id="projectTitleSectionContainer"
-            >
-              <div class="projectSectionTitle" id="projectSectionTitle"></div>
-            </div>
-          </div>
-          <div class="projectGrid" id="projectGrid">
-            <template class="projectBox" id="projectBox">
-              <div
-                class="projectBoxWrapper card flex-card"
-                id="projectBoxWrapper"
-              >
-                <div class="projectWrapperRow1">
-                  <div class="projectNumber number-box">01</div>
-                  <div class="projectTitleBox">
-                    <!-- <img
+        <div class="projectGrid" id="projectGrid">
+          <template class="projectBox" id="projectBox">
+            <div class="projectBoxWrapper" id="projectBoxWrapper">
+              <div class="projectWrapperRow1">
+                <div class="projectNumber number-box">01</div>
+                <div class="projectTitleBox">
+                  <!-- <img
                       class="projectTitlImage"
                       id="projectTitlImage"
                       src="/assets/images/illustrations/RE.png"
                     /> -->
-                    <div
-                      class="projectTitle secondary-heading"
-                      id="projectTitle"
-                    ></div>
-                  </div>
+                  <div class="projectTitle secondary-heading" id="projectTitle"></div>
                 </div>
-                <div class="projectWrapperRow2">
-                  <!-- <img
+              </div>
+              <div class="projectWrapperRow2">
+                <!-- <img
                     class="projectImage"
                     id="projectImage"
                     src="/assets/images/illustrations/RE.png"
                   /> -->
-                  <div class="projectDescText" id="projectDescText"></div>
-                </div>
-                <div class="projectWrapperRow3">
-                  <div class="projectMadeWithBox">
-                    <div class="projectMadeWithLabel label-box-highlight">
-                      Made with:
+                <div class="projectDescText" id="projectDescText"></div>
+              </div>
+              <div class="projectWrapperRow3">
+                <div class="projectMadeWithBox">
+                  <div class="projectMadeWithLabel label-box-highlight">
+                    Made with:
+                  </div>
+                  <div class="projectMadeWithItems">
+                    <div class="projectMadeWithItem label-highlight">
+                      Javascript
                     </div>
-                    <div class="projectMadeWithItems">
-                      <div class="projectMadeWithItem label-highlight">
-                        Javascript
-                      </div>
-                      <div class="projectMadeWithItem label-highlight">
-                        HTML
-                      </div>
-                      <div class="projectMadeWithItem label-highlight">CSS</div>
-                      <div class="projectMadeWithItem label-highlight">
-                        Google Fonts
-                      </div>
+                    <div class="projectMadeWithItem label-highlight">
+                      HTML
+                    </div>
+                    <div class="projectMadeWithItem label-highlight">CSS</div>
+                    <div class="projectMadeWithItem label-highlight">
+                      Google Fonts
                     </div>
                   </div>
                 </div>
-                <div class="projectWrapperRow4">
-                  <button
-                    id="projectDetailsIndexPageButton"
-                    class="projectDetailsIndexPageButton btn-secondary warm-yellow"
-                  ></button>
-                </div>
               </div>
-            </template>
-          </div>
-        </div>
-      </section>
-      <section class="view techSkillSection" id="techSkillContainer">
-        <div class="techSkillContainer glass-card">
-          <div
-            class="techSkillHeader section-title cool-teal"
-            id="techSkillHeader"
-          >
-            <div class="techSkillTitle" id="techSkillTitle"></div>
-          </div>
-          <div class="techSkillContent" id="techSkillContent">
-            <template class="skillGroup" id="skillGroup">
-              <div class="skillGroupWrapper" id="skillGroupWrapper">
-                <div class="skillCategory" id="skillCategory"></div>
-                <div class="skillTags" id="skillTags">
-                  <template class="skillTag" id="skillTag">
-                    <span class="skillTagWrapper" id="skillTagWrapper"></span>
-                  </template>
-                </div>
+              <div class="projectWrapperRow4">
+                <button id="projectDetailsIndexPageButton"
+                  class="projectDetailsIndexPageButton btn-secondary warm-yellow"></button>
               </div>
-            </template>
-          </div>
+            </div>
+          </template>
         </div>
-      </section>
-      <footer class="footer hideElement" id="footer">
-        <div id="copyrightSection" class="copyrightSection"></div>
-      </footer>
-    </main>
-  </body>
+      </div>
+    </section>
+    <section class="view techSkillSection" id="skill">
+      <div class="techSkillContainer glass-card">
+        <div class="techSkillHeader section-title cool-teal" id="techSkillHeader">
+          <div class="techSkillTitle" id="techSkillTitle"></div>
+        </div>
+        <div class="techSkillContent" id="techSkillContent">
+          <template class="skillGroup" id="skillGroup">
+            <div class="skillGroupWrapper" id="skillGroupWrapper">
+              <div class="skillCategory" id="skillCategory"></div>
+              <div class="skillTags" id="skillTags">
+                <template class="skillTag" id="skillTag">
+                  <span class="skillTagWrapper" id="skillTagWrapper"></span>
+                </template>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </section>
+    <section class="view aboutMeSection" id="about">
+      <div class="aboutMeContainer glass-card">
+        <div class="aboutHeader section-title cool-teal" id="aboutHeader">
+          <div class="aboutTitle" id="aboutTitle"></div>
+        </div>
+        <div class="aboutContent card flex-card" id="aboutContent">
+          <template class="aboutSummeryDescription" id="aboutSummeryDescription">
+            <div class="aboutSummeryDescriptionWrapper" id="aboutSummeryDescriptionWrapper"></div>
+          </template>
+        </div>
+      </div>
+    </section>
+    <section class="view contactSection" id="contact">
+      <div class="contactSectionContainer glass-card">
+        <div class="contactHeader section-title cool-teal" id="contentHeader">
+          <div class="contactTitle" id="contactTitle"></div>
+        </div>
+        <div class="contactContent card flex-card" id="contactContent">
+          <template class="contactDescription" id="contactDescription">
+            <div class="contactDescriptionWrapper" id="contactDescriptionWrapper">
+              <span class="contactText" id="contactText"></span>
+              <a class="contactLink" id="contactLink" href="" target="_blank"></a>
+            </div>
+          </template>
+        </div>
+      </div>
+    </section>
+    <footer class="footer hideElement" id="footer">
+      <div id="copyrightSection" class="copyrightSection"></div>
+    </footer>
+  </main>
+</body>
+
 </html>

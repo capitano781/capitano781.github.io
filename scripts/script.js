@@ -1,18 +1,33 @@
 import { validatePortfolioData } from "./validator.js";
 import { CONFIG, CLASSES, SELECTORS, MESSAGES } from "./constants.js";
 import { setStaticPageData } from "./dataPlugScript.js";
-import { getElement } from "./utilityScripts.js";
+import { getElement, getAllElements } from "./utilityScripts.js";
 
 // window.location.href = './projectDetails.html';
 
 // const bgVideo = document.getElementById("bgVideo");
 // bgVideo.playbackRate = 0.1; // 0.25 = very slow, 0.5 = smooth slow
 
+const rootContainer = getElement(SELECTORS.rootContainer);
+const menuBar = getElement(SELECTORS.menuBar);
+const hamburgerMenu = getElement(SELECTORS.hamburgerMenu);
+const hamburgerIcon = getElement(SELECTORS.hamburgerIcon);
+const headerViewWorkButton = getElement(SELECTORS.headerViewWorkButton);
+
+const toggleElementClassName = (element, className) => {
+  if (element?.classList?.value.includes(className)) {
+    element.classList.remove(className);
+  } else {
+    element.classList.add(className);
+  }
+};
+
 const exitLoader = () => {
   const loaderOverlay = getElement(SELECTORS.loaderOverlay);
-  const rootContainer = getElement(SELECTORS.rootContainer);
-  loaderOverlay.classList.add(CLASSES.hidden);
-  rootContainer.classList.remove(CLASSES.hidden);
+  const menuBar = getElement(SELECTORS.menuBar);
+  loaderOverlay.classList.add(CLASSES.hiddenWithScale);
+  rootContainer.classList.remove(CLASSES.hiddenWithScale);
+  menuBar.classList.remove(CLASSES.hiddenWithScale);
 };
 
 (async () => {
@@ -40,51 +55,84 @@ const exitLoader = () => {
   }
 })();
 
-const headerSection = document.querySelector(SELECTORS.header);
-
-const setActiveSection = (targetSection) => {
-  targetSection.classList.add("activeSection");
-  // targetSection.style.transform = `scale(1)`;
-};
-
 const controlSlider = () => {
   // Menu bar slider controls
 
-  const menuSlider = document.querySelector(SELECTORS.menuSlider);
-  const menuItems = document.querySelectorAll(SELECTORS.menuItem);
+  const menuSlider = getElement(SELECTORS.menuSlider);
+  const mainMenuItems = getAllElements(SELECTORS.menuItem);
+  const hamburgerMenuItems = getAllElements(SELECTORS.hamburgerMenuItem);
 
-  const sectionViews = document.querySelectorAll(SELECTORS.view);
+  const sectionViews = getAllElements(SELECTORS.view);
 
   const setSliderPosition = (targetMenu) => {
     const { offsetLeft } = targetMenu;
-
     menuSlider.style.left = `${offsetLeft}px`;
   };
 
-  const menuItemClickHandler = (eventType, menuItem, menuIndex) => {
-    if (eventType === "click") {
-      menuItems.forEach((menuItem) => {
+  const findSliderMenu = (viewId) => {
+    mainMenuItems.forEach((menuItem) => {
+      if (menuItem?.id?.includes(viewId)) {
+        menuItem.classList.add("menuActive");
+        setSliderPosition(menuItem);
+      } else {
         menuItem.classList.remove("menuActive");
-      });
-      menuItem.classList.add("menuActive");
-      setSliderPosition(menuItem);
+      }
+    });
+  };
 
-      sectionViews.forEach((view, index) => {
-        if (index === menuIndex) {
-          view.classList.add("activeSection");
-        } else {
-          view.classList.remove("activeSection");
-        }
-      });
+  const setActiveView = (menuId) => {
+    sectionViews.forEach((view) => {
+      if (menuId.includes(view?.id)) {
+        view.classList.add("activeSection");
+        findSliderMenu(view?.id);
+      } else {
+        view.classList.remove("activeSection");
+      }
+    });
+  };
+
+  const menuItemClickHandler = (eventType, menuItem, menuType) => {
+    if (eventType === "click") {
+      if (menuType === "hamburgerMenu") {
+        toggleElementClassName(rootContainer, CLASSES.hiddenWithScale);
+        toggleElementClassName(menuBar, CLASSES.hiddenWithScale);
+        toggleElementClassName(hamburgerIcon, CLASSES.hamburgerIconActive);
+        toggleElementClassName(hamburgerMenu, CLASSES.hiddenWithOpacity);
+      }
+      setActiveView(menuItem.id);
     }
   };
 
-  // if (menuItems && Array.isArray(menuItems) && menuItems.length > 0)
-  menuItems.forEach((menuItem, index) => {
+  mainMenuItems.forEach((menuItem) => {
     menuItem.addEventListener("click", (event) => {
-      menuItemClickHandler(event.type, menuItem, index);
+      menuItemClickHandler(event.type, menuItem, "mainMenu");
     });
+  });
+
+  hamburgerMenuItems.forEach((menuItem) => {
+    menuItem.addEventListener("click", (event) => {
+      setTimeout(() => {
+        menuItemClickHandler(event.type, menuItem, "hamburgerMenu");
+      }, 300);
+    });
+  });
+
+  headerViewWorkButton.addEventListener("click", (event) => {
+    setTimeout(() => {
+      setActiveView("work");
+    }, 300);
   });
 };
 
 controlSlider();
+
+const hamburgerIconToggle = () => {
+  hamburgerIcon.addEventListener("click", () => {
+    toggleElementClassName(rootContainer, CLASSES.hiddenWithScale);
+    toggleElementClassName(menuBar, CLASSES.hiddenWithScale);
+    toggleElementClassName(hamburgerIcon, CLASSES.hamburgerIconActive);
+    toggleElementClassName(hamburgerMenu, CLASSES.hiddenWithOpacity);
+  });
+};
+
+hamburgerIconToggle();

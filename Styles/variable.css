@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap");
 
 :root {
   --bg-main: #f3f5f9;
@@ -14,14 +14,20 @@
 
   /* colors themes */
 
-  /* calm blue */
+  /* calm blue theme*/
   --accent-calm-blue: #289ccd;
   --accent-calm-blue-hover: #289ccd;
+  --accent-calm-blue-transparent: #289ccd36;
+  --accent-ocean-green: #28cdbdcc;
+  --accent-ocean-green-hover: #28cdbd;
+  --accent-ocean-green-transparent: #28cdc574;
   --text-calm-blue-primary: #c5c5c5;
   --text-calm-blue-secondary: #c5c5c5;
   --glass-card-shadow: inset 0px 0px 20px 4px rgb(0 0 0),
     8px 9px 0px 0px #289ccd8f;
   --glass-card-border: rgb(207 241 255 / 0%);
+  --bg-semi-transparent-black: #1402025c;
+  --bg-hamburger-calm-blue-line: #051f2a;
 
   --accent-primary: #289ccd; /* cyan-blue (glass native) */
   --accent-secondary: #fbbf24; /* warm contrast */
@@ -36,7 +42,8 @@
     inset -4px -4px 8px rgba(255, 255, 255, 0.9);
 
   /* Menu bar */
-  --bg-menuBar: rgb(3 50 70 / 67%);
+  /* --bg-menuBar: rgb(3 50 70 / 67%); */
+  --bg-menuBar: #022534;
   --bg-menuSlider: radial-gradient(
     circle,
     rgb(36 118 158 / 100%) 0%,
@@ -44,10 +51,13 @@
   );
   --bs-menuBar: inset 0px 0px 20px 4px rgb(0 0 0);
   --bs-active-menuBar: 0px 0px 0px 0px #3e8aba;
+  --bg-hamburger-menuItems: inset 4px 4px 20px 1px rgb(20 96 131 / 80%),
+    3px 4px 5px 0px rgb(19 129 122);
 
   /* Fonts */
-  --ff-heading: "Space Grotesk", sans-serif;
-  --ff-base: "Inter", sans-serif;
+  --ff-heading: "Bitcount Prop Single", system-ui;
+  --ff-base: "Space Grotesk", sans-serif;
+  /* --ff-base: "Inter", sans-serif; */
 
   /* Font weight */
   --fw-light: 300;
@@ -104,6 +114,7 @@
 
   /* pixel sizing */
   --px-0: 0px;
+  --px-0-5: 0.5px;
   --px-1: 1px;
   --px-2: 2px;
   --px-3: 3px;

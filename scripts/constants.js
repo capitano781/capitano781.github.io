@@ -24,8 +24,6 @@ export const SELECTORS = {
   loaderOverlay: "#loaderOverlay",
   rootContainer: "#rootContainer",
 
-  view: ".view",
-
   // Header Section
   header: "#header",
   headerTitlePart1: "#headerTitlePart1",
@@ -37,6 +35,7 @@ export const SELECTORS = {
 
   // Project Section
   projectSectionTitle: "#projectSectionTitle",
+  projectSectionSecondaryTitle: "#projectSectionSecondaryTitle",
   projectGrid: "#projectGrid",
   projectBox: "#projectBox",
   projectBoxWrapper: "#projectBoxWrapper",
@@ -73,7 +72,13 @@ export const SELECTORS = {
 
   // menu bar
   menuSlider: "#menuSlider",
-  menuItem: "#menuItem",
+  menuItem: ".menuItem",
+  menuBar: "#menuBar",
+  hamburgerMenuItem: ".hamburgerMenuItem",
+  hamburgerIcon: "#hamburgerIcon",
+  hamburgerMenu: "#hamburgerMenu",
+
+  view: ".view",
 
   // Project Detail Page Selectors
   backToHomeButton: "#backToHomeButton",
@@ -178,10 +183,13 @@ export const SELECTORS = {
 
 export const CLASSES = {
   hidden: "hideElement",
+  hiddenWithScale: "hideElementWithScale",
+  hiddenWithOpacity: "hideElementWithOpacity",
   visible: "showElement",
   projectCard: "projectBoxWrapper",
   skillTag: "skillTagWrapper",
   contactCard: "contactDescriptionWrapper",
+  hamburgerIconActive: "hamburgerIcon-active",
 };
 
 // ============================================
@@ -191,6 +199,7 @@ export const CLASSES = {
 export const MESSAGES = {
   loadingError: "Could not load Folio Data",
   elementNotFound: "Element not found",
+  elementsNotFound: "Elements not found",
   dataValidationFailed: "Data validation failed",
   cloneFailed: "Failed to clone template",
 };
