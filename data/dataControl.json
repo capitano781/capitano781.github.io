@@ -1,15 +1,15 @@
 {
-    "Header_Title": "Hi, I am Capitano781",
     "Header_Title": {
         "Header_Title_Part1": "Hi, I am ",
-        "Header_Title_Part2": "Capitano781"
+        "Header_Title_Part2": "Capitano-781"
     },
     "Header_Tag": "Frontend Engineer | MERN Stack",
     "Header_Description": "I build scalable React applications and maintainable UI systems that prioritize clean architecture, performance, and real-world product needs.",
     "Header_ViewWorkButtonLabel": "View my work",
     "Header_Image_Url": "/assets/images/illustrations/RE.png",
     "Project_Section": {
-        "Title": "Projects",
+        "Title": "PROJECTS",
+        "Secondary_Title": "A mix of personal projects and work I’ve contributed to.",
         "ProjectSectionLabels": {
             "ChallengesAndLearningsSectionTitle": "ChallengesAndLearnings",
             "TechnologiesUsedSectionTitle": "TechnologiesUsed",
@@ -85,7 +85,9 @@
                     },
                     {
                         "Category": "API Architecture:",
-                        "Descriptions": ["RESTful APIs"]
+                        "Descriptions": [
+                            "RESTful APIs"
+                        ]
                     }
                 ],
                 "ChallengesAndLearnings": [
@@ -184,7 +186,9 @@
                     },
                     {
                         "Category": "API Architecture:",
-                        "Descriptions": ["RESTful APIs"]
+                        "Descriptions": [
+                            "RESTful APIs"
+                        ]
                     }
                 ],
                 "ChallengesAndLearnings": [
@@ -286,7 +290,9 @@
                     },
                     {
                         "Category": "API Architecture:",
-                        "Descriptions": ["RESTful APIs"]
+                        "Descriptions": [
+                            "RESTful APIs"
+                        ]
                     }
                 ],
                 "ChallengesAndLearnings": [
@@ -385,7 +391,9 @@
                     },
                     {
                         "Category": "API Architecture:",
-                        "Descriptions": ["RESTful APIs"]
+                        "Descriptions": [
+                            "RESTful APIs"
+                        ]
                     }
                 ],
                 "ChallengesAndLearnings": [
@@ -460,7 +468,9 @@
             },
             {
                 "Category": "Database:",
-                "Descriptions": ["MongoDB"]
+                "Descriptions": [
+                    "MongoDB"
+                ]
             },
             {
                 "Category": "Tools:",
@@ -501,4 +511,3 @@
         "copyrightText": "© 2026 Capitano781. All rights reserved."
     }
 }
-

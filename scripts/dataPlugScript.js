@@ -1,143 +1,159 @@
-'use strict';
+"use strict";
 
-import { getElementTemplateClone, 
-    setTemplateElementText,
-    setElementAttribute,
-    getTemplateElementChild, 
-    setTemplateElementAttribute, 
-    setElementText, 
-    getElement, 
-    isArrayDataValid 
-} from './utilityScripts.js';
-import { SELECTORS } from './constants.js';
+import {
+  getElementTemplateClone,
+  setTemplateElementText,
+  setElementAttribute,
+  getTemplateElementChild,
+  setTemplateElementAttribute,
+  setElementText,
+  getElement,
+  isArrayDataValid,
+} from "./utilityScripts.js";
+import { SELECTORS } from "./constants.js";
 
 const setCommonHandler = (eventType, handlerFor, handlerElementId, index) => {
-    if (handlerFor === 'button') {
-        if (eventType === 'click') {
-            window.location.href = `/projectDetails.html?id=${index}`;
-        }
+  if (handlerFor === "button") {
+    if (eventType === "click") {
+      window.location.href = `/projectDetails.html?id=${index}`;
     }
+  }
 };
 
 const setHeaderSectionData = (data) => {
-    setElementText(SELECTORS.headerTitlePart1, data?.Header_Title?.Header_Title_Part1);
-    setElementText(SELECTORS.headerTitlePart2, data?.Header_Title?.Header_Title_Part2);
-    setElementText(SELECTORS.headerDescription, data?.Header_Description);
-    setElementText(SELECTORS.headerTag, data?.Header_Tag);
-    setElementText(SELECTORS.headerViewWorkButton, data?.Header_ViewWorkButtonLabel);
+  setElementText(
+    SELECTORS.headerTitlePart1,
+    data?.Header_Title?.Header_Title_Part1
+  );
+  setElementText(
+    SELECTORS.headerTitlePart2,
+    data?.Header_Title?.Header_Title_Part2
+  );
+  setElementText(SELECTORS.headerDescription, data?.Header_Description);
+  setElementText(SELECTORS.headerTag, data?.Header_Tag);
+  setElementText(
+    SELECTORS.headerViewWorkButton,
+    data?.Header_ViewWorkButtonLabel
+  );
 
-    const headerViewWorkButton = getElement(SELECTORS.headerViewWorkButton);
-    headerViewWorkButton.addEventListener('click', () => {
-
-    });
+  const headerViewWorkButton = getElement(SELECTORS.headerViewWorkButton);
+  headerViewWorkButton.addEventListener("click", () => { });
 };
 
 const setProjectSectionData = (Project_Section) => {
+  setElementText(SELECTORS.projectSectionTitle, Project_Section?.Title);
+  setElementText(SELECTORS.projectSectionSecondaryTitle, Project_Section?.Secondary_Title);
 
-    setElementText(SELECTORS.projectSectionTitle, Project_Section?.Title);
-    
-    const projectGrid = getElement(SELECTORS.projectGrid);
-    const projectBoxTemplate = getElement(SELECTORS.projectBox);
+  const projectGrid = getElement(SELECTORS.projectGrid);
+  const projectBoxTemplate = getElement(SELECTORS.projectBox);
 
-    if (isArrayDataValid(Project_Section?.Projects))
-        Project_Section?.Projects.forEach((project, index) => {
-    
-            const projectBoxClone = getElementTemplateClone(projectBoxTemplate, SELECTORS.projectBox);
-            setTemplateElementText(projectBoxClone, SELECTORS.projectTitle, project?.Title);
-            setTemplateElementText(projectBoxClone, SELECTORS.projectDescText, project?.OnelineDescription);
-            setTemplateElementText(projectBoxClone, SELECTORS.projectDetailsIndexPageButton, project?.indexPageButtonLabel);
+  if (isArrayDataValid(Project_Section?.Projects))
+    Project_Section?.Projects.forEach((project, index) => {
+      const projectBoxClone = getElementTemplateClone(projectBoxTemplate, SELECTORS.projectBox);
+      setTemplateElementText(projectBoxClone, SELECTORS.projectTitle, project?.Title);
+      setTemplateElementText(projectBoxClone, SELECTORS.projectDescText, project?.OnelineDescription);
+      setTemplateElementText(projectBoxClone, SELECTORS.projectDetailsIndexPageButton, project?.indexPageButtonLabel);
 
-            projectBoxClone.querySelector(SELECTORS.projectDetailsIndexPageButton).addEventListener('click', (event) => {
-                setTimeout(() => {
-                    setCommonHandler(event.type, 'button', SELECTORS.projectDetailsIndexPageButton, index);
-                }, 400);
-            });
-
-            projectGrid.appendChild(projectBoxClone);
+      projectBoxClone
+        .querySelector(SELECTORS.projectDetailsIndexPageButton)
+        .addEventListener("click", (event) => {
+          setTimeout(() => {
+            setCommonHandler(
+              event.type,
+              "button",
+              SELECTORS.projectDetailsIndexPageButton,
+              index
+            );
+          }, 400);
         });
+
+      projectGrid.appendChild(projectBoxClone);
+    });
 };
 
 const setAboutmeSectionData = (About_Section) => {
-    
-    setElementText(SELECTORS.aboutTitle, About_Section?.Title);
-    const aboutContent = getElement(SELECTORS.aboutContent);
-    const aboutSummeryDescriptionTemplate = getElement(SELECTORS.aboutSummeryDescription);
+  setElementText(SELECTORS.aboutTitle, About_Section?.Title);
+  const aboutContent = getElement(SELECTORS.aboutContent);
+  const aboutSummeryDescriptionTemplate = getElement(
+    SELECTORS.aboutSummeryDescription
+  );
 
-    if (isArrayDataValid(About_Section?.Descriptions))
-        About_Section.Descriptions.forEach((Description) => {
+  if (isArrayDataValid(About_Section?.Descriptions))
+    About_Section.Descriptions.forEach((Description) => {
+      const aboutSummeryDescriptionTemplateClone = getElementTemplateClone(
+        aboutSummeryDescriptionTemplate,
+        SELECTORS.aboutSummeryDescription
+      );
 
-            const aboutSummeryDescriptionTemplateClone = getElementTemplateClone(aboutSummeryDescriptionTemplate, SELECTORS.aboutSummeryDescription);
+      setTemplateElementText(
+        aboutSummeryDescriptionTemplateClone,
+        SELECTORS.aboutSummeryDescriptionWrapper,
+        Description.DescriptionPara
+      );
 
-            setTemplateElementText(aboutSummeryDescriptionTemplateClone, SELECTORS.aboutSummeryDescriptionWrapper, Description.DescriptionPara);
-
-            aboutContent.appendChild(aboutSummeryDescriptionTemplateClone);
+      aboutContent.appendChild(aboutSummeryDescriptionTemplateClone);
     });
 };
 
 const setTechSkillSectionData = (Technical_Skills_Section) => {
+  setElementText(SELECTORS.techSkillTitle, Technical_Skills_Section?.Title);
+  const techSkillContent = getElement(SELECTORS.techSkillContent);
+  const skillGroupTemplate = getElement(SELECTORS.skillGroup);
 
-    setElementText(SELECTORS.techSkillTitle, Technical_Skills_Section?.Title);
-    const techSkillContent = getElement(SELECTORS.techSkillContent);
-    const skillGroupTemplate = getElement(SELECTORS.skillGroup);
+  if (isArrayDataValid(Technical_Skills_Section?.Categories))
+    Technical_Skills_Section.Categories.forEach((category) => {
+      const skillGroupTemplateClone = getElementTemplateClone(skillGroupTemplate, SELECTORS.skillGroup);
+      setTemplateElementText(skillGroupTemplateClone, SELECTORS.skillCategory, category?.Category);
 
-    if (isArrayDataValid(Technical_Skills_Section?.Categories))
-        Technical_Skills_Section.Categories.forEach(category => {
-            
-            const skillGroupTemplateClone = getElementTemplateClone(skillGroupTemplate, SELECTORS.skillGroup);
-            setTemplateElementText(skillGroupTemplateClone, SELECTORS.skillCategory, category?.Category);
-            
-            const skillTags = getTemplateElementChild(skillGroupTemplateClone, SELECTORS.skillTags);
-            const skillTagTemplate = getTemplateElementChild(skillGroupTemplateClone, SELECTORS.skillTag);
+      const skillTags = getTemplateElementChild(skillGroupTemplateClone, SELECTORS.skillTags);
+      const skillTagTemplate = getTemplateElementChild(skillGroupTemplateClone, SELECTORS.skillTag);
 
-            if (isArrayDataValid(category?.Descriptions))
-                category.Descriptions.forEach(description => {
+      if (isArrayDataValid(category?.Descriptions))
+        category.Descriptions.forEach((description) => {
+          const skillTagTemplateClone = getElementTemplateClone(skillTagTemplate, SELECTORS.skillTag);
+          setTemplateElementText(skillTagTemplateClone, SELECTORS.skillTagWrapper, description);
 
-                    const skillTagTemplateClone = getElementTemplateClone(skillTagTemplate, SELECTORS.skillTag);
-                    setTemplateElementText(skillTagTemplateClone, SELECTORS.skillTagWrapper, description);
-                    
-                    skillTags.appendChild(skillTagTemplateClone);
-                });
-
-            techSkillContent.appendChild(skillGroupTemplateClone);
+          skillTags.appendChild(skillTagTemplateClone);
         });
+
+      techSkillContent.appendChild(skillGroupTemplateClone);
+    });
 };
 
 const setContactSectionData = (Contact_Section) => {
+  setElementText(SELECTORS.contactTitle, Contact_Section?.Title);
+  const contactContent = getElement(SELECTORS.contactContent);
+  const contactDescriptionTemplate = getElement(SELECTORS.contactDescription);
 
-    setElementText(SELECTORS.contactTitle, Contact_Section?.Title);
-    const contactContent = getElement(SELECTORS.contactContent);
-    const contactDescriptionTemplate = getElement(SELECTORS.contactDescription);
+  if (isArrayDataValid(Contact_Section?.Descriptions))
+    Contact_Section.Descriptions.forEach((description) => {
+      const contactDescriptionTemplateClone = getElementTemplateClone(contactDescriptionTemplate, SELECTORS.contactDescription);
 
-    if (isArrayDataValid(Contact_Section?.Descriptions))
-        Contact_Section.Descriptions.forEach(description => {
+      setTemplateElementText(contactDescriptionTemplateClone, SELECTORS.contactText, description?.text
+      );
 
-            const contactDescriptionTemplateClone = getElementTemplateClone(contactDescriptionTemplate, SELECTORS.contactDescription);
-            
-            setTemplateElementText(contactDescriptionTemplateClone, SELECTORS.contactText, description?.text);
+      setTemplateElementText(contactDescriptionTemplateClone, SELECTORS.contactLink, description?.hyperlink_Label_Text);
 
-            setTemplateElementText(contactDescriptionTemplateClone, SELECTORS.contactLink, description?.hyperlink_Label_Text);
+      setTemplateElementAttribute(contactDescriptionTemplateClone, SELECTORS.contactLink, "href", description?.link);
 
-            setTemplateElementAttribute(contactDescriptionTemplateClone, SELECTORS.contactLink, 'href', description?.link);
-
-            contactContent.appendChild(contactDescriptionTemplateClone);
-        });
+      contactContent.appendChild(contactDescriptionTemplateClone);
+    });
 };
 
 const setCopyRightText = (copyrightText) => {
-    setElementText(SELECTORS.copyrightSection, copyrightText);
+  setElementText(SELECTORS.copyrightSection, copyrightText);
 };
 
 export const setStaticPageData = (data) => {
+  setHeaderSectionData(data);
 
-    setHeaderSectionData(data);
+  setProjectSectionData(data?.Project_Section);
 
-    setProjectSectionData(data?.Project_Section);
+  setAboutmeSectionData(data?.About_Section);
 
-    setAboutmeSectionData(data?.About_Section);
-    
-    setTechSkillSectionData(data?.Technical_Skills_Section);
+  setTechSkillSectionData(data?.Technical_Skills_Section);
 
-    setContactSectionData(data?.Contact_Section);
-    
-    setCopyRightText(data?.Footer_Section?.copyrightText);
+  setContactSectionData(data?.Contact_Section);
+
+  setCopyRightText(data?.Footer_Section?.copyrightText);
 };
