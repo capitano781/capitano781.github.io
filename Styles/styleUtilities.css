@@ -70,6 +70,7 @@
   box-shadow: 4px 4px 0px 0px #289ccdc6;
   transform: translateY(-2px);
 }
+
 .btn-glass:active {
   box-shadow: 0px 0px 0px 0px #289ccdc6;
   transform: translate(2px, 2px);
@@ -77,23 +78,66 @@
 
 .btn-glass.accent {
   color: var(--text-accent);
-  background: linear-gradient(
-      135deg,
+  background: linear-gradient(135deg,
       rgba(255, 255, 255, 0.35),
-      rgba(255, 255, 255, 0.15)
-    ),
+      rgba(255, 255, 255, 0.15)),
     var(--accent);
 
   border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .btn-glass.accent:hover {
-  background: linear-gradient(
-      135deg,
+  background: linear-gradient(135deg,
       rgba(255, 255, 255, 0.45),
-      rgba(255, 255, 255, 0.2)
-    ),
+      rgba(255, 255, 255, 0.2)),
     var(--accent-hover);
+}
+
+/* ============================== */
+
+/* ========================
+    project slider utilities 
+=========================== */
+
+.slide-position-1 {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.slide-position-2 {
+  opacity: 1;
+  transform: translate(-52%, -53%);
+  z-index: 9;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.slide-position-3 {
+  opacity: 0.6;
+  transform: translate(-54%, -56%);
+  z-index: 8;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.dismiss-slide-right {
+  opacity: 0;
+  transform: translate(-0%, -50%);
+  z-index: 11;
+  transition: transform 0.5s ease, opacity 1s ease;
+}
+
+.dismiss-slide-left {
+  opacity: 0;
+  transform: translate(-100%, -50%);
+  z-index: 9;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.send-to-back-deck {
+  opacity: 0;
+  transform: translate(-56%, -54%);
+  z-index: 7;
 }
 
 /* ============================== */
@@ -131,8 +175,7 @@
   /* transition: transform 0.5s ease-out; */
 }
 
-.divider {
-}
+.divider {}
 
 .glass-card {
   background: rgb(8 26 34 / 80%);
@@ -209,11 +252,11 @@
   text-shadow: var(--text-shadow);
 
   font-family: var(--ff-base);
-    font-size: clamp(1rem, 2vw, 1.1rem);
-    color: var(--text-secondary-accent);
-    font-weight: var(--fw-light);
-    text-shadow: var(--text-shadow);
-    letter-spacing: var(--px-0-5);
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  color: var(--text-secondary-accent);
+  font-weight: var(--fw-light);
+  text-shadow: var(--text-shadow);
+  letter-spacing: var(--px-0-5);
 }
 
 /* ============================== */

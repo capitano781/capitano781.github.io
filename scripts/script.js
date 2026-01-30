@@ -30,6 +30,121 @@ const exitLoader = () => {
   menuBar.classList.remove(CLASSES.hiddenWithScale);
 };
 
+const initProjectSlider = () => {
+  const projectSlides = [...getAllElements(SELECTORS.projectBoxWrapper)];
+  const sliderLeftNav = getElement(SELECTORS.SliderLeftNav);
+  const sliderRightNav = getElement(SELECTORS.SliderRightNav);
+  const projectSlideClose = getElement(SELECTORS.projectSlideClose);
+  let firstSlidePositionIndex = 0;
+
+  const dismissProjectSlide = (slide) => {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        slide.addEventListener('transitionend', (e) => {
+          if (e.target !== slide) return;
+          slide.classList.remove(CLASSES.dismissSlideRight);
+          slide.classList.remove(CLASSES.dismissSlideLeft);
+          slide.classList.add(CLASSES.sendSlideBackToDeck);
+          slide.removeEventListener('transitionend', () => { });
+        }, { once: true });
+      });
+    });
+  };
+
+  const getTargetIncrementedPositions = () => {
+    firstSlidePositionIndex = (firstSlidePositionIndex + 1 < projectSlides.length) ? firstSlidePositionIndex + 1 : 0;
+    const incrementPosition = (position) => {
+      return (position + 1) < projectSlides.length ? (position + 1) : 0;
+    };
+    const firstSlide = firstSlidePositionIndex;
+    const secondSlide = incrementPosition(firstSlide);
+    const thirdSlide = incrementPosition(secondSlide);
+
+    return { firstSlide, secondSlide, thirdSlide };
+  };
+
+  const getTargetDecrementedPositions = () => {
+    firstSlidePositionIndex = firstSlidePositionIndex === 0 ? projectSlides.length - 1 : firstSlidePositionIndex - 1;
+    const updatePosition = (position) => {
+      return position === projectSlides.length - 1 ? 0 : position + 1;
+    };
+
+    const firstSlide = firstSlidePositionIndex;
+    const secondSlide = updatePosition(firstSlide);
+    const thirdSlide = updatePosition(secondSlide);
+
+    return { firstSlide, secondSlide, thirdSlide };
+  };
+
+  const shiftSlidePositions = (direction = 'RIGHT') => {
+    let targetPositions = {};
+    if (direction === 'RIGHT') targetPositions = getTargetIncrementedPositions();
+    if (direction === 'LEFT') targetPositions = getTargetDecrementedPositions();
+    projectSlides.forEach((projectSlide, index) => {
+
+      // dismiss current first slide
+      if (projectSlide.classList.contains(CLASSES.slidePosition1) && direction === 'RIGHT') {
+        projectSlide.classList.remove(CLASSES.slidePosition1);
+        projectSlide.classList.add(CLASSES.dismissSlideRight);
+        // if (direction === 'LEFT') projectSlide.classList.add(CLASSES.dismissSlideLeft);
+        dismissProjectSlide(projectSlide);
+      } else {
+        // remove classes for projectSlides
+        if (projectSlide.classList.contains(CLASSES.slidePosition1) && direction === 'LEFT') {
+          projectSlide.classList.remove(CLASSES.slidePosition1);
+        }
+        projectSlide.classList.remove(CLASSES.slidePosition2);
+        projectSlide.classList.remove(CLASSES.slidePosition3);
+        projectSlide.classList.remove(CLASSES.sendSlideBackToDeck);
+
+        // set slide positions
+        if (targetPositions.firstSlide === index) {
+          projectSlide.classList.add(CLASSES.slidePosition1);
+        } else if (projectSlides.length >= 2 && targetPositions.secondSlide === index) {
+          projectSlide.classList.add(CLASSES.slidePosition2);
+        } else if (projectSlides.length >= 3 && targetPositions.thirdSlide === index) {
+          projectSlide.classList.add(CLASSES.slidePosition3);
+        } else {
+          // hide remainig slides
+          projectSlide.classList.add(CLASSES.sendSlideBackToDeck);
+        }
+      }
+    });
+  };
+
+  // initialize project slide placements
+  projectSlides.forEach((projectSlide, index) => {
+    if (index === 0) projectSlide.classList.add(CLASSES.slidePosition1);
+    if (index === 1) projectSlide.classList.add(CLASSES.slidePosition2);
+    if (index === 2) projectSlide.classList.add(CLASSES.slidePosition3);
+    if (index > 2) projectSlide.classList.add(CLASSES.sendSlideBackToDeck);
+  });
+
+  // slider nav handlers
+  sliderLeftNav.addEventListener('click', event => {
+    shiftSlidePositions('LEFT');
+  });
+
+  sliderRightNav.addEventListener('click', event => {
+    shiftSlidePositions('RIGHT');
+  });
+
+  projectSlideClose.addEventListener('click', event => {
+    shiftSlidePositions('RIGHT');
+  });
+
+  // set sl-1 slide
+
+  // set sl-2 slide
+
+  // set sl-3 slide
+
+  // set hidden-slide
+
+  // dismiss slide
+
+}
+
 (async () => {
   try {
     await new Promise((resolve) => setTimeout(resolve, CONFIG.LOADER_DELAY));
@@ -46,6 +161,7 @@ const exitLoader = () => {
     if (data) {
       exitLoader();
       setStaticPageData(data);
+      initProjectSlider();
       return;
     }
   } catch (e) {

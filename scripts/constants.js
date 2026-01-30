@@ -40,8 +40,12 @@ export const SELECTORS = {
   projectBox: "#projectBox",
   projectBoxWrapper: "#projectBoxWrapper",
   projectTitle: "#projectTitle",
+  projectNumber: "#projectNumber",
   projectDescText: "#projectDescText",
   projectDetailsIndexPageButton: "#projectDetailsIndexPageButton",
+  SliderLeftNav: "#SliderLeftNav",
+  SliderRightNav: "#SliderRightNav",
+  projectSlideClose: "#projectSlideClose",
 
   // About Section
   aboutTitle: "#aboutTitle",
@@ -190,6 +194,12 @@ export const CLASSES = {
   skillTag: "skillTagWrapper",
   contactCard: "contactDescriptionWrapper",
   hamburgerIconActive: "hamburgerIcon-active",
+  slidePosition1: "slide-position-1",
+  slidePosition2: "slide-position-2",
+  slidePosition3: "slide-position-3",
+  dismissSlideRight: "dismiss-slide-right",
+  dismissSlideLeft: "dismiss-slide-left",
+  sendSlideBackToDeck: "send-to-back-deck",
 };
 
 // ============================================

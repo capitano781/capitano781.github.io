@@ -80,53 +80,58 @@
             <div class="projectSectionSecondaryTitle section-sub-heading" id="projectSectionSecondaryTitle"></div>
           </div>
         </div>
-        <div class="projectGrid" id="projectGrid">
-          <template class="projectBox" id="projectBox">
-            <div class="projectBoxWrapper" id="projectBoxWrapper">
-              <div class="projectWrapperRow1">
-                <div class="projectNumber number-box">01</div>
-                <div class="projectTitleBox">
-                  <!-- <img
+        <div class="projectSliderWrapper">
+          <button class="leftNav navButton" id="SliderLeftNav"></button>
+          <div class="projectGrid" id="projectGrid">
+            <template class="projectBox" id="projectBox">
+              <div class="projectBoxWrapper" id="projectBoxWrapper">
+                <div class="projectSlideClose" id="projectSlideClose"></div>
+                <div class="projectWrapperRow1">
+                  <div class="projectNumber number-box" id="projectNumber">01</div>
+                  <div class="projectTitleBox">
+                    <!-- <img
                       class="projectTitlImage"
                       id="projectTitlImage"
                       src="/assets/images/illustrations/RE.png"
                     /> -->
-                  <div class="projectTitle secondary-heading" id="projectTitle"></div>
+                    <div class="projectTitle secondary-heading" id="projectTitle"></div>
+                  </div>
                 </div>
-              </div>
-              <div class="projectWrapperRow2">
-                <!-- <img
+                <div class="projectWrapperRow2">
+                  <!-- <img
                     class="projectImage"
                     id="projectImage"
                     src="/assets/images/illustrations/RE.png"
                   /> -->
-                <div class="projectDescText" id="projectDescText"></div>
-              </div>
-              <div class="projectWrapperRow3">
-                <div class="projectMadeWithBox">
-                  <div class="projectMadeWithLabel label-box-highlight">
-                    Made with:
-                  </div>
-                  <div class="projectMadeWithItems">
-                    <div class="projectMadeWithItem label-highlight">
-                      Javascript
+                  <div class="projectDescText" id="projectDescText"></div>
+                </div>
+                <div class="projectWrapperRow3">
+                  <div class="projectMadeWithBox">
+                    <div class="projectMadeWithLabel label-box-highlight">
+                      Made with:
                     </div>
-                    <div class="projectMadeWithItem label-highlight">
-                      HTML
-                    </div>
-                    <div class="projectMadeWithItem label-highlight">CSS</div>
-                    <div class="projectMadeWithItem label-highlight">
-                      Google Fonts
+                    <div class="projectMadeWithItems">
+                      <div class="projectMadeWithItem label-highlight">
+                        Javascript
+                      </div>
+                      <div class="projectMadeWithItem label-highlight">
+                        HTML
+                      </div>
+                      <div class="projectMadeWithItem label-highlight">CSS</div>
+                      <div class="projectMadeWithItem label-highlight">
+                        Google Fonts
+                      </div>
                     </div>
                   </div>
                 </div>
+                <div class="projectWrapperRow4">
+                  <button id="projectDetailsIndexPageButton"
+                    class="projectDetailsIndexPageButton btn-secondary warm-yellow"></button>
+                </div>
               </div>
-              <div class="projectWrapperRow4">
-                <button id="projectDetailsIndexPageButton"
-                  class="projectDetailsIndexPageButton btn-secondary warm-yellow"></button>
-              </div>
-            </div>
-          </template>
+            </template>
+          </div>
+          <button class="rightNav navButton" id="SliderRightNav"></button>
         </div>
       </div>
     </section>

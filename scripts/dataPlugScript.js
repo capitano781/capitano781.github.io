@@ -51,21 +51,15 @@ const setProjectSectionData = (Project_Section) => {
     Project_Section?.Projects.forEach((project, index) => {
       const projectBoxClone = getElementTemplateClone(projectBoxTemplate, SELECTORS.projectBox);
       setTemplateElementText(projectBoxClone, SELECTORS.projectTitle, project?.Title);
+      setTemplateElementText(projectBoxClone, SELECTORS.projectNumber, Number(index) + 1);
       setTemplateElementText(projectBoxClone, SELECTORS.projectDescText, project?.OnelineDescription);
       setTemplateElementText(projectBoxClone, SELECTORS.projectDetailsIndexPageButton, project?.indexPageButtonLabel);
 
-      projectBoxClone
-        .querySelector(SELECTORS.projectDetailsIndexPageButton)
-        .addEventListener("click", (event) => {
-          setTimeout(() => {
-            setCommonHandler(
-              event.type,
-              "button",
-              SELECTORS.projectDetailsIndexPageButton,
-              index
-            );
-          }, 400);
-        });
+      projectBoxClone.querySelector(SELECTORS.projectDetailsIndexPageButton).addEventListener("click", (event) => {
+        setTimeout(() => {
+          setCommonHandler(event.type, "button", SELECTORS.projectDetailsIndexPageButton, index);
+        }, 400);
+      });
 
       projectGrid.appendChild(projectBoxClone);
     });

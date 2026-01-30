@@ -186,7 +186,7 @@ body {
   border-radius: 5px;
   background: var(--bg-menuSlider);
   cursor: pointer;
-  z-index: 3;
+  z-index: 100;
   display: none;
 }
 
@@ -230,7 +230,7 @@ body {
 }
 
 .hamburgerMenu {
-  z-index: 2;
+  z-index: 99;
   position: absolute;
   top: 0;
   left: 0;
@@ -457,18 +457,56 @@ body {
   scrollbar-color: #1aa3c7 rgba(0, 20, 30, 0.6);
 } */
 
+.projectSliderWrapper {
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.navButton {
+  background: var(--transparent);
+}
+
+.leftNav {
+  border: 1px solid #bbff00;
+  height: 4rem;
+  width: 4rem;
+}
+
+.rightNav {
+  border: 1px solid #bbff00;
+  height: 4rem;
+  width: 4rem;
+}
+
+.projectGrid {
+  position: relative;
+  /* border: 1px solid #ffd000; */
+  height: 348px;
+  width: clamp(375px, 60vw, 500px);
+  /* overflow: hidden; */
+  padding: 1rem;
+}
+
 .projectBoxWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  /* height: 100%; */
   color: #c5c5c5;
   border: 1px solid #02222f;
   padding: 1.5rem;
   border-radius: 10px;
-  /* box-shadow: inset 2px 2px 20px 0px #145e7e, inset -5px -5px 20px 1px #28cdc500;
-  background: #001017; */
   background: rgba(0, 16, 23, 0.85);
   backdrop-filter: blur(6px);
-  box-shadow: 0 0 0 1px rgba(40, 205, 197, 0.2),
-    inset 0 0 20px rgba(20, 94, 126, 0.4);
-  /* width: 100%; */
+  box-shadow: 0 0 0 1px rgba(40, 205, 197, 0.2), inset 0 0 20px rgba(20, 94, 126, 0.4);
+  transition: transform 1s ease, opacity 1s ease;
 }
 
 .projectBoxWrapper:hover {
@@ -482,6 +520,15 @@ body {
 
 .projectBoxWrapper:hover .projectDetailsIndexPageButton {
   box-shadow: 0 0 12px rgba(255, 215, 0, 0.8);
+}
+
+.projectSlideClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 3rem;
+  width: 3rem;
+  border: 1px solid #fb00ef;
 }
 
 .projectWrapperRow1 {
@@ -639,6 +686,12 @@ body {
   .menuBar.hideElementWithScale {
     transform: scale(1) translate(-50%, 0%);
     opacity: 1;
+  }
+}
+
+@media (max-width: 840px) {
+  .projectSliderWrapper {
+    flex-direction: column;
   }
 }
 
