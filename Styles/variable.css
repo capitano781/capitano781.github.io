@@ -61,6 +61,25 @@
   --ff-base: "Space Grotesk", sans-serif;
   /* --ff-base: "Inter", sans-serif; */
 
+  /* Transition speed */
+  --ts-100ms: 0.1s;
+  --ts-200ms: 0.2s;
+  --ts-300ms: 0.3s;
+  --ts-400ms: 0.4s;
+  --ts-500ms: 0.5s;
+  --ts-600ms: 0.6s;
+  --ts-700ms: 0.7s;
+  --ts-800ms: 0.8s;
+  --ts-900ms: 0.9s;
+  --ts-1s: 1s;
+  --ts-2s: 2s;
+  --ts-3s: 3s;
+  --ts-4s: 4s;
+  --ts-5s: 5s;
+
+  /* Slider transition speed */
+  --slider-transition-speed: var(--ts-500ms);
+
   /* Font weight */
   --fw-light: 300;
   --fw-regular: 400;

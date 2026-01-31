@@ -74,25 +74,27 @@
     </section>
     <section class="view projectSection activeSection" id="work">
       <div class="projectSectionContainer glass-card calm-blue">
-        <div class="projectHeader" id="projectHeader">
+        <div class="projectHeader glass-card-title" id="projectHeader">
           <div class="projectTitleSectionContainer" id="projectTitleSectionContainer">
             <div class="projectSectionTitle section-heading" id="projectSectionTitle"></div>
             <div class="projectSectionSecondaryTitle section-sub-heading" id="projectSectionSecondaryTitle"></div>
           </div>
         </div>
-        <div class="projectSliderWrapper">
-          <button class="leftNav navButton" id="SliderLeftNav"></button>
+        <div class="projectSliderWrapper glass-card-content">
+          <button class="leftNav navButton" id="SliderLeftNav">
+          </button>
           <div class="projectGrid" id="projectGrid">
             <template class="projectBox" id="projectBox">
               <div class="projectBoxWrapper" id="projectBoxWrapper">
-                <!-- <div class="projectSlideClose" id="projectSlideClose"></div> -->
                 <div class="number-card">
-                  <div class="projectNumber" id="projectNumber"></div>
+                  <div class="projectNumber">
+                    <div class="projectNumberText" id="projectNumber"></div>
+                  </div>
                 </div>
                 <div class="projectWrapperRow1">
                   <div class="projectTitleBox">
                     <!-- <img class="projectTitlImage" id="projectTitlImage" src="/assets/images/illustrations/RE.png" /> -->
-                    <div class="projectTitle secondary-heading" id="projectTitle"></div>
+                    <div class="projectTitle primary-text" id="projectTitle"></div>
                   </div>
                 </div>
                 <div class="card-divider"></div>
@@ -107,7 +109,7 @@
                 <div class="card-divider"></div>
                 <div class="projectWrapperRow3">
                   <div class="projectMadeWithBox">
-                    <div class="projectMadeWithLabel label-box-highlight">
+                    <div class="projectMadeWithLabel secondary-text">
                       Made with:
                     </div>
                     <div class="projectMadeWithItems">
@@ -121,17 +123,24 @@
                       <div class="projectMadeWithItem label-highlight">
                         Google Fonts
                       </div>
+                      <div class="projectMadeWithItem label-highlight">
+                        Google Fonts
+                      </div>
+                      <div class="projectMadeWithItem label-highlight">
+                        Google Fonts
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="projectWrapperRow4">
-                  <button id="projectDetailsIndexPageButton"
-                    class="projectDetailsIndexPageButton btn-glass btn-glass-small"></button>
+                  <button id="projectDetailsIndexPageButton" class="btn-glass btn-glass-small"></button>
                 </div>
               </div>
             </template>
           </div>
-          <button class="rightNav navButton" id="SliderRightNav"></button>
+          <button class="rightNav navButton" id="SliderRightNav">
+          </button>
+          </button>
         </div>
       </div>
     </section>

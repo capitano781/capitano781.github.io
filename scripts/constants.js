@@ -24,6 +24,9 @@ export const SELECTORS = {
   loaderOverlay: "#loaderOverlay",
   rootContainer: "#rootContainer",
 
+  // video
+  backgroundVideo: '#bgVideo',
+
   // Header Section
   header: "#header",
   headerTitlePart1: "#headerTitlePart1",

@@ -13,6 +13,15 @@ const menuBar = getElement(SELECTORS.menuBar);
 const hamburgerMenu = getElement(SELECTORS.hamburgerMenu);
 const hamburgerIcon = getElement(SELECTORS.hamburgerIcon);
 const headerViewWorkButton = getElement(SELECTORS.headerViewWorkButton);
+const bgVideo = getElement(SELECTORS.backgroundVideo);
+
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    bgVideo.pause();
+  } else {
+    bgVideo.play();
+  }
+});
 
 const toggleElementClassName = (element, className) => {
   if (element?.classList?.value.includes(className)) {
@@ -34,7 +43,6 @@ const initProjectSlider = () => {
   const projectSlides = [...getAllElements(SELECTORS.projectBoxWrapper)];
   const sliderLeftNav = getElement(SELECTORS.SliderLeftNav);
   const sliderRightNav = getElement(SELECTORS.SliderRightNav);
-  const projectSlideClose = getElement(SELECTORS.projectSlideClose);
   let firstSlidePositionIndex = 0;
   let delayNavigationClickFlag = true;
 
