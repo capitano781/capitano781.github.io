@@ -36,6 +36,7 @@ const initProjectSlider = () => {
   const sliderRightNav = getElement(SELECTORS.SliderRightNav);
   const projectSlideClose = getElement(SELECTORS.projectSlideClose);
   let firstSlidePositionIndex = 0;
+  let delayNavigationClickFlag = true;
 
   const dismissProjectSlide = (slide) => {
     requestAnimationFrame(() => {
@@ -76,38 +77,57 @@ const initProjectSlider = () => {
     return { firstSlide, secondSlide, thirdSlide };
   };
 
+  const getTargetDirectionalPositions = (direction = 'RIGHT') => {
+
+    const incrementPosition = (position) => {
+      return (position + 1) < projectSlides.length ? position + 1 : 0;
+    };
+
+    const decrementPosition = (position) => {
+      return (position - 1) >= 0 ? position - 1 : projectSlides.length - 1;
+    };
+
+    if (direction === 'RIGHT') {
+      firstSlidePositionIndex = incrementPosition(firstSlidePositionIndex);
+      const firstSlide = firstSlidePositionIndex;
+      const secondSlide = decrementPosition(firstSlide);;
+      const thirdSlide = incrementPosition(firstSlide);
+      return { firstSlide, secondSlide, thirdSlide };
+    }
+    if (direction === 'LEFT') {
+      firstSlidePositionIndex = decrementPosition(firstSlidePositionIndex);
+      const firstSlide = firstSlidePositionIndex
+      const secondSlide = decrementPosition(firstSlide);
+      const thirdSlide = incrementPosition(firstSlide);
+      return { firstSlide, secondSlide, thirdSlide };
+    }
+    return null;
+  }
+
   const shiftSlidePositions = (direction = 'RIGHT') => {
-    let targetPositions = {};
-    if (direction === 'RIGHT') targetPositions = getTargetIncrementedPositions();
-    if (direction === 'LEFT') targetPositions = getTargetDecrementedPositions();
+    delayNavigationClickFlag = false;
+    setTimeout(() => {
+      delayNavigationClickFlag = true;
+    }, 500);
+    const targetPositions = getTargetDirectionalPositions(direction);
     projectSlides.forEach((projectSlide, index) => {
 
-      // dismiss current first slide
-      if (projectSlide.classList.contains(CLASSES.slidePosition1) && direction === 'RIGHT') {
-        projectSlide.classList.remove(CLASSES.slidePosition1);
-        projectSlide.classList.add(CLASSES.dismissSlideRight);
-        // if (direction === 'LEFT') projectSlide.classList.add(CLASSES.dismissSlideLeft);
-        dismissProjectSlide(projectSlide);
-      } else {
-        // remove classes for projectSlides
-        if (projectSlide.classList.contains(CLASSES.slidePosition1) && direction === 'LEFT') {
-          projectSlide.classList.remove(CLASSES.slidePosition1);
-        }
-        projectSlide.classList.remove(CLASSES.slidePosition2);
-        projectSlide.classList.remove(CLASSES.slidePosition3);
-        projectSlide.classList.remove(CLASSES.sendSlideBackToDeck);
+      // remove all slider classes
+      projectSlide.classList.remove(CLASSES.slidePosition1);
+      projectSlide.classList.remove(CLASSES.slidePosition2);
+      projectSlide.classList.remove(CLASSES.slidePosition3);
+      projectSlide.classList.remove(CLASSES.sendSlideBackToDeck);
 
-        // set slide positions
-        if (targetPositions.firstSlide === index) {
-          projectSlide.classList.add(CLASSES.slidePosition1);
-        } else if (projectSlides.length >= 2 && targetPositions.secondSlide === index) {
-          projectSlide.classList.add(CLASSES.slidePosition2);
-        } else if (projectSlides.length >= 3 && targetPositions.thirdSlide === index) {
-          projectSlide.classList.add(CLASSES.slidePosition3);
-        } else {
-          // hide remainig slides
-          projectSlide.classList.add(CLASSES.sendSlideBackToDeck);
-        }
+      // set slide position classes
+      if (targetPositions.firstSlide === index) {
+        projectSlide.classList.add(CLASSES.slidePosition1);
+      } else if (targetPositions.secondSlide === index) {
+        projectSlide.classList.add(CLASSES.slidePosition2);
+      } else if (targetPositions.thirdSlide === index) {
+        projectSlide.classList.add(CLASSES.slidePosition3);
+      } else {
+        // hide remainig slides
+        projectSlide.classList.add(CLASSES.sendSlideBackToDeck);
       }
     });
   };
@@ -115,34 +135,19 @@ const initProjectSlider = () => {
   // initialize project slide placements
   projectSlides.forEach((projectSlide, index) => {
     if (index === 0) projectSlide.classList.add(CLASSES.slidePosition1);
-    if (index === 1) projectSlide.classList.add(CLASSES.slidePosition2);
-    if (index === 2) projectSlide.classList.add(CLASSES.slidePosition3);
-    if (index > 2) projectSlide.classList.add(CLASSES.sendSlideBackToDeck);
+    else if (index === projectSlides.length - 1) projectSlide.classList.add(CLASSES.slidePosition2);
+    else if (index === 1) projectSlide.classList.add(CLASSES.slidePosition3);
+    else { projectSlide.classList.add(CLASSES.sendSlideBackToDeck); }
   });
 
   // slider nav handlers
   sliderLeftNav.addEventListener('click', event => {
-    shiftSlidePositions('LEFT');
+    if (delayNavigationClickFlag) shiftSlidePositions('LEFT');
   });
 
   sliderRightNav.addEventListener('click', event => {
-    shiftSlidePositions('RIGHT');
+    if (delayNavigationClickFlag) shiftSlidePositions('RIGHT');
   });
-
-  projectSlideClose.addEventListener('click', event => {
-    shiftSlidePositions('RIGHT');
-  });
-
-  // set sl-1 slide
-
-  // set sl-2 slide
-
-  // set sl-3 slide
-
-  // set hidden-slide
-
-  // dismiss slide
-
 }
 
 (async () => {

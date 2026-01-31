@@ -9,6 +9,7 @@
 
   --text-primary: #c5c5c5;
   --text-secondary: #c5c5c5;
+  --text-tertiary: #d4d4d4cc;
   --text-muted: #64748b;
   --text-shadow: 0px 0px 20px black, 0px 0px 20px black;
 
@@ -29,9 +30,12 @@
   --bg-semi-transparent-black: #1402025c;
   --bg-hamburger-calm-blue-line: #051f2a;
 
-  --accent-primary: #289ccd; /* cyan-blue (glass native) */
-  --accent-secondary: #fbbf24; /* warm contrast */
-  --accent-tertiary: #2dd4bf; /* teal */
+  --accent-primary: #289ccd;
+  /* cyan-blue (glass native) */
+  --accent-secondary: #fbbf24;
+  /* warm contrast */
+  --accent-tertiary: #2dd4bf;
+  /* teal */
 
   /* shadows */
   --shadow-soft: 8px 8px 16px rgba(0, 0, 0, 0.08),
@@ -44,11 +48,9 @@
   /* Menu bar */
   /* --bg-menuBar: rgb(3 50 70 / 67%); */
   --bg-menuBar: #022534;
-  --bg-menuSlider: radial-gradient(
-    circle,
-    rgb(36 118 158 / 100%) 0%,
-    rgb(9 82 113) 100%
-  );
+  --bg-menuSlider: radial-gradient(circle,
+      rgb(36 118 158 / 100%) 0%,
+      rgb(9 82 113) 100%);
   --bs-menuBar: inset 0px 0px 20px 4px rgb(0 0 0);
   --bs-active-menuBar: 0px 0px 0px 0px #3e8aba;
   --bg-hamburger-menuItems: inset 4px 4px 20px 1px rgb(20 96 131 / 80%),
@@ -100,6 +102,7 @@
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
+  --space-3-1: 0.9rem;
   --space-4: 1rem;
   --space-5: 1.5rem;
   --space-6: 2rem;
@@ -140,5 +143,4 @@
   --vw-6: 6vw;
 }
 
-[data-theme="dark"] {
-}
+[data-theme="dark"] {}

@@ -47,11 +47,16 @@ const setProjectSectionData = (Project_Section) => {
   const projectGrid = getElement(SELECTORS.projectGrid);
   const projectBoxTemplate = getElement(SELECTORS.projectBox);
 
+  const getProjectNumber = (index) => {
+    if (index < 10) return `0${Number(index) + 1}`;
+    return `${Number(index) + 1}`;
+  };
+
   if (isArrayDataValid(Project_Section?.Projects))
     Project_Section?.Projects.forEach((project, index) => {
       const projectBoxClone = getElementTemplateClone(projectBoxTemplate, SELECTORS.projectBox);
       setTemplateElementText(projectBoxClone, SELECTORS.projectTitle, project?.Title);
-      setTemplateElementText(projectBoxClone, SELECTORS.projectNumber, Number(index) + 1);
+      setTemplateElementText(projectBoxClone, SELECTORS.projectNumber, getProjectNumber(index));
       setTemplateElementText(projectBoxClone, SELECTORS.projectDescText, project?.OnelineDescription);
       setTemplateElementText(projectBoxClone, SELECTORS.projectDetailsIndexPageButton, project?.indexPageButtonLabel);
 
