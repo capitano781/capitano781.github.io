@@ -25,6 +25,7 @@ export const SELECTORS = {
   rootContainer: "#rootContainer",
 
   // video
+  bgVideoControl: '#bgVideoControl',
   backgroundVideo: '#bgVideo',
 
   // Header Section
