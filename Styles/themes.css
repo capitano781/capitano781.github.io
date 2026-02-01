@@ -1,24 +1,43 @@
 @import "variable.css";
 
 .calm-blue {
-  --accent: var(--accent-calm-blue);
-  --accent-hover: var(--accent-calm-blue-hover);
-  --accent-transparent: var(--accent-calm-blue-transparent);
-  --accent-secondary: var(--accent-ocean-green);
-  --accent-secondary-hover: var(--accent-ocean-green-hover);
-  --accent-secondary-transparent: var(--accent-ocean-green-transparent);
-  --text-primary-accent: var(--text-calm-blue-primary);
-  --text-secondary-accent: var(--text-calm-blue-secondary);
-  --bg-transparent-accent: var(--bg-semi-transparent-black);
-  --bg-hamburger-line: var(--bg-hamburger-calm-blue-line);
-}
+  /* cursor */
+  --cursor-primary: var(--cb-cursor-primary);
+  --cursor-primary-hover: var(--cb-cursor-primary-hover);
 
-.calm-blue .btn-glass {
-  --accent: var(--accent-calm-blue);
-  --accent-hover: var(--accent-calm-blue-hover);
-  --text-primary-accent: var(--black);
-  --text-primary-shadow: var(--black);
-  --btn-border: var(--black);
+  /* colors */
+  --accent: var(--cb-accent);
+  --accent-hover: var(--cb-accent-hover);
+  --accent-transparent: var(--cb-accent-transparent);
+  --accent-secondary: var(--cb-accent-ocean-green);
+  --accent-secondary-hover: var(--cb-accent-ocean-green-hover);
+  --accent-secondary-transparent: var(--cb-accent-ocean-green-transparent);
+
+  /* text accents */
+  --text-primary-accent: var(--cb-text-primary);
+  --text-secondary-accent: var(--cb-text-secondary);
+  --text-tertiary-accent: var(--cb-text-tertiary);
+  --text-primary-shadow: var(--cb-text-shadow);
+
+  /* borders and shadow */
+  --glass-card-shadow: var(--cb-glass-card-shadow);
+  --glass-card-border: var(--cb-glass-card-border);
+
+  /* backgrounds */
+  --video-background-overlay: var(--cb-video-background-overlay);
+  --hamburger-icon-line: var(--cb-hamburger-icon-line);
+
+  /* selections */
+  --selection-background: var(--cb-selection-background);
+  --selection-color: var(--cb-selection-color);
+
+  /* menu bar */
+  --menubar-background: var(--cb-menuBar-background);
+  --menuSlider-background: var(--cb-menuSlider-background);
+  --menubar-shadow: var(--cb-menuBar-shadow);
+  --menu-active: var(--cb-menu-active);
+  --menu-active: var(--cb-menu-active);
+  --hamburger-menuItems-shadow: var(--cb-hamburger-menuItems-shadow);
 }
 
 /* ===================== */
@@ -40,21 +59,25 @@
   --accent-hover: #1f5cff;
   --text-accent: #f4f1de;
 }
+
 .lime-green {
   --accent: #7cff00;
   --accent-hover: #6ae000;
   --text-accent: #1f1f1f;
 }
+
 .hot-pink {
   --accent: #ff3fa4;
   --accent-hover: #ff2f96;
   --text-accent: #1f1f1f;
 }
+
 .deep-red {
   --accent: #c81d25;
   --accent-hover: #b81a22;
   --text-accent: #1f1f1f;
 }
+
 .cool-teal {
   --accent: #1fb6aa;
   --accent-hover: #18a39a;

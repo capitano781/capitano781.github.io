@@ -13,15 +13,41 @@ const menuBar = getElement(SELECTORS.menuBar);
 const hamburgerMenu = getElement(SELECTORS.hamburgerMenu);
 const hamburgerIcon = getElement(SELECTORS.hamburgerIcon);
 const headerViewWorkButton = getElement(SELECTORS.headerViewWorkButton);
-const bgVideo = getElement(SELECTORS.backgroundVideo);
 
-document.addEventListener('visibilitychange', () => {
-  if (document.hidden) {
-    bgVideo.pause();
-  } else {
-    bgVideo.play();
-  }
-});
+// CONTROLS
+let playBackgroundVideo = false;
+const videoPlaybackSpeed = 1;
+
+const initBackgroundVideo = () => {
+  const bgVideo = getElement(SELECTORS.backgroundVideo);
+  const bgVideoControl = getElement(SELECTORS.bgVideoControl);
+
+  bgVideo.playbackRate = videoPlaybackSpeed;
+
+  const toggleBackgroundVideoStatus = () => {
+    if (playBackgroundVideo) {
+      bgVideo.play();
+    } else {
+      bgVideo.pause();
+    }
+  };
+  toggleBackgroundVideoStatus();
+
+  bgVideoControl.addEventListener('click', () => {
+    playBackgroundVideo = playBackgroundVideo ? false : true;
+    toggleBackgroundVideoStatus();
+  });
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      bgVideo.pause();
+    } else {
+      if (playBackgroundVideo) bgVideo.play();
+    }
+  });
+};
+
+initBackgroundVideo();
 
 const toggleElementClassName = (element, className) => {
   if (element?.classList?.value.includes(className)) {

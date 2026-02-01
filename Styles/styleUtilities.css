@@ -10,14 +10,14 @@
   color: var(--text-primary-accent);
   font-weight: var(--fw-medium);
   font-family: var(--ff-heading);
-  text-shadow: var(--text-shadow);
+  text-shadow: var(--text-primary-shadow);
 }
 
 .hero-highlight-text {
   color: var(--accent);
   font-weight: var(--fw-bold);
   font-family: var(--ff-heading);
-  text-shadow: var(--text-shadow);
+  text-shadow: var(--text-primary-shadow);
   text-transform: uppercase;
 }
 
@@ -26,7 +26,7 @@
   color: var(--accent-secondary);
   font-weight: var(--fw-medium);
   font-family: var(--ff-heading);
-  text-shadow: var(--text-shadow);
+  text-shadow: var(--text-primary-shadow);
 }
 
 .tertiary-hero-heading {
@@ -34,7 +34,7 @@
   color: var(--text-secondary-accent);
   font-weight: var(--fw-regular);
   font-family: var(--ff-base);
-  text-shadow: var(--text-shadow);
+  text-shadow: var(--text-primary-shadow);
 }
 
 /* ============================== */
@@ -59,7 +59,7 @@
   -webkit-backdrop-filter: blur(var(--px-14));
   box-shadow: 2px 2px 0px 0px #289ccdc6;
   transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
-  text-shadow: var(--text-shadow);
+  text-shadow: var(--text-primary-shadow);
   text-transform: uppercase;
   padding: var(--space-4);
 }
@@ -252,47 +252,39 @@
   box-shadow: 0px 0px 20px 1px #145f81;
 }
 
-/* .primary-text {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
-  color: var(--text-primary-accent);
-  font-family: var(--ff-heading);
-  font-weight: var(--fw-medium);
-  text-shadow: var(--text-shadow);
-} */
-
 .primary-text {
   font-size: clamp(1rem, 2vw, 1.1rem);
   font-family: var(--ff-base);
-  color: var(--text-secondary-accent);
+  color: var(--text-primary-accent);
   font-weight: var(--fw-regular);
-  text-shadow: var(--text-shadow);
+  text-shadow: var(--text-primary-shadow);
   letter-spacing: var(--px-1);
 }
 
 .secondary-text {
-  color: var(--text-tertiary);
+  color: var(--text-secondary-accent);
   font-family: var(--ff-base);
-  text-shadow: var(--text-shadow);
+  text-shadow: var(--text-primary-shadow);
   font-size: clamp(0.8rem, 2vw, 0.95rem);
   font-weight: var(--fw-medium);
 }
 
 .tertiary-text {
-  color: var(--text-tertiary);
+  color: var(--text-tertiary-accent);
   font-family: var(--ff-base);
-  text-shadow: var(--text-shadow);
+  text-shadow: var(--text-primary-shadow);
   font-size: clamp(0.8rem, 2vw, 0.95rem);
   font-weight: var(--fw-light);
 }
 
 .highlight-text {
   color: var(--accent);
-  text-shadow: var(--text-shadow);
+  text-shadow: var(--text-primary-shadow);
 }
 
 .highlight-secondary-text {
   color: var(--accent-secondary);
-  text-shadow: var(--text-shadow);
+  text-shadow: var(--text-primary-shadow);
 }
 
 .bold-text {
@@ -308,7 +300,7 @@
   color: var(--accent);
   font-family: var(--ff-heading);
   font-weight: var(--fw-medium);
-  text-shadow: var(--text-shadow);
+  text-shadow: var(--text-primary-shadow);
 }
 
 .section-sub-heading {
@@ -316,13 +308,13 @@
   font-size: clamp(1.2rem, 2vw, 1.3rem);
   color: var(--text-secondary-accent);
   font-weight: var(--fw-bold);
-  text-shadow: var(--text-shadow);
+  text-shadow: var(--text-primary-shadow);
 
   font-family: var(--ff-base);
   font-size: clamp(1rem, 2vw, 1.1rem);
   color: var(--text-secondary-accent);
   font-weight: var(--fw-light);
-  text-shadow: var(--text-shadow);
+  text-shadow: var(--text-primary-shadow);
   letter-spacing: var(--px-0-5);
 }
 

@@ -9,27 +9,17 @@
 }
 
 ::selection {
-  background-color: #004466;
-  /* Deep Navy Blue */
-  color: #00f2ff;
-  /* Glowing Cyan Text */
+  background-color: var(--selection-background);
+  color: var(--selection-color);
 }
 
-/* For Firefox support */
 ::-moz-selection {
-  background-color: rgba(0, 242, 255, 0.8);
-  color: #000;
+  background-color: var(--selection-background);
+  color: var(--selection-color);
 }
 
 html {
-  /* Use your file path */
   cursor: url('/assets/images/illustrations/mouse.svg'), auto;
-}
-
-/* Make sure buttons still feel clickable */
-button,
-a {
-  cursor: url('/assets/images/illustrations/mouse.svg'), pointer;
 }
 
 button:hover,
@@ -67,6 +57,16 @@ body {
   overflow: hidden;
 }
 
+.bg-video-control {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2rem;
+  width: 2rem;
+  border: 2px solid red;
+  z-index: 50;
+}
+
 .bg-video {
   position: fixed;
   inset: 0;
@@ -93,7 +93,7 @@ body {
   width: 100%;
   /* background-color: #020e14a3; */
   /* background-color: #1402025c; */
-  background-color: var(--bg-transparent-accent);
+  background-color: var(--video-background-overlay);
   /* background: url(/assets/images/bg/un1.jpg) center center/cover; */
 }
 
@@ -148,12 +148,12 @@ body {
   left: 50%;
   transform: translate(-50%, 0%);
   padding: 0 1rem;
-  background: var(--bg-menuBar);
+  background: var(--menubar-background);
   /* backdrop-filter: blur(var(--px-10)) saturate(150%);
   -webkit-backdrop-filter: blur(var(--px-10)) saturate(150%); */
   border-radius: var(--px-10);
   border: var(--px-4) solid var(--glass-card-border);
-  box-shadow: var(--bs-menuBar);
+  box-shadow: var(--cb-menuBar-shadow);
   opacity: 1;
   -webkit-user-select: none;
   /* Safari */
@@ -179,10 +179,10 @@ body {
   align-items: center;
   justify-content: center;
   font-size: clamp(1rem, 2vw, 1.1rem);
-  color: var(--text-primary);
+  color: var(--text-primary-accent);
   font-weight: var(--fw-medium);
   font-family: var(--ff-heading);
-  text-shadow: var(--text-shadow);
+  text-shadow: var(--text-primary-shadow);
   text-transform: uppercase;
   letter-spacing: var(--px-2);
   border-radius: var(--px-5);
@@ -192,7 +192,7 @@ body {
 }
 
 .menuActive {
-  box-shadow: var(--bs-active-menuBar);
+  box-shadow: var(--cb-menu-active);
 }
 
 .menuItem:hover {}
@@ -202,11 +202,12 @@ body {
 .menuSlider {
   height: 170%;
   width: 120px;
-  background: var(--bg-menuSlider);
+  background: var(--menuSlider-background);
   position: absolute;
   top: 50%;
   left: 304px;
   transform: translateY(-50%);
+  border: none;
   border-radius: 5px;
   z-index: -1;
   transition: left 0.5s ease, background 0.25s ease-in;
@@ -226,7 +227,7 @@ body {
   width: 3.5rem;
   height: 3rem;
   border-radius: 5px;
-  background: var(--bg-menuSlider);
+  background: var(--menuSlider-background);
   z-index: 100;
   display: none;
 }
@@ -237,7 +238,7 @@ body {
   height: 4px;
   width: 60%;
   transition: transform 0.2s ease-in-out, background 0.5s ease;
-  background: var(--bg-hamburger-line);
+  background: var(--hamburger-icon-line);
 }
 
 .l-up {
@@ -301,16 +302,16 @@ body {
 
 .hamburgerMenuItem {
   font-size: clamp(1rem, 2vw, 1.1rem);
-  color: var(--text-primary);
+  color: var(--text-primary-accent);
   font-weight: var(--fw-medium);
   font-family: var(--ff-heading);
-  text-shadow: var(--text-shadow);
+  text-shadow: var(--text-primary-shadow);
   text-transform: uppercase;
   letter-spacing: var(--px-2);
   border-radius: var(--px-5);
   padding: 1rem;
   border: 1px solid var(--accent);
-  box-shadow: var(--bg-hamburger-menuItems);
+  box-shadow: var(--hamburger-menuItems-shadow);
   transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
   width: 150px;
   text-align: center;
@@ -396,7 +397,6 @@ body {
 }
 
 .headerTitle {
-  /* color: var(--text-primary); */
   padding: var(--space-4) 0;
 }
 
@@ -596,7 +596,7 @@ body {
   /* opacity: 1; */
   font-family: var(--ff-heading);
   font-weight: var(--fw-medium);
-  text-shadow: var(--text-shadow);
+  text-shadow: var(--text-primary-shadow);
   font-size: var(--space-5);
   /* width: 3.5rem; */
   /* max-width: 4rem; */
