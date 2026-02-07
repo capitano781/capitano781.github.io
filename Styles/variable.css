@@ -8,6 +8,7 @@
 
   /* COMMON */
   --transparent: #00000000;
+  --dark-transparent: #000000cd;
 
   /* ***************************
       Calm blue theme (--cb-)
@@ -31,14 +32,21 @@
   --cb-glass-card-shadow: inset 0px 0px 20px 4px rgb(0 0 0),
     8px 9px 0px 0px #289ccd8f;
   --cb-glass-card-border: rgb(207 241 255 / 0%);
+  --cb-card-divider-shadow: 0px 0px 20px 1px #145f81;
 
   /* backgrounds */
+  --cb-glass-card-background: #081a22cc;
+  --cb-background-blur: #48636f33;
   --cb-video-background-overlay: #1402025c;
   --cb-hamburger-icon-line: #051f2a;
+  --cb-card-divider-background: linear-gradient(90deg, #001e2b 0%, #165f81 50%, #001e2b 100%);
 
   /* selection */
   --cb-selection-background: #004466;
   --cb-selection-color: #00f2ff;
+
+  /* buttons */
+  --cb-button-shadow: #289ccdc6;
 
   /* Menu bar */
   --cb-menuBar-background: #022534;
@@ -46,6 +54,16 @@
   --cb-menuBar-shadow: inset 0px 0px 20px 4px rgb(0 0 0);
   --cb-menu-active: 0px 0px 0px 0px #3e8aba;
   --cb-hamburger-menuItems-shadow: inset 4px 4px 20px 1px #146083cc, 3px 4px 5px 0px #13817a;
+  --cb-hamburger-menuItems-hover: inset 6px 6px 20px 1px #146083cc, 5px 6px 5px 0px #13817a;
+  --cb-hamburger-menuItems-active: inset 2px 2px 20px 1px #146083cc, 1px 2px 5px 0px #13817a;
+
+  /* Projects section */
+  --cb-projectBoxWrapper-shadow: inset 5px 6px 20px 0px rgb(16 92 125), 0px 2px 7px 0px #01171e, 5px 5px 0px 0px #106f6a;
+  --cb-projectBoxWrapper-background: #001017d7;
+  --cb-projectNumber-background: #001017f1;
+  --cb-label-highlight-border: #1f7d9e7a;
+  --cb-label-highlight-color: #1e9f95;
+
 
   /* ***************************** */
 

@@ -22,14 +22,21 @@
   /* borders and shadow */
   --glass-card-shadow: var(--cb-glass-card-shadow);
   --glass-card-border: var(--cb-glass-card-border);
+  --card-divider-shadow: var(--cb-card-divider-shadow);
 
   /* backgrounds */
+  --glass-card-background: var(--cb-glass-card-background);
+  --background-blur: var(--cb-background-blur);
   --video-background-overlay: var(--cb-video-background-overlay);
   --hamburger-icon-line: var(--cb-hamburger-icon-line);
+  --card-divider-background: var(--cb-card-divider-background);
 
   /* selections */
   --selection-background: var(--cb-selection-background);
   --selection-color: var(--cb-selection-color);
+
+  /* buttons */
+  --button-shadow: var(--cb-button-shadow);
 
   /* menu bar */
   --menubar-background: var(--cb-menuBar-background);
@@ -38,6 +45,15 @@
   --menu-active: var(--cb-menu-active);
   --menu-active: var(--cb-menu-active);
   --hamburger-menuItems-shadow: var(--cb-hamburger-menuItems-shadow);
+  --hamburger-menuItems-active: var(--cb-hamburger-menuItems-active);
+  --hamburger-menuItems-hover: var(--cb-hamburger-menuItems-hover);
+
+  /* projects section */
+  --projectBoxWrapper-shadow: var(--cb-projectBoxWrapper-shadow);
+  --projectBoxWrapper-background: var(--cb-projectBoxWrapper-background);
+  --projectNumber-background: var(--cb-projectNumber-background);
+  --label-highlight-border: var(--cb-label-highlight-border);
+  --label-highlight-color: var(--cb-label-highlight-color);
 }
 
 /* ===================== */
