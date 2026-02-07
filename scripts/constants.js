@@ -50,6 +50,7 @@ export const SELECTORS = {
   SliderLeftNav: "#SliderLeftNav",
   SliderRightNav: "#SliderRightNav",
   projectSlideClose: "#projectSlideClose",
+  projectDetailsView: '#projectDetailsView',
 
   // About Section
   aboutTitle: "#aboutTitle",

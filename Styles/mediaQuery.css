@@ -1,0 +1,242 @@
+/* ====================================================
+  Media queries Section
+=======================================================*/
+
+
+
+@media (max-width: 1090px) {
+    .projectBoxWrapper {
+        width: 80%;
+    }
+
+    .slide-position-2 {
+        transform: translate(-25%, -53%) scale(0.7);
+        width: 90%;
+    }
+
+    .slide-position-3 {
+        transform: translate(-75%, -53%) scale(0.7);
+        width: 90%;
+    }
+}
+
+@media (max-width: 1024px) AND (max-height: 600px) {
+    .projectGrid {
+        height: 260px;
+    }
+
+    .projectWrapperRow3,
+    .dv2 {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    .projectDetailsWrapper {
+        flex-direction: column;
+    }
+
+    .detailsTabsContainer {
+        flex-direction: row;
+        /* width: 50px; */
+    }
+
+    .detailsTabIcon {
+        display: block;
+    }
+
+    .detailsTabText {
+        display: none;
+    }
+
+    .detailsTabsContainer {
+        height: 50px;
+        width: 100%;
+        max-width: auto;
+        min-width: auto;
+    }
+
+    .detailsContentContainer {
+        height: 100%;
+        width: 100%;
+        max-width: auto;
+        min-width: auto;
+    }
+
+    .detailsTitle {
+        display: flex;
+    }
+}
+
+@media (max-width: 810px) {
+    .hamburgerIcon {
+        display: block;
+    }
+
+    .hamburgerMenu {
+        display: flex;
+    }
+
+    .menuBar {
+        opacity: 0;
+    }
+
+    .rootContainer {
+        height: 100%;
+    }
+
+    .slide-position-1 {}
+
+    .slide-position-2 {
+        transform: translate(-25%, -53%) scale(0.7);
+        width: 90%;
+    }
+
+    .slide-position-3 {
+        transform: translate(-75%, -53%) scale(0.7);
+        width: 90%;
+    }
+}
+
+@media (min-width: 811px) {
+    .rootContainer.hideElementWithScale {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    .menuBar.hideElementWithScale {
+        transform: scale(1) translate(-50%, 0%);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 840px) {
+    .projectSliderWrapper {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .glass-card {
+        height: 90%;
+        gap: 2rem;
+    }
+
+
+
+    .projectSliderWrapper {
+        gap: 3rem;
+    }
+
+    .slide-position-2,
+    .slide-position-3 {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.7);
+        --slider-transition-speed: 0s;
+    }
+}
+
+@media (max-width: 560px) {
+
+
+    .glass-card {
+        height: 100%;
+        gap: 2rem;
+        min-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 0;
+    }
+
+    .navButtons {
+        width: 5rem;
+        position: static;
+        transform: translate(0, 0);
+        padding: 0;
+    }
+
+    .navButton {
+        width: 2rem;
+        height: 2rem;
+        background-size: 3rem;
+    }
+
+    .leftNav:hover {
+        width: 2rem;
+        height: 2rem;
+        background-size: 3rem;
+    }
+
+    .rightNav:hover {
+        width: 2rem;
+        height: 2rem;
+        background-size: 3rem;
+    }
+
+    .slide-position-2 {
+        transform: translate(-35%, -53%) scale(0.7);
+        width: 90%;
+    }
+
+    .slide-position-3 {
+        transform: translate(-65%, -53%) scale(0.7);
+        width: 90%;
+    }
+
+    .projectGrid {
+        height: 260px;
+    }
+
+    .projectWrapperRow3,
+    .dv2 {
+        display: none;
+    }
+}
+
+@media (max-width: 431px) {
+
+
+    .projectTitleSectionContainer {
+        gap: 0;
+    }
+
+    .section-heading {
+        font-size: 1.5rem;
+    }
+
+    .section-sub-heading {
+        font-size: 0.9rem;
+    }
+
+    .projectSliderWrapper {
+        gap: 2rem;
+    }
+
+    .navButton {
+        width: 1.5rem;
+        height: 1.5rem;
+        background-size: 2.5rem;
+    }
+
+    .navButtons {
+        width: 4rem;
+    }
+
+    .projectBoxWrapper {
+        width: 90%;
+    }
+
+    .projectGrid {
+        height: 260px;
+    }
+
+    .projectWrapperRow3,
+    .dv2 {
+        display: none;
+    }
+}
+
+/* ======================================== */

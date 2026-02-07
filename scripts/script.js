@@ -1,7 +1,11 @@
 import { validatePortfolioData } from "./validator.js";
 import { CONFIG, CLASSES, SELECTORS, MESSAGES } from "./constants.js";
 import { setStaticPageData } from "./dataPlugScript.js";
-import { getElement, getAllElements } from "./utilityScripts.js";
+import {
+  getElement,
+  getAllElements,
+  setActiveView
+} from "./utilityScripts.js";
 
 // window.location.href = './projectDetails.html';
 
@@ -34,7 +38,7 @@ const initBackgroundVideo = () => {
   toggleBackgroundVideoStatus();
 
   bgVideoControl.addEventListener('click', () => {
-    playBackgroundVideo = playBackgroundVideo ? false : true;
+    playBackgroundVideo = !playBackgroundVideo;
     toggleBackgroundVideoStatus();
   });
 
@@ -46,8 +50,6 @@ const initBackgroundVideo = () => {
     }
   });
 };
-
-initBackgroundVideo();
 
 const toggleElementClassName = (element, className) => {
   if (element?.classList?.value.includes(className)) {
@@ -84,31 +86,6 @@ const initProjectSlider = () => {
         }, { once: true });
       });
     });
-  };
-
-  const getTargetIncrementedPositions = () => {
-    firstSlidePositionIndex = (firstSlidePositionIndex + 1 < projectSlides.length) ? firstSlidePositionIndex + 1 : 0;
-    const incrementPosition = (position) => {
-      return (position + 1) < projectSlides.length ? (position + 1) : 0;
-    };
-    const firstSlide = firstSlidePositionIndex;
-    const secondSlide = incrementPosition(firstSlide);
-    const thirdSlide = incrementPosition(secondSlide);
-
-    return { firstSlide, secondSlide, thirdSlide };
-  };
-
-  const getTargetDecrementedPositions = () => {
-    firstSlidePositionIndex = firstSlidePositionIndex === 0 ? projectSlides.length - 1 : firstSlidePositionIndex - 1;
-    const updatePosition = (position) => {
-      return position === projectSlides.length - 1 ? 0 : position + 1;
-    };
-
-    const firstSlide = firstSlidePositionIndex;
-    const secondSlide = updatePosition(firstSlide);
-    const thirdSlide = updatePosition(secondSlide);
-
-    return { firstSlide, secondSlide, thirdSlide };
   };
 
   const getTargetDirectionalPositions = (direction = 'RIGHT') => {
@@ -212,39 +189,8 @@ const initProjectSlider = () => {
 
 const controlSlider = () => {
   // Menu bar slider controls
-
-  const menuSlider = getElement(SELECTORS.menuSlider);
   const mainMenuItems = getAllElements(SELECTORS.menuItem);
   const hamburgerMenuItems = getAllElements(SELECTORS.hamburgerMenuItem);
-
-  const sectionViews = getAllElements(SELECTORS.view);
-
-  const setSliderPosition = (targetMenu) => {
-    const { offsetLeft } = targetMenu;
-    menuSlider.style.left = `${offsetLeft}px`;
-  };
-
-  const findSliderMenu = (viewId) => {
-    mainMenuItems.forEach((menuItem) => {
-      if (menuItem?.id?.includes(viewId)) {
-        menuItem.classList.add("menuActive");
-        setSliderPosition(menuItem);
-      } else {
-        menuItem.classList.remove("menuActive");
-      }
-    });
-  };
-
-  const setActiveView = (menuId) => {
-    sectionViews.forEach((view) => {
-      if (menuId.includes(view?.id)) {
-        view.classList.add("activeSection");
-        findSliderMenu(view?.id);
-      } else {
-        view.classList.remove("activeSection");
-      }
-    });
-  };
 
   const menuItemClickHandler = (eventType, menuItem, menuType) => {
     if (eventType === "click") {
@@ -254,7 +200,7 @@ const controlSlider = () => {
         toggleElementClassName(hamburgerIcon, CLASSES.hamburgerIconActive);
         toggleElementClassName(hamburgerMenu, CLASSES.hiddenWithOpacity);
       }
-      setActiveView(menuItem.id);
+      setActiveView(menuItem.id, true);
     }
   };
 
@@ -274,12 +220,10 @@ const controlSlider = () => {
 
   headerViewWorkButton.addEventListener("click", (event) => {
     setTimeout(() => {
-      setActiveView("work");
+      setActiveView("work", true);
     }, 300);
   });
 };
-
-controlSlider();
 
 const hamburgerIconToggle = () => {
   hamburgerIcon.addEventListener("click", () => {
@@ -290,4 +234,6 @@ const hamburgerIconToggle = () => {
   });
 };
 
+initBackgroundVideo();
+controlSlider();
 hamburgerIconToggle();

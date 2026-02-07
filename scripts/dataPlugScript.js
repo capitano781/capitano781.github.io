@@ -9,13 +9,20 @@ import {
   setElementText,
   getElement,
   isArrayDataValid,
+  setActiveView,
 } from "./utilityScripts.js";
 import { SELECTORS } from "./constants.js";
+import { setProjectDetailsPageData } from "./projectDetailsDataPlug.js";
 
-const setCommonHandler = (eventType, handlerFor, handlerElementId, index) => {
+const setCommonHandler = (eventType, handlerFor, handlerElementId, index, data) => {
   if (handlerFor === "button") {
     if (eventType === "click") {
-      window.location.href = `/projectDetails.html?id=${index}`;
+      if (handlerElementId === SELECTORS.projectDetailsIndexPageButton) {
+        const selectedProjectId = index;
+        setProjectDetailsPageData(data?.Project_Section?.ProjectSectionLabels, data?.Project_Section?.Projects[selectedProjectId], data?.Footer_Section?.copyrightText);
+        setActiveView(SELECTORS.projectDetailsView, false);
+        // window.location.href = `/projectDetails.html?id=${index}`;
+      }
     }
   }
 };
@@ -40,9 +47,9 @@ const setHeaderSectionData = (data) => {
   headerViewWorkButton.addEventListener("click", () => { });
 };
 
-const setProjectSectionData = (Project_Section) => {
-  setElementText(SELECTORS.projectSectionTitle, Project_Section?.Title);
-  setElementText(SELECTORS.projectSectionSecondaryTitle, Project_Section?.Secondary_Title);
+const setProjectSectionData = (data) => {
+  setElementText(SELECTORS.projectSectionTitle, data?.Project_Section?.Title);
+  setElementText(SELECTORS.projectSectionSecondaryTitle, data?.Project_Section?.Secondary_Title);
 
   const projectGrid = getElement(SELECTORS.projectGrid);
   const projectBoxTemplate = getElement(SELECTORS.projectBox);
@@ -52,8 +59,8 @@ const setProjectSectionData = (Project_Section) => {
     return `${Number(index) + 1}`;
   };
 
-  if (isArrayDataValid(Project_Section?.Projects))
-    Project_Section?.Projects.forEach((project, index) => {
+  if (isArrayDataValid(data?.Project_Section?.Projects))
+    data?.Project_Section?.Projects.forEach((project, index) => {
       const projectBoxClone = getElementTemplateClone(projectBoxTemplate, SELECTORS.projectBox);
       setTemplateElementText(projectBoxClone, SELECTORS.projectTitle, project?.Title);
       setTemplateElementText(projectBoxClone, SELECTORS.projectNumber, getProjectNumber(index));
@@ -62,7 +69,7 @@ const setProjectSectionData = (Project_Section) => {
 
       projectBoxClone.querySelector(SELECTORS.projectDetailsIndexPageButton).addEventListener("click", (event) => {
         setTimeout(() => {
-          setCommonHandler(event.type, "button", SELECTORS.projectDetailsIndexPageButton, index);
+          setCommonHandler(event.type, "button", SELECTORS.projectDetailsIndexPageButton, index, data);
         }, 400);
       });
 
@@ -146,7 +153,7 @@ const setCopyRightText = (copyrightText) => {
 export const setStaticPageData = (data) => {
   setHeaderSectionData(data);
 
-  setProjectSectionData(data?.Project_Section);
+  setProjectSectionData(data);
 
   setAboutmeSectionData(data?.About_Section);
 

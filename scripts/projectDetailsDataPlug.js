@@ -1,7 +1,7 @@
 'use strict';
 
 import { SELECTORS } from './constants.js';
-import { 
+import {
     isArrayDataValid,
     setElementText,
     setElementAttribute,
@@ -23,17 +23,17 @@ const setCommonHandler = (eventType, fieldType, handlerElementId) => {
     }
 };
 
-const setBackToHomeButtonText = (backToHomeButtonLabel) => {
-    setElementText(SELECTORS.backToHomeButton, backToHomeButtonLabel);
+// const setBackToHomeButtonText = (backToHomeButtonLabel) => {
+//     setElementText(SELECTORS.backToHomeButton, backToHomeButtonLabel);
 
-    const backToHomeButton = getElement(SELECTORS.backToHomeButton);
+//     const backToHomeButton = getElement(SELECTORS.backToHomeButton);
 
-    backToHomeButton.addEventListener('click', event => {
-        if (event.type === 'click') {
-            setCommonHandler(event.type, 'button', SELECTORS.backToHomeButton);
-        }
-    });
-};
+//     backToHomeButton.addEventListener('click', event => {
+//         if (event.type === 'click') {
+//             setCommonHandler(event.type, 'button', SELECTORS.backToHomeButton);
+//         }
+//     });
+// };
 
 const setProjectHeaderdata = (projectData) => {
     setElementText(SELECTORS.projectDetailTitle, projectData.Title);
@@ -47,7 +47,7 @@ const setProjectOverviewSectionData = (OverviewSectionTitle, projectOverviewData
 
     if (isArrayDataValid(projectOverviewData)) {
         projectOverviewData.forEach(overviewPoint => {
-            
+
             const overviewItemTemplateClone = getElementTemplateClone(overviewItemTemplate, SELECTORS.overviewItemTemplate);
 
             if (overviewPoint?.Name) setTemplateElementText(overviewItemTemplateClone, SELECTORS.overviewItemName, overviewPoint?.Name);
@@ -166,24 +166,24 @@ const setCopyRightText = (copyrightText) => {
 };
 
 export const setProjectDetailsPageData = (ProjectSectionLabels, projectData, copyrightText) => {
-    
-    setBackToHomeButtonText(projectData?.backToHomeButtonLabel);
 
-    setProjectHeaderdata(projectData);
+    // setBackToHomeButtonText(projectData?.backToHomeButtonLabel);
 
-    setProjectOverviewSectionData(ProjectSectionLabels.OverviewSectionTitle, projectData?.Overview);
+    // setProjectHeaderdata(projectData);
 
-    setkeyFeaturesSectionData(ProjectSectionLabels.KeyFeaturesSectionTitle, projectData?.KeyFeatures);
+    // setProjectOverviewSectionData(ProjectSectionLabels.OverviewSectionTitle, projectData?.Overview);
 
-    setTechnologySectionData(ProjectSectionLabels.TechnologiesUsedSectionTitle, projectData?.TechnologiesUsed);
+    // setkeyFeaturesSectionData(ProjectSectionLabels.KeyFeaturesSectionTitle, projectData?.KeyFeatures);
 
-    setChallengesSectionData(ProjectSectionLabels.ChallengesAndLearningsSectionTitle, projectData?.ChallengesAndLearnings);
+    // setTechnologySectionData(ProjectSectionLabels.TechnologiesUsedSectionTitle, projectData?.TechnologiesUsed);
 
-    if (projectData?.showScreenshotSection) 
-    setScreenshotsSectionData(ProjectSectionLabels.ScreenShotsSectionTitle, projectData?.ScreenShots);
+    // setChallengesSectionData(ProjectSectionLabels.ChallengesAndLearningsSectionTitle, projectData?.ChallengesAndLearnings);
 
-    setSourceCodeLink(projectData?.SourceCodeData);
+    // if (projectData?.showScreenshotSection)
+    //     setScreenshotsSectionData(ProjectSectionLabels.ScreenShotsSectionTitle, projectData?.ScreenShots);
 
-    setCopyRightText(copyrightText);
+    // setSourceCodeLink(projectData?.SourceCodeData);
+
+    // setCopyRightText(copyrightText);
 
 };

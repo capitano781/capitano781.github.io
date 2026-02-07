@@ -1,6 +1,6 @@
 "use strict";
 
-import { CONFIG, MESSAGES } from "./constants.js";
+import { CONFIG, MESSAGES, SELECTORS } from "./constants.js";
 
 export const isArrayDataValid = (data) => {
   if (data && Array.isArray(data) && data.length > 0) return true;
@@ -78,4 +78,34 @@ export const setTemplateElementAttribute = (
   if (!element) throwElementNullError(targetId);
   if (!value) console.error("invalid value for Id", targetId);
   if (element) element.setAttribute(attributeName, value);
+};
+
+export const setSliderPosition = (targetMenu) => {
+  const menuSlider = getElement(SELECTORS.menuSlider);
+  const { offsetLeft } = targetMenu;
+  menuSlider.style.left = `${offsetLeft}px`;
+};
+
+export const findSliderMenu = (viewId) => {
+  const mainMenuItems = getAllElements(SELECTORS.menuItem);
+  mainMenuItems.forEach((menuItem) => {
+    if (menuItem?.id?.includes(viewId)) {
+      menuItem.classList.add("menuActive");
+      setSliderPosition(menuItem);
+    } else {
+      menuItem.classList.remove("menuActive");
+    }
+  });
+};
+
+export const setActiveView = (menuId, setSlider = true) => {
+  const sectionViews = getAllElements(SELECTORS.view);
+  sectionViews.forEach((view) => {
+    if (menuId.includes(view?.id)) {
+      view.classList.add("activeSection");
+      if (setSlider) findSliderMenu(view?.id);
+    } else {
+      view.classList.remove("activeSection");
+    }
+  });
 };

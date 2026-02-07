@@ -61,6 +61,16 @@
                     }
                 ],
                 "TechnologiesUsed": [
+                    "C#",
+                    "(Windows Forms)",
+                    "Python",
+                    "FastAPI",
+                    "Uvicorn",
+                    "SQL",
+                    "Server",
+                    "RESTful APIs"
+                ],
+                "TechnologiesUsed2": [
                     {
                         "Category": "Frontend:",
                         "Descriptions": [

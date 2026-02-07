@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/styles/style.css" />
-  <link rel="stylesheet" href="/Styles//styleUtilities.css" />
+  <link rel="stylesheet" href="/Styles/styleUtilities.css" />
+  <link rel="stylesheet" href="/Styles/mediaQuery.css" />
   <script type="module" src="scripts/script.js"></script>
   <title>Capitano781 | MERN Stack Developer</title>
 </head>
@@ -60,7 +61,7 @@
   <main class="rootContainer hideElementWithScale" id="rootContainer">
     <section class="view header" id="home">
       <section class="headerWrapper" id="headerWrapper">
-        <div class="headerContainer glass-card bg-blur" id="headerContainer">
+        <div class="headerContainer glass-card" id="headerContainer">
           <div class="headerTitle" id="headerTitle">
             <span class="headerTitlePart1 primary-hero-heading" id="headerTitlePart1"></span>
             <span class="headerTitlePart2 primary-hero-heading hero-highlight-text" id="headerTitlePart2"></span>
@@ -73,12 +74,12 @@
         </div>
       </section>
     </section>
-    <section class="view projectSection activeSection" id="work">
-      <div class="projectSectionContainer glass-card bg-blur">
-        <div class="projectHeader glass-card-title" id="projectHeader">
-          <div class="projectTitleSectionContainer" id="projectTitleSectionContainer">
-            <div class="projectSectionTitle section-heading" id="projectSectionTitle"></div>
-            <div class="projectSectionSecondaryTitle section-sub-heading" id="projectSectionSecondaryTitle"></div>
+    <section class="view projectSection" id="work">
+      <div class="projectSectionContainer glass-card">
+        <div class="glass-card-title-section" id="projectHeader">
+          <div class="glass-card-title-wrap" id="projectTitleSectionContainer">
+            <div class="section-heading" id="projectSectionTitle"></div>
+            <div class="section-sub-heading" id="projectSectionSecondaryTitle"></div>
           </div>
         </div>
         <div class="projectSliderWrapper glass-card-content">
@@ -145,6 +146,40 @@
             </button>
           </div>
           </button>
+        </div>
+      </div>
+    </section>
+    <section class="view projectDetailsSection activeSection" id="projectDetailsView">
+      <div class="projectDetailsContainer glass-card">
+        <div class="glass-card-title-section" id="projectDetailsHeader">
+          <div class="glass-card-title-wrap" id="projectDetailsHeaderTitleSectionContainer">
+            <div class="section-heading-secondary" id="projectDetailsHeaderSectionTitle">UST Market Risk VaR Calculator
+            </div>
+          </div>
+        </div>
+        <div class="projectDetailsWrapper glass-card-content">
+          <div class="detailsTabsContainer">
+            <div class="detailsTab">
+              <button class="detailsTabIcon"></button>
+              <button class="detailsTabText">Key Features</button>
+            </div>
+            <div class="detailsTab">
+              <button class="detailsTabIcon"></button>
+              <button class="detailsTabText">Key Features</button>
+            </div>
+            <div class="detailsTab">
+              <button class="detailsTabIcon"></button>
+              <button class="detailsTabText">Key Features</button>
+            </div>
+            <div class="detailsTab">
+              <button class="detailsTabIcon"></button>
+              <button class="detailsTabText">Key Features</button>
+            </div>
+          </div>
+          <div class="detailsContentContainer">
+            <div class="detailsTitle">Key features</div>
+            <div class="detailsContent"></div>
+          </div>
         </div>
       </div>
     </section>
