@@ -60,7 +60,7 @@
   <main class="rootContainer hideElementWithScale" id="rootContainer">
     <section class="view header" id="home">
       <section class="headerWrapper" id="headerWrapper">
-        <div class="headerContainer glass-card" id="headerContainer">
+        <div class="headerContainer glass-card bg-blur" id="headerContainer">
           <div class="headerTitle" id="headerTitle">
             <span class="headerTitlePart1 primary-hero-heading" id="headerTitlePart1"></span>
             <span class="headerTitlePart2 primary-hero-heading hero-highlight-text" id="headerTitlePart2"></span>
@@ -74,7 +74,7 @@
       </section>
     </section>
     <section class="view projectSection activeSection" id="work">
-      <div class="projectSectionContainer glass-card">
+      <div class="projectSectionContainer glass-card bg-blur">
         <div class="projectHeader glass-card-title" id="projectHeader">
           <div class="projectTitleSectionContainer" id="projectTitleSectionContainer">
             <div class="projectSectionTitle section-heading" id="projectSectionTitle"></div>
@@ -82,8 +82,6 @@
           </div>
         </div>
         <div class="projectSliderWrapper glass-card-content">
-          <button class="leftNav navButton" id="SliderLeftNav">
-          </button>
           <div class="projectGrid" id="projectGrid">
             <template class="projectBox" id="projectBox">
               <div class="projectBoxWrapper" id="projectBoxWrapper">
@@ -98,7 +96,7 @@
                     <div class="projectTitle primary-text" id="projectTitle"></div>
                   </div>
                 </div>
-                <div class="card-divider"></div>
+                <div class="card-divider dv1"></div>
                 <div class="projectWrapperRow2">
                   <!-- <img
                     class="projectImage"
@@ -107,7 +105,7 @@
                   /> -->
                   <div class="projectDescText tertiary-text" id="projectDescText"></div>
                 </div>
-                <div class="card-divider"></div>
+                <div class="card-divider dv2"></div>
                 <div class="projectWrapperRow3">
                   <div class="projectMadeWithBox">
                     <div class="projectMadeWithLabel secondary-text">
@@ -134,13 +132,18 @@
                   </div>
                 </div>
                 <div class="projectWrapperRow4">
-                  <button id="projectDetailsIndexPageButton" class="btn-glass btn-glass-small"></button>
+                  <button id="projectDetailsIndexPageButton"
+                    class="projectDetailsIndexPageButton btn-glass btn-glass-small"></button>
                 </div>
               </div>
             </template>
           </div>
-          <button class="rightNav navButton" id="SliderRightNav">
-          </button>
+          <div class="navButtons">
+            <button class="leftNav navButton" id="SliderLeftNav">
+            </button>
+            <button class="rightNav navButton" id="SliderRightNav">
+            </button>
+          </div>
           </button>
         </div>
       </div>

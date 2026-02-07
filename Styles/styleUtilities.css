@@ -52,12 +52,12 @@
   font-family: var(--ff-heading);
   font-weight: var(--fw-semibold);
   font-size: var(--fs-300);
-  color: #c5c5c5;
+  color: var(--text-primary-accent);
   background: var(--accent-transparent);
   border: 1px solid var(--accent);
   backdrop-filter: blur(var(--px-14));
   -webkit-backdrop-filter: blur(var(--px-14));
-  box-shadow: 2px 2px 0px 0px #289ccdc6;
+  box-shadow: 2px 2px 0px 0px var(--button-shadow);
   transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
   text-shadow: var(--text-primary-shadow);
   text-transform: uppercase;
@@ -65,31 +65,13 @@
 }
 
 .btn-glass:hover {
-  /* background: rgba(255, 255, 255, 0.35); */
-  box-shadow: 4px 4px 0px 0px #289ccdc6;
+  box-shadow: 4px 4px 0px 0px var(--button-shadow);
   transform: translateY(-2px);
 }
 
 .btn-glass:active {
-  box-shadow: 0px 0px 0px 0px #289ccdc6;
+  box-shadow: 0px 0px 0px 0px var(--button-shadow);
   transform: translate(2px, 2px);
-}
-
-.btn-glass.accent {
-  color: var(--text-accent);
-  background: linear-gradient(135deg,
-      rgba(255, 255, 255, 0.35),
-      rgba(255, 255, 255, 0.15)),
-    var(--accent);
-
-  border: 1px solid rgba(255, 255, 255, 0.4);
-}
-
-.btn-glass.accent:hover {
-  background: linear-gradient(135deg,
-      rgba(255, 255, 255, 0.45),
-      rgba(255, 255, 255, 0.2)),
-    var(--accent-hover);
 }
 
 .btn-glass-small {
@@ -99,9 +81,9 @@
 
 /* ============================== */
 
-/* ========================
+/* =================================
     project slider utilities 
-=========================== */
+==================================== */
 
 .slide-position-1 {
   opacity: 1;
@@ -109,8 +91,6 @@
   z-index: 10;
   transition: transform var(--slider-transition-speed) ease, opacity var(--slider-transition-speed), filter 0.5s ease;
   will-change: transform;
-  /* transition: transform 0.5s ease, filter 1s ease; */
-  /* transition: transform 0.5s cubic-bezier(0, -0.79, 0.95, 0.9), filter 1s ease; */
 }
 
 .slide-position-1 .projectNumberText {
@@ -214,10 +194,7 @@
 .divider {}
 
 .glass-card {
-  background: rgb(8 26 34 / 80%);
-  /* background: rgb(72 99 111 / 20%); */
-  /* backdrop-filter: blur(10px) saturate(150%); */
-  /* -webkit-backdrop-filter: blur(10px) saturate(150%); */
+  background: var(--glass-card-background);
   border-radius: var(--px-20);
   border: var(--px-4) solid var(--glass-card-border);
   box-shadow: var(--glass-card-shadow);
@@ -228,6 +205,12 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+}
+
+.bg-blur {
+  background: var(--background-blur);
+  backdrop-filter: blur(10px) saturate(150%);
+  -webkit-backdrop-filter: blur(10px) saturate(150%);
 }
 
 .glass-card-title {
@@ -248,8 +231,8 @@
 .card-divider {
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, #001e2b 0%, #165f81 50%, #001e2b 100%);
-  box-shadow: 0px 0px 20px 1px #145f81;
+  background: var(--card-divider-background);
+  box-shadow: var(--card-divider-shadow);
 }
 
 .primary-text {
@@ -327,21 +310,171 @@
   0% {
     opacity: 0.4;
     filter: blur(1px);
-    text-shadow: 0 0 0px #00cdc694;
+    text-shadow: 0 0 0px var(--accent-secondary-transparent);
   }
 
   50% {
     opacity: 1;
     filter: blur(0px);
-    text-shadow: 0 0 10px #00cdc694;
+    text-shadow: 0 0 10px var(--accent-secondary-transparent);
     /* Adds a neon glow at peak brightness */
   }
 
   100% {
     opacity: 0.4;
     filter: blur(1px);
-    text-shadow: 0 0 0px #00cdc694;
+    text-shadow: 0 0 0px var(--accent-secondary-transparent);
   }
 }
 
 /* ============================== */
+
+/* ====================================================
+  Media queries Section
+=======================================================*/
+
+@media (max-width: 1090px) {
+  .projectBoxWrapper {
+    width: 80%;
+  }
+
+  .slide-position-2 {
+    transform: translate(-25%, -53%) scale(0.7);
+    width: 90%;
+  }
+
+  .slide-position-3 {
+    transform: translate(-75%, -53%) scale(0.7);
+    width: 90%;
+  }
+}
+
+@media (max-width: 1024px) AND (max-height: 600px) {
+  .projectGrid {
+    height: 260px;
+  }
+
+  .projectWrapperRow3,
+  .dv2 {
+    display: none;
+  }
+}
+
+@media (max-width: 750px) {
+
+  .projectSectionContainer {
+    height: 90%;
+    gap: 2rem;
+  }
+
+  .projectSliderWrapper {
+    gap: 3rem;
+  }
+
+  .navButtons {
+    width: 5rem;
+    position: static;
+    transform: translate(0, 0);
+    padding: 0;
+  }
+
+  .navButton {
+    width: 2rem;
+    height: 2rem;
+    background-size: 3rem;
+  }
+
+  .leftNav:hover {
+    width: 2rem;
+    height: 2rem;
+    background-size: 3rem;
+  }
+
+  .rightNav:hover {
+    width: 2rem;
+    height: 2rem;
+    background-size: 3rem;
+  }
+
+  .slide-position-2,
+  .slide-position-3 {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.7);
+    --slider-transition-speed: 0s;
+  }
+}
+
+@media (max-width: 560px) {
+
+  .slide-position-2 {
+    transform: translate(-35%, -53%) scale(0.7);
+    width: 90%;
+  }
+
+  .slide-position-3 {
+    transform: translate(-65%, -53%) scale(0.7);
+    width: 90%;
+  }
+
+  .projectGrid {
+    height: 260px;
+  }
+
+  .projectWrapperRow3,
+  .dv2 {
+    display: none;
+  }
+}
+
+@media (max-width: 431px) {
+  .projectSectionContainer {
+    height: 100%;
+    gap: 0.5rem;
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .projectTitleSectionContainer {
+    gap: 0;
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+  }
+
+  .section-sub-heading {
+    font-size: 0.9rem;
+  }
+
+  .projectSliderWrapper {
+    gap: 2rem;
+  }
+
+  .navButton {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-size: 2.5rem;
+  }
+
+  .navButtons {
+    width: 4rem;
+  }
+
+  .projectBoxWrapper {
+    width: 90%;
+  }
+
+  .projectGrid {
+    height: 260px;
+  }
+
+  .projectWrapperRow3,
+  .dv2 {
+    display: none;
+  }
+}
+
+/* ======================================== */
