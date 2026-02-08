@@ -18,8 +18,9 @@ const setCommonHandler = (eventType, handlerFor, handlerElementId, index, data) 
   if (handlerFor === "button") {
     if (eventType === "click") {
       if (handlerElementId === SELECTORS.projectDetailsIndexPageButton) {
-        const selectedProjectId = index;
-        setProjectDetailsPageData(data?.Project_Section?.ProjectSectionLabels, data?.Project_Section?.Projects[selectedProjectId], data?.Footer_Section?.copyrightText);
+
+        setProjectDetailsPageData(data?.Project_Section?.Projects[index]);
+
         setActiveView(SELECTORS.projectDetailsView, false);
         // window.location.href = `/projectDetails.html?id=${index}`;
       }

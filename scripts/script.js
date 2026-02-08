@@ -51,6 +51,8 @@ const initBackgroundVideo = () => {
   });
 };
 
+// initBackgroundVideo();
+
 const toggleElementClassName = (element, className) => {
   if (element?.classList?.value.includes(className)) {
     element.classList.remove(className);

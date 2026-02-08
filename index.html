@@ -153,33 +153,32 @@
       <div class="projectDetailsContainer glass-card">
         <div class="glass-card-title-section" id="projectDetailsHeader">
           <div class="glass-card-title-wrap" id="projectDetailsHeaderTitleSectionContainer">
-            <div class="section-heading-secondary" id="projectDetailsHeaderSectionTitle">UST Market Risk VaR Calculator
+            <div class="section-heading-secondary" id="projectDetailsHeaderSectionTitle">
             </div>
           </div>
         </div>
         <div class="projectDetailsWrapper glass-card-content">
-          <div class="detailsTabsContainer">
-            <div class="detailsTab">
-              <button class="detailsTabIcon"></button>
-              <button class="detailsTabText">Key Features</button>
-            </div>
-            <div class="detailsTab">
-              <button class="detailsTabIcon"></button>
-              <button class="detailsTabText">Key Features</button>
-            </div>
-            <div class="detailsTab">
-              <button class="detailsTabIcon"></button>
-              <button class="detailsTabText">Key Features</button>
-            </div>
-            <div class="detailsTab">
-              <button class="detailsTabIcon"></button>
-              <button class="detailsTabText">Key Features</button>
-            </div>
+          <div class="detailsTabsContainer" id="detailsTabsContainer">
           </div>
-          <div class="detailsContentContainer">
-            <div class="detailsTitle">Key features</div>
-            <div class="detailsContent"></div>
-          </div>
+          <template id="detailsTabTemplate">
+            <div class="detailsTabWrapper" id="detailsTabWrapper">
+              <button class="detailsTabIcon TabIconDisplay" id="detailsTabIcon"></button>
+              <button class="detailsTabText" id="detailsTabText">Key Features</button>
+            </div>
+          </template>
+          <div class="detailsContentContainer" id="detailsContentContainer"></div>
+          <template id="detailsContentContainerTemplate">
+            <div class="detailsContentContainerWrapper" id="detailsContentContainerWrapper">
+              <div class="detailsTitle" id="detailsTitle"></div>
+              <div class="detailsContent" id="detailsContent"></div>
+              <template class="plainListTemplate" id="plainListTemplate">
+                <div class="plainListWrapper">
+                  <span class="primaryText" id="primaryText"></span>
+                  <span class="secondaryText" id="secondaryText"></span>
+                </div>
+              </template>
+            </div>
+          </template>
         </div>
       </div>
     </section>

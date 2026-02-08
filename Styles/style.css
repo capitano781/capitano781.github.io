@@ -689,7 +689,7 @@ body {
   gap: 1rem;
 }
 
-.detailsTab {
+.detailsTabWrapper {
   border: 1px solid red;
   height: 50px;
   width: 100%;
@@ -700,17 +700,22 @@ body {
 }
 
 .detailsTabIcon {
-  background: url(/assets/images/icons/feature.svg) center no-repeat;
+  /* background: url('/assets/images/icons/feature.svg'); */
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: auto;
   background-color: #c13030;
   height: 50px;
   width: 50px;
   border: none;
+}
+
+.TabIconDisplay {
   display: none;
 }
 
 .detailsTabText {
-  background: #333;
+  background: #33333300;
   border: none;
   color: #ffffffa3;
   height: 100%;
@@ -719,14 +724,27 @@ body {
 }
 
 .detailsContentContainer {
-  border: 1px solid #ff00e6;
+  border: 3px solid #ff0000;
   height: 100%;
-  min-width: 500px;
-  max-width: 600px;
+  /* min-width: 500px; */
+  width: 600px;
+  position: relative;
+}
+
+.detailsContentContainerWrapper {
+  border: 3px solid #1eff00;
+  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  /* position: absolute; */
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
 .detailsTitle {
@@ -738,12 +756,43 @@ body {
   align-items: center;
   justify-content: center;
   display: none;
+  color: red;
 }
 
 .detailsContent {
-  border: 1px solid #00ff95;
+  border: 1px solid #0055ff;
   height: 100%;
   width: 100%;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  pointer-events: all;
+}
+
+.detailsContent::-webkit-scrollbar {
+  width: 5px;
+}
+
+.detailsContent::-webkit-scrollbar-track {
+  background: #004466;
+  /* border-left: 1px solid rgba(0, 242, 255, 0.1); */
+  border-radius: 10px;
+}
+
+.detailsContent::-webkit-scrollbar-thumb {
+  background: #28cdbd;
+  border-radius: 10px;
+  min-height: 40px;
+  box-shadow: inset 0 0 10px #28cdbd;
+}
+
+.detailsContent::-webkit-scrollbar-thumb:hover {
+  background: #28cdc574;
+}
+
+.plainListWrapper {
+  border: 2px solid rgb(255, 0, 170);
+  margin: 1rem;
+  color: #ffffffb3;
 }
 
 /* ======================================== */

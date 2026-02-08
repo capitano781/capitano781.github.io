@@ -159,6 +159,22 @@
 /* ============================== */
 
 /* ========================
+    Project details tab utilities 
+=========================== */
+
+.activeTab {
+  background-color: #009a6c;
+}
+
+.activeContent {
+  opacity: 1;
+  transition: opacity 0.8s ease;
+  z-index: 5;
+}
+
+/* ============================== */
+
+/* ========================
     general utilities 
 =========================== */
 
