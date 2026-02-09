@@ -19,37 +19,37 @@
         },
         "Projects": [
             {
-                "Title": "UST Portfolio Market Risk VaR Calculator 1",
+                "Title": "Sample project name big and lengthy",
                 "OnelineDescription": "A robust tool for calculating Value at Risk (VaR) for an UST (United States Treasury) Portfolio, employing a C# thick client GUI with a Python FastAPI ",
                 "indexPageButtonLabel": "Learn more",
                 "backToHomeButtonLabel": "Back to Portfolio",
                 "BriefDescription": "A robust tool for calculating Value at Risk (VaR) for an UST (United States Treasury) Portfolio, employing a C# thick client GUI with a Python FastAPI server backend and SQL Server database. This application helps investors analyze and optimize their portfolio's market risk.",
                 "sections": [
                     {
-                        "title": "Overview of project",
+                        "title": "Overview",
                         "iconUrl": "icons/feature.svg",
                         "type": "plainList",
                         "content": [
                             {
                                 "primaryText": "",
-                                "secondaryText": "The application is designed to allow users to construct a portfolio of US Treasury securities and analyze its market risk using Value at Risk (VaR) calculations. The following UST data is downloaded from the US Treasury portal: 4-Week, 8-Week, 13-Week, 26-Week, and 52-Week securities."
+                                "secondaryText": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi odio rem perferendis, ex repellendus suscipit exercitationem labore fugit assumenda! Dolorum vel architecto quos repellendus, eum doloremque error pariatur modi natus?"
                             },
                             {
-                                "primaryText": "",
-                                "secondaryText": "Users can define a fixed income portfolio by assigning weights to these different securities, ensuring the sum of the weights equals 1.0. The C# GUI then instructs the Python API server to calculate VaR for this portfolio using two methods:"
+                                "primaryText": "Point about something:",
+                                "secondaryText": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi odio rem perferendis, ex repellendus sdis, ex repellendus sdis, ex repellendus suscipit exercitationem labore fugit assumenda! Dolorum vel architecto quos repellendus, eum doloremque error pariatur modi natus?"
                             },
                             {
-                                "primaryText": "Historical Simulation:",
-                                "secondaryText": "A non-parametric approach using historical price data."
+                                "primaryText": "Point about something:",
+                                "secondaryText": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi odio rem perferendis"
                             },
                             {
-                                "primaryText": "Parametric Method:",
-                                "secondaryText": "A statistical approach assuming a normal distribution of returns."
+                                "primaryText": "Point about something:",
+                                "secondaryText": "Lorem, ips sit amet consectetur. Nisi odio rem perferendis"
                             }
                         ]
                     },
                     {
-                        "title": "KeyFeatures of project",
+                        "title": "Features",
                         "iconUrl": "icons/feature.svg",
                         "type": "plainList",
                         "content": [
@@ -72,41 +72,20 @@
                         ]
                     },
                     {
-                        "title": "TechnologiesUsed",
+                        "title": "Tech stack",
                         "iconUrl": "icons/feature.svg",
-                        "type": "plainList",
+                        "type": "largeIconTextBoxList",
                         "content": [
-                            "C#",
-                            "(Windows Forms)",
-                            "Python",
-                            "FastAPI",
-                            "Uvicorn",
+                            "HTML",
+                            "CSS",
+                            "Javascript",
+                            "React",
+                            "Redux",
                             "SQL",
-                            "Server",
+                            "Node",
+                            "Express",
+                            "Mongodb",
                             "RESTful APIs"
-                        ]
-                    },
-                    {
-                        "title": "ChallengesAndLearnings",
-                        "iconUrl": "icons/feature.svg",
-                        "type": "plainList",
-                        "content": [
-                            {
-                                "primaryText": "Cross-Platform Integration:",
-                                "secondaryText": "Integrating C# GUI with Python backend required efficient data serialization and API design."
-                            },
-                            {
-                                "primaryText": "Performance Optimization:",
-                                "secondaryText": "Optimizing Python code for efficient VaR calculations to provide near-real-time results."
-                            },
-                            {
-                                "primaryText": "Data Handling:",
-                                "secondaryText": "Designing a robust database schema in SQL Server to store and retrieve large amounts of historical market data."
-                            },
-                            {
-                                "primaryText": "User Interface:",
-                                "secondaryText": "Building a user-friendly C# interface for interacting with the VaR calculator and visualizing results."
-                            }
                         ]
                     },
                     {
@@ -120,7 +99,22 @@
                         ]
                     },
                     {
-                        "title": "SourceCodeData",
+                        "title": "Links",
+                        "iconUrl": "icons/feature.svg",
+                        "type": "plainList",
+                        "content": [
+                            {
+                                "primaryText": "Source Code Link",
+                                "secondaryText": "https://www.google.com"
+                            },
+                            {
+                                "primaryText": "demo link",
+                                "secondaryText": "https://www.google.com"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Links",
                         "iconUrl": "icons/feature.svg",
                         "type": "plainList",
                         "content": [
@@ -151,18 +145,6 @@
                             {
                                 "primaryText": "",
                                 "secondaryText": "The application is designed to allow users to construct a portfolio of US Treasury securities and analyze its market risk using Value at Risk (VaR) calculations. The following UST data is downloaded from the US Treasury portal: 4-Week, 8-Week, 13-Week, 26-Week, and 52-Week securities."
-                            },
-                            {
-                                "primaryText": "",
-                                "secondaryText": "Users can define a fixed income portfolio by assigning weights to these different securities, ensuring the sum of the weights equals 1.0. The C# GUI then instructs the Python API server to calculate VaR for this portfolio using two methods:"
-                            },
-                            {
-                                "primaryText": "Historical Simulation:",
-                                "secondaryText": "A non-parametric approach using historical price data."
-                            },
-                            {
-                                "primaryText": "Parametric Method:",
-                                "secondaryText": "A statistical approach assuming a normal distribution of returns."
                             }
                         ]
                     },

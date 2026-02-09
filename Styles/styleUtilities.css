@@ -163,13 +163,42 @@
 =========================== */
 
 .activeTab {
-  background-color: #009a6c;
+  background-color: var(--accent-secondary-transparent);
+  /* box-shadow: var(); */
 }
 
 .activeContent {
   opacity: 1;
   transition: opacity 0.8s ease;
   z-index: 5;
+}
+
+/* ============================== */
+
+/* ========================
+    scrollbar utilities 
+=========================== */
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 100%;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #004466;
+  /* border-left: 1px solid rgba(0, 242, 255, 0.1); */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #28cdc574;
+  border-radius: 10px;
+  min-height: 40px;
+  box-shadow: inset 0 0 10px #28cdc574;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #28cdbdcc;
 }
 
 /* ============================== */
@@ -221,9 +250,10 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  background: var(--background-blur);
-  backdrop-filter: blur(10px) saturate(150%);
-  -webkit-backdrop-filter: blur(10px) saturate(150%);
+  /* background: var(--background-blur); */
+  backdrop-filter: blur(0px);
+  /* backdrop-filter: blur(10px) saturate(150%); */
+  /* -webkit-backdrop-filter: blur(10px) saturate(150%); */
 }
 
 .bg-blur {
@@ -277,7 +307,7 @@
   color: var(--text-secondary-accent);
   font-family: var(--ff-base);
   text-shadow: var(--text-primary-shadow);
-  font-size: clamp(0.8rem, 2vw, 0.95rem);
+  font-size: clamp(0.9rem, 2vw, 0.95rem);
   font-weight: var(--fw-medium);
 }
 
@@ -285,18 +315,20 @@
   color: var(--text-tertiary-accent);
   font-family: var(--ff-base);
   text-shadow: var(--text-primary-shadow);
-  font-size: clamp(0.8rem, 2vw, 0.95rem);
+  font-size: clamp(0.9rem, 2vw, 0.95rem);
   font-weight: var(--fw-light);
 }
 
 .highlight-text {
   color: var(--accent);
   text-shadow: var(--text-primary-shadow);
+  font-weight: var(--fw-medium);
 }
 
 .highlight-secondary-text {
   color: var(--accent-secondary);
   text-shadow: var(--text-primary-shadow);
+  font-weight: var(--fw-medium);
 }
 
 .bold-text {
@@ -316,7 +348,7 @@
 }
 
 .section-heading-secondary {
-  font-size: clamp(1.8rem, 4vw, 2rem);
+  font-size: clamp(1.5rem, 4vw, 2rem);
   color: var(--accent);
   font-family: var(--ff-heading);
   font-weight: var(--fw-medium);

@@ -14,7 +14,7 @@ export const CONFIG = {
   DATA_FILE_PATH: './data/dataControl.json',
   ERROR_FALLBACK_TEXT: 'Data Plug Error',
   IMAGE_FILE_URL_INTERNAL: '/assets/images/',
-  IMAGE_FILE_URL_ATTR: 'center / auto no-repeat'
+  IMAGE_FILE_URL_ATTR: 'center center / 60% no-repeat'
 };
 
 export const SELECTORS = {
@@ -69,6 +69,11 @@ export const SELECTORS = {
   secondaryText: '#secondaryText',
   detailsContentContainerWrapper: '#detailsContentContainerWrapper',
   detailsTabWrapper: '#detailsTabWrapper',
+  plainListBulletIcon: '#plainListBulletIcon',
+  largeIconTextBoxTemplate: '#largeIconTextBoxTemplate',
+  largeIconTextBoxContainer: '#largeIconTextBoxContainer',
+  largeIcon: '#largeIcon',
+  iconText: '#iconText',
 
   // About Section
   aboutTitle: '#aboutTitle',

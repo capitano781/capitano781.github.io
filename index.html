@@ -158,25 +158,34 @@
           </div>
         </div>
         <div class="projectDetailsWrapper glass-card-content">
-          <div class="detailsTabsContainer" id="detailsTabsContainer">
+          <div class="detailsTabsContainer custom-scrollbar" id="detailsTabsContainer">
           </div>
           <template id="detailsTabTemplate">
             <div class="detailsTabWrapper" id="detailsTabWrapper">
               <button class="detailsTabIcon TabIconDisplay" id="detailsTabIcon"></button>
-              <button class="detailsTabText" id="detailsTabText">Key Features</button>
+              <button class="detailsTabText" id="detailsTabText"></button>
             </div>
           </template>
           <div class="detailsContentContainer" id="detailsContentContainer"></div>
           <template id="detailsContentContainerTemplate">
             <div class="detailsContentContainerWrapper" id="detailsContentContainerWrapper">
-              <div class="detailsTitle" id="detailsTitle"></div>
-              <div class="detailsContent" id="detailsContent"></div>
+              <div class="detailsTitle primary-text highlight-text" id="detailsTitle"></div>
+              <div class="detailsContent custom-scrollbar" id="detailsContent"></div>
               <template class="plainListTemplate" id="plainListTemplate">
                 <div class="plainListWrapper">
-                  <span class="primaryText" id="primaryText"></span>
-                  <span class="secondaryText" id="secondaryText"></span>
+                  <span class="plainListBulletIcon" id="plainListBulletIcon"></span>
+                  <span class="primaryText highlight-secondary-text" id="primaryText"></span>
+                  <span class="secondaryText secondary-text" id="secondaryText"></span>
                 </div>
               </template>
+              <div class="largeIconTextBoxContainer hideElement" id="largeIconTextBoxContainer">
+                <template id="largeIconTextBoxTemplate">
+                  <div class="largeIconTextBoxWrapper">
+                    <span class="largeIcon" id="largeIcon"></span>
+                    <span class="iconText" id="iconText"></span>
+                  </div>
+                </template>
+              </div>
             </div>
           </template>
         </div>
