@@ -43,9 +43,6 @@ const setHeaderSectionData = (data) => {
     SELECTORS.headerViewWorkButton,
     data?.Header_ViewWorkButtonLabel
   );
-
-  const headerViewWorkButton = getElement(SELECTORS.headerViewWorkButton);
-  headerViewWorkButton.addEventListener("click", () => { });
 };
 
 const setProjectSectionData = (data) => {

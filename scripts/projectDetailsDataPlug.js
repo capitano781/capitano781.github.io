@@ -11,6 +11,7 @@ import {
     getElementTemplateClone,
     getTemplateElementChild,
     getAllElements,
+    setActiveView
 } from './utilityScripts.js';
 import { isValidArray } from './validator.js';
 
@@ -18,7 +19,19 @@ import { isValidArray } from './validator.js';
  * Project details data load
  **********************************/
 
+const imageGalleryLargeView = getElement(SELECTORS.imageGalleryLargeView);
+
 const sectionLimit = 5;
+
+const setImageGalleryLargeView = (src) => {
+    imageGalleryLargeView.classList.remove(CLASSES.hiddenWithScale);
+    imageGalleryLargeView.style.background = `url('${CONFIG.IMAGE_FILE_URL_INTERNAL}${src}') ${CONFIG.IMAGE_FILE_URL_ATTR}`;
+    imageGalleryLargeView.style.backgroundColor = '#000000cd';
+};
+
+const closeImageGalleryLargeView = () => {
+    imageGalleryLargeView.classList.add(CLASSES.hiddenWithScale);
+};
 
 const getProjectSections = (projectData) => {
     if (projectData && projectData.sections && isValidArray(projectData?.sections)) {
@@ -46,14 +59,48 @@ const setActiveContent = (index) => {
 const setCommonHandler = (eventType, fieldType, handlerElementId, data) => {
     if (fieldType === 'button') {
         if (eventType === 'click') {
-            if (SELECTORS.backToHomeButton === handlerElementId) {
-                window.location.href = `/index.html`;
-            }
-            if (handlerElementId === SELECTORS.detailsTabIcon || handlerElementId === SELECTORS.detailsTabText) {
-                setActiveContent(data.index);
-            }
+            switch (handlerElementId) {
+                case SELECTORS.backToHomeButton: {
+                    window.location.href = `/index.html`;
+                    break;
+                }
+                case SELECTORS.detailsTabIcon: {
+                    setActiveContent(data.index);
+                    break;
+                }
+                case SELECTORS.detailsTabText: {
+                    setActiveContent(data.index);
+                    break;
+                }
+                case SELECTORS.projectDetailsCancel: {
+                    setActiveView("work", true);
+                    break;
+                }
+                case SELECTORS.imageGalleryLargeViewCancel: {
+                    closeImageGalleryLargeView();
+                    break;
+                }
+                default: console.error('Handler element not found -', handlerElementId);
+            };
         }
     }
+    if (fieldType === 'div') {
+        if (eventType === 'click') {
+            switch (handlerElementId) {
+                case SELECTORS.imageGallerySrc: {
+                    setImageGalleryLargeView(data.src);
+                    break;
+                }
+                default: console.error('Handler element not found -', handlerElementId);
+            };
+        }
+    }
+};
+
+const setProjectDetailsCancelHandler = () => {
+    getElement(SELECTORS.projectDetailsCancel).addEventListener('click', e => {
+        setCommonHandler(e.type, 'button', SELECTORS.projectDetailsCancel);
+    });
 };
 
 const setProjectTitle = (value) => {
@@ -97,6 +144,11 @@ const setProjectContents = (projectSections) => {
     const detailsContentContainer = getElement(SELECTORS.detailsContentContainer);
     detailsContentContainer.innerHTML = '';
     const detailsContentContainerTemplate = getElement(SELECTORS.detailsContentContainerTemplate);
+
+    const imageGalleryLargeViewCancel = getElement(SELECTORS.imageGalleryLargeViewCancel);
+    imageGalleryLargeViewCancel.addEventListener('click', e => {
+        setCommonHandler(e.type, 'button', SELECTORS.imageGalleryLargeViewCancel);
+    });
 
     if (projectSections && isArrayDataValid(projectSections)) {
         projectSections.forEach(section => {
@@ -142,7 +194,8 @@ const setProjectContents = (projectSections) => {
 
                             const largeIconTextBoxTemplateClone = getElementTemplateClone(largeIconTextBoxTemplate, SELECTORS.largeIconTextBoxTemplate);
 
-                            getTemplateElementChild(largeIconTextBoxTemplateClone, SELECTORS.largeIcon).style.background = `url('${CONFIG.IMAGE_FILE_URL_INTERNAL}icons/${data}.svg') ${CONFIG.IMAGE_FILE_URL_ATTR}`;
+                            const data1 = data.split(' ')[0];
+                            getTemplateElementChild(largeIconTextBoxTemplateClone, SELECTORS.largeIcon).style.background = `url('${CONFIG.IMAGE_FILE_URL_INTERNAL}icons/${data1}.svg') ${CONFIG.IMAGE_FILE_URL_ATTR}`;
 
                             setTemplateElementText(largeIconTextBoxTemplateClone, SELECTORS.iconText, data);
 
@@ -154,6 +207,37 @@ const setProjectContents = (projectSections) => {
 
                     break;
                 }
+                case 'imageGallery': {
+                    const imageGallerySmallView = getElement(SELECTORS.imageGallerySmallView);
+                    imageGallerySmallView.classList.remove(CLASSES.hidden);
+
+                    const imageGallerySmallViewTemplate = getElement(SELECTORS.imageGallerySmallViewTemplate);
+
+                    if (isValidArray(section?.content)) {
+
+                        if (section?.content.length > 4) imageGallerySmallView.style.alignItems = 'flex-start';
+
+                        section?.content.forEach(content => {
+                            const imageGallerySmallViewTemplateClone = getElementTemplateClone(imageGallerySmallViewTemplate, SELECTORS.imageGallerySmallViewTemplate);
+
+                            const imageGallerySrc = getTemplateElementChild(imageGallerySmallViewTemplateClone, SELECTORS.imageGallerySrc);
+
+                            imageGallerySrc.style.background = `url('${CONFIG.IMAGE_FILE_URL_INTERNAL}${content?.src}') ${CONFIG.IMAGE_FILE_URL_ATTR}`;
+
+                            imageGallerySrc.addEventListener('click', e => {
+                                setCommonHandler(e.type, 'div', SELECTORS.imageGallerySrc, { src: content?.src });
+                            });
+
+                            setTemplateElementText(imageGallerySmallViewTemplateClone, SELECTORS.imageGalleryLabel, content?.label);
+
+                            imageGallerySmallView.appendChild(imageGallerySmallViewTemplateClone);
+                        });
+                    }
+
+                    detailsContent.appendChild(imageGallerySmallView);
+
+                    break;
+                }
                 default: null;
             };
             detailsContentContainer.appendChild(detailsContentContainerTemplateClone);
@@ -162,6 +246,7 @@ const setProjectContents = (projectSections) => {
 };
 
 export const setProjectDetailsPageData = (projectData) => {
+    setProjectDetailsCancelHandler();
     setProjectTitle(projectData?.Title);
     const projectSections = getProjectSections(projectData);
     setProjectTabs(projectSections);

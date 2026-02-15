@@ -9,6 +9,8 @@
   /* COMMON */
   --transparent: #00000000;
   --dark-transparent: #000000cd;
+  --svg-accent: #289ccdaf;
+  --svg-accent-secondary: #28cdbd93;
 
   /* ***************************
       Calm blue theme (--cb-)
@@ -66,6 +68,28 @@
 
 
   /* ***************************** */
+
+  /* ************************
+    z-index values
+  *********************** */
+  --bg-video-control-button: 50;
+  --bg-video: -2;
+  --background-wrapper: -1;
+  --loaderOverlay: -1;
+  --menuItem-main: 1;
+  --menuSlider: -1;
+  --hamburgerIcon: 100;
+  --hamburgerMenu: 99;
+  --view: 1;
+  --navButton: 20;
+  --detailsContentContainerWrapper: 0;
+  --slide-position-1: 10;
+  --slide-position-2: 9;
+  --slide-position-2: 8;
+  --send-to-back-deck: 7;
+  --activeContent-projectDetail-content: 5;
+  --activeSection: 2;
+  --imageGalleryLargeView: 101;
 
 
   /* Fonts */

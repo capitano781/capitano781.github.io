@@ -78,38 +78,29 @@
                         "content": [
                             "HTML",
                             "CSS",
-                            "Javascript",
-                            "React",
-                            "Redux",
-                            "SQL",
-                            "Node",
-                            "Express",
-                            "Mongodb",
-                            "RESTful APIs"
+                            "Javascript"
                         ]
                     },
                     {
                         "title": "ScreenShots",
                         "iconUrl": "icons/feature.svg",
-                        "type": "imageList",
+                        "type": "imageGallery",
                         "content": [
                             {
-                                "src": "/assets/images/screenshots/initialPageSkeleton.png"
-                            }
-                        ]
-                    },
-                    {
-                        "title": "Links",
-                        "iconUrl": "icons/feature.svg",
-                        "type": "plainList",
-                        "content": [
-                            {
-                                "primaryText": "Source Code Link",
-                                "secondaryText": "https://www.google.com"
+                                "src": "screenshots/hero_page.png",
+                                "label": "Home"
                             },
                             {
-                                "primaryText": "demo link",
-                                "secondaryText": "https://www.google.com"
+                                "src": "screenshots/projects_page.png",
+                                "label": "Projects"
+                            },
+                            {
+                                "src": "screenshots/skill_page.png",
+                                "label": "Skills"
+                            },
+                            {
+                                "src": "screenshots/about_page.png",
+                                "label": "About me"
                             }
                         ]
                     },
@@ -176,13 +167,15 @@
                         "iconUrl": "icons/feature.svg",
                         "type": "plainList",
                         "content": [
-                            "C#",
-                            "(Windows Forms)",
-                            "Python",
-                            "FastAPI",
-                            "Uvicorn",
+                            "HTML",
+                            "CSS",
+                            "Javascript",
+                            "React",
+                            "Redux",
                             "SQL",
-                            "Server",
+                            "Node",
+                            "Express",
+                            "Mongodb",
                             "RESTful APIs"
                         ]
                     },

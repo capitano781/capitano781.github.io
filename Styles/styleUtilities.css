@@ -79,6 +79,14 @@
   font-size: var(--space-3-1);
 }
 
+.btn-cross {
+  height: 40px;
+  width: 40px;
+  background: var(--transparent);
+  border: none;
+  background: url(/assets/images/icons/cross.svg) center center / 150% no-repeat;
+}
+
 /* ============================== */
 
 /* =================================
@@ -233,6 +241,7 @@
 .activeSection {
   transform: scale(1);
   opacity: 1;
+  z-index: 2;
   /* transition: transform 0.5s ease-out; */
 }
 
@@ -369,6 +378,10 @@
   font-weight: var(--fw-light);
   text-shadow: var(--text-primary-shadow);
   letter-spacing: var(--px-0-5);
+}
+
+.font-heading {
+  font-family: var(--ff-heading);
 }
 
 /* ============================== */

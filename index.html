@@ -23,9 +23,12 @@
   </div>
   <div class="bg-video-control" id="bgVideoControl"></div>
   <div class="bg-video">
-    <video id="bgVideo" autoplay muted loop playsinline>
-      <source src="/assets/video/vid1.mp4" type="video/mp4" />
+    <video class="" id="bgVideo" autoplay muted loop playsinline>
+      <source src="/assets/video/vid1.webm" type="video/mp4" />
     </video>
+    <div class="background-wrapper hideElement">
+      <div class="background-grid"></div>
+    </div>
     <div class="bg-overlay"></div>
   </div>
   <div class="hamburgerIcon" id="hamburgerIcon">
@@ -57,6 +60,9 @@
       <button class="menuItem" id="menu_work">Work</button>
       <button class="menuItem" id="menu_skill">Skill</button>
     </div>
+  </div>
+  <div class="imageGalleryLargeView hideElementWithScale" id="imageGalleryLargeView">
+    <button class="imageGalleryLargeViewCancel btn-cross" id="imageGalleryLargeViewCancel"></button>
   </div>
   <main class="rootContainer hideElementWithScale" id="rootContainer">
     <section class="view header" id="home">
@@ -151,6 +157,9 @@
     </section>
     <section class="view projectDetailsSection activeSection" id="projectDetailsView">
       <div class="projectDetailsContainer glass-card">
+        <button class="projectDetailsCancel" id="projectDetailsCancel">
+          <div class="btn-cross" id="projectDetailsCancelImg"></div>
+        </button>
         <div class="glass-card-title-section" id="projectDetailsHeader">
           <div class="glass-card-title-wrap" id="projectDetailsHeaderTitleSectionContainer">
             <div class="section-heading-secondary" id="projectDetailsHeaderSectionTitle">
@@ -181,8 +190,16 @@
               <div class="largeIconTextBoxContainer hideElement" id="largeIconTextBoxContainer">
                 <template id="largeIconTextBoxTemplate">
                   <div class="largeIconTextBoxWrapper">
-                    <span class="largeIcon" id="largeIcon"></span>
-                    <span class="iconText" id="iconText"></span>
+                    <div class="largeIcon" id="largeIcon"></div>
+                    <span class="iconText secondary-text" id="iconText"></span>
+                  </div>
+                </template>
+              </div>
+              <div class="imageGallerySmallView hideElement" id="imageGallerySmallView">
+                <template id="imageGallerySmallViewTemplate">
+                  <div class="imageGallerySmallViewWrapper" id="imageGallerySmallViewWrapper">
+                    <div class="imageGallerySrc" id="imageGallerySrc"></div>
+                    <div class="imageGalleryLabel secondary-text" id="imageGalleryLabel"></div>
                   </div>
                 </template>
               </div>

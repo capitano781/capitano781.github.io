@@ -84,6 +84,63 @@ body {
   perspective: 1000px;
 }
 
+.background-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* background: #000; */
+  /* background: url(/assets/images/bg/un7.jpg) center center / cover no-repeat; */
+  /* Dark space background */
+  perspective: 1000px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* 2. The grid itself */
+.background-grid {
+  position: absolute;
+  width: 200%;
+  height: 400%;
+  /* Extra height to ensure it covers the horizon */
+  top: -100%;
+  /* Pull it up so we don't see the edge */
+  left: -50%;
+  /* background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: linear-gradient(#28cdbd 4.4px, transparent 4.4px),
+    linear-gradient(90deg, #28cdbd 4.4px, transparent 4.4px),
+    linear-gradient(#28cdbd 2.2px, transparent 2.2px),
+    linear-gradient(90deg, #28cdbd 2.2px, #e5e5f7 2.2px);
+  background-size: 110px 110px, 110px 110px, 22px 22px, 22px 22px;
+  background-position: -4.4px -4.4px, -4.4px -4.4px, -2.2px -2.2px, -2.2px -2.2px; */
+
+  /* This creates the 'floor' look */
+  /* transform: rotateX(60deg); */
+
+  /* Make the grid fade out toward the top */
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 80%);
+
+  animation: move-grid 10s ease infinite;
+}
+
+@keyframes move-grid {
+  0% {
+    transform: rotateX(0deg) translateY(0);
+  }
+
+  50% {
+    transform: rotateX(60deg) translateY(60px);
+  }
+
+  100% {
+    transform: rotateX(0deg) translateY(0px);
+  }
+
+  /* Match background-size height */
+}
+
 .bg-overlay {
   position: absolute;
   inset: 1;
@@ -356,6 +413,7 @@ body {
   opacity: 0;
   transition: transform 0.5s ease-out;
   will-change: transform;
+  z-index: 1;
 }
 
 /* ====================================================
@@ -668,6 +726,19 @@ body {
   gap: 0rem !important;
 }
 
+.projectDetailsCancel {
+  background: none;
+  border: none;
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.projectDetailsCancelImg {}
+
 .projectDetailsWrapper {
   height: 390px;
   /* border: 1px solid red; */
@@ -786,12 +857,19 @@ body {
 }
 
 .detailsContent {
-  /* border: 1px solid #0055ff; */
-  max-height: 100%;
+  height: 100%;
   width: 100%;
   overflow-y: auto;
   scrollbar-gutter: stable;
   pointer-events: all;
+  /* border: 1px solid #14608200; */
+  box-shadow: inset 0px 0px 20px 0px #145f81;
+  border-radius: 5px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 1.5rem 1rem;
 }
 
 .plainListWrapper {
@@ -814,6 +892,88 @@ body {
   /* border: 1px solid #1d6866; */
   /* padding: 2px 5px; */
   /* font-weight: 600; */
+}
+
+.largeIconTextBoxContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  /* border: 1px solid #1a6a6d; */
+  /* height: 100%; */
+  width: 100%;
+}
+
+.largeIconTextBoxWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* border: 1px solid #16666882; */
+  border-radius: 5px;
+  min-width: 110px;
+  padding: 0.5rem;
+  background: #00000000;
+  box-shadow: inset 3px 4px 20px 0px #125e80ab, 3px 2px 5px 0px #16686b;
+}
+
+.largeIcon {
+  height: 60px;
+  width: 60px;
+}
+
+.iconText {
+  /* text-transform: uppercase; */
+}
+
+.imageGallerySmallView {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.imageGallerySmallViewWrapper {
+  width: 40%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.imageGallerySrc {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: inset 3px 3px 7px 0px #125e80ab, inset -3px -3px 20px 0px #106f6a;
+}
+
+.imageGalleryLabel {}
+
+.imageGalleryLargeView {
+  z-index: 101;
+  height: 90%;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  background-color: var(--dark-transparent);
+  box-shadow: inset 3px 3px 7px 0px #125e80ab, inset -3px -3px 20px 0px #106f6a;
+  border-radius: 1rem;
+  transition: transform 0.5s ease;
+}
+
+.imageGalleryLargeViewCancel {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
 }
 
 /* ======================================== */

@@ -14,7 +14,7 @@ export const CONFIG = {
   DATA_FILE_PATH: './data/dataControl.json',
   ERROR_FALLBACK_TEXT: 'Data Plug Error',
   IMAGE_FILE_URL_INTERNAL: '/assets/images/',
-  IMAGE_FILE_URL_ATTR: 'center center / 60% no-repeat'
+  IMAGE_FILE_URL_ATTR: 'center center / 90% no-repeat'
 };
 
 export const SELECTORS = {
@@ -53,6 +53,13 @@ export const SELECTORS = {
   SliderRightNav: '#SliderRightNav',
   projectSlideClose: '#projectSlideClose',
   projectDetailsView: '#projectDetailsView',
+  imageGalleryContainer: '#imageGalleryContainer',
+  imageGallerySmallView: '#imageGallerySmallView',
+  imageGallerySmallViewTemplate: '#imageGallerySmallViewTemplate',
+  imageGallerySrc: '#imageGallerySrc',
+  imageGalleryLabel: '#imageGalleryLabel',
+  imageGalleryLargeView: '#imageGalleryLargeView',
+  imageGalleryLargeViewCancel: '#imageGalleryLargeViewCancel',
 
   // Project details
   projectDetailsHeaderSectionTitle: '#projectDetailsHeaderSectionTitle',
@@ -68,6 +75,7 @@ export const SELECTORS = {
   primaryText: '#primaryText',
   secondaryText: '#secondaryText',
   detailsContentContainerWrapper: '#detailsContentContainerWrapper',
+  projectDetailsCancel: '#projectDetailsCancel',
   detailsTabWrapper: '#detailsTabWrapper',
   plainListBulletIcon: '#plainListBulletIcon',
   largeIconTextBoxTemplate: '#largeIconTextBoxTemplate',

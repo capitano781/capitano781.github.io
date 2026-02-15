@@ -32,6 +32,13 @@
 }
 
 @media (max-width: 1000px) {
+
+    .projectDetailsContainer.glass-card,
+    .projectSectionContainer .glass-card {
+        height: 90%;
+        gap: 2rem;
+    }
+
     .projectDetailsContainer {
         gap: 0rem !important;
     }
@@ -142,12 +149,10 @@
 
 @media (max-width: 750px) {
 
-    .glass-card {
-        height: 90%;
-        gap: 2rem;
+    .projectWrapperRow3,
+    .dv2 {
+        display: none;
     }
-
-
 
     .projectSliderWrapper {
         gap: 3rem;
@@ -212,11 +217,6 @@
 
     .projectGrid {
         height: 260px;
-    }
-
-    .projectWrapperRow3,
-    .dv2 {
-        display: none;
     }
 }
 
