@@ -9,6 +9,7 @@
   /* COMMON */
   --transparent: #00000000;
   --dark-transparent: #000000cd;
+  --darker-transparent: #000000e4;
   --svg-accent: #289ccdaf;
   --svg-accent-secondary: #28cdbd93;
 
@@ -73,8 +74,9 @@
     z-index values
   *********************** */
   --bg-video-control-button: 50;
-  --bg-video: -2;
+  --bg-video: -4;
   --background-wrapper: -1;
+  --background-box: -2;
   --loaderOverlay: -1;
   --menuItem-main: 1;
   --menuSlider: -1;

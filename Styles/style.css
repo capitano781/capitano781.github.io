@@ -98,47 +98,54 @@ body {
   z-index: -1;
 }
 
-/* 2. The grid itself */
-.background-grid {
-  position: absolute;
+.background-box {
+  height: 200%;
   width: 200%;
-  height: 400%;
-  /* Extra height to ensure it covers the horizon */
-  top: -100%;
-  /* Pull it up so we don't see the edge */
-  left: -50%;
-  /* background-color: #e5e5f7;
-  opacity: 0.8;
-  background-image: linear-gradient(#28cdbd 4.4px, transparent 4.4px),
-    linear-gradient(90deg, #28cdbd 4.4px, transparent 4.4px),
-    linear-gradient(#28cdbd 2.2px, transparent 2.2px),
-    linear-gradient(90deg, #28cdbd 2.2px, #e5e5f7 2.2px);
-  background-size: 110px 110px, 110px 110px, 22px 22px, 22px 22px;
-  background-position: -4.4px -4.4px, -4.4px -4.4px, -2.2px -2.2px, -2.2px -2.2px; */
-
-  /* This creates the 'floor' look */
-  /* transform: rotateX(60deg); */
-
-  /* Make the grid fade out toward the top */
-  mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 80%);
-
-  animation: move-grid 10s ease infinite;
+  background: #333;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  perspective: 1000px;
+  z-index: -4;
 }
 
-@keyframes move-grid {
-  0% {
-    transform: rotateX(0deg) translateY(0);
-  }
+.gridBox {
+  height: 30%;
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
 
-  50% {
-    transform: rotateX(60deg) translateY(60px);
-  }
+.background-gridBox-1 {
+  transform: translate(-50%, -120%) rotateX(90deg) rotateY(0deg) rotateZ(-90deg) translateZ(0px);
+  background: #a9ab50;
+  z-index: -2;
+}
 
-  100% {
-    transform: rotateX(0deg) translateY(0px);
-  }
+.background-gridBox-2 {
+  transform: translate(0%, -45%) rotateX(90deg) rotateY(-90deg) rotateZ(-90deg) translateZ(0px);
+  background: #aa4141;
+  z-index: -2;
+}
 
-  /* Match background-size height */
+.background-gridBox-3 {
+  transform: translate(-96%, -45%) rotateX(0deg) rotateY(90deg) rotateZ(0deg) translateZ(0px);
+  background: #3d9b51;
+  z-index: -2;
+}
+
+.background-gridBox-4 {
+  transform: translate(-50%, 17%) rotateX(90deg) rotateY(0deg) rotateZ(-90deg) translateZ(0px);
+  background: #4083aa;
+  z-index: -2;
+}
+
+.background-gridBox-5 {
+  transform: translate(-50%, -50%) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  background: #712253;
+  z-index: -3;
 }
 
 .bg-overlay {
@@ -952,6 +959,7 @@ body {
   height: 100%;
   border-radius: 5px;
   box-shadow: inset 3px 3px 7px 0px #125e80ab, inset -3px -3px 20px 0px #106f6a;
+  cursor: url('/assets/images/illustrations/mousePointer.svg'), pointer;
 }
 
 .imageGalleryLabel {}
@@ -964,7 +972,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  background-color: var(--dark-transparent);
+  background-color: var(--darker-transparent);
   box-shadow: inset 3px 3px 7px 0px #125e80ab, inset -3px -3px 20px 0px #106f6a;
   border-radius: 1rem;
   transition: transform 0.5s ease;
@@ -974,6 +982,41 @@ body {
   position: absolute;
   top: 1rem;
   right: 2rem;
+}
+
+.linksViewContrainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.linksViewWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0.3rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #0f5b7c;
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 9px 0px #166083, 2px 2px 3px 0px #196d70;
+  text-decoration: none;
+}
+
+.linksViewWrapper:hover {}
+
+.linkIcon {
+  height: 20px;
+  width: 20px;
+  background: url(/assets/images/icons/link.svg) center center / 90% no-repeat;
+}
+
+.linkView {
+  text-decoration: none;
 }
 
 /* ======================================== */
@@ -1014,20 +1057,88 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* border: 4px solid #4fca4f; */
 }
 
 .techSkillContainer {
   max-width: 80%;
-  height: 80%;
+  /* height: 80%; */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   padding: 0rem;
-  gap: 2rem;
-  /* border: 3px solid #f6ff00; */
-  /* background: #333; */
+  gap: 1.5rem !important;
+}
+
+.techSkillContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0rem;
+  width: 100%;
+}
+
+.skillGroup {
+  width: 100%;
+}
+
+.skillGroupWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  /* gap: 1rem; */
+  width: 100%;
+  border: 1px solid #002839;
+  border-left: none;
+  border-right: none;
+  padding: 0.7rem 0.5rem;
+}
+
+.skillCategory {
+  min-width: 175px;
+  transform: translateY(6px);
+  color: var(--accent) !important;
+}
+
+.skillPartition {
+  padding: 0 1rem;
+  transform: translateY(6px);
+}
+
+.skillTags {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skillTag {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.skillTagWrapper {
+  /* border: 1px solid #21a79b8f; */
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  text-wrap: nowrap;
+  box-shadow: inset 0px 0px 10px 0px #135f81, 3px 2px 0px 0px #28cdc574;
+  transform: translate(0px, 0px);
+  transition: all 0.5s ease;
+}
+
+.skillTagWrapper:hover {
+  box-shadow: inset 0px 0px 10px 0px #135f81, 0px 0px 0px 0px #28cdc574;
+  transform: translate(3px, 2px);
+  transition: all 0.5s ease;
 }
 
 /* ======================================== */

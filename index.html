@@ -26,10 +26,17 @@
     <video class="" id="bgVideo" autoplay muted loop playsinline>
       <source src="/assets/video/vid1.webm" type="video/mp4" />
     </video>
-    <div class="background-wrapper hideElement">
-      <div class="background-grid"></div>
+    <div class="background-wrapper ">
+      <!-- <div class="background-grid"></div> -->
     </div>
     <div class="bg-overlay"></div>
+  </div>
+  <div class="background-box hideElement">
+    <div class="background-gridBox-1 gridBox"></div>
+    <div class="background-gridBox-2 gridBox"></div>
+    <div class="background-gridBox-3 gridBox"></div>
+    <div class="background-gridBox-4 gridBox"></div>
+    <div class="background-gridBox-5 gridBox"></div>
   </div>
   <div class="hamburgerIcon" id="hamburgerIcon">
     <div class="line l-up"></div>
@@ -155,7 +162,7 @@
         </div>
       </div>
     </section>
-    <section class="view projectDetailsSection activeSection" id="projectDetailsView">
+    <section class="view projectDetailsSection" id="projectDetailsView">
       <div class="projectDetailsContainer glass-card">
         <button class="projectDetailsCancel" id="projectDetailsCancel">
           <div class="btn-cross" id="projectDetailsCancelImg"></div>
@@ -203,23 +210,34 @@
                   </div>
                 </template>
               </div>
+              <div class="linksViewContrainer hideElement" id="linksViewContrainer">
+                <template id="linksViewTemplate">
+                  <a href="" target="_blank" rel="" class="linksViewWrapper" id="linksViewWrapper">
+                    <div class="linkView secondary-text" id="linkView"></div>
+                    <div class="linkIcon"></div>
+                  </a>
+                </template>
+              </div>
             </div>
           </template>
         </div>
       </div>
     </section>
-    <section class="view techSkillSection" id="skill">
+    <section class="view techSkillSection activeSection" id="skill">
       <div class="techSkillContainer glass-card">
-        <div class="techSkillHeader section-title cool-teal" id="techSkillHeader">
-          <div class="techSkillTitle" id="techSkillTitle"></div>
+        <div class="glass-card-title-section" id="techSkillHeader">
+          <div class="glass-card-title-wrap" id="techSkillHeaderContainer">
+            <div class="section-heading" id="techSkillTitle"></div>
+          </div>
         </div>
-        <div class="techSkillContent" id="techSkillContent">
-          <template class="skillGroup" id="skillGroup">
+        <div class="techSkillContent glass-card-content custom-scrollbar" id="techSkillContent">
+          <template id="skillGroup">
             <div class="skillGroupWrapper" id="skillGroupWrapper">
-              <div class="skillCategory" id="skillCategory"></div>
+              <div class="skillCategory primary-text highlight-text" id="skillCategory"></div>
+              <div class="skillPartition primary-text highlight-text" id="skillCategory">:</div>
               <div class="skillTags" id="skillTags">
-                <template class="skillTag" id="skillTag">
-                  <span class="skillTagWrapper" id="skillTagWrapper"></span>
+                <template id="skillTag">
+                  <span class="skillTagWrapper secondary-text" id="skillTagWrapper"></span>
                 </template>
               </div>
             </div>
