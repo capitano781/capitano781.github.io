@@ -82,6 +82,12 @@ const setAboutmeSectionData = (About_Section) => {
     SELECTORS.aboutSummeryDescription
   );
 
+  const processDescription = (text) => {
+    return text.replace(/\[([^\]]+)\]/g, (matchedString, matchedGroup, index, wholeString) => {
+      return `<span class="highlight-secondary-text">${matchedGroup}</span>`;
+    });
+  };
+
   if (isArrayDataValid(About_Section?.Descriptions))
     About_Section.Descriptions.forEach((Description) => {
       const aboutSummeryDescriptionTemplateClone = getElementTemplateClone(
@@ -89,11 +95,11 @@ const setAboutmeSectionData = (About_Section) => {
         SELECTORS.aboutSummeryDescription
       );
 
-      setTemplateElementText(
-        aboutSummeryDescriptionTemplateClone,
-        SELECTORS.aboutSummeryDescriptionWrapper,
-        Description.DescriptionPara
-      );
+      const description = processDescription(Description.DescriptionPara);
+
+      const aboutSummeryDescriptionWrapper = getTemplateElementChild(aboutSummeryDescriptionTemplateClone, SELECTORS.aboutSummeryDescriptionWrapper);
+
+      aboutSummeryDescriptionWrapper.innerHTML = description;
 
       aboutContent.appendChild(aboutSummeryDescriptionTemplateClone);
     });
@@ -144,9 +150,9 @@ const setContactSectionData = (Contact_Section) => {
     });
 };
 
-const setCopyRightText = (copyrightText) => {
-  setElementText(SELECTORS.copyrightSection, copyrightText);
-};
+// const setCopyRightText = (copyrightText) => {
+//   setElementText(SELECTORS.copyrightSection, copyrightText);
+// };
 
 export const setStaticPageData = (data) => {
   setHeaderSectionData(data);
@@ -159,5 +165,5 @@ export const setStaticPageData = (data) => {
 
   setContactSectionData(data?.Contact_Section);
 
-  setCopyRightText(data?.Footer_Section?.copyrightText);
+  // setCopyRightText(data?.Footer_Section?.copyrightText);
 };

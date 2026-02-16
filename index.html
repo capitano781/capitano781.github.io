@@ -223,7 +223,7 @@
         </div>
       </div>
     </section>
-    <section class="view techSkillSection activeSection" id="skill">
+    <section class="view techSkillSection" id="skill">
       <div class="techSkillContainer glass-card">
         <div class="glass-card-title-section" id="techSkillHeader">
           <div class="glass-card-title-wrap" id="techSkillHeaderContainer">
@@ -247,34 +247,38 @@
     </section>
     <section class="view aboutMeSection" id="about">
       <div class="aboutMeContainer glass-card">
-        <div class="aboutHeader section-title cool-teal" id="aboutHeader">
-          <div class="aboutTitle" id="aboutTitle"></div>
+        <div class="glass-card-title-section" id="aboutHeader">
+          <div class="glass-card-title-wrap" id="aboutHeaderContainer">
+            <div class="section-heading" id="aboutTitle"></div>
+          </div>
         </div>
-        <div class="aboutContent card flex-card" id="aboutContent">
-          <template class="aboutSummeryDescription" id="aboutSummeryDescription">
-            <div class="aboutSummeryDescriptionWrapper" id="aboutSummeryDescriptionWrapper"></div>
+        <div class="aboutContent glass-card-content custom-scrollbar" id="aboutContent">
+          <template id="aboutSummeryDescription">
+            <div class="aboutSummeryDescriptionWrapper secondary-text" id="aboutSummeryDescriptionWrapper"></div>
           </template>
         </div>
       </div>
     </section>
-    <section class="view contactSection" id="contact">
+    <section class="view contactSection activeSection" id="contact">
       <div class="contactSectionContainer glass-card">
-        <div class="contactHeader section-title cool-teal" id="contentHeader">
-          <div class="contactTitle" id="contactTitle"></div>
+        <div class="glass-card-title-section" id="contentHeader">
+          <div class="glass-card-title-wrap" id="contentHeaderContainer">
+            <div class="section-heading" id="contactTitle"></div>
+          </div>
         </div>
-        <div class="contactContent card flex-card" id="contactContent">
+        <div class="contactContent glass-card-content custom-scrollbar" id="contactContent">
           <template class="contactDescription" id="contactDescription">
-            <div class="contactDescriptionWrapper" id="contactDescriptionWrapper">
+            <div class="contactDescriptionWrapper secondary-text" id="contactDescriptionWrapper">
               <span class="contactText" id="contactText"></span>
-              <a class="contactLink" id="contactLink" href="" target="_blank"></a>
+              <a class="contactLink highlight-secondary-text" id="contactLink" href="" target="_blank"></a>
             </div>
           </template>
         </div>
       </div>
     </section>
-    <footer class="footer hideElement" id="footer">
+    <!-- <footer class="footer hideElement" id="footer">
       <div id="copyrightSection" class="copyrightSection"></div>
-    </footer>
+    </footer> -->
   </main>
 </body>
 
