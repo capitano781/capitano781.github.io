@@ -26,7 +26,7 @@ const sectionLimit = 5;
 const setImageGalleryLargeView = (src) => {
     imageGalleryLargeView.classList.remove(CLASSES.hiddenWithScale);
     imageGalleryLargeView.style.background = `url('${CONFIG.IMAGE_FILE_URL_INTERNAL}${src}') ${CONFIG.IMAGE_FILE_URL_ATTR}`;
-    imageGalleryLargeView.style.backgroundColor = '#000000cd';
+    imageGalleryLargeView.style.backgroundColor = '#000000e4';
 };
 
 const closeImageGalleryLargeView = () => {
@@ -233,9 +233,28 @@ const setProjectContents = (projectSections) => {
                             imageGallerySmallView.appendChild(imageGallerySmallViewTemplateClone);
                         });
                     }
-
                     detailsContent.appendChild(imageGallerySmallView);
+                    break;
+                }
+                case 'linksView': {
 
+                    const linksViewContrainer = getElement(SELECTORS.linksViewContrainer);
+                    linksViewContrainer.classList.remove(CLASSES.hidden);
+
+                    const linksViewTemplate = getElement(SELECTORS.linksViewTemplate);
+
+                    if (isValidArray(section?.content)) {
+                        section.content.forEach(content => {
+                            const linksViewTemplateClone = getElementTemplateClone(linksViewTemplate, SELECTORS.linksViewTemplate);
+
+                            if (content?.link) setTemplateElementAttribute(linksViewTemplateClone, SELECTORS.linksViewWrapper, 'href', content.link);
+
+                            if (content?.label) setTemplateElementText(linksViewTemplateClone, SELECTORS.linkView, content.label);
+
+                            linksViewContrainer.appendChild(linksViewTemplateClone);
+                        });
+                    }
+                    detailsContent.appendChild(linksViewContrainer);
                     break;
                 }
                 default: null;

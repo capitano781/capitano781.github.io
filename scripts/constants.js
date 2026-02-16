@@ -82,6 +82,10 @@ export const SELECTORS = {
   largeIconTextBoxContainer: '#largeIconTextBoxContainer',
   largeIcon: '#largeIcon',
   iconText: '#iconText',
+  linksViewContrainer: '#linksViewContrainer',
+  linksViewTemplate: '#linksViewTemplate',
+  linksViewWrapper: '#linksViewWrapper',
+  linkView: '#linkView',
 
   // About Section
   aboutTitle: '#aboutTitle',

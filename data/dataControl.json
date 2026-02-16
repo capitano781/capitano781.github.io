@@ -107,15 +107,15 @@
                     {
                         "title": "Links",
                         "iconUrl": "icons/feature.svg",
-                        "type": "plainList",
+                        "type": "linksView",
                         "content": [
                             {
-                                "primaryText": "Source Code Link",
-                                "secondaryText": "https://www.google.com"
+                                "link": "https://www.google.com",
+                                "label": "Source Code Link"
                             },
                             {
-                                "primaryText": "demo link",
-                                "secondaryText": "https://www.google.com"
+                                "link": "https://www.google.com",
+                                "label": "demo link"
                             }
                         ]
                     }
@@ -482,7 +482,7 @@
         "Title": "Technical Skills",
         "Categories": [
             {
-                "Category": "Languages:",
+                "Category": "Languages",
                 "Descriptions": [
                     "JavaScript (ES6+)",
                     "HTML5",
@@ -490,16 +490,17 @@
                 ]
             },
             {
-                "Category": "Frontend:",
+                "Category": "Frontend",
                 "Descriptions": [
                     "React.js",
-                    "Hooks",
+                    "React Hooks",
                     "Redux",
+                    "Responsive Design",
                     "Bootstrap"
                 ]
             },
             {
-                "Category": "Backend:",
+                "Category": "Backend",
                 "Descriptions": [
                     "Node.js",
                     "Express.js",
@@ -507,24 +508,26 @@
                 ]
             },
             {
-                "Category": "Database:",
+                "Category": "Database",
                 "Descriptions": [
-                    "MongoDB"
+                    "MongoDB",
+                    "SQL"
                 ]
             },
             {
-                "Category": "Tools:",
+                "Category": "Tools & Workflow",
                 "Descriptions": [
                     "Git",
+                    "GitHub",
                     "Postman",
                     "Chrome DevTools",
-                    "GitHub Copilot",
-                    "Research Tools",
-                    "AI-assisted Debugging"
+                    "VS Code",
+                    "AI-assisted Debugging",
+                    "Figma"
                 ]
             },
             {
-                "Category": "Methodologies:",
+                "Category": "Methodologies",
                 "Descriptions": [
                     "Agile",
                     "Scrum"

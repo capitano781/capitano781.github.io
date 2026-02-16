@@ -97,6 +97,20 @@
     .detailsContent {
         height: 100%;
     }
+
+    .techSkillContent {
+        height: 500px;
+        overflow-y: auto;
+    }
+
+    .skillGroupWrapper {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .skillPartition {
+        display: none;
+    }
 }
 
 @media (max-width: 810px) {
@@ -217,6 +231,11 @@
 
     .projectGrid {
         height: 260px;
+    }
+
+    .techSkillContent {
+        height: auto;
+        overflow-y: auto;
     }
 }
 
