@@ -19,7 +19,7 @@ const hamburgerIcon = getElement(SELECTORS.hamburgerIcon);
 const headerViewWorkButton = getElement(SELECTORS.headerViewWorkButton);
 
 // CONTROLS
-let playBackgroundVideo = false;
+let playBackgroundVideo = true;
 const videoPlaybackSpeed = 1;
 
 const initBackgroundVideo = () => {
