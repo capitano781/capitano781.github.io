@@ -1,30 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap");
+
 :root {
-  /* Theme colors */
-  --darkBg: #36384e;
+
+  /* ***************************
+      Resources
+  *************************** */
+
+  /* COMMON */
   --transparent: #00000000;
+  --dark-transparent: #000000cd;
+  --darker-transparent: #000000e4;
+  --svg-accent: #289ccdaf;
+  --svg-accent-secondary: #28cdbd93;
 
-  --primary: #f4f1de; /* off-white / cards background */
-  --accent: #f95738; /* strong coral-red */
-  --secondary: #43bccd; /* cyan-blue */
-  --highlight: #ffd166; /* warm yellow */
+  /* ***************************
+      Calm blue theme (--cb-)
+  *************************** */
 
-  --text-accent: #f4f1de;
+  /* color accents */
+  --cb-accent: #289ccde4;
+  --cb-accent-hover: #289ccd;
+  --cb-accent-transparent: #289ccd36;
+  --cb-accent-ocean-green: #28cdbdcc;
+  --cb-accent-ocean-green-hover: #28cdbd;
+  --cb-accent-ocean-green-transparent: #28cdc574;
 
-  --text-dark: #1f1f1f;
-  --text-light: #f4f1de;
-  --border: #000000;
-  --shadow: #000000;
+  /* text accents */
+  --cb-text-primary: #c5c5c5e2;
+  --cb-text-secondary: #b9b9b9db;
+  --cb-text-tertiary: #d4d4d4ce;
+  --cb-text-shadow: 0px 0px 20px #000, 0px 0px 20px #000;
 
-  --card-altL: #f4f1de;
+  /* border and shadows */
+  --cb-glass-card-shadow: inset 0px 0px 20px 4px rgb(0 0 0),
+    8px 9px 0px 0px #289ccd8f;
+  --cb-glass-card-border: rgb(207 241 255 / 0%);
+  --cb-card-divider-shadow: 0px 0px 20px 1px #145f81;
 
-  /* Button colors */
+  /* backgrounds */
+  --cb-glass-card-background: #081a22cc;
+  --cb-background-blur: #48636f33;
+  --cb-video-background-overlay: #1402025c;
+  --cb-hamburger-icon-line: #051f2a;
+  --cb-card-divider-background: linear-gradient(90deg, #001e2b 0%, #165f81 50%, #001e2b 100%);
+
+  /* selection */
+  --cb-selection-background: #004466;
+  --cb-selection-color: #00f2ff;
+
+  /* buttons */
+  --cb-button-shadow: #289ccdc6;
+
+  /* Menu bar */
+  --cb-menuBar-background: #022534;
+  --cb-menuSlider-background: radial-gradient(circle, #24769e 0%, #095271 100%);
+  --cb-menuBar-shadow: inset 0px 0px 20px 4px rgb(0 0 0);
+  --cb-menu-active: 0px 0px 0px 0px #3e8aba;
+  --cb-hamburger-menuItems-shadow: inset 4px 4px 20px 1px #146083cc, 3px 4px 5px 0px #13817a;
+  --cb-hamburger-menuItems-hover: inset 6px 6px 20px 1px #146083cc, 5px 6px 5px 0px #13817a;
+  --cb-hamburger-menuItems-active: inset 2px 2px 20px 1px #146083cc, 1px 2px 5px 0px #13817a;
+
+  /* Projects section */
+  --cb-projectBoxWrapper-shadow: inset 5px 6px 20px 0px rgb(16 92 125), 0px 2px 7px 0px #01171e, 5px 5px 0px 0px #106f6a;
+  --cb-projectBoxWrapper-background: #001017d7;
+  --cb-projectNumber-background: #001017f1;
+  --cb-label-highlight-border: #1f7d9e7a;
+  --cb-label-highlight-color: #1e9f95;
+
+
+  /* ***************************** */
+
+  /* ************************
+    z-index values
+  *********************** */
+  --bg-video-control-button: 50;
+  --bg-video: -4;
+  --background-wrapper: -1;
+  --background-box: -2;
+  --loaderOverlay: -1;
+  --menuItem-main: 1;
+  --menuSlider: -1;
+  --hamburgerIcon: 100;
+  --hamburgerMenu: 99;
+  --view: 1;
+  --navButton: 20;
+  --detailsContentContainerWrapper: 0;
+  --slide-position-1: 10;
+  --slide-position-2: 9;
+  --slide-position-2: 8;
+  --send-to-back-deck: 7;
+  --activeContent-projectDetail-content: 5;
+  --activeSection: 2;
+  --imageGalleryLargeView: 101;
+
+
+  /* Fonts */
+  --ff-heading: "Bitcount Prop Single", system-ui;
+  --ff-base: "Space Grotesk", sans-serif;
+  /* --ff-base: "Inter", sans-serif; */
+
+  /* Transition speed */
+  --ts-100ms: 0.1s;
+  --ts-200ms: 0.2s;
+  --ts-300ms: 0.3s;
+  --ts-400ms: 0.4s;
+  --ts-500ms: 0.5s;
+  --ts-600ms: 0.6s;
+  --ts-700ms: 0.7s;
+  --ts-800ms: 0.8s;
+  --ts-900ms: 0.9s;
+  --ts-1s: 1s;
+  --ts-2s: 2s;
+  --ts-3s: 3s;
+  --ts-4s: 4s;
+  --ts-5s: 5s;
+
+  /* Slider transition speed */
+  --slider-transition-speed: var(--ts-500ms);
 
   /* Font weight */
-  --light: 300;
-  --slightly-bold: 400;
-  --bold: 500;
-  --very-bold: 600;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-superbold: 800;
+  --fw-ultrabold: 900;
+
+  /* Font size */
+  --fs-100: 0.75rem;
+  --fs-200: 0.875rem;
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.5rem;
+  --fs-700: 1.875rem;
+  --fs-800: 2.25rem;
+  --fs-900: 3rem;
+
+  /* Line height */
+  --lh-tight: 1.1;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.7;
+
+  /* Letter spacing */
+  --ls-tight: -0.02em;
+  --ls-normal: 0;
+  --ls-wide: 0.05em;
+  --ls-wider: 0.1em;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-3-1: 0.9rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 2.5rem;
+  --space-8: 3rem;
+  --space-9: 3.5rem;
+
+  /* core spacings */
+  --pad-card: var(--space-4);
+  --pad-section: var(--space-6);
+  --mar-section: var(--space-6);
+
+  /* pixel sizing */
+  --px-0: 0px;
+  --px-0-5: 0.5px;
+  --px-1: 1px;
+  --px-2: 2px;
+  --px-3: 3px;
+  --px-4: 4px;
+  --px-5: 5px;
+  --px-6: 6px;
+  --px-8: 8px;
+  --px-10: 10px;
+  --px-12: 12px;
+  --px-14: 14px;
+  --px-16: 16px;
+  --px-20: 20px;
+  --px-24: 24px;
+  --px-27: 27px;
+  --px-32: 32px;
+
+  /* View port sizing */
+  --vw-1: 1vw;
+  --vw-2: 2vw;
+  --vw-3: 3vw;
+  --vw-4: 4vw;
+  --vw-5: 5vw;
+  --vw-6: 6vw;
 }
 
-[data-theme="dark"] {
-}
+[data-theme="dark"] {}

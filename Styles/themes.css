@@ -1,5 +1,63 @@
 @import "variable.css";
 
+.calm-blue {
+  /* cursor */
+  --cursor-primary: var(--cb-cursor-primary);
+  --cursor-primary-hover: var(--cb-cursor-primary-hover);
+
+  /* colors */
+  --accent: var(--cb-accent);
+  --accent-hover: var(--cb-accent-hover);
+  --accent-transparent: var(--cb-accent-transparent);
+  --accent-secondary: var(--cb-accent-ocean-green);
+  --accent-secondary-hover: var(--cb-accent-ocean-green-hover);
+  --accent-secondary-transparent: var(--cb-accent-ocean-green-transparent);
+
+  /* text accents */
+  --text-primary-accent: var(--cb-text-primary);
+  --text-secondary-accent: var(--cb-text-secondary);
+  --text-tertiary-accent: var(--cb-text-tertiary);
+  --text-primary-shadow: var(--cb-text-shadow);
+
+  /* borders and shadow */
+  --glass-card-shadow: var(--cb-glass-card-shadow);
+  --glass-card-border: var(--cb-glass-card-border);
+  --card-divider-shadow: var(--cb-card-divider-shadow);
+
+  /* backgrounds */
+  --glass-card-background: var(--cb-glass-card-background);
+  --background-blur: var(--cb-background-blur);
+  --video-background-overlay: var(--cb-video-background-overlay);
+  --hamburger-icon-line: var(--cb-hamburger-icon-line);
+  --card-divider-background: var(--cb-card-divider-background);
+
+  /* selections */
+  --selection-background: var(--cb-selection-background);
+  --selection-color: var(--cb-selection-color);
+
+  /* buttons */
+  --button-shadow: var(--cb-button-shadow);
+
+  /* menu bar */
+  --menubar-background: var(--cb-menuBar-background);
+  --menuSlider-background: var(--cb-menuSlider-background);
+  --menubar-shadow: var(--cb-menuBar-shadow);
+  --menu-active: var(--cb-menu-active);
+  --menu-active: var(--cb-menu-active);
+  --hamburger-menuItems-shadow: var(--cb-hamburger-menuItems-shadow);
+  --hamburger-menuItems-active: var(--cb-hamburger-menuItems-active);
+  --hamburger-menuItems-hover: var(--cb-hamburger-menuItems-hover);
+
+  /* projects section */
+  --projectBoxWrapper-shadow: var(--cb-projectBoxWrapper-shadow);
+  --projectBoxWrapper-background: var(--cb-projectBoxWrapper-background);
+  --projectNumber-background: var(--cb-projectNumber-background);
+  --label-highlight-border: var(--cb-label-highlight-border);
+  --label-highlight-color: var(--cb-label-highlight-color);
+}
+
+/* ===================== */
+
 .epic-orange {
   --accent: #ff5a3c;
   --accent-hover: #ff4a2a;
@@ -17,21 +75,25 @@
   --accent-hover: #1f5cff;
   --text-accent: #f4f1de;
 }
+
 .lime-green {
   --accent: #7cff00;
   --accent-hover: #6ae000;
   --text-accent: #1f1f1f;
 }
+
 .hot-pink {
   --accent: #ff3fa4;
   --accent-hover: #ff2f96;
   --text-accent: #1f1f1f;
 }
+
 .deep-red {
   --accent: #c81d25;
   --accent-hover: #b81a22;
   --text-accent: #1f1f1f;
 }
+
 .cool-teal {
   --accent: #1fb6aa;
   --accent-hover: #18a39a;

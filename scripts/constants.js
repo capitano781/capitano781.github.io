@@ -10,159 +10,215 @@
 // ============================================
 
 export const CONFIG = {
-    LOADER_DELAY: 100, // milliseconds
-    DATA_FILE_PATH: './data/dataControl.json',
-    ERROR_FALLBACK_TEXT: 'Data Plug Error'
+  LOADER_DELAY: 100, // milliseconds
+  DATA_FILE_PATH: './data/dataControl.json',
+  ERROR_FALLBACK_TEXT: 'Data Plug Error',
+  IMAGE_FILE_URL_INTERNAL: '/assets/images/',
+  IMAGE_FILE_URL_ATTR: 'center center / 90% no-repeat'
 };
 
 export const SELECTORS = {
-    // ============================================
-    // DOM Selectors - Index page
-    // ============================================
+  // ============================================
+  // DOM Selectors - Index page
+  // ============================================
 
-    // Loader
-    loaderOverlay: '#loaderOverlay',
-    rootContainer: '#rootContainer',
+  // Loader
+  loaderOverlay: '#loaderOverlay',
+  rootContainer: '#rootContainer',
 
-    // Header Section
-    headerTitlePart1: '#headerTitlePart1',
-    headerTitlePart2: '#headerTitlePart2',
-    headerDescription: '#headerDescription',
-    headerTag: '#headerTag',
-    headerViewWorkButton: '#headerViewWorkButton',
-    headerImage: '#headerImage',
+  // video
+  bgVideoControl: '#bgVideoControl',
+  backgroundVideo: '#bgVideo',
 
-    // Project Section
-    projectSectionTitle: '#projectSectionTitle',
-    projectGrid: '#projectGrid',
-    projectBox: '#projectBox',
-    projectBoxWrapper: '#projectBoxWrapper',
-    projectTitle: '#projectTitle',
-    projectDescText: '#projectDescText',
-    projectDetailsIndexPageButton: '#projectDetailsIndexPageButton',
+  // Header Section
+  header: '#header',
+  headerTitlePart1: '#headerTitlePart1',
+  headerTitlePart2: '#headerTitlePart2',
+  headerDescription: '#headerDescription',
+  headerTag: '#headerTag',
+  headerViewWorkButton: '#headerViewWorkButton',
+  headerImage: '#headerImage',
 
-    // About Section
-    aboutTitle: '#aboutTitle',
-    aboutContent: '#aboutContent',
-    aboutSummeryDescription: '#aboutSummeryDescription',
-    aboutSummeryDescriptionWrapper: '#aboutSummeryDescriptionWrapper',
+  // Project Section
+  projectSectionTitle: '#projectSectionTitle',
+  projectSectionSecondaryTitle: '#projectSectionSecondaryTitle',
+  projectGrid: '#projectGrid',
+  projectBox: '#projectBox',
+  projectBoxWrapper: '#projectBoxWrapper',
+  projectTitle: '#projectTitle',
+  projectNumber: '#projectNumber',
+  projectDescText: '#projectDescText',
+  projectDetailsIndexPageButton: '#projectDetailsIndexPageButton',
+  SliderLeftNav: '#SliderLeftNav',
+  SliderRightNav: '#SliderRightNav',
+  projectSlideClose: '#projectSlideClose',
+  projectDetailsView: '#projectDetailsView',
+  imageGalleryContainer: '#imageGalleryContainer',
+  imageGallerySmallView: '#imageGallerySmallView',
+  imageGallerySmallViewTemplate: '#imageGallerySmallViewTemplate',
+  imageGallerySrc: '#imageGallerySrc',
+  imageGalleryLabel: '#imageGalleryLabel',
+  imageGalleryLargeView: '#imageGalleryLargeView',
+  imageGalleryLargeViewCancel: '#imageGalleryLargeViewCancel',
 
-    // Tech Skills Section
-    techSkillTitle: '#techSkillTitle',
-    techSkillContent: '#techSkillContent',
-    skillGroup: '#skillGroup',
-    skillGroupWrapper: '#skillGroupWrapper',
-    skillCategory: '#skillCategory',
-    skillTags: '#skillTags',
-    skillTag: '#skillTag',
-    skillTagWrapper: '#skillTagWrapper',
+  // Project details
+  projectDetailsHeaderSectionTitle: '#projectDetailsHeaderSectionTitle',
+  detailsTabsContainer: '#detailsTabsContainer',
+  detailsTabTemplate: '#detailsTabTemplate',
+  detailsTabText: '#detailsTabText',
+  detailsTabIcon: '#detailsTabIcon',
+  detailsContentContainer: '#detailsContentContainer',
+  detailsContentContainerTemplate: '#detailsContentContainerTemplate',
+  detailsTitle: '#detailsTitle',
+  detailsContent: '#detailsContent',
+  plainListTemplate: '#plainListTemplate',
+  primaryText: '#primaryText',
+  secondaryText: '#secondaryText',
+  detailsContentContainerWrapper: '#detailsContentContainerWrapper',
+  projectDetailsCancel: '#projectDetailsCancel',
+  detailsTabWrapper: '#detailsTabWrapper',
+  plainListBulletIcon: '#plainListBulletIcon',
+  largeIconTextBoxTemplate: '#largeIconTextBoxTemplate',
+  largeIconTextBoxContainer: '#largeIconTextBoxContainer',
+  largeIcon: '#largeIcon',
+  iconText: '#iconText',
+  linksViewContrainer: '#linksViewContrainer',
+  linksViewTemplate: '#linksViewTemplate',
+  linksViewWrapper: '#linksViewWrapper',
+  linkView: '#linkView',
 
-    // Contact Section
-    contactTitle: '#contactTitle',
-    contactContent: '#contactContent',
-    contactDescription: '#contactDescription',
-    contactDescriptionWrapper: '#contactDescriptionWrapper',
-    contactText: '#contactText',
-    contactLink: '#contactLink',
+  // About Section
+  aboutTitle: '#aboutTitle',
+  aboutContent: '#aboutContent',
+  aboutSummeryDescription: '#aboutSummeryDescription',
+  aboutSummeryDescriptionWrapper: '#aboutSummeryDescriptionWrapper',
 
-    // Footer Section
-    copyrightSection: '#copyrightSection',
+  // Tech Skills Section
+  techSkillTitle: '#techSkillTitle',
+  techSkillContent: '#techSkillContent',
+  skillGroup: '#skillGroup',
+  skillGroupWrapper: '#skillGroupWrapper',
+  skillCategory: '#skillCategory',
+  skillTags: '#skillTags',
+  skillTag: '#skillTag',
+  skillTagWrapper: '#skillTagWrapper',
 
-    // Project Detail Page Selectors
-    backToHomeButton: '#backToHomeButton',
-    projectDetailHeader: '#projectDetailHeader',
-    projectDetailHeroSection: '#projectDetailHeroSection',
-    projectDetailTitle: '#projectDetailTitle',
-    projectDetailBriefDescription: '#projectDetailBriefDescription',
-    
-    // Overview Section
-    projectOverviewSection: '#projectOverviewSection',
-    overviewContent: '#overviewContent',
-    overviewItem: '#overviewItem',
-    overviewItemWrapper: '#overviewItemWrapper',
-    overviewItemName: '#overviewItemName',
-    overviewItemDescription: '#overviewItemDescription',
-    
-    // Features Section
-    keyFeaturesSection: '#keyFeaturesSection',
-    featuresContent: '#featuresContent',
-    featureItem: '#featureItem',
-    featureItemWrapper: '#featureItemWrapper',
-    featureName: '#featureName',
-    featureDescription: '#featureDescription',
-    
-    // Technologies Section
-    technologiesSection: '#technologiesSection',
-    technologiesContent: '#technologiesContent',
-    technologyCategory: '#technologyCategory',
-    technologyCategoryWrapper: '#technologyCategoryWrapper',
-    technologyCategoryName: '#technologyCategoryName',
-    technologyList: '#technologyList',
-    technologyItem: '#technologyItem',
-    technologyItemName: '#technologyItemName',
-    
-    // Challenges Section
-    challengesSection: '#challengesSection',
-    challengesContent: '#challengesContent',
-    challengeItem: '#challengeItem',
-    challengeItemWrapper: '#challengeItemWrapper',
-    challengeName: '#challengeName',
-    challengeDescription: '#challengeDescription',
-    
-    // Screenshots Section
-    screenshotsSection: '#screenshotsSection',
-    screenshotsContent: '#screenshotsContent',
-    screenshotItem: '#screenshotItem',
-    screenshotItemWrapper: '#screenshotItemWrapper',
-    screenshotImage: '#screenshotImage',
-    
-    // Source Code Section
-    sourceCodeSection: '#sourceCodeSection',
-    sourceCodeLink: '#sourceCodeLink',
+  // Contact Section
+  contactTitle: '#contactTitle',
+  contactContent: '#contactContent',
+  contactDescription: '#contactDescription',
+  contactDescriptionWrapper: '#contactDescriptionWrapper',
+  contactText: '#contactText',
+  contactLink: '#contactLink',
 
-    // ============================================
-    // DOM Selectors - Project details page
-    // ============================================
+  // Footer Section
+  copyrightSection: '#copyrightSection',
 
-    projectDetailsPageLoaderOverlay: '#projectDetailsPageLoaderOverlay',
-    projectDetailsPageRootContainer: '#projectDetailsPageRootContainer',
-    
-    backToHomeButton: '#backToHomeButton',
+  // menu bar
+  menuSlider: '#menuSlider',
+  menuItem: '.menuItem',
+  menuBar: '#menuBar',
+  hamburgerMenuItem: '.hamburgerMenuItem',
+  hamburgerIcon: '#hamburgerIcon',
+  hamburgerMenu: '#hamburgerMenu',
 
-    projectDetailTitle: '#projectDetailTitle',
+  view: '.view',
 
-    overviewSectionTitle: '#overviewSectionTitle',
-    overviewContent: '#overviewContent',
-    overviewItemTemplate: '#overviewItemTemplate',
-    overviewItemName: '#overviewItemName',
-    overviewItemDescription: '#overviewItemDescription',
+  // Project Detail Page Selectors
+  backToHomeButton: '#backToHomeButton',
+  projectDetailHeader: '#projectDetailHeader',
+  projectDetailHeroSection: '#projectDetailHeroSection',
+  projectDetailTitle: '#projectDetailTitle',
+  projectDetailBriefDescription: '#projectDetailBriefDescription',
 
-    keyFeaturesSectionTitle: '#keyFeaturesSectionTitle',
-    featuresContent: '#featuresContent',
-    featureItemTemplate: '#featureItemTemplate',
-    featureName: '#featureName',
-    featureDescription: '#featureDescription',
+  // Overview Section
+  projectOverviewSection: '#projectOverviewSection',
+  overviewContent: '#overviewContent',
+  overviewItem: '#overviewItem',
+  overviewItemWrapper: '#overviewItemWrapper',
+  overviewItemName: '#overviewItemName',
+  overviewItemDescription: '#overviewItemDescription',
 
-    technologiesSectionTitle: '#technologiesSectionTitle',
-    technologiesContent: '#technologiesContent',
-    technologyCategoryTemplate: '#technologyCategoryTemplate',
-    technologyCategoryName: '#technologyCategoryName',
-    technologyList: '#technologyList',
-    technologyItemTemplate: '#technologyItemTemplate',
-    technologyItemName: '#technologyItemName',
+  // Features Section
+  keyFeaturesSection: '#keyFeaturesSection',
+  featuresContent: '#featuresContent',
+  featureItem: '#featureItem',
+  featureItemWrapper: '#featureItemWrapper',
+  featureName: '#featureName',
+  featureDescription: '#featureDescription',
 
-    challengesSectionTitle: '#challengesSectionTitle',
-    challengesContent: '#challengesContent',
-    challengeItemTemplate: '#challengeItemTemplate',
-    challengeName: '#challengeName',
-    challengeDescription: '#challengeDescription',
+  // Technologies Section
+  technologiesSection: '#technologiesSection',
+  technologiesContent: '#technologiesContent',
+  technologyCategory: '#technologyCategory',
+  technologyCategoryWrapper: '#technologyCategoryWrapper',
+  technologyCategoryName: '#technologyCategoryName',
+  technologyList: '#technologyList',
+  technologyItem: '#technologyItem',
+  technologyItemName: '#technologyItemName',
 
-    screenshotsSectionTitle: '#screenshotsSectionTitle',
-    screenshotsContent: '#screenshotsContent',
-    screenshotItemTemplate: '#screenshotItemTemplate',
-    screenshotImage: '#screenshotImage',
+  // Challenges Section
+  challengesSection: '#challengesSection',
+  challengesContent: '#challengesContent',
+  challengeItem: '#challengeItem',
+  challengeItemWrapper: '#challengeItemWrapper',
+  challengeName: '#challengeName',
+  challengeDescription: '#challengeDescription',
 
-    sourceCodeLink: '#sourceCodeLink',
+  // Screenshots Section
+  screenshotsSection: '#screenshotsSection',
+  screenshotsContent: '#screenshotsContent',
+  screenshotItem: '#screenshotItem',
+  screenshotItemWrapper: '#screenshotItemWrapper',
+  screenshotImage: '#screenshotImage',
+
+  // Source Code Section
+  sourceCodeSection: '#sourceCodeSection',
+  sourceCodeLink: '#sourceCodeLink',
+
+  // ============================================
+  // DOM Selectors - Project details page
+  // ============================================
+
+  projectDetailsPageLoaderOverlay: '#projectDetailsPageLoaderOverlay',
+  projectDetailsPageRootContainer: '#projectDetailsPageRootContainer',
+
+  backToHomeButton: '#backToHomeButton',
+
+  projectDetailTitle: '#projectDetailTitle',
+
+  overviewSectionTitle: '#overviewSectionTitle',
+  overviewContent: '#overviewContent',
+  overviewItemTemplate: '#overviewItemTemplate',
+  overviewItemName: '#overviewItemName',
+  overviewItemDescription: '#overviewItemDescription',
+
+  keyFeaturesSectionTitle: '#keyFeaturesSectionTitle',
+  featuresContent: '#featuresContent',
+  featureItemTemplate: '#featureItemTemplate',
+  featureName: '#featureName',
+  featureDescription: '#featureDescription',
+
+  technologiesSectionTitle: '#technologiesSectionTitle',
+  technologiesContent: '#technologiesContent',
+  technologyCategoryTemplate: '#technologyCategoryTemplate',
+  technologyCategoryName: '#technologyCategoryName',
+  technologyList: '#technologyList',
+  technologyItemTemplate: '#technologyItemTemplate',
+  technologyItemName: '#technologyItemName',
+
+  challengesSectionTitle: '#challengesSectionTitle',
+  challengesContent: '#challengesContent',
+  challengeItemTemplate: '#challengeItemTemplate',
+  challengeName: '#challengeName',
+  challengeDescription: '#challengeDescription',
+
+  screenshotsSectionTitle: '#screenshotsSectionTitle',
+  screenshotsContent: '#screenshotsContent',
+  screenshotItemTemplate: '#screenshotItemTemplate',
+  screenshotImage: '#screenshotImage',
+
+  sourceCodeLink: '#sourceCodeLink',
 };
 
 // ============================================
@@ -170,11 +226,22 @@ export const SELECTORS = {
 // ============================================
 
 export const CLASSES = {
-    hidden: 'hideElement',
-    visible: 'showElement',
-    projectCard: 'projectBoxWrapper',
-    skillTag: 'skillTagWrapper',
-    contactCard: 'contactDescriptionWrapper'
+  hidden: 'hideElement',
+  hiddenWithScale: 'hideElementWithScale',
+  hiddenWithOpacity: 'hideElementWithOpacity',
+  visible: 'showElement',
+  projectCard: 'projectBoxWrapper',
+  skillTag: 'skillTagWrapper',
+  contactCard: 'contactDescriptionWrapper',
+  hamburgerIconActive: 'hamburgerIcon-active',
+  slidePosition1: 'slide-position-1',
+  slidePosition2: 'slide-position-2',
+  slidePosition3: 'slide-position-3',
+  dismissSlideRight: 'dismiss-slide-right',
+  dismissSlideLeft: 'dismiss-slide-left',
+  sendSlideBackToDeck: 'send-to-back-deck',
+  activeTab: 'activeTab',
+  activeContent: 'activeContent',
 };
 
 // ============================================
@@ -182,10 +249,11 @@ export const CLASSES = {
 // ============================================
 
 export const MESSAGES = {
-    loadingError: 'Could not load Folio Data',
-    elementNotFound: 'Element not found',
-    dataValidationFailed: 'Data validation failed',
-    cloneFailed: 'Failed to clone template'
+  loadingError: 'Could not load Folio Data',
+  elementNotFound: 'Element not found',
+  elementsNotFound: 'Elements not found',
+  dataValidationFailed: 'Data validation failed',
+  cloneFailed: 'Failed to clone template',
 };
 
 // ============================================
@@ -193,9 +261,9 @@ export const MESSAGES = {
 // ============================================
 
 export const EVENTS = {
-    projectDetailsClick: 'projectDetailsClick',
-    pageLoaded: 'pageLoaded',
-    dataLoaded: 'dataLoaded'
+  projectDetailsClick: 'projectDetailsClick',
+  pageLoaded: 'pageLoaded',
+  dataLoaded: 'dataLoaded',
 };
 
 // ============================================
@@ -203,11 +271,11 @@ export const EVENTS = {
 // ============================================
 
 export const DATA_KEYS = {
-    headerTitle: 'Header_Title',
-    headerDescription: 'Header_Description',
-    projectSection: 'Project_Section',
-    aboutSection: 'About_Section',
-    techSkillsSection: 'Technical_Skills_Section',
-    contactSection: 'Contact_Section',
-    footerSection: 'Footer_Section'
+  headerTitle: 'Header_Title',
+  headerDescription: 'Header_Description',
+  projectSection: 'Project_Section',
+  aboutSection: 'About_Section',
+  techSkillsSection: 'Technical_Skills_Section',
+  contactSection: 'Contact_Section',
+  footerSection: 'Footer_Section',
 };
