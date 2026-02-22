@@ -1,6 +1,7 @@
 'use strict';
 
-import { CLASSES, CONFIG, SELECTORS } from './constants.js';
+import { getApiResponse } from '../core/initApiResponse.js';
+import { CLASSES, CONFIG, SELECTORS } from '../utils/constants.js';
 import {
     isArrayDataValid,
     setElementText,
@@ -11,9 +12,9 @@ import {
     getElementTemplateClone,
     getTemplateElementChild,
     getAllElements,
-    setActiveView
-} from './utilityScripts.js';
-import { isValidArray } from './validator.js';
+} from '../utils/utilityScripts.js';
+import { isValidArray } from '../utils/validator.js';
+import setProjectTabs from './project_details_views/renderProjectTabs.js';
 
 /*********************************
  * Project details data load
@@ -107,38 +108,7 @@ const setProjectTitle = (value) => {
     setElementText(SELECTORS.projectDetailsHeaderSectionTitle, value);
 };
 
-const setProjectTabs = (projectSections) => {
-    const tabsList = projectSections.map(section => {
-        return {
-            title: section.title,
-            icon: section.iconUrl,
-        }
-    });
-    const detailsTabsContainer = getElement(SELECTORS.detailsTabsContainer);
-    detailsTabsContainer.innerHTML = '';
-    const detailsTabTemplate = getElement(SELECTORS.detailsTabTemplate);
 
-    if (isArrayDataValid(tabsList)) {
-        tabsList.forEach((tab, index) => {
-            const detailsTabTemplateClone = getElementTemplateClone(detailsTabTemplate, SELECTORS.detailsTabTemplate);
-
-            const iconUrl = `url('${CONFIG.IMAGE_FILE_URL_INTERNAL}${tab.icon}') ${CONFIG.IMAGE_FILE_URL_ATTR}`;
-            const detailsTabIcon = getTemplateElementChild(detailsTabTemplateClone, SELECTORS.detailsTabIcon);
-            detailsTabIcon.style.background = iconUrl;
-            detailsTabIcon.addEventListener('click', event => {
-                setCommonHandler(event.type, 'button', SELECTORS.detailsTabIcon, { index });
-            });
-
-            const detailsTabText = getTemplateElementChild(detailsTabTemplateClone, SELECTORS.detailsTabText);
-            detailsTabText.textContent = tab.title;
-            detailsTabText.addEventListener('click', event => {
-                setCommonHandler(event.type, 'button', SELECTORS.detailsTabText, { index });
-            });
-
-            detailsTabsContainer.appendChild(detailsTabTemplateClone);
-        });
-    }
-};
 
 const setProjectContents = (projectSections) => {
     const detailsContentContainer = getElement(SELECTORS.detailsContentContainer);
@@ -264,7 +234,11 @@ const setProjectContents = (projectSections) => {
     }
 };
 
-export const setProjectDetailsPageData = (projectData) => {
+export const setProjectDetailsPageData = (index = 0) => {
+
+    const apiResponse = getApiResponse();
+    const projectData = apiResponse?.Project_Section?.Projects[index];
+
     setProjectDetailsCancelHandler();
     setProjectTitle(projectData?.Title);
     const projectSections = getProjectSections(projectData);

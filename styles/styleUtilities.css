@@ -97,7 +97,7 @@
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
   z-index: 10;
-  transition: transform var(--slider-transition-speed) ease, opacity var(--slider-transition-speed), filter 0.5s ease;
+  transition: transform var(--slider-transition-speed) ease, opacity var(--slider-transition-speed) ease, filter 0.5s ease;
   will-change: transform;
 }
 

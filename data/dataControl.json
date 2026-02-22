@@ -550,6 +550,37 @@
             }
         ]
     },
+    "FolioDetails_Section": {
+        "Title": "My Developer Portfolio [Retro-HUD Pattern]",
+        "Content": [
+            {
+                "type": "bulletPoint",
+                "primaryText": "",
+                "secondaryText": "Lorem, ips sit amet consectetur. Nisi odio rem perferendis"
+            },
+            {
+                "type": "sectionLinks",
+                "label": "Inspired by",
+                "contentLinks": [
+                    {
+                        "type": "link",
+                        "linkURL": "https://www.google.com",
+                        "linkLabel": "Reference 1"
+                    },
+                    {
+                        "type": "link",
+                        "linkURL": "https://www.google.com",
+                        "linkLabel": "Reference 2"
+                    },
+                    {
+                        "type": "link",
+                        "linkURL": "https://www.google.com",
+                        "linkLabel": "Material UI"
+                    }
+                ]
+            }
+        ]
+    },
     "Footer_Section": {
         "copyrightText": "© 2026 Capitano781. All rights reserved."
     }
