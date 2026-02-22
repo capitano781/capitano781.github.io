@@ -1,6 +1,5 @@
-"use strict";
-
-import { CONFIG, MESSAGES, SELECTORS } from "./constants.js";
+import { CONFIG, MESSAGES, CLASSES } from "./constants.js";
+import elements from "./domElementRegistry.js";
 
 export const isArrayDataValid = (data) => {
   if (data && Array.isArray(data) && data.length > 0) return true;
@@ -80,32 +79,17 @@ export const setTemplateElementAttribute = (
   if (element) element.setAttribute(attributeName, value);
 };
 
-export const setSliderPosition = (targetMenu) => {
-  const menuSlider = getElement(SELECTORS.menuSlider);
-  const { offsetLeft } = targetMenu;
-  menuSlider.style.left = `${offsetLeft}px`;
+export const toggleElementClassName = (element, className) => {
+  if (element?.classList?.value.includes(className)) {
+    element.classList.remove(className);
+  } else {
+    element.classList.add(className);
+  }
 };
 
-export const findSliderMenu = (viewId) => {
-  const mainMenuItems = getAllElements(SELECTORS.menuItem);
-  mainMenuItems.forEach((menuItem) => {
-    if (menuItem?.id?.includes(viewId)) {
-      menuItem.classList.add("menuActive");
-      setSliderPosition(menuItem);
-    } else {
-      menuItem.classList.remove("menuActive");
-    }
-  });
-};
-
-export const setActiveView = (menuId, setSlider = true) => {
-  const sectionViews = getAllElements(SELECTORS.view);
-  sectionViews.forEach((view) => {
-    if (menuId.includes(view?.id)) {
-      view.classList.add("activeSection");
-      if (setSlider) findSliderMenu(view?.id);
-    } else {
-      view.classList.remove("activeSection");
-    }
-  });
-};
+export const toggleGroupClasses = () => {
+  toggleElementClassName(elements.rootContainer, CLASSES.hiddenWithScale);
+  toggleElementClassName(elements.menuBar, CLASSES.hiddenWithScale);
+  toggleElementClassName(elements.hamburgerIcon, CLASSES.hamburgerIconActive);
+  toggleElementClassName(elements.hamburgerMenu, CLASSES.hiddenWithOpacity);
+}

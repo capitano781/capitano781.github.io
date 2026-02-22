@@ -17,10 +17,22 @@ export const CONFIG = {
   IMAGE_FILE_URL_ATTR: 'center center / 90% no-repeat'
 };
 
+export const STATE_PROPS = {
+  videoPlayback: 'videoPlayback',
+  videoPlaybackRate: 'videoPlaybackRate',
+  activeView: 'activeView',
+  activeProject: 'activeProject',
+  activeProjectDetails: 'activeProjectDetails',
+  activeProjectTab: 'activeProjectTab',
+  activeImageZoom: 'activeImageZoom',
+};
+
 export const SELECTORS = {
   // ============================================
   // DOM Selectors - Index page
   // ============================================
+
+  documentElement: 'documentElement',
 
   // Loader
   loaderOverlay: '#loaderOverlay',
@@ -261,9 +273,8 @@ export const MESSAGES = {
 // ============================================
 
 export const EVENTS = {
-  projectDetailsClick: 'projectDetailsClick',
-  pageLoaded: 'pageLoaded',
-  dataLoaded: 'dataLoaded',
+  CLICK: 'click',
+  VISIBILITY_CHANGE: 'visibilitychange'
 };
 
 // ============================================
