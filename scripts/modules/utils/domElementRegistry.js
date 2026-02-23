@@ -7,6 +7,7 @@ let elements = {};
 export const loadPostRenderDomElements = () => {
     elements.documentElement = document;
     elements.bgVideo = getElement(SELECTORS.backgroundVideo);
+    elements.bgVideo = getElement(SELECTORS.backgroundVideo);
     elements.bgVideoControl = getElement(SELECTORS.bgVideoControl);
     elements.projectSlides = [...getAllElements(SELECTORS.projectBoxWrapper)];
     elements.boxSliderLeftNav = getElement(SELECTORS.SliderLeftNav);
@@ -15,13 +16,16 @@ export const loadPostRenderDomElements = () => {
     elements.hamburgerMenuItems = getAllElements(SELECTORS.hamburgerMenuItem);
     elements.sectionViews = getAllElements(SELECTORS.view);
     elements.menuSlider = getElement(SELECTORS.menuSlider);
-    elements.rootContainer = getElement(SELECTORS.rootContainer);
-    elements.menuBar = getElement(SELECTORS.menuBar);
     elements.hamburgerMenu = getElement(SELECTORS.hamburgerMenu);
     elements.hamburgerIcon = getElement(SELECTORS.hamburgerIcon);
+    elements.contactText = getElement(SELECTORS.contactText);
 };
 
 export const loadPreRenderDomElements = () => {
+
+    elements.loaderOverlay = getElement(SELECTORS.loaderOverlay);
+    elements.menuBar = getElement(SELECTORS.menuBar);
+    elements.rootContainer = getElement(SELECTORS.rootContainer);
 
     elements.headerViewWorkButton = getElement(SELECTORS.headerViewWorkButton);
 
@@ -31,14 +35,22 @@ export const loadPreRenderDomElements = () => {
     elements.techSkillContent = getElement(SELECTORS.techSkillContent);
     elements.skillGroupTemplate = getElement(SELECTORS.skillGroup);
 
-    elements.aboutContent = getElement(SELECTORS.aboutContent);
+    elements.aboutSummeryContent = getElement(SELECTORS.aboutSummeryContent);
     elements.aboutSummeryDescriptionTemplate = getElement(SELECTORS.aboutSummeryDescription);
+    elements.aboutTitle = getElement(SELECTORS.aboutTitle);
+    elements.creditsLink = getElement(SELECTORS.creditsLink);
 
-    elements.contactContent = getElement(SELECTORS.contactContent);
+    elements.contactDetails = getElement(SELECTORS.contactDetails);
     elements.contactDescriptionTemplate = getElement(SELECTORS.contactDescription);
 
     elements.detailsTabsContainer = getElement(SELECTORS.detailsTabsContainer);
     elements.detailsTabTemplate = getElement(SELECTORS.detailsTabTemplate);
+    elements.projectDetailsCancel = getElement(SELECTORS.projectDetailsCancel);
+
+    elements.detailsContentContainer = getElement(SELECTORS.detailsContentContainer);
+    elements.detailsContentContainerTemplate = getElement(SELECTORS.detailsContentContainerTemplate);
+    elements.imageGalleryLargeViewCancel = getElement(SELECTORS.imageGalleryLargeViewCancel);
+    elements.imageGalleryLargeView = getElement(SELECTORS.imageGalleryLargeView);
 
 };
 

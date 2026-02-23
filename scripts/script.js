@@ -11,6 +11,9 @@ import { isBgVideoRunning, setBgVideoSpeed, initBgVideoHandlers } from './module
 import setBoxSliderCardPosition, { initBoxSliderHandlers } from "./modules/controls/boxSlideController.js";
 import setActiveView, { initMenuSliderHandlers } from "./modules/controls/menuSliderController.js";
 import { setProjectDetailsPageData } from "./modules/views/renderProjectDetails.js";
+import { setActiveContent } from "./modules/views/renderProjectDetails.js";
+import { setImageGalleryLargeView } from "./modules/views/project_details_views/renderProjectContents.js";
+import exitLoader from "./modules/views/renderSpinner.js";
 
 const stateHandler = {
   set(target, property, value) {
@@ -36,12 +39,14 @@ const stateHandler = {
         return Reflect.set(target, property, value);
       }
       case (STATE_PROPS.activeProjectTab): {
+        setActiveContent(value);
         return Reflect.set(target, property, value);
       }
       case (STATE_PROPS.activeImageZoom): {
+        if (value !== 'NA') setImageGalleryLargeView(value);
         return Reflect.set(target, property, value);
       }
-      default: return true;
+      default: return Reflect.set(target, property, value);
     }
   }
 }
@@ -55,20 +60,6 @@ export function getState(prop) {
 
 export function setState(prop, value) {
   stateProxy[prop] = value;
-};
-
-// ################################################################################
-
-
-
-
-
-const exitLoader = () => {
-  const loaderOverlay = getElement(SELECTORS.loaderOverlay);
-  const menuBar = getElement(SELECTORS.menuBar);
-  loaderOverlay.classList.add(CLASSES.hiddenWithScale);
-  rootContainer.classList.remove(CLASSES.hiddenWithScale);
-  menuBar.classList.remove(CLASSES.hiddenWithScale);
 };
 
 const initHandlers = () => {
@@ -91,13 +82,14 @@ const initHandlers = () => {
     }
 
     if (data) {
-      exitLoader();
-
       // initialize api response
       initApiResponse(data);
 
       // Initialize DOM elements required Pre-Render
       loadPreRenderDomElements();
+
+      // remove spinner view
+      exitLoader();
 
       // Plug JSON data object to JS runtime
       renderView();
@@ -111,11 +103,12 @@ const initHandlers = () => {
       // Initial traps activation
       setState(STATE_PROPS.videoPlayback, true);
       setState(STATE_PROPS.videoPlaybackRate, 1);
-      setState(STATE_PROPS.activeView, 'home');
+      setState(STATE_PROPS.activeView, 'about');
       setState(STATE_PROPS.activeProject, 0);
+      setState(STATE_PROPS.projectSectionsLimit, 5);
       setState(STATE_PROPS.activeProjectDetails, 0);
       setState(STATE_PROPS.activeProjectTab, 0);
-      setState(STATE_PROPS.activeImageZoom, 0);
+      setState(STATE_PROPS.activeImageZoom, 'NA');
 
       return;
     }

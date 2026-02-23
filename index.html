@@ -72,7 +72,7 @@
     <button class="imageGalleryLargeViewCancel btn-cross" id="imageGalleryLargeViewCancel"></button>
   </div>
   <main class="rootContainer hideElementWithScale" id="rootContainer">
-    <section class="view header activeSection" id="home">
+    <section class="view header" id="home">
       <section class="headerWrapper" id="headerWrapper">
         <div class="headerContainer glass-card" id="headerContainer">
           <div class="headerTitle" id="headerTitle">
@@ -253,9 +253,12 @@
           </div>
         </div>
         <div class="aboutContent glass-card-content custom-scrollbar" id="aboutContent">
-          <template id="aboutSummeryDescription">
-            <div class="aboutSummeryDescriptionWrapper secondary-text" id="aboutSummeryDescriptionWrapper"></div>
-          </template>
+          <div class="aboutSummeryContent" id="aboutSummeryContent">
+            <template id="aboutSummeryDescription">
+              <div class="aboutSummeryDescriptionWrapper secondary-text" id="aboutSummeryDescriptionWrapper"></div>
+            </template>
+          </div>
+          <button id="creditsLink" class="creditsLink btn-glass btn-glass-small"></button>
         </div>
       </div>
     </section>
@@ -267,16 +270,21 @@
           </div>
         </div>
         <div class="contactContent glass-card-content custom-scrollbar" id="contactContent">
-          <template class="contactDescription" id="contactDescription">
-            <div class="contactDescriptionWrapper secondary-text" id="contactDescriptionWrapper">
-              <span class="contactText" id="contactText"></span>
-              <a class="contactLink highlight-secondary-text" id="contactLink" href="" target="_blank"></a>
-            </div>
-          </template>
+          <div class="contactText secondary-text" id="contactText"></div>
+          <div class="contactDetails" id="contactDetails">
+            <template class="contactDescription" id="contactDescription">
+              <div class="contactDescriptionWrapper secondary-text" id="contactDescriptionWrapper">
+                <a href="" target="_blank" rel="" class="linksViewWrapper" id="contactLink">
+                  <div class="linkView secondary-text" id="contactLinkText"></div>
+                  <div class="linkIcon"></div>
+                </a>
+              </div>
+            </template>
+          </div>
         </div>
       </div>
     </section>
-    <section class="view folioDetails activeSection" id="contact">
+    <section class="view creditDetails" id="credit">
       <div class="folioDetailsContainer glass-card">
         <div class="glass-card-title-section" id="folioDetailsHeader">
           <div class="glass-card-title-wrap" id="folioDetailsTitleContainer">

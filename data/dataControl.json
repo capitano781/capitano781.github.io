@@ -476,7 +476,8 @@
             {
                 "DescriptionPara": "Currently, I work on enterprise-scale [React.js] applications and complex legacy codebases. I’m also expanding into the [MERN] stack through personal projects, aiming to grow as a [product-focused engineer] who builds reliable and scalable solutions."
             }
-        ]
+        ],
+        "Credit_Button": "About this Portfolio project"
     },
     "Technical_Skills_Section": {
         "Title": "Technical Skills",
@@ -537,22 +538,30 @@
     },
     "Contact_Section": {
         "Title": "Contact",
-        "Descriptions": [
+        "Description": "Open to impactful front-end opportunities and meaningful collaborations.",
+        "Content": [
             {
-                "text": "Feel free to reach out to me via email at ",
                 "link": "mailto:quantuy@gmail.com",
-                "hyperlink_Label_Text": "quantuy@gmail.com"
+                "hyperlink_Label_Text": "Email Me"
             },
             {
-                "text": "Check out my github profile at ",
                 "link": "quantuy@gmail.com",
-                "hyperlink_Label_Text": "quantuy@gmail.com"
+                "hyperlink_Label_Text": "Download Resume"
+            },
+            {
+                "link": "quantuy@gmail.com",
+                "hyperlink_Label_Text": "View GitHub"
             }
         ]
     },
     "FolioDetails_Section": {
         "Title": "My Developer Portfolio [Retro-HUD Pattern]",
         "Content": [
+            {
+                "type": "plainText",
+                "primaryText": "",
+                "secondaryText": "Lorem, ips sit amet consectetur. Nisi odio rem perferendis"
+            },
             {
                 "type": "bulletPoint",
                 "primaryText": "",

@@ -23,8 +23,19 @@ export const STATE_PROPS = {
   activeView: 'activeView',
   activeProject: 'activeProject',
   activeProjectDetails: 'activeProjectDetails',
+  projectSectionsLimit: 'projectSectionsLimit',
   activeProjectTab: 'activeProjectTab',
   activeImageZoom: 'activeImageZoom',
+};
+
+export const VIEWS = {
+  home: 'home',
+  work: 'work',
+  projectDetailsView: 'projectDetailsView',
+  skill: 'skill',
+  about: 'about',
+  contact: 'contact',
+  credit: 'credit',
 };
 
 export const SELECTORS = {
@@ -101,9 +112,10 @@ export const SELECTORS = {
 
   // About Section
   aboutTitle: '#aboutTitle',
-  aboutContent: '#aboutContent',
+  aboutSummeryContent: '#aboutSummeryContent',
   aboutSummeryDescription: '#aboutSummeryDescription',
   aboutSummeryDescriptionWrapper: '#aboutSummeryDescriptionWrapper',
+  creditsLink: '#creditsLink',
 
   // Tech Skills Section
   techSkillTitle: '#techSkillTitle',
@@ -122,6 +134,8 @@ export const SELECTORS = {
   contactDescriptionWrapper: '#contactDescriptionWrapper',
   contactText: '#contactText',
   contactLink: '#contactLink',
+  contactLinkText: '#contactLinkText',
+  contactDetails: '#contactDetails',
 
   // Footer Section
   copyrightSection: '#copyrightSection',

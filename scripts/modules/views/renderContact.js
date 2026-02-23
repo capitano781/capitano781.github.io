@@ -11,19 +11,18 @@ import {
 const setContactSectionData = (Contact_Section) => {
 
     setElementText(SELECTORS.contactTitle, Contact_Section?.Title);
+    setElementText(SELECTORS.contactText, Contact_Section?.Description);
 
-    if (isArrayDataValid(Contact_Section?.Descriptions))
-        Contact_Section.Descriptions.forEach((description) => {
+    if (isArrayDataValid(Contact_Section?.Content))
+        Contact_Section.Content.forEach((Content) => {
+
             const contactDescriptionTemplateClone = getElementTemplateClone(elements.contactDescriptionTemplate, SELECTORS.contactDescription);
 
-            setTemplateElementText(contactDescriptionTemplateClone, SELECTORS.contactText, description?.text
-            );
+            setTemplateElementText(contactDescriptionTemplateClone, SELECTORS.contactLinkText, Content?.hyperlink_Label_Text);
 
-            setTemplateElementText(contactDescriptionTemplateClone, SELECTORS.contactLink, description?.hyperlink_Label_Text);
+            setTemplateElementAttribute(contactDescriptionTemplateClone, SELECTORS.contactLink, "href", Content?.link);
 
-            setTemplateElementAttribute(contactDescriptionTemplateClone, SELECTORS.contactLink, "href", description?.link);
-
-            elements.contactContent.appendChild(contactDescriptionTemplateClone);
+            elements.contactDetails.appendChild(contactDescriptionTemplateClone);
         });
 };
 

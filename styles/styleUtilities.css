@@ -367,12 +367,7 @@
 }
 
 .section-sub-heading {
-  font-family: var(--ff-base);
-  font-size: clamp(1.2rem, 2vw, 1.3rem);
-  color: var(--text-secondary-accent);
-  font-weight: var(--fw-bold);
-  text-shadow: var(--text-primary-shadow);
-
+  text-transform: none;
   font-family: var(--ff-base);
   font-size: clamp(1rem, 2vw, 1.1rem);
   color: var(--text-secondary-accent);

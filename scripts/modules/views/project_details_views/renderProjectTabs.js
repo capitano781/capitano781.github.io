@@ -17,6 +17,8 @@ const setProjectTabs = (projectSections) => {
         }
     });
 
+    elements.detailsTabsContainer.innerHTML = '';
+
     if (isArrayDataValid(tabsList)) {
         tabsList.forEach((tab, index) => {
             const detailsTabTemplateClone = getElementTemplateClone(elements.detailsTabTemplate, SELECTORS.detailsTabTemplate);
@@ -26,11 +28,10 @@ const setProjectTabs = (projectSections) => {
             const detailsTabIcon = getTemplateElementChild(detailsTabTemplateClone, SELECTORS.detailsTabIcon);
             detailsTabIcon.style.background = iconUrl;
 
-            setHandler(detailsTabIcon, EVENTS.CLICK, SELECTORS.detailsTabIcon, { index });
-
             const detailsTabText = getTemplateElementChild(detailsTabTemplateClone, SELECTORS.detailsTabText);
             detailsTabText.textContent = tab.title;
 
+            setHandler(detailsTabIcon, EVENTS.CLICK, SELECTORS.detailsTabIcon, { index });
             setHandler(detailsTabText, EVENTS.CLICK, SELECTORS.detailsTabText, { index });
 
             elements.detailsTabsContainer.appendChild(detailsTabTemplateClone);

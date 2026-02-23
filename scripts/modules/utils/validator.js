@@ -204,16 +204,16 @@ export const validateContactSection = (contactSection) => {
         errors.push('Contact section Title is required');
     }
 
-    if (!isValidArray(contactSection.Descriptions)) {
-        errors.push('Contact section must have at least one description');
+    if (!isValidValue(contactSection.Description)) {
+        errors.push('Contact section Descriptions is required');
+    }
+
+    if (!isValidArray(contactSection.Content)) {
+        errors.push('Contact section must have at least one Content');
         return { isValid: false, errors };
     }
 
-    contactSection.Descriptions.forEach((contact, index) => {
-        if (!isValidValue(contact.text)) {
-            errors.push(`Contact ${index}: text is required`);
-        }
-
+    contactSection.Content.forEach((contact, index) => {
         if (!isValidValue(contact.hyperlink_Label_Text)) {
             errors.push(`Contact ${index}: hyperlink_Label_Text is required`);
         }

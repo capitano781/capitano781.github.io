@@ -1,6 +1,7 @@
 import { setState, getState } from '../../script.js';
-import { STATE_PROPS, SELECTORS, EVENTS } from '../utils/constants.js';
+import { STATE_PROPS, SELECTORS, EVENTS, CLASSES, VIEWS } from '../utils/constants.js';
 import { toggleGroupClasses } from '../utils/utilityScripts.js';
+import elements from '../utils/domElementRegistry.js';
 
 let lockSliderNavigation = true;
 
@@ -45,7 +46,7 @@ export const handlers = {
     },
     [SELECTORS.headerViewWorkButton]: {
         [EVENTS.CLICK]() {
-            setTimeout(() => setState(STATE_PROPS.activeView, 'work'), 500);
+            setTimeout(() => setState(STATE_PROPS.activeView, VIEWS.work), 500);
         }
     },
     [SELECTORS.menuItem]: {
@@ -56,7 +57,7 @@ export const handlers = {
     [SELECTORS.hamburgerMenuItem]: {
         [EVENTS.CLICK](payload) {
             toggleGroupClasses();
-            setState(STATE_PROPS.activeView, payload.menuId);
+            setTimeout(() => setState(STATE_PROPS.activeView, payload.menuId), 500);
         }
     },
     [SELECTORS.hamburgerIcon]: {
@@ -65,13 +66,33 @@ export const handlers = {
         }
     },
     [SELECTORS.detailsTabIcon]: {
-        [EVENTS.CLICK]() {
-            setState(STATE_PROPS.activeProjectDetails, payload.index);
+        [EVENTS.CLICK](payload) {
+            setState(STATE_PROPS.activeProjectTab, payload.index);
         }
     },
     [SELECTORS.detailsTabText]: {
+        [EVENTS.CLICK](payload) {
+            setState(STATE_PROPS.activeProjectTab, payload.index);
+        }
+    },
+    [SELECTORS.imageGalleryLargeViewCancel]: {
         [EVENTS.CLICK]() {
-            setState(STATE_PROPS.activeProjectDetails, payload.index);
+            elements.imageGalleryLargeView.classList.add(CLASSES.hiddenWithScale);
+        }
+    },
+    [SELECTORS.imageGallerySrc]: {
+        [EVENTS.CLICK](payload) {
+            setState(STATE_PROPS.activeImageZoom, payload.src);
+        }
+    },
+    [SELECTORS.projectDetailsCancel]: {
+        [EVENTS.CLICK]() {
+            setState(STATE_PROPS.activeView, VIEWS.work);
+        }
+    },
+    [SELECTORS.creditsLink]: {
+        [EVENTS.CLICK]() {
+            setTimeout(() => setState(STATE_PROPS.activeView, VIEWS.credit), 500);
         }
     },
 };

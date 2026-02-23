@@ -1,15 +1,19 @@
 import elements from "../utils/domElementRegistry.js";
-import { SELECTORS } from "../utils/constants.js";
+import { EVENTS, SELECTORS } from "../utils/constants.js";
 import {
     getElementTemplateClone,
     getTemplateElementChild,
     setElementText,
     isArrayDataValid,
 } from "../utils/utilityScripts.js";
+import setHandler from "../core/initHandler.js";
 
 const setAboutmeSectionData = (About_Section) => {
 
-    setElementText(SELECTORS.aboutTitle, About_Section?.Title);
+    elements.aboutTitle.textContent = About_Section?.Title;
+    elements.creditsLink.textContent = About_Section?.Credit_Button;
+
+    setHandler(elements.creditsLink, EVENTS.CLICK, SELECTORS.creditsLink);
 
     const processDescription = (text) => {
         return text.replace(/\[([^\]]+)\]/g, (matchedString, matchedGroup, index, wholeString) => {
@@ -30,7 +34,7 @@ const setAboutmeSectionData = (About_Section) => {
 
             aboutSummeryDescriptionWrapper.innerHTML = description;
 
-            elements.aboutContent.appendChild(aboutSummeryDescriptionTemplateClone);
+            elements.aboutSummeryContent.appendChild(aboutSummeryDescriptionTemplateClone);
         });
 };
 
