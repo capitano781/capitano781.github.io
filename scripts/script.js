@@ -1,6 +1,6 @@
 import { validatePortfolioData } from "./modules/utils/validator.js";
 import { initApiResponse } from "./modules/core/initApiResponse.js";
-import { CONFIG, CLASSES, SELECTORS, MESSAGES, STATE_PROPS } from "./modules/utils/constants.js";
+import { CONFIG, CLASSES, SELECTORS, MESSAGES, STATE_PROPS, VIEWS } from "./modules/utils/constants.js";
 import { renderView } from "./modules/views/renderView.js";
 import {
   getElement,
@@ -101,9 +101,9 @@ const initHandlers = () => {
       initHandlers()
 
       // Initial traps activation
-      setState(STATE_PROPS.videoPlayback, true);
-      setState(STATE_PROPS.videoPlaybackRate, 1);
-      setState(STATE_PROPS.activeView, 'credit');
+      // setState(STATE_PROPS.videoPlayback, true);
+      // setState(STATE_PROPS.videoPlaybackRate, 1);
+      setState(STATE_PROPS.activeView, VIEWS.home);
       setState(STATE_PROPS.activeProject, 0);
       setState(STATE_PROPS.projectSectionsLimit, 5);
       setState(STATE_PROPS.activeProjectDetails, 0);
