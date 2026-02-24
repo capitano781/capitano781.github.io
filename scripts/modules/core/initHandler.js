@@ -8,12 +8,12 @@ let lockSliderNavigation = true;
 export const handlers = {
     [SELECTORS.documentElement]: {
         [EVENTS.VISIBILITY_CHANGE]: () => {
-            setState(STATE_PROPS.videoPlayback, !getState(STATE_PROPS.videoPlayback));
+            // setState(STATE_PROPS.videoPlayback, !getState(STATE_PROPS.videoPlayback));
         }
     },
     [SELECTORS.bgVideoControl]: {
         [EVENTS.CLICK]() {
-            setState(STATE_PROPS.videoPlayback, !getState(STATE_PROPS.videoPlayback));
+            // setState(STATE_PROPS.videoPlayback, !getState(STATE_PROPS.videoPlayback));
         }
     },
     [SELECTORS.SliderLeftNav]: {

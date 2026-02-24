@@ -7,12 +7,13 @@
   <link rel="stylesheet" href="/styles/style.css" />
   <link rel="stylesheet" href="/styles/styleUtilities.css" />
   <link rel="stylesheet" href="/styles/mediaQuery.css" />
+  <link rel="stylesheet" href="/styles/bgAnimation.css">
   <script type="module" src="scripts/script.js"></script>
   <title>Capitano781 | MERN Stack Developer</title>
 </head>
 
 <body class="calm-blue">
-  <div class="loaderOverlay hideElementWithScale" id="loaderOverlay">
+  <div class="loaderOverlay hideElementWithScale hideElement" id="loaderOverlay">
     <div class="loaderBg"></div>
     <div class="glass-card">
       <div class="innerGlass">
@@ -21,23 +22,38 @@
     </div>
     <!-- <div class="neubrutalist-card"></div> -->
   </div>
-  <div class="bg-video-control" id="bgVideoControl"></div>
-  <div class="bg-video">
+  <div class="bg-video-control hideElement" id="bgVideoControl"></div>
+  <div class="bg-video hideElement">
     <video class="" id="bgVideo" autoplay muted loop playsinline>
       <!-- <source src="/assets/video/vid1.webm" type="video/mp4" /> -->
-      <source src="/assets/video/vid7.mp4" type="video/mp4" />
+      <!-- <source src="/assets/video/vid7" type="video/mp4" /> -->
     </video>
     <div class="background-wrapper ">
       <!-- <div class="background-grid"></div> -->
     </div>
     <div class="bg-overlay"></div>
   </div>
-  <div class="background-box hideElement">
-    <div class="background-gridBox-1 gridBox"></div>
-    <div class="background-gridBox-2 gridBox"></div>
-    <div class="background-gridBox-3 gridBox"></div>
-    <div class="background-gridBox-4 gridBox"></div>
-    <div class="background-gridBox-5 gridBox"></div>
+  <div class="container">
+    <div class="background-container">
+      <div class="halos-container">
+        <div class="center-hole"></div>
+        <div class="halo halo-1">
+          <div class="sub-halo sub-halo-1"></div>
+        </div>
+        <div class="halo halo-2">
+          <div class="sub-halo sub-halo-2"></div>
+        </div>
+        <div class="halo halo-3">
+          <div class="sub-halo sub-halo-3"></div>
+        </div>
+        <div class="halo halo-4">
+          <div class="sub-halo sub-halo-4"></div>
+        </div>
+        <div class="halo halo-5">
+          <div class="sub-halo sub-halo-5"></div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="hamburgerIcon" id="hamburgerIcon">
     <div class="line l-up"></div>
@@ -330,15 +346,15 @@
             <template id="creditLinksTemplate">
               <div class="creditLinksWrapper" id="creditLinksWrapper">
 
-                <div class="creditSectionLabel primary-text" id="creditSectionLabel"></div>
+                <div class="creditSectionLabel secondary-text" id="creditSectionLabel"></div>
 
                 <div class="creditSectionContent" id="creditSectionContent">
 
                   <template id="creditSectionContentTemplate">
                     <div class="creditSectionContentWrapper" id="creditSectionContentWrapper">
 
-                      <a href="" target="_blank" rel="noopener noreferrer" class="creditLink linksViewWrapper"
-                        id="creditLink">
+                      <a href="" target="_blank" rel="noopener noreferrer"
+                        class="creditLink linksViewWrapper linksViewWrapper-small" id="creditLink">
                         <div class="linkView secondary-text" id="contactLinkText"></div>
                         <div class="" id="creditLinkIcon"></div>
                       </a>
