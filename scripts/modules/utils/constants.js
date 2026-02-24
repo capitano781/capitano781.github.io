@@ -109,6 +109,7 @@ export const SELECTORS = {
   linksViewTemplate: '#linksViewTemplate',
   linksViewWrapper: '#linksViewWrapper',
   linkView: '#linkView',
+  projectLinks: '#projectLinks',
 
   // About Section
   aboutTitle: '#aboutTitle',
@@ -136,6 +137,29 @@ export const SELECTORS = {
   contactLink: '#contactLink',
   contactLinkText: '#contactLinkText',
   contactDetails: '#contactDetails',
+  externalLinkTemplate: '#externalLinkTemplate',
+  downloadDocTemplate: '#downloadDocTemplate',
+  contactDescriptionIcon: '#contactDescriptionIcon',
+
+  // Credit Section
+  creditDetailsTitle: '#creditDetailsTitle',
+  creditDetailsContentWrapper: '#creditDetailsContentWrapper',
+  creditPlainTextTemplate: '#creditPlainTextTemplate',
+  creditBulletPointsTemplate: '#creditBulletPointsTemplate',
+  creditLinksTemplate: '#creditLinksTemplate',
+  creditPlainTextPrimary: '#creditPlainTextPrimary',
+  creditPlainTextSecondary: '#creditPlainTextSecondary',
+  creditBulletPointsPrimary: '#creditBulletPointsPrimary',
+  creditBulletPointsSecondary: '#creditBulletPointsSecondary',
+  creditSectionLabel: '#creditSectionLabel',
+  creditSectionContent: '#creditSectionContent',
+  creditSectionContentTemplate: '#creditSectionContentTemplate',
+  creditLink: '#creditLink',
+  contactLinkText: '#contactLinkText',
+  creditSingleBulletTemplate: '#creditSingleBulletTemplate',
+  creditBulletPointsWrapper: '#creditBulletPointsWrapper',
+  creditDetailsCancel: '#creditDetailsCancel',
+  creditLinkIcon: '#creditLinkIcon',
 
   // Footer Section
   copyrightSection: '#copyrightSection',
@@ -268,6 +292,12 @@ export const CLASSES = {
   sendSlideBackToDeck: 'send-to-back-deck',
   activeTab: 'activeTab',
   activeContent: 'activeContent',
+  linkIcon: 'linkIcon',
+  downloadIcon: 'downloadIcon',
+  emailIcon: 'emailIcon',
+  githubIcon: 'githubIcon',
+  sourceCode: 'sourceCode',
+  liveLink: 'liveLink',
 };
 
 // ============================================

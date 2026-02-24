@@ -8,6 +8,7 @@ import {
     setTemplateElementAttribute,
     getElementTemplateClone,
     getTemplateElementChild,
+    addClassName,
 } from '../../utils/utilityScripts.js';
 
 export const setImageGalleryLargeView = (src) => {
@@ -121,7 +122,9 @@ const setProjectContents = (projectSections) => {
 
                             if (content?.label) setTemplateElementText(linksViewTemplateClone, SELECTORS.linkView, content.label);
 
-                            linksViewContrainer.appendChild(linksViewTemplateClone);
+                            addClassName(getTemplateElementChild(linksViewTemplateClone, SELECTORS.projectLinks), content.iconType);
+
+                            linksViewContrainer.appendChild(linksViewTemplateClone, CLASSES.sourceCode);
                         });
                     }
                     detailsContent.appendChild(linksViewContrainer);

@@ -994,31 +994,6 @@ body {
   gap: 1rem;
 }
 
-.linksViewWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  gap: 0.3rem;
-  padding: 0.5rem 1rem;
-  border: 1px solid #0f5b7c;
-  border-radius: 5px;
-  box-shadow: inset 0px 0px 9px 0px #166083, 2px 2px 3px 0px #196d70;
-  text-decoration: none;
-}
-
-.linksViewWrapper:hover {}
-
-.linkIcon {
-  height: 20px;
-  width: 20px;
-  background: url(/assets/images/icons/link.svg) center center / 90% no-repeat;
-}
-
-.linkView {
-  text-decoration: none;
-}
-
 /* ======================================== */
 
 /* ====================================================
@@ -1042,7 +1017,7 @@ body {
   align-items: flex-start;
   justify-content: center;
   padding: 0rem;
-  /* gap: 2rem !important; */
+  gap: 2rem !important;
   /* border: 3px solid #f6ff00; */
   /* background: #333; */
 }
@@ -1061,6 +1036,10 @@ body {
   justify-content: center;
   flex-direction: column;
   gap: 1rem;
+}
+
+.creditsLink {
+  margin-top: 1rem;
 }
 
 /* ======================================= */
@@ -1187,6 +1166,17 @@ body {
   /* background: #3333335c; */
 }
 
+.creditDetailsCancel {
+  background: none;
+  border: none;
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
 .contactContent {
   display: flex;
   flex-direction: column;
@@ -1217,7 +1207,7 @@ body {
   /* border: 4px solid #4fca4f; */
 }
 
-.folioDetailsContainer {
+.creditDetailsContainer {
   /* max-width: 800px; */
   width: clamp(40%, 800px, 80%);
   /* height: 80%; */
@@ -1226,17 +1216,75 @@ body {
   align-items: flex-start;
   justify-content: center;
   padding: 0rem;
-  /* gap: 2rem !important; */
+  gap: 2rem !important;
   /* border: 3px solid #f6ff00; */
   /* background: #333; */
 }
 
-.folioDetailsContent {
+.creditDetailsContent {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 1rem;
+}
+
+.creditDetailsContentWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.creditLinksWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.creditSectionContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.creditSectionContentWrapper {
+  width: fit-content;
+}
+
+.creditPlainTextBulletIcon {
+  background: url('/assets/images/icons/plainListBullet3.svg') center / contain no-repeat;
+  height: 1rem;
+  width: 1rem;
+  margin: 0px 3px 0 0;
+  transform: translateY(3px);
+  display: inline-block;
+}
+
+.creditLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0.3rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #0f5b7c;
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 9px 0px #166083, 2px 2px 3px 0px #196d70;
+  text-decoration: none;
+}
+
+.creditLink:hover {}
+
+.linkView {
+  text-decoration: none;
 }
 
 /* ======================================== */

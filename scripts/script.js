@@ -103,7 +103,7 @@ const initHandlers = () => {
       // Initial traps activation
       setState(STATE_PROPS.videoPlayback, true);
       setState(STATE_PROPS.videoPlaybackRate, 1);
-      setState(STATE_PROPS.activeView, 'about');
+      setState(STATE_PROPS.activeView, 'credit');
       setState(STATE_PROPS.activeProject, 0);
       setState(STATE_PROPS.projectSectionsLimit, 5);
       setState(STATE_PROPS.activeProjectDetails, 0);

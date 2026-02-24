@@ -95,6 +95,11 @@ export const handlers = {
             setTimeout(() => setState(STATE_PROPS.activeView, VIEWS.credit), 500);
         }
     },
+    [SELECTORS.creditDetailsCancel]: {
+        [EVENTS.CLICK]() {
+            setState(STATE_PROPS.activeView, VIEWS.about);
+        }
+    },
 };
 
 const initHandler = (elementId, eventype, payload) => {

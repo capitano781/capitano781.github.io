@@ -33,6 +33,10 @@ export const setElementText = (elementId, textContent) => {
   if (element) element.textContent = textContent || CONFIG.ERROR_FALLBACK_TEXT;
 };
 
+export const setSavedElementText = (element, textContent) => {
+  if (element) element.textContent = textContent || CONFIG.ERROR_FALLBACK_TEXT;
+};
+
 export const setElementAttribute = (elementId, attributeName, value) => {
   const element = getElement(elementId);
   if (element)
@@ -85,6 +89,10 @@ export const toggleElementClassName = (element, className) => {
   } else {
     element.classList.add(className);
   }
+};
+
+export const addClassName = (element, className) => {
+  if (!element?.classList?.value.includes(className)) element.classList.add(className);
 };
 
 export const toggleGroupClasses = () => {

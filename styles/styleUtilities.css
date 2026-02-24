@@ -87,6 +87,124 @@
   background: url(/assets/images/icons/cross.svg) center center / 150% no-repeat;
 }
 
+.linksViewWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0.3rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #0f5b7c;
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 9px 0px #166083, 2px 2px 3px 0px #196d70;
+  background: #00000000;
+  transition: background 0.5s ease;
+  text-decoration: none;
+}
+
+.linksViewWrapper:hover {
+  /* box-shadow: inset 0px 0px 7px 0px #166083, 0px 0px 0px 5px #196d70; */
+  background: #125d7e70;
+  transition: background 0.5s ease;
+}
+
+.linkView {
+  text-decoration: none;
+}
+
+.linkIcon {
+  height: 30px;
+  width: 30px;
+  background: url(/assets/images/icons/link.svg) center center / 90% no-repeat;
+  transform: translateY(-1px);
+}
+
+.downloadIcon {
+  height: 30px;
+  width: 30px;
+  background: url(/assets/images/icons/download.svg) center center / 90% no-repeat;
+  transform: translateY(-1px);
+}
+
+.emailIcon {
+  height: 30px;
+  width: 30px;
+  background: url(/assets/images/icons/email.svg) center center / 90% no-repeat;
+  transform: translateY(-1px);
+}
+
+.githubIcon {
+  height: 30px;
+  width: 30px;
+  background: url(/assets/images/icons/github.svg) center center / 90% no-repeat;
+  transform: translateY(-1px);
+}
+
+.svgrepo {
+  height: 30px;
+  width: 30px;
+  background: url(/assets/images/icons/svgrepo.svg) center center / 90% no-repeat;
+  transform: translateY(-1px);
+}
+
+.googleFonts {
+  height: 26px;
+  width: 26px;
+  background: url(/assets/images/icons/googleFonts.svg) center center / 90% no-repeat;
+  transform: translateY(-1px);
+}
+
+.pexels {
+  height: 24px;
+  width: 24px;
+  background: url(/assets/images/icons/pexels.svg) center center / 90% no-repeat;
+  transform: translateY(-1px);
+}
+
+.isladjan {
+  height: 26px;
+  width: 26px;
+  background: url(/assets/images/icons/isladjan.svg) center center / 90% no-repeat;
+  transform: translateY(-1px);
+}
+
+.apixdo {
+  height: 30px;
+  width: 30px;
+  background: url(/assets/images/icons/apixdo.svg) center center / 90% no-repeat;
+  transform: translateY(-1px);
+}
+
+.simpleIcons {
+  height: 26px;
+  width: 26px;
+  background: url(/assets/images/icons/simpleIcons.svg) center center / 90% no-repeat;
+  transform: translateY(-1px);
+}
+
+.devicons {
+  height: 26px;
+  width: 26px;
+  background: url(/assets/images/icons/devicons.svg) center center / 90% no-repeat;
+  transform: translateY(1px);
+}
+
+.sourceCode {
+  height: 26px;
+  width: 26px;
+  background: url(/assets/images/icons/sourceCode.svg) center center / 90% no-repeat;
+  transform: translateY(-1px);
+}
+
+.liveLink {
+  height: 30px;
+  width: 30px;
+  background: url(/assets/images/icons/liveLink.svg) center center / 90% no-repeat;
+  transform: translateY(0px);
+}
+
+.linkHover {}
+
 /* ============================== */
 
 /* =================================
@@ -355,6 +473,10 @@
   font-family: var(--ff-heading);
   font-weight: var(--fw-medium);
   text-shadow: var(--text-primary-shadow);
+}
+
+.section-heading-small {
+  font-size: clamp(1.8rem, 4vw, 2rem);
 }
 
 .section-heading-secondary {

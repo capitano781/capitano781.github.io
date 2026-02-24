@@ -24,7 +24,8 @@
   <div class="bg-video-control" id="bgVideoControl"></div>
   <div class="bg-video">
     <video class="" id="bgVideo" autoplay muted loop playsinline>
-      <source src="/assets/video/vid1.webm" type="video/mp4" />
+      <!-- <source src="/assets/video/vid1.webm" type="video/mp4" /> -->
+      <source src="/assets/video/vid7.mp4" type="video/mp4" />
     </video>
     <div class="background-wrapper ">
       <!-- <div class="background-grid"></div> -->
@@ -212,9 +213,9 @@
               </div>
               <div class="linksViewContrainer hideElement" id="linksViewContrainer">
                 <template id="linksViewTemplate">
-                  <a href="" target="_blank" rel="" class="linksViewWrapper" id="linksViewWrapper">
+                  <a href="" target="_blank" rel="noopener noreferrer" class="linksViewWrapper" id="linksViewWrapper">
                     <div class="linkView secondary-text" id="linkView"></div>
-                    <div class="linkIcon"></div>
+                    <div class="linkIcon" id="projectLinks"></div>
                   </a>
                 </template>
               </div>
@@ -274,10 +275,19 @@
           <div class="contactDetails" id="contactDetails">
             <template class="contactDescription" id="contactDescription">
               <div class="contactDescriptionWrapper secondary-text" id="contactDescriptionWrapper">
-                <a href="" target="_blank" rel="" class="linksViewWrapper" id="contactLink">
-                  <div class="linkView secondary-text" id="contactLinkText"></div>
-                  <div class="linkIcon"></div>
-                </a>
+                <template id="externalLinkTemplate">
+                  <a href="" target="_blank" rel="noopener noreferrer" class="linksViewWrapper" id="contactLink">
+                    <div class="linkView secondary-text" id="contactLinkText"></div>
+                    <div class="" id="contactDescriptionIcon"></div>
+                  </a>
+                </template>
+                <template id="downloadDocTemplate">
+                  <a href="" download target="_blank" rel="noopener noreferrer" class="linksViewWrapper"
+                    id="contactLink">
+                    <div class="linkView secondary-text" id="contactLinkText"></div>
+                    <div class="" id="contactDescriptionIcon"></div>
+                  </a>
+                </template>
               </div>
             </template>
           </div>
@@ -285,19 +295,62 @@
       </div>
     </section>
     <section class="view creditDetails" id="credit">
-      <div class="folioDetailsContainer glass-card">
-        <div class="glass-card-title-section" id="folioDetailsHeader">
-          <div class="glass-card-title-wrap" id="folioDetailsTitleContainer">
-            <div class="section-heading" id="folioDetailsTitle"></div>
+      <div class="creditDetailsContainer glass-card">
+        <button class="creditDetailsCancel" id="creditDetailsCancel">
+          <div class="btn-cross" id="projectDetailsCancelImg"></div>
+        </button>
+        <div class="glass-card-title-section" id="creditDetailsHeader">
+          <div class="glass-card-title-wrap" id="creditDetailsTitleContainer">
+            <div class="section-heading section-heading-small" id="creditDetailsTitle"></div>
           </div>
         </div>
-        <div class="folioDetailsContent glass-card-content custom-scrollbar" id="folioDetailsContent">
-          <template class="folioDetailsDescription" id="folioDetailsDescription">
-            <div class="folioDetailsDescriptionWrapper secondary-text" id="folioDetailsDescriptionWrapper">
-              <span class="folioDetailsText" id="folioDetailsText"></span>
-              <a class="folioDetailsLink highlight-secondary-text" id="folioDetailsLink" href="" target="_blank"></a>
-            </div>
-          </template>
+        <div class="creditDetailsContent glass-card-content custom-scrollbar" id="creditDetailsContent">
+          <div class="creditDetailsContentWrapper" id="creditDetailsContentWrapper">
+
+            <template id="creditPlainTextTemplate">
+              <div class="creditPlainTextWrapper">
+                <span class="creditPlainTextPrimary highlight-secondary-text" id="creditPlainTextPrimary"></span>
+                <span class="creditPlainTextSecondary secondary-text" id="creditPlainTextSecondary"></span>
+              </div>
+            </template>
+
+            <template id="creditBulletPointsTemplate">
+              <div class="creditBulletPointsWrapper" id="creditBulletPointsWrapper">
+                <template id="creditSingleBulletTemplate">
+                  <div class="creditSingleBulletTemplateWrapper" id="creditSingleBulletTemplateWrapper">
+                    <span class="creditPlainTextBulletIcon"></span>
+                    <span class="creditBulletPointsPrimary highlight-secondary-text"
+                      id="creditBulletPointsPrimary"></span>
+                    <span class="creditBulletPointsSecondary secondary-text" id="creditBulletPointsSecondary"></span>
+                  </div>
+                </template>
+              </div>
+            </template>
+
+            <template id="creditLinksTemplate">
+              <div class="creditLinksWrapper" id="creditLinksWrapper">
+
+                <div class="creditSectionLabel primary-text" id="creditSectionLabel"></div>
+
+                <div class="creditSectionContent" id="creditSectionContent">
+
+                  <template id="creditSectionContentTemplate">
+                    <div class="creditSectionContentWrapper" id="creditSectionContentWrapper">
+
+                      <a href="" target="_blank" rel="noopener noreferrer" class="creditLink linksViewWrapper"
+                        id="creditLink">
+                        <div class="linkView secondary-text" id="contactLinkText"></div>
+                        <div class="" id="creditLinkIcon"></div>
+                      </a>
+
+                    </div>
+                  </template>
+
+                </div>
+              </div>
+            </template>
+
+          </div>
         </div>
       </div>
     </section>
