@@ -4,6 +4,7 @@ import setProjectSectionData from "./renderProjects.js";
 import setTechSkillSectionData from "./renderSkills.js";
 import setAboutmeSectionData from "./renderAbout.js";
 import setContactSectionData from "./renderContact.js";
+import setCreditSectionData from "./renderCredits.js";
 
 export const renderView = () => {
   const apiResponse = getApiResponse();
@@ -12,4 +13,5 @@ export const renderView = () => {
   setTechSkillSectionData(apiResponse?.Technical_Skills_Section);
   setAboutmeSectionData(apiResponse?.About_Section);
   setContactSectionData(apiResponse?.Contact_Section);
+  setCreditSectionData(apiResponse?.Credit_Section);
 };
