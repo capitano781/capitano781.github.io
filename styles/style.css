@@ -28,76 +28,53 @@ a:hover {
 }
 
 button {
-  -webkit-user-select: none;
   /* Safari */
-  -ms-user-select: none;
+  -webkit-user-select: none;
   /* IE 10 and 11 */
-  user-select: none;
+  -ms-user-select: none;
   /* Standard syntax */
+  user-select: none;
 }
 
 html,
 body {
-  margin: 0;
-  padding: 0;
-  font-family: "Space Grotesk", sans-serif;
+  margin: var(--space-0);
+  padding: var(--space-0);
+  font-family: var(--ff-base);
   font-optical-sizing: auto;
   font-style: normal;
-  /* background-color: var(--darkBg); */
-  /* background: url(/assets/images/bg/tealMEsh.jpg) center center;
-  background-attachment: fixed;
-  background-size: cover; */
   color: var(--text-light);
-  /* cursor: url("/assets/images/illustrations/p1.png") 4 4, auto !important; */
   scroll-behavior: smooth;
 }
 
 body {
-  /* height: 100%; */
   width: 100%;
-  /* position: relative; */
   overflow: hidden;
 }
 
 .bg-video-control {
   position: absolute;
-  top: 0;
-  right: 0;
-  height: 2rem;
-  width: 2rem;
-  border: 2px solid red;
-  z-index: 50;
+  top: var(--space-0);
+  right: var(--space-0);
+  height: var(--space-6);
+  width: var(--space-6);
+  border: var(--px-2) solid var(--cb-accent-ocean-green-transparent);
+  z-index: var(--bg-video-control-button);
 }
 
 .bg-video {
   position: fixed;
-  inset: 0;
-  z-index: -2;
-  /* overflow: hidden; */
+  inset: var(--space-0);
+  z-index: var(--bg-video);
 }
 
 .bg-video video {
-  height: 100%;
-  width: 100%;
+  height: var(--p-100);
+  width: var(--p-100);
   object-fit: cover;
-  transform: translateZ(-1000px);
-  /* Pushes it back in 3D space */
+  transform: translateZ(var(--px-1000));
   backface-visibility: hidden;
-  perspective: 1000px;
-}
-
-.background-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  /* background: #000; */
-  /* background: url(/assets/images/bg/un7.jpg) center center / cover no-repeat; */
-  /* Dark space background */
-  perspective: 1000px;
-  overflow: hidden;
-  z-index: -1;
+  perspective: var(--px-1000);
 }
 
 .bg-overlay {
@@ -114,43 +91,42 @@ body {
 }
 
 .loaderOverlay {
-  height: 100vh;
-  width: 100vw;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--vh-100);
+  width: var(--vw-100);
+  top: var(--space-0);
+  left: var(--space-0);
   /* background-color: #00191f;
-    background-image: radial-gradient(at 59% 8%, rgb(87 189 199 / 30%) 0px, transparent 50%), radial-gradient(at 27% 67%, rgb(83 215 237 / 20%) 0px, transparent 50%); */
+  background-image: radial-gradient(at 59% 8%, rgb(87 189 199 / 30%) 0px, transparent 50%), radial-gradient(at 27% 67%, rgb(83 215 237 / 20%) 0px, transparent 50%); */
 
   /* background-image: url('../assets/images/bg/un1.jpg'); */
   /* background-image: url('../assets/images/bg/un1.jpg'); */
 
   background-position: center;
   background-size: cover;
-
   background-attachment: fixed;
   position: relative;
   background-attachment: fixed;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  z-index: var(--loaderOverlay);
 }
 
 .loaderBg {
   position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
+  top: var(--space-0);
+  right: var(--space-0);
+  height: var(--p-100);
+  width: var(--p-100);
   /* background: #333; */
   /* background-image: url("../assets/images/bg/un1.jpg"); */
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  filter: blur(30px);
+  filter: blur(var(--px-30));
   /* Scale it up slightly to hide the blurred edges of the screen */
-  transform: scale(1.1);
+  transform: scale(var(--dc-1-1));
 }
 
 /* ====================================================
@@ -446,7 +422,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
   /* border: 2px solid #4fca4f; */
 }
 
@@ -455,6 +430,7 @@ body {
   /* height: clamp(70%, 68vh, 80%); */
   max-width: 80%;
   overflow: hidden;
+  gap: 0rem !important;
   /* border: 3px solid #f6ff00; */
   /* background: #333; */
 }
@@ -1010,7 +986,7 @@ body {
 
 .techSkillContainer {
   /* max-width: 80%; */
-  width: clamp(48%, 800px, 80%);
+  width: clamp(60%, 1000px, 80%);
   /* height: 80%; */
   display: flex;
   flex-direction: column;
@@ -1162,7 +1138,7 @@ body {
 
 .creditDetailsContainer {
   /* max-width: 800px; */
-  width: clamp(40%, 800px, 80%);
+  width: clamp(50%, 800px, 80%);
   /* height: 80%; */
   display: flex;
   flex-direction: column;
@@ -1188,6 +1164,10 @@ body {
   justify-content: center;
   flex-direction: column;
   gap: 1rem;
+}
+
+.creditPlainTextWrapper {
+  width: 100%;
 }
 
 .creditLinksWrapper {

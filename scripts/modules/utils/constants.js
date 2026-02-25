@@ -18,6 +18,7 @@ export const CONFIG = {
 };
 
 export const STATE_PROPS = {
+  backgroundAnimationStatus: 'backgroundAnimationStatus',
   videoPlayback: 'videoPlayback',
   videoPlaybackRate: 'videoPlaybackRate',
   activeView: 'activeView',
@@ -44,6 +45,16 @@ export const SELECTORS = {
   // ============================================
 
   documentElement: 'documentElement',
+
+  // CSS background Animations
+  halo1: '#halo-1',
+  halo2: '#halo-2',
+  halo3: '#halo-3',
+  halo4: '#halo-4',
+  halo5: '#halo-5',
+  halo6: '#halo-6',
+  centerRing: '#center-ring',
+  sudoHalo: 'sudoHalo',
 
   // Loader
   loaderOverlay: '#loaderOverlay',
@@ -76,13 +87,9 @@ export const SELECTORS = {
   SliderRightNav: '#SliderRightNav',
   projectSlideClose: '#projectSlideClose',
   projectDetailsView: '#projectDetailsView',
-  imageGalleryContainer: '#imageGalleryContainer',
-  imageGallerySmallView: '#imageGallerySmallView',
-  imageGallerySmallViewTemplate: '#imageGallerySmallViewTemplate',
-  imageGallerySrc: '#imageGallerySrc',
-  imageGalleryLabel: '#imageGalleryLabel',
-  imageGalleryLargeView: '#imageGalleryLargeView',
-  imageGalleryLargeViewCancel: '#imageGalleryLargeViewCancel',
+  projectMadeWithItems: '#projectMadeWithItems',
+  projectMadeWithItem: '#projectMadeWithItem',
+  projectMadeWithItemTemplate: '#projectMadeWithItemTemplate',
 
   // Project details
   projectDetailsHeaderSectionTitle: '#projectDetailsHeaderSectionTitle',
@@ -110,6 +117,13 @@ export const SELECTORS = {
   linksViewWrapper: '#linksViewWrapper',
   linkView: '#linkView',
   projectLinks: '#projectLinks',
+  imageGalleryContainer: '#imageGalleryContainer',
+  imageGallerySmallView: '#imageGallerySmallView',
+  imageGallerySmallViewTemplate: '#imageGallerySmallViewTemplate',
+  imageGallerySrc: '#imageGallerySrc',
+  imageGalleryLabel: '#imageGalleryLabel',
+  imageGalleryLargeView: '#imageGalleryLargeView',
+  imageGalleryLargeViewCancel: '#imageGalleryLargeViewCancel',
 
   // About Section
   aboutTitle: '#aboutTitle',
@@ -276,6 +290,7 @@ export const SELECTORS = {
 // ============================================
 
 export const CLASSES = {
+  stopAnimation: 'stop-animation',
   hidden: 'hideElement',
   hiddenWithScale: 'hideElementWithScale',
   hiddenWithOpacity: 'hideElementWithOpacity',

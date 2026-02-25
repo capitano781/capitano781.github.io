@@ -9,6 +9,7 @@ export const handlers = {
     [SELECTORS.documentElement]: {
         [EVENTS.VISIBILITY_CHANGE]: () => {
             // setState(STATE_PROPS.videoPlayback, !getState(STATE_PROPS.videoPlayback));
+            setState(STATE_PROPS.backgroundAnimationStatus, !getState(STATE_PROPS.backgroundAnimationStatus));
         }
     },
     [SELECTORS.bgVideoControl]: {

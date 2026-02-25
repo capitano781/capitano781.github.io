@@ -1,23 +1,24 @@
-import { validatePortfolioData } from "./modules/utils/validator.js";
-import { initApiResponse } from "./modules/core/initApiResponse.js";
-import { CONFIG, CLASSES, SELECTORS, MESSAGES, STATE_PROPS, VIEWS } from "./modules/utils/constants.js";
-import { renderView } from "./modules/views/renderView.js";
-import {
-  getElement,
-  getAllElements,
-} from "./modules/utils/utilityScripts.js";
-import { loadPostRenderDomElements, loadPreRenderDomElements } from "./modules/utils/domElementRegistry.js";
+import { validatePortfolioData } from './modules/utils/validator.js';
+import { initApiResponse } from './modules/core/initApiResponse.js';
+import { CONFIG, MESSAGES, STATE_PROPS, VIEWS } from './modules/utils/constants.js';
+import { renderView } from './modules/views/renderView.js';
+import { loadPostRenderDomElements, loadPreRenderDomElements } from './modules/utils/domElementRegistry.js';
 import { isBgVideoRunning, setBgVideoSpeed, initBgVideoHandlers } from './modules/controls/bgVideoController.js';
-import setBoxSliderCardPosition, { initBoxSliderHandlers } from "./modules/controls/boxSlideController.js";
-import setActiveView, { initMenuSliderHandlers } from "./modules/controls/menuSliderController.js";
-import { setProjectDetailsPageData } from "./modules/views/renderProjectDetails.js";
-import { setActiveContent } from "./modules/views/renderProjectDetails.js";
-import { setImageGalleryLargeView } from "./modules/views/project_details_views/renderProjectContents.js";
-import exitLoader from "./modules/views/renderSpinner.js";
+import setBoxSliderCardPosition, { initBoxSliderHandlers } from './modules/controls/boxSlideController.js';
+import setActiveView, { initMenuSliderHandlers } from './modules/controls/menuSliderController.js';
+import { setProjectDetailsPageData } from './modules/views/renderProjectDetails.js';
+import { setActiveContent } from './modules/views/renderProjectDetails.js';
+import { setImageGalleryLargeView } from './modules/views/project_details_views/renderProjectContents.js';
+import exitLoader from './modules/views/renderSpinner.js';
+import toggleCssBackgroundAnimationState from './modules/controls/cssBackgroundController.js';
 
 const stateHandler = {
   set(target, property, value) {
     switch (property) {
+      case (STATE_PROPS.backgroundAnimationStatus): {
+        toggleCssBackgroundAnimationState();
+        return Reflect.set(target, property, value);
+      }
       case (STATE_PROPS.videoPlayback): {
         isBgVideoRunning(value);
         return Reflect.set(target, property, value);
@@ -51,7 +52,11 @@ const stateHandler = {
   }
 }
 
-export const stateProxy = new Proxy({}, stateHandler);
+const initialState = {
+  backgroundAnimationStatus: true,
+}
+
+export const stateProxy = new Proxy(initialState, stateHandler);
 
 export function getState(prop) {
   if (!(Reflect.has(stateProxy, prop))) console.log('Invalid state property:', prop);

@@ -4,6 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/ico" href="./assets/images/icons/webIcon/webIcon180.ico" sizes="16×16">
+  <link rel="icon" type="image/ico" href="./assets/images/icons/webIcon/webIcon180.ico" sizes="24×24">
+  <link rel="icon" type="image/ico" href="./assets/images/icons/webIcon/webIcon180.ico" sizes="32×32">
+  <link rel="icon" type="image/ico" href="./assets/images/icons/webIcon/webIcon180.ico" sizes="48×48">
+  <link rel="icon" type="image/ico" href="./assets/images/icons/webIcon/webIcon180.ico" sizes="64×64">
+  <link rel="icon" type="image/ico" href="./assets/images/icons/webIcon/webIcon180.ico" sizes="96×96">
+  <link rel="icon" type="image/ico" href="./assets/images/icons/webIcon/webIcon180.ico" sizes="128×128">
   <link rel="stylesheet" href="/styles/style.css" />
   <link rel="stylesheet" href="/styles/styleUtilities.css" />
   <link rel="stylesheet" href="/styles/mediaQuery.css" />
@@ -20,7 +27,6 @@
         <div class="spinner"></div>
       </div>
     </div>
-    <!-- <div class="neubrutalist-card"></div> -->
   </div>
   <div class="bg-video-control hideElement" id="bgVideoControl"></div>
   <div class="bg-video hideElement">
@@ -28,29 +34,29 @@
       <!-- <source src="/assets/video/vid1.webm" type="video/mp4" /> -->
       <!-- <source src="/assets/video/vid7" type="video/mp4" /> -->
     </video>
-    <div class="background-wrapper ">
-      <!-- <div class="background-grid"></div> -->
-    </div>
     <div class="bg-overlay"></div>
   </div>
   <div class="container">
     <div class="background-container">
       <div class="halos-container">
-        <div class="center-hole"></div>
-        <div class="halo halo-1">
+        <div class="center-ring" id="center-ring"></div>
+        <div class="halo halo-1" id="halo-1">
           <div class="sub-halo sub-halo-1"></div>
         </div>
-        <div class="halo halo-2">
+        <div class="halo halo-2" id="halo-2">
           <div class="sub-halo sub-halo-2"></div>
         </div>
-        <div class="halo halo-3">
+        <div class="halo halo-3" id="halo-3">
           <div class="sub-halo sub-halo-3"></div>
         </div>
-        <div class="halo halo-4">
+        <div class="halo halo-4" id="halo-4">
           <div class="sub-halo sub-halo-4"></div>
         </div>
-        <div class="halo halo-5">
+        <div class="halo halo-5" id="halo-5">
           <div class="sub-halo sub-halo-5"></div>
+        </div>
+        <div class="halo halo-6" id="halo-6">
+          <div class="sub-halo sub-halo-6"></div>
         </div>
       </div>
     </div>
@@ -142,8 +148,13 @@
                     <div class="projectMadeWithLabel secondary-text">
                       Made with:
                     </div>
-                    <div class="projectMadeWithItems">
-                      <div class="projectMadeWithItem label-highlight">
+                    <div class="projectMadeWithItems" id="projectMadeWithItems">
+                      <template id="projectMadeWithItemTemplate">
+                        <div class="projectMadeWithItem label-highlight" id="projectMadeWithItem">
+                          Javascript
+                        </div>
+                      </template>
+                      <!-- <div class="projectMadeWithItem label-highlight">
                         Javascript
                       </div>
                       <div class="projectMadeWithItem label-highlight">
@@ -158,7 +169,7 @@
                       </div>
                       <div class="projectMadeWithItem label-highlight">
                         Google Fonts
-                      </div>
+                      </div> -->
                     </div>
                   </div>
                 </div>

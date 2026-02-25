@@ -73,25 +73,25 @@
   /* ************************
     z-index values
   *********************** */
-  --bg-video-control-button: 50;
-  --bg-video: -4;
-  --background-wrapper: -1;
-  --background-box: -2;
-  --loaderOverlay: -1;
-  --menuItem-main: 1;
-  --menuSlider: -1;
+  --imageGalleryLargeView: 101;
   --hamburgerIcon: 100;
   --hamburgerMenu: 99;
-  --view: 1;
+  --bg-video-control-button: 50;
   --navButton: 20;
-  --detailsContentContainerWrapper: 0;
   --slide-position-1: 10;
   --slide-position-2: 9;
-  --slide-position-2: 8;
+  --slide-position-3: 8;
   --send-to-back-deck: 7;
   --activeContent-projectDetail-content: 5;
   --activeSection: 2;
-  --imageGalleryLargeView: 101;
+  --view: 1;
+  --detailsContentContainerWrapper: 0;
+  --background-wrapper: -1;
+  --loaderOverlay: -1;
+  --menuItem-main: 1;
+  --menuSlider: -1;
+  --background-box: -2;
+  --bg-video: -2;
 
 
   /* Fonts */
@@ -155,7 +155,21 @@
   --radius-lg: 12px;
   --radius-full: 9999px;
 
+  /* Percentag */
+  --p-0: 0%;
+  --p-10: 10%;
+  --p-20: 20%;
+  --p-30: 30%;
+  --p-40: 40%;
+  --p-50: 50%;
+  --p-60: 60%;
+  --p-70: 70%;
+  --p-80: 80%;
+  --p-90: 90%;
+  --p-100: 100%;
+
   /* Spacing */
+  --space-0: 0;
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
@@ -189,15 +203,42 @@
   --px-20: 20px;
   --px-24: 24px;
   --px-27: 27px;
+  --px-30: 30px;
   --px-32: 32px;
+  --px-1000: 1000px;
 
-  /* View port sizing */
+  /* View port Width sizing */
   --vw-1: 1vw;
   --vw-2: 2vw;
   --vw-3: 3vw;
   --vw-4: 4vw;
   --vw-5: 5vw;
   --vw-6: 6vw;
+  --vw-100: 100vw;
+
+  /* View port Height sizing */
+  --vh-1: 1vh;
+  --vh-2: 2vh;
+  --vh-3: 3vh;
+  --vh-4: 4vh;
+  --vh-5: 5vh;
+  --vh-6: 6vh;
+  --vh-100: 100vh;
+
+  /* Decimal sizing */
+  --dc-0: 0;
+  --dc-0-1: 0.1;
+  --dc-0-2: 0.2;
+  --dc-0-3: 0.3;
+  --dc-0-4: 0.4;
+  --dc-0-5: 0.5;
+  --dc-0-6: 0.6;
+  --dc-0-7: 0.7;
+  --dc-0-8: 0.8;
+  --dc-0-9: 0.9;
+  --dc-1: 1;
+  --dc-1-1: 1.1;
+  --dc-1-2: 1.2;
 }
 
 [data-theme="dark"] {}

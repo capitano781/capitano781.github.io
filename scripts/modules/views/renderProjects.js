@@ -6,6 +6,7 @@ import {
     setTemplateElementText,
     setElementText,
     isArrayDataValid,
+    getTemplateElementChild,
 } from "../utils/utilityScripts.js";
 
 const setProjectSectionData = (data) => {
@@ -27,6 +28,20 @@ const setProjectSectionData = (data) => {
             setTemplateElementText(projectBoxClone, SELECTORS.projectNumber, getProjectNumber(index));
             setTemplateElementText(projectBoxClone, SELECTORS.projectDescText, project?.OnelineDescription);
             setTemplateElementText(projectBoxClone, SELECTORS.projectDetailsIndexPageButton, project?.indexPageButtonLabel);
+
+            const projectMadeWithItems = getTemplateElementChild(projectBoxClone, SELECTORS.projectMadeWithItems);
+
+            const projectMadeWithItemTemplate = getTemplateElementChild(projectBoxClone, SELECTORS.projectMadeWithItemTemplate)
+
+            if (isArrayDataValid(project?.madeWith)) {
+                project.madeWith.forEach(item => {
+                    const projectMadeWithItemTemplateClone = getElementTemplateClone(projectMadeWithItemTemplate);
+
+                    setTemplateElementText(projectMadeWithItemTemplateClone, SELECTORS.projectMadeWithItem, item);
+
+                    projectMadeWithItems.appendChild(projectMadeWithItemTemplateClone);
+                });
+            }
 
             setHandler(
                 projectBoxClone.querySelector(SELECTORS.projectDetailsIndexPageButton),

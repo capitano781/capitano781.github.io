@@ -8,6 +8,13 @@ export const loadPostRenderDomElements = () => {
     elements.documentElement = document;
     elements.bgVideo = getElement(SELECTORS.backgroundVideo);
     elements.bgVideo = getElement(SELECTORS.backgroundVideo);
+    elements.halo1 = getElement(SELECTORS.halo1);
+    elements.halo2 = getElement(SELECTORS.halo2);
+    elements.halo3 = getElement(SELECTORS.halo3);
+    elements.halo4 = getElement(SELECTORS.halo4);
+    elements.halo5 = getElement(SELECTORS.halo5);
+    elements.halo6 = getElement(SELECTORS.halo6);
+    elements.centerRing = getElement(SELECTORS.centerRing);
     elements.bgVideoControl = getElement(SELECTORS.bgVideoControl);
     elements.projectSlides = [...getAllElements(SELECTORS.projectBoxWrapper)];
     elements.boxSliderLeftNav = getElement(SELECTORS.SliderLeftNav);

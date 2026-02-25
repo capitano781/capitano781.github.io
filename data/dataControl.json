@@ -24,6 +24,341 @@
                 "indexPageButtonLabel": "Learn more",
                 "backToHomeButtonLabel": "Back to Portfolio",
                 "BriefDescription": "A robust tool for calculating Value at Risk (VaR) for an UST (United States Treasury) Portfolio, employing a C# thick client GUI with a Python FastAPI server backend and SQL Server database. This application helps investors analyze and optimize their portfolio's market risk.",
+                "madeWith": [
+                    "HTML",
+                    "CSS",
+                    "Javascript"
+                ],
+                "sections": [
+                    {
+                        "title": "Overview",
+                        "iconUrl": "icons/feature.svg",
+                        "type": "plainList",
+                        "content": [
+                            {
+                                "primaryText": "",
+                                "secondaryText": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi odio rem perferendis, ex repellendus suscipit exercitationem labore fugit assumenda! Dolorum vel architecto quos repellendus, eum doloremque error pariatur modi natus?"
+                            },
+                            {
+                                "primaryText": "Point about something:",
+                                "secondaryText": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi odio rem perferendis, ex repellendus sdis, ex repellendus sdis, ex repellendus suscipit exercitationem labore fugit assumenda! Dolorum vel architecto quos repellendus, eum doloremque error pariatur modi natus?"
+                            },
+                            {
+                                "primaryText": "Point about something:",
+                                "secondaryText": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi odio rem perferendis"
+                            },
+                            {
+                                "primaryText": "Point about something:",
+                                "secondaryText": "Lorem, ips sit amet consectetur. Nisi odio rem perferendis"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Features",
+                        "iconUrl": "icons/feature.svg",
+                        "type": "plainList",
+                        "content": [
+                            {
+                                "primaryText": "C# Thick Client GUI",
+                                "secondaryText": "User-friendly interface for easy portfolio construction, data input, and result visualization."
+                            },
+                            {
+                                "primaryText": "Python FastAPI Backend:",
+                                "secondaryText": "High-performance API for serving VaR calculations and data retrieval."
+                            },
+                            {
+                                "primaryText": "SQL Server Database:",
+                                "secondaryText": "Secure and scalable data storage for instrument data, portfolio information, and historical market data."
+                            },
+                            {
+                                "primaryText": "Comprehensive VaR Calculations:",
+                                "secondaryText": "Supports Historical Simulation and Parametric VaR methodologies with adjustable confidence levels."
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tech stack",
+                        "iconUrl": "icons/feature.svg",
+                        "type": "largeIconTextBoxList",
+                        "content": [
+                            "HTML",
+                            "CSS",
+                            "Javascript"
+                        ]
+                    },
+                    {
+                        "title": "ScreenShots",
+                        "iconUrl": "icons/feature.svg",
+                        "type": "imageGallery",
+                        "content": [
+                            {
+                                "src": "screenshots/hero_page.png",
+                                "label": "Home"
+                            },
+                            {
+                                "src": "screenshots/projects_page.png",
+                                "label": "Projects"
+                            },
+                            {
+                                "src": "screenshots/skill_page.png",
+                                "label": "Skills"
+                            },
+                            {
+                                "src": "screenshots/about_page.png",
+                                "label": "About me"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Links",
+                        "iconUrl": "icons/feature.svg",
+                        "type": "linksView",
+                        "content": [
+                            {
+                                "link": "https://www.google.com",
+                                "label": "Source Code Link",
+                                "iconType": "sourceCode"
+                            },
+                            {
+                                "link": "https://www.google.com",
+                                "label": "demo link",
+                                "iconType": "liveLink"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Title": "Sample project name big and lengthy",
+                "OnelineDescription": "A robust tool for calculating Value at Risk (VaR) for an UST (United States Treasury) Portfolio, employing a C# thick client GUI with a Python FastAPI ",
+                "indexPageButtonLabel": "Learn more",
+                "backToHomeButtonLabel": "Back to Portfolio",
+                "BriefDescription": "A robust tool for calculating Value at Risk (VaR) for an UST (United States Treasury) Portfolio, employing a C# thick client GUI with a Python FastAPI server backend and SQL Server database. This application helps investors analyze and optimize their portfolio's market risk.",
+                "madeWith": [
+                    "HTML",
+                    "CSS",
+                    "Javascript"
+                ],
+                "sections": [
+                    {
+                        "title": "Overview",
+                        "iconUrl": "icons/feature.svg",
+                        "type": "plainList",
+                        "content": [
+                            {
+                                "primaryText": "",
+                                "secondaryText": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi odio rem perferendis, ex repellendus suscipit exercitationem labore fugit assumenda! Dolorum vel architecto quos repellendus, eum doloremque error pariatur modi natus?"
+                            },
+                            {
+                                "primaryText": "Point about something:",
+                                "secondaryText": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi odio rem perferendis, ex repellendus sdis, ex repellendus sdis, ex repellendus suscipit exercitationem labore fugit assumenda! Dolorum vel architecto quos repellendus, eum doloremque error pariatur modi natus?"
+                            },
+                            {
+                                "primaryText": "Point about something:",
+                                "secondaryText": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi odio rem perferendis"
+                            },
+                            {
+                                "primaryText": "Point about something:",
+                                "secondaryText": "Lorem, ips sit amet consectetur. Nisi odio rem perferendis"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Features",
+                        "iconUrl": "icons/feature.svg",
+                        "type": "plainList",
+                        "content": [
+                            {
+                                "primaryText": "C# Thick Client GUI",
+                                "secondaryText": "User-friendly interface for easy portfolio construction, data input, and result visualization."
+                            },
+                            {
+                                "primaryText": "Python FastAPI Backend:",
+                                "secondaryText": "High-performance API for serving VaR calculations and data retrieval."
+                            },
+                            {
+                                "primaryText": "SQL Server Database:",
+                                "secondaryText": "Secure and scalable data storage for instrument data, portfolio information, and historical market data."
+                            },
+                            {
+                                "primaryText": "Comprehensive VaR Calculations:",
+                                "secondaryText": "Supports Historical Simulation and Parametric VaR methodologies with adjustable confidence levels."
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tech stack",
+                        "iconUrl": "icons/feature.svg",
+                        "type": "largeIconTextBoxList",
+                        "content": [
+                            "HTML",
+                            "CSS",
+                            "Javascript"
+                        ]
+                    },
+                    {
+                        "title": "ScreenShots",
+                        "iconUrl": "icons/feature.svg",
+                        "type": "imageGallery",
+                        "content": [
+                            {
+                                "src": "screenshots/hero_page.png",
+                                "label": "Home"
+                            },
+                            {
+                                "src": "screenshots/projects_page.png",
+                                "label": "Projects"
+                            },
+                            {
+                                "src": "screenshots/skill_page.png",
+                                "label": "Skills"
+                            },
+                            {
+                                "src": "screenshots/about_page.png",
+                                "label": "About me"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Links",
+                        "iconUrl": "icons/feature.svg",
+                        "type": "linksView",
+                        "content": [
+                            {
+                                "link": "https://www.google.com",
+                                "label": "Source Code Link",
+                                "iconType": "sourceCode"
+                            },
+                            {
+                                "link": "https://www.google.com",
+                                "label": "demo link",
+                                "iconType": "liveLink"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Title": "Sample project name big and lengthy",
+                "OnelineDescription": "A robust tool for calculating Value at Risk (VaR) for an UST (United States Treasury) Portfolio, employing a C# thick client GUI with a Python FastAPI ",
+                "indexPageButtonLabel": "Learn more",
+                "backToHomeButtonLabel": "Back to Portfolio",
+                "BriefDescription": "A robust tool for calculating Value at Risk (VaR) for an UST (United States Treasury) Portfolio, employing a C# thick client GUI with a Python FastAPI server backend and SQL Server database. This application helps investors analyze and optimize their portfolio's market risk.",
+                "madeWith": [
+                    "HTML",
+                    "CSS",
+                    "Javascript"
+                ],
+                "sections": [
+                    {
+                        "title": "Overview",
+                        "iconUrl": "icons/feature.svg",
+                        "type": "plainList",
+                        "content": [
+                            {
+                                "primaryText": "",
+                                "secondaryText": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi odio rem perferendis, ex repellendus suscipit exercitationem labore fugit assumenda! Dolorum vel architecto quos repellendus, eum doloremque error pariatur modi natus?"
+                            },
+                            {
+                                "primaryText": "Point about something:",
+                                "secondaryText": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi odio rem perferendis, ex repellendus sdis, ex repellendus sdis, ex repellendus suscipit exercitationem labore fugit assumenda! Dolorum vel architecto quos repellendus, eum doloremque error pariatur modi natus?"
+                            },
+                            {
+                                "primaryText": "Point about something:",
+                                "secondaryText": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi odio rem perferendis"
+                            },
+                            {
+                                "primaryText": "Point about something:",
+                                "secondaryText": "Lorem, ips sit amet consectetur. Nisi odio rem perferendis"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Features",
+                        "iconUrl": "icons/feature.svg",
+                        "type": "plainList",
+                        "content": [
+                            {
+                                "primaryText": "C# Thick Client GUI",
+                                "secondaryText": "User-friendly interface for easy portfolio construction, data input, and result visualization."
+                            },
+                            {
+                                "primaryText": "Python FastAPI Backend:",
+                                "secondaryText": "High-performance API for serving VaR calculations and data retrieval."
+                            },
+                            {
+                                "primaryText": "SQL Server Database:",
+                                "secondaryText": "Secure and scalable data storage for instrument data, portfolio information, and historical market data."
+                            },
+                            {
+                                "primaryText": "Comprehensive VaR Calculations:",
+                                "secondaryText": "Supports Historical Simulation and Parametric VaR methodologies with adjustable confidence levels."
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tech stack",
+                        "iconUrl": "icons/feature.svg",
+                        "type": "largeIconTextBoxList",
+                        "content": [
+                            "HTML",
+                            "CSS",
+                            "Javascript"
+                        ]
+                    },
+                    {
+                        "title": "ScreenShots",
+                        "iconUrl": "icons/feature.svg",
+                        "type": "imageGallery",
+                        "content": [
+                            {
+                                "src": "screenshots/hero_page.png",
+                                "label": "Home"
+                            },
+                            {
+                                "src": "screenshots/projects_page.png",
+                                "label": "Projects"
+                            },
+                            {
+                                "src": "screenshots/skill_page.png",
+                                "label": "Skills"
+                            },
+                            {
+                                "src": "screenshots/about_page.png",
+                                "label": "About me"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Links",
+                        "iconUrl": "icons/feature.svg",
+                        "type": "linksView",
+                        "content": [
+                            {
+                                "link": "https://www.google.com",
+                                "label": "Source Code Link",
+                                "iconType": "sourceCode"
+                            },
+                            {
+                                "link": "https://www.google.com",
+                                "label": "demo link",
+                                "iconType": "liveLink"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Title": "Sample project name big and lengthy",
+                "OnelineDescription": "A robust tool for calculating Value at Risk (VaR) for an UST (United States Treasury) Portfolio, employing a C# thick client GUI with a Python FastAPI ",
+                "indexPageButtonLabel": "Learn more",
+                "backToHomeButtonLabel": "Back to Portfolio",
+                "BriefDescription": "A robust tool for calculating Value at Risk (VaR) for an UST (United States Treasury) Portfolio, employing a C# thick client GUI with a Python FastAPI server backend and SQL Server database. This application helps investors analyze and optimize their portfolio's market risk.",
+                "madeWith": [
+                    "HTML",
+                    "CSS",
+                    "Javascript"
+                ],
                 "sections": [
                     {
                         "title": "Overview",
@@ -141,16 +476,11 @@
         "Title": "Technical Skills",
         "Categories": [
             {
-                "Category": "Languages",
+                "Category": "Frontend",
                 "Descriptions": [
                     "JavaScript (ES6+)",
                     "HTML5",
-                    "CSS3"
-                ]
-            },
-            {
-                "Category": "Frontend",
-                "Descriptions": [
+                    "CSS3",
                     "React.js",
                     "React Hooks",
                     "Redux",

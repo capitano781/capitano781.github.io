@@ -91,6 +91,10 @@ export const toggleElementClassName = (element, className) => {
   }
 };
 
+export const addCSSClassName = (element, className) => {
+  if (!(element?.classList?.value.includes(className))) element.classList.add(className);
+};
+
 export const addClassName = (element, className) => {
   if (!element?.classList?.value.includes(className)) element.classList.add(className);
 };

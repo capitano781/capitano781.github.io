@@ -48,7 +48,7 @@
     transform: translate(-50%, -50%);
 }
 
-.center-hole {
+.center-ring {
     height: 500px;
     width: 500px;
     background: #00f4ff08;
@@ -60,7 +60,8 @@
     box-shadow: inset 0px 0px 20px 20px #004655, 0px 0px 20px 20px #00d2ff30;
     opacity: 1;
     transform: translate(-50%, -50%) translateZ(-100px);
-    animation: center-hole 10s linear infinite;
+    animation: center-hole 20s linear infinite;
+    animation-play-state: running;
 }
 
 .halo {
@@ -89,7 +90,7 @@
     border-radius: 50%;
     /* box-shadow: 0px 0px 20px 9px #88f0889c; */
     opacity: 1;
-    transform: translate(-50%, -50%) translateZ(20px);
+    transform: translate(-50%, -50%) translateZ(40px);
 
     /* -400 78 */
 }
@@ -100,7 +101,7 @@
     background: var(--blue-bg);
     border: 4px solid var(--faint-glow);
     box-shadow: 0 0 20px var(--soft-glow);
-    animation: halo-1 10s linear infinite;
+
 }
 
 .sub-halo-1,
@@ -111,30 +112,59 @@
 }
 
 .halo-2,
+.halo-6,
 .halo-4 {
     background: var(--neo-bg);
     border: 4px solid var(--neo-soft-glow);
     box-shadow: 0px 0px 20px 9px var(--neo-faint-glow);
-    animation: halo-2 13s linear infinite;
     /* animation-delay: 4s; */
 }
 
 .sub-halo-2,
+.sub-halo-6,
 .sub-halo-4 {
     border: 4px solid var(--neo-subSoft-glow);
     box-shadow: 0px 0px 20px 9px var(--neo-subFaint-glow);
 }
 
+.halo-1 {
+    /* animation: halo-1 10s linear infinite; */
+    animation: halo-1 20s linear infinite;
+    animation-play-state: running;
+}
+
+.halo-2 {
+    /* animation: halo-2 13s linear infinite; */
+    animation: halo-2 17s linear infinite;
+    animation-play-state: running;
+}
+
 .halo-3 {
-    animation: halo-3 8s linear infinite;
+    /* animation: halo-3 8s linear infinite; */
+    animation: halo-3 14s linear infinite;
+    animation-play-state: running;
 }
 
 .halo-4 {
-    animation: halo-4 17s linear infinite;
+    /* animation: halo-4 15s linear infinite; */
+    animation: halo-4 11s linear infinite;
+    animation-play-state: running;
 }
 
 .halo-5 {
-    animation: halo-5 20s linear infinite;
+    /* animation: halo-5 6s linear infinite; */
+    animation: halo-5 10s linear infinite;
+    animation-play-state: running;
+}
+
+.halo-6 {
+    /* animation: halo-6 5s linear infinite; */
+    animation: halo-6 15s linear infinite;
+    animation-play-state: running;
+}
+
+.stop-animation {
+    animation-play-state: paused !important;
 }
 
 @keyframes halo-1 {
@@ -209,6 +239,23 @@
     0% {
         opacity: 0;
         transform: translate(-50%, -50%) translateZ(-650px) scale(0.1);
+    }
+
+    95% {
+        opacity: 1;
+        transform: translate(-50%, -50%) translateZ(855px) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateZ(880px) scale(1);
+    }
+}
+
+@keyframes halo-6 {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateZ(-0px) scale(0.1);
     }
 
     95% {
