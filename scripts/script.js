@@ -108,6 +108,7 @@ const initHandlers = () => {
       // Initial traps activation
       // setState(STATE_PROPS.videoPlayback, true);
       // setState(STATE_PROPS.videoPlaybackRate, 1);
+
       setState(STATE_PROPS.activeView, VIEWS.home);
       setState(STATE_PROPS.activeProject, 0);
       setState(STATE_PROPS.projectSectionsLimit, 5);

@@ -14,17 +14,21 @@
   <link rel="stylesheet" href="/styles/style.css" />
   <link rel="stylesheet" href="/styles/styleUtilities.css" />
   <link rel="stylesheet" href="/styles/mediaQuery.css" />
+  <link rel="stylesheet" href="/styles/spinner.css">
   <link rel="stylesheet" href="/styles/bgAnimation.css">
   <script type="module" src="scripts/script.js"></script>
   <title>Capitano781 | MERN Stack Developer</title>
 </head>
 
 <body class="calm-blue">
-  <div class="loaderOverlay hideElementWithScale hideElement" id="loaderOverlay">
-    <div class="loaderBg"></div>
+  <div class="loaderOverlay" id="loaderOverlay">
     <div class="glass-card">
-      <div class="innerGlass">
-        <div class="spinner"></div>
+      <div class="loaderContent section-heading" id="loaderContent">
+        LODAING
+        <span class="loaderDot dot-1"></span>
+        <span class="loaderDot dot-2"></span>
+        <span class="loaderDot dot-3"></span>
+        <span class="loaderDot dot-4"></span>
       </div>
     </div>
   </div>
@@ -36,7 +40,7 @@
     </video>
     <div class="bg-overlay"></div>
   </div>
-  <div class="container">
+  <div class="css-background">
     <div class="background-container">
       <div class="halos-container">
         <div class="center-ring" id="center-ring"></div>

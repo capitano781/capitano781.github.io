@@ -23,7 +23,7 @@ const setProjectTabs = (projectSections) => {
         tabsList.forEach((tab, index) => {
             const detailsTabTemplateClone = getElementTemplateClone(elements.detailsTabTemplate, SELECTORS.detailsTabTemplate);
 
-            const iconUrl = `url('${CONFIG.IMAGE_FILE_URL_INTERNAL}${tab.icon}') ${CONFIG.IMAGE_FILE_URL_ATTR}`;
+            const iconUrl = `url('${CONFIG.IMAGE_FILE_URL_INTERNAL}${tab.icon}') ${CONFIG.TAB_IMAGE_FILE_URL_ATTR}`;
 
             const detailsTabIcon = getTemplateElementChild(detailsTabTemplateClone, SELECTORS.detailsTabIcon);
             detailsTabIcon.style.background = iconUrl;

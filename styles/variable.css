@@ -78,6 +78,7 @@
   --hamburgerMenu: 99;
   --bg-video-control-button: 50;
   --navButton: 20;
+  --navButtons: 10;
   --slide-position-1: 10;
   --slide-position-2: 9;
   --slide-position-3: 8;
@@ -90,6 +91,7 @@
   --loaderOverlay: -1;
   --menuItem-main: 1;
   --menuSlider: -1;
+  --css-background: -2;
   --background-box: -2;
   --bg-video: -2;
 
@@ -156,7 +158,10 @@
   --radius-full: 9999px;
 
   /* Percentag */
+  --p-neg-300: -300%;
+  --p-neg-50: -50%;
   --p-0: 0%;
+  --p-7: 7%;
   --p-10: 10%;
   --p-20: 20%;
   --p-30: 30%;
@@ -165,8 +170,11 @@
   --p-60: 60%;
   --p-70: 70%;
   --p-80: 80%;
+  --p-85: 85%;
   --p-90: 90%;
   --p-100: 100%;
+  --p-170: 170%;
+  --p-300: 300%;
 
   /* Spacing */
   --space-0: 0;
@@ -187,6 +195,9 @@
   --mar-section: var(--space-6);
 
   /* pixel sizing */
+  --px-neg-20: -20px;
+  --px-neg-16: -16px;
+  --px-neg-4: -4px;
   --px-0: 0px;
   --px-0-5: 0.5px;
   --px-1: 1px;
@@ -205,6 +216,8 @@
   --px-27: 27px;
   --px-30: 30px;
   --px-32: 32px;
+  --px-120: 120px;
+  --px-304: 304px;
   --px-1000: 1000px;
 
   /* View port Width sizing */
@@ -239,6 +252,21 @@
   --dc-1: 1;
   --dc-1-1: 1.1;
   --dc-1-2: 1.2;
+
+  /* Angle units */
+  --deg-neg-45: -45deg;
+  --deg-0: 0deg;
+  --deg-10: 10deg;
+  --deg-20: 20deg;
+  --deg-30: 30deg;
+  --deg-40: 40deg;
+  --deg-45: 45deg;
+  --deg-50: 50deg;
+  --deg-60: 60deg;
+  --deg-70: 70deg;
+  --deg-80: 80deg;
+  --deg-90: 90deg;
+  --deg-100: 100deg;
 }
 
 [data-theme="dark"] {}
