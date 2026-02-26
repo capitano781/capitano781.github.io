@@ -293,8 +293,9 @@
 =========================== */
 
 .activeTab {
-  background-color: var(--accent-secondary-transparent);
-  /* box-shadow: var(); */
+  background-color: var(--transparent);
+  height: 45px !important;
+  width: 45px !important;
 }
 
 .activeContent {
@@ -338,11 +339,11 @@
 =========================== */
 
 .hideElement {
-  display: none;
+  display: none !important;
 }
 
 .hideElementWithScale {
-  transform: scale(0.001);
+  transform: scale(0);
   opacity: 0;
 }
 

@@ -32,7 +32,7 @@
                 "sections": [
                     {
                         "title": "Overview",
-                        "iconUrl": "icons/feature.svg",
+                        "iconUrl": "icons/overview.svg",
                         "type": "plainList",
                         "content": [
                             {
@@ -78,7 +78,7 @@
                     },
                     {
                         "title": "Tech stack",
-                        "iconUrl": "icons/feature.svg",
+                        "iconUrl": "icons/techStack.svg",
                         "type": "largeIconTextBoxList",
                         "content": [
                             "HTML",
@@ -88,7 +88,7 @@
                     },
                     {
                         "title": "ScreenShots",
-                        "iconUrl": "icons/feature.svg",
+                        "iconUrl": "icons/screenshot.svg",
                         "type": "imageGallery",
                         "content": [
                             {
@@ -111,7 +111,7 @@
                     },
                     {
                         "title": "Links",
-                        "iconUrl": "icons/feature.svg",
+                        "iconUrl": "icons/linkTab.svg",
                         "type": "linksView",
                         "content": [
                             {

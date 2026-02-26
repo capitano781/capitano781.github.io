@@ -57,8 +57,10 @@ export const handlers = {
     },
     [SELECTORS.hamburgerMenuItem]: {
         [EVENTS.CLICK](payload) {
-            toggleGroupClasses();
-            setTimeout(() => setState(STATE_PROPS.activeView, payload.menuId), 500);
+            setTimeout(() => {
+                setState(STATE_PROPS.activeView, payload.menuId);
+                toggleGroupClasses();
+            }, 500);
         }
     },
     [SELECTORS.hamburgerIcon]: {
