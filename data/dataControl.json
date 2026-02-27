@@ -19,15 +19,14 @@
         },
         "Projects": [
             {
-                "Title": "Sample project name big and lengthy",
-                "OnelineDescription": "A robust tool for calculating Value at Risk (VaR) for an UST (United States Treasury) Portfolio, employing a C# thick client GUI with a Python FastAPI ",
+                "Title": "Dynamic Component Render Engine",
+                "OnelineDescription": "A configuration-driven React rendering system that dynamically constructs complete UI pages from backend metadata.",
                 "indexPageButtonLabel": "Learn more",
                 "backToHomeButtonLabel": "Back to Portfolio",
-                "BriefDescription": "A robust tool for calculating Value at Risk (VaR) for an UST (United States Treasury) Portfolio, employing a C# thick client GUI with a Python FastAPI server backend and SQL Server database. This application helps investors analyze and optimize their portfolio's market risk.",
+                "BriefDescription": "",
                 "madeWith": [
-                    "HTML",
-                    "CSS",
-                    "Javascript"
+                    "JavaScript",
+                    "React"
                 ],
                 "sections": [
                     {
@@ -37,76 +36,279 @@
                         "content": [
                             {
                                 "primaryText": "",
-                                "secondaryText": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi odio rem perferendis, ex repellendus suscipit exercitationem labore fugit assumenda! Dolorum vel architecto quos repellendus, eum doloremque error pariatur modi natus?"
+                                "secondaryText": "A dynamic UI rendering framework built in React that consumes structured configuration from backend APIs and automatically constructs page layouts. The system eliminates repetitive manual wiring of sections and fields by interpreting hierarchical metadata and mapping it to reusable component registries."
                             },
                             {
-                                "primaryText": "Point about something:",
-                                "secondaryText": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi odio rem perferendis, ex repellendus sdis, ex repellendus sdis, ex repellendus suscipit exercitationem labore fugit assumenda! Dolorum vel architecto quos repellendus, eum doloremque error pariatur modi natus?"
+                                "primaryText": "Problem:",
+                                "secondaryText": "UI pages were driven by backend configuration, but developers still had to manually create and connect components for every new section or field."
                             },
                             {
-                                "primaryText": "Point about something:",
-                                "secondaryText": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi odio rem perferendis"
+                                "primaryText": "Challenge:",
+                                "secondaryText": "As pages became more complex, repeated manual mapping increased code duplication and reduced maintainability."
                             },
                             {
-                                "primaryText": "Point about something:",
-                                "secondaryText": "Lorem, ips sit amet consectetur. Nisi odio rem perferendis"
+                                "primaryText": "Solution:",
+                                "secondaryText": "Designed a recursive render engine that interprets configuration trees and automatically generates the component hierarchy."
                             }
                         ]
                     },
                     {
-                        "title": "Features",
-                        "iconUrl": "icons/feature.svg",
+                        "title": "Architecture",
+                        "iconUrl": "icons/architecture.svg",
                         "type": "plainList",
                         "content": [
                             {
-                                "primaryText": "C# Thick Client GUI",
-                                "secondaryText": "User-friendly interface for easy portfolio construction, data input, and result visualization."
+                                "primaryText": "Recursive Render Core:",
+                                "secondaryText": "A React component that renders nested sections and fields dynamically based on hierarchical metadata."
                             },
                             {
-                                "primaryText": "Python FastAPI Backend:",
-                                "secondaryText": "High-performance API for serving VaR calculations and data retrieval."
+                                "primaryText": "Section Registry:",
+                                "secondaryText": "Maps configuration-defined section types to reusable layout components (tabs, collapsible blocks, grid layouts, etc.)."
                             },
                             {
-                                "primaryText": "SQL Server Database:",
-                                "secondaryText": "Secure and scalable data storage for instrument data, portfolio information, and historical market data."
+                                "primaryText": "Field Registry:",
+                                "secondaryText": "Maps field definitions to reusable UI components (text, image, input, dynamic display components)."
                             },
                             {
-                                "primaryText": "Comprehensive VaR Calculations:",
-                                "secondaryText": "Supports Historical Simulation and Parametric VaR methodologies with adjustable confidence levels."
+                                "primaryText": "Externalized Control Layer:",
+                                "secondaryText": "Event handling and business logic are managed at the parent component level, keeping rendering and logic clearly separated."
                             }
                         ]
                     },
                     {
-                        "title": "Tech stack",
+                        "title": "Key Capabilities",
+                        "iconUrl": "icons/capability.svg",
+                        "type": "plainList",
+                        "content": [
+                            {
+                                "primaryText": "Configuration-Driven UI:",
+                                "secondaryText": "Entire pages can be generated from backend metadata without modifying structural UI code."
+                            },
+                            {
+                                "primaryText": "Plug-and-Replace Components:",
+                                "secondaryText": "Sections and fields can be swapped by updating registry mappings rather than rewriting page structure."
+                            },
+                            {
+                                "primaryText": "Scalable Design:",
+                                "secondaryText": "New component types can be introduced without altering the core rendering engine."
+                            },
+                            {
+                                "primaryText": "Improved Development Velocity:",
+                                "secondaryText": "Significantly reduced repetitive UI scaffolding and streamlined complex page development."
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Core Elements",
                         "iconUrl": "icons/techStack.svg",
                         "type": "largeIconTextBoxList",
                         "content": [
                             "HTML",
                             "CSS",
-                            "Javascript"
+                            "JavaScript",
+                            "React js",
+                            "REST API"
+                        ]
+                    }
+                ]
+            },
+            {
+                "Title": "Configurable Query Builder Module",
+                "OnelineDescription": "A dynamic, rule-based filtering system supporting nested groups, logical operators, and metadata-driven configuration.",
+                "indexPageButtonLabel": "Learn more",
+                "backToHomeButtonLabel": "Back to Portfolio",
+                "BriefDescription": "",
+                "madeWith": [
+                    "React",
+                    "JavaScript",
+                    "Component Composition",
+                    "Registry Pattern"
+                ],
+                "sections": [
+                    {
+                        "title": "Overview",
+                        "iconUrl": "icons/overview.svg",
+                        "type": "plainList",
+                        "content": [
+                            {
+                                "primaryText": "",
+                                "secondaryText": "A flexible, metadata-driven filtering module designed to construct complex query conditions dynamically. Built to extend beyond a simple four-field filter requirement, the system supports nested rule groups, logical operators (AND/OR), configurable field types, and dynamic operator mapping — enabling scalable and reusable filtering across data grids."
+                            },
+                            {
+                                "primaryText": "Initial Requirement:",
+                                "secondaryText": "Implement a basic filter on a data grid using four parameters."
+                            },
+                            {
+                                "primaryText": "Extended Vision:",
+                                "secondaryText": "Designed a reusable query builder capable of handling multiple rule groups, logical operators, and scalable metadata-driven configuration."
+                            },
+                            {
+                                "primaryText": "Core Structure:",
+                                "secondaryText": "Filters are represented as a hierarchical object consisting of rule groups (AND/OR logic) and individual rule criteria."
+                            }
                         ]
                     },
                     {
-                        "title": "ScreenShots",
-                        "iconUrl": "icons/screenshot.svg",
-                        "type": "imageGallery",
+                        "title": "Architecture",
+                        "iconUrl": "icons/architecture.svg",
+                        "type": "plainList",
                         "content": [
                             {
-                                "src": "screenshots/hero_page.png",
-                                "label": "Home"
+                                "primaryText": "Root Group Model:",
+                                "secondaryText": "A non-removable base group acts as the root of the filter tree, managing nested rules and sub-groups."
                             },
                             {
-                                "src": "screenshots/projects_page.png",
-                                "label": "Projects"
+                                "primaryText": "Rule Object Structure:",
+                                "secondaryText": "Each rule consists of a field selector, operator selector, and dynamically determined value input."
                             },
                             {
-                                "src": "screenshots/skill_page.png",
-                                "label": "Skills"
+                                "primaryText": "Operator Registry:",
+                                "secondaryText": "Operators are mapped to field types, ensuring only valid comparisons are available for each field."
                             },
                             {
-                                "src": "screenshots/about_page.png",
-                                "label": "About me"
+                                "primaryText": "Field Registry:",
+                                "secondaryText": "Dynamic value input components are rendered based on field type and selected operator."
+                            },
+                            {
+                                "primaryText": "Metadata-Driven Configuration:",
+                                "secondaryText": "Field definitions and operator mappings are provided externally via structured metadata."
                             }
+                        ]
+                    },
+                    {
+                        "title": "Key Capabilities",
+                        "iconUrl": "icons/capability.svg",
+                        "type": "plainList",
+                        "content": [
+                            {
+                                "primaryText": "Nested Logical Groups:",
+                                "secondaryText": "Supports multiple rule groups with AND/OR logic combinations."
+                            },
+                            {
+                                "primaryText": "Dynamic UI Rendering:",
+                                "secondaryText": "Filter interface adapts automatically based on metadata configuration."
+                            },
+                            {
+                                "primaryText": "Controlled Scalability:",
+                                "secondaryText": "Ability to limit the number of groups and rules vertically or horizontally."
+                            },
+                            {
+                                "primaryText": "State-Driven Query Object:",
+                                "secondaryText": "Maintains a structured filter object that can be serialized and passed to parent components."
+                            },
+                            {
+                                "primaryText": "Collapsible Summary View:",
+                                "secondaryText": "Provides a non-editable snapshot of active filters with option to reopen and modify."
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Core Elements",
+                        "iconUrl": "icons/techStack.svg",
+                        "type": "largeIconTextBoxList",
+                        "content": [
+                            "React",
+                            "JavaScript",
+                            "Dynamic Form Rendering",
+                            "Registry Pattern",
+                            "State Driven UI"
+                        ]
+                    }
+                ]
+            },
+            {
+                "Title": "Structured Notes Management API",
+                "OnelineDescription": "A RESTful Node.js API with JWT authentication and advanced tag-based filtering capabilities.",
+                "indexPageButtonLabel": "Learn more",
+                "backToHomeButtonLabel": "Back to Portfolio",
+                "BriefDescription": "",
+                "madeWith": [
+                    "Node.js",
+                    "Express.js",
+                    "MongoDB",
+                    "JWT Authentication",
+                    "REST API"
+                ],
+                "sections": [
+                    {
+                        "title": "Overview",
+                        "iconUrl": "icons/overview.svg",
+                        "type": "plainList",
+                        "content": [
+                            {
+                                "primaryText": "",
+                                "secondaryText": "A standalone backend service built with Node.js and Express that enables authenticated users to create, manage, and filter structured notes. The system supports dynamic tag-based filtering, keyword search, priority sorting, and modular route architecture, demonstrating backend fundamentals and scalable API design."
+                            },
+                            {
+                                "primaryText": "Objective:",
+                                "secondaryText": "Design a modular backend API for managing structured notes with flexible filtering."
+                            },
+                            {
+                                "primaryText": "Core Functionality:",
+                                "secondaryText": "Users can create notes with tags and filter them using multiple criteria."
+                            },
+                            {
+                                "primaryText": "Security:",
+                                "secondaryText": "Implements JWT-based authentication for protected endpoints."
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Architecture",
+                        "iconUrl": "icons/architecture.svg",
+                        "type": "plainList",
+                        "content": [
+                            {
+                                "primaryText": "Layered Structure:",
+                                "secondaryText": "Separated routes, controllers, services, and middleware for maintainable backend design."
+                            },
+                            {
+                                "primaryText": "Validation Middleware:",
+                                "secondaryText": "Ensures structured input validation before request processing."
+                            },
+                            {
+                                "primaryText": "Global Error Handling:",
+                                "secondaryText": "Centralized error handler for consistent API responses."
+                            },
+                            {
+                                "primaryText": "Dynamic Query Processing:",
+                                "secondaryText": "Supports filtering by tags, keyword search, date range, and pagination."
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Key Features",
+                        "iconUrl": "icons/feature.svg",
+                        "type": "plainList",
+                        "content": [
+                            {
+                                "primaryText": "JWT Authentication:",
+                                "secondaryText": "Secure login and protected resource access."
+                            },
+                            {
+                                "primaryText": "Tag-Based Filtering:",
+                                "secondaryText": "Filter notes dynamically using one or multiple tags."
+                            },
+                            {
+                                "primaryText": "Search & Pagination:",
+                                "secondaryText": "Efficient keyword search with paginated results."
+                            },
+                            {
+                                "primaryText": "Modular Backend Design:",
+                                "secondaryText": "Clear separation of concerns across controllers, services, and middleware."
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Core Elements",
+                        "iconUrl": "icons/techStack.svg",
+                        "type": "largeIconTextBoxList",
+                        "content": [
+                            "Node js",
+                            "Express js",
+                            "MongoDB",
+                            "JWT",
+                            "REST Architecture"
                         ]
                     },
                     {
@@ -115,85 +317,15 @@
                         "type": "linksView",
                         "content": [
                             {
-                                "link": "https://www.google.com",
-                                "label": "Source Code Link",
+                                "link": "_#",
+                                "label": "Source Code Link [Coming soon...]",
                                 "iconType": "sourceCode"
                             },
                             {
-                                "link": "https://www.google.com",
-                                "label": "demo link",
+                                "link": "_#",
+                                "label": "demo link [Coming soon...]",
                                 "iconType": "liveLink"
                             }
-                        ]
-                    }
-                ]
-            },
-            {
-                "Title": "Sample project name big and lengthy",
-                "OnelineDescription": "A robust tool for calculating Value at Risk (VaR) for an UST (United States Treasury) Portfolio, employing a C# thick client GUI with a Python FastAPI ",
-                "indexPageButtonLabel": "Learn more",
-                "backToHomeButtonLabel": "Back to Portfolio",
-                "BriefDescription": "A robust tool for calculating Value at Risk (VaR) for an UST (United States Treasury) Portfolio, employing a C# thick client GUI with a Python FastAPI server backend and SQL Server database. This application helps investors analyze and optimize their portfolio's market risk.",
-                "madeWith": [
-                    "HTML",
-                    "CSS",
-                    "Javascript"
-                ],
-                "sections": [
-                    {
-                        "title": "Overview",
-                        "iconUrl": "icons/overview.svg",
-                        "type": "plainList",
-                        "content": [
-                            {
-                                "primaryText": "",
-                                "secondaryText": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi odio rem perferendis, ex repellendus suscipit exercitationem labore fugit assumenda! Dolorum vel architecto quos repellendus, eum doloremque error pariatur modi natus?"
-                            },
-                            {
-                                "primaryText": "Point about something:",
-                                "secondaryText": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi odio rem perferendis, ex repellendus sdis, ex repellendus sdis, ex repellendus suscipit exercitationem labore fugit assumenda! Dolorum vel architecto quos repellendus, eum doloremque error pariatur modi natus?"
-                            },
-                            {
-                                "primaryText": "Point about something:",
-                                "secondaryText": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi odio rem perferendis"
-                            },
-                            {
-                                "primaryText": "Point about something:",
-                                "secondaryText": "Lorem, ips sit amet consectetur. Nisi odio rem perferendis"
-                            }
-                        ]
-                    },
-                    {
-                        "title": "Features",
-                        "iconUrl": "icons/feature.svg",
-                        "type": "plainList",
-                        "content": [
-                            {
-                                "primaryText": "C# Thick Client GUI",
-                                "secondaryText": "User-friendly interface for easy portfolio construction, data input, and result visualization."
-                            },
-                            {
-                                "primaryText": "Python FastAPI Backend:",
-                                "secondaryText": "High-performance API for serving VaR calculations and data retrieval."
-                            },
-                            {
-                                "primaryText": "SQL Server Database:",
-                                "secondaryText": "Secure and scalable data storage for instrument data, portfolio information, and historical market data."
-                            },
-                            {
-                                "primaryText": "Comprehensive VaR Calculations:",
-                                "secondaryText": "Supports Historical Simulation and Parametric VaR methodologies with adjustable confidence levels."
-                            }
-                        ]
-                    },
-                    {
-                        "title": "Tech stack",
-                        "iconUrl": "icons/techStack.svg",
-                        "type": "largeIconTextBoxList",
-                        "content": [
-                            "HTML",
-                            "CSS",
-                            "Javascript"
                         ]
                     }
                 ]

@@ -652,7 +652,7 @@ body {
 .detailsTabsContainer {
   /* border: 1px solid #eaff00; */
   height: var(--p-100);
-  min-width: 200px;
+  min-width: 230px;
   max-width: 300px;
   display: flex;
   align-items: center;

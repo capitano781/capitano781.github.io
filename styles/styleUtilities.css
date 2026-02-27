@@ -218,7 +218,7 @@
 .slide-position-1 {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
-  z-index: 10;
+  z-index: var(--slide-position-1);
   transition: transform var(--slider-transition-speed) ease, opacity var(--slider-transition-speed) ease, filter 0.5s ease;
   will-change: transform;
 }
@@ -231,7 +231,7 @@
   /* opacity: 0.6; */
   transform: translate(0%, -53%) scale(0.7);
   filter: blur(5px);
-  z-index: 9;
+  z-index: var(--slide-position-2);
   transition: transform var(--slider-transition-speed) ease, opacity var(--slider-transition-speed) ease, filter 0.5s ease;
   -webkit-user-select: none;
   /* Safari */
@@ -246,7 +246,7 @@
   /* opacity: 0.6; */
   transform: translate(-100%, -53%) scale(0.7);
   filter: blur(5px);
-  z-index: 8;
+  z-index: var(--slide-position-3);
   transition: transform var(--slider-transition-speed) ease, opacity var(--slider-transition-speed) ease, filter 0.5s ease;
   -webkit-user-select: none;
   /* Safari */
@@ -276,7 +276,7 @@
   transform: translate(-50%, -50%) scale(0.7);
   filter: blur(3px);
   transition: transform var(--slider-transition-speed) ease, opacity 1s ease, filter 1s ease;
-  z-index: 7;
+  z-index: var(--send-to-back-deck);
   -webkit-user-select: none;
   /* Safari */
   -ms-user-select: none;
