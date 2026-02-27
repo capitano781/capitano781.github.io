@@ -348,7 +348,7 @@
             {
                 "Category": "Frontend",
                 "Descriptions": [
-                    "JavaScript (ES6+)",
+                    "Javascript (ES6+)",
                     "HTML5",
                     "CSS3",
                     "React.js",
@@ -424,7 +424,7 @@
             {
                 "type": "plainText",
                 "primaryText": "",
-                "secondaryText": "This portfolio is a [modular single-page application] built with [vanilla JavaScript], [HTML], and [CSS], combining a distinctive HUD-inspired interface with clean, maintainable architecture."
+                "secondaryText": "This portfolio is a [modular single-page application] built with [vanilla Javascript], [HTML], and [CSS], combining a distinctive HUD-inspired interface with clean, maintainable architecture."
             },
             {
                 "type": "bulletPoints",
