@@ -25,7 +25,7 @@
                 "backToHomeButtonLabel": "Back to Portfolio",
                 "BriefDescription": "",
                 "madeWith": [
-                    "JavaScript",
+                    "Javascript",
                     "React"
                 ],
                 "sections": [
@@ -105,7 +105,7 @@
                         "content": [
                             "HTML",
                             "CSS",
-                            "JavaScript",
+                            "Javascript",
                             "React js",
                             "REST API"
                         ]
@@ -120,9 +120,7 @@
                 "BriefDescription": "",
                 "madeWith": [
                     "React",
-                    "JavaScript",
-                    "Component Composition",
-                    "Registry Pattern"
+                    "JavaScript"
                 ],
                 "sections": [
                     {
@@ -208,7 +206,7 @@
                         "type": "largeIconTextBoxList",
                         "content": [
                             "React",
-                            "JavaScript",
+                            "Javascript",
                             "Dynamic Form Rendering",
                             "Registry Pattern",
                             "State Driven UI"
@@ -333,16 +331,16 @@
         ]
     },
     "About_Section": {
-        "Title": "About me",
+        "Title": "About Me",
         "Descriptions": [
             {
-                "DescriptionPara": "I’m a [Frontend Engineer] with 6 years of IT experience and [3+ years] working with [React.js], focused on building [scalable], maintainable user interfaces. I enjoy working with [component-driven architecture], [state management], and [clean UI systems] while integrating [REST APIs] in real-world applications."
+                "DescriptionPara": "I’m a [Frontend Engineer] with 6 years of IT experience, including over 5 years working with [React.js]. I focus on building structured user interfaces with a strong emphasis on [component-driven architecture], [state management], and clean system design. I enjoy turning complex requirements into predictable, reliable interfaces."
             },
             {
-                "DescriptionPara": "Currently, I work on enterprise-scale [React.js] applications and complex legacy codebases. I’m also expanding into the [MERN] stack through personal projects, aiming to grow as a [product-focused engineer] who builds reliable and scalable solutions."
+                "DescriptionPara": "Currently, I work on enterprise-scale React applications and large legacy codebases. Alongside my frontend work, I’m expanding into the [MERN stack] through personal projects to strengthen my backend fundamentals and grow as a product-focused engineer."
             }
         ],
-        "Credit_Button": "About this Portfolio project"
+        "Credit_Button": "About this portfolio"
     },
     "Technical_Skills_Section": {
         "Title": "Technical Skills",
