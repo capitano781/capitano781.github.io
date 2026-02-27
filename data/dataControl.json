@@ -25,8 +25,8 @@
                 "backToHomeButtonLabel": "Back to Portfolio",
                 "BriefDescription": "",
                 "madeWith": [
-                    "Javascript",
-                    "React"
+                    "React js",
+                    "Javascript"
                 ],
                 "sections": [
                     {
@@ -119,8 +119,8 @@
                 "backToHomeButtonLabel": "Back to Portfolio",
                 "BriefDescription": "",
                 "madeWith": [
-                    "React",
-                    "JavaScript"
+                    "React js",
+                    "Javascript"
                 ],
                 "sections": [
                     {
@@ -205,7 +205,7 @@
                         "iconUrl": "icons/techStack.svg",
                         "type": "largeIconTextBoxList",
                         "content": [
-                            "React",
+                            "React js",
                             "Javascript",
                             "Dynamic Form Rendering",
                             "Registry Pattern",
@@ -221,8 +221,8 @@
                 "backToHomeButtonLabel": "Back to Portfolio",
                 "BriefDescription": "",
                 "madeWith": [
-                    "Node.js",
-                    "Express.js",
+                    "Node js",
+                    "Express js",
                     "MongoDB",
                     "JWT Authentication",
                     "REST API"
