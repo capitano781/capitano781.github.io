@@ -1,42 +1,52 @@
-/* ====================================================
-  Media queries Section
-=======================================================*/
+@media (max-width: 800px) {
 
+    /* ============================================
+        Utility media query
+    =============================================== */
 
-
-@media (max-width: 1090px) {
-    .projectBoxWrapper {
-        width: 80%;
+    .section-heading-secondary {
+        padding: 0 2rem;
     }
 
-    .slide-position-2 {
-        transform: translate(-25%, -53%) scale(0.7);
-        width: 90%;
+    .section-heading-small {
+        padding: 0 2rem;
     }
 
-    .slide-position-3 {
-        transform: translate(-75%, -53%) scale(0.7);
-        width: 90%;
-    }
-}
-
-@media (max-width: 1024px) AND (max-height: 600px) {
-    .projectGrid {
-        height: 260px;
+    /* ============================================
+        rootContainer and menuBar media query
+    =============================================== */
+    .rootContainer {
+        height: 100%;
     }
 
-    .projectWrapperRow3,
-    .dv2 {
+    .menuBar {
         display: none;
     }
-}
 
-@media (max-width: 1000px) {
+    .hamburgerIcon {
+        display: block;
+    }
 
-    .projectDetailsContainer.glass-card,
-    .projectSectionContainer .glass-card {
+    .hamburgerMenu {
+        display: flex;
+    }
+
+    /* ============================================
+        Projects view media query
+    =============================================== */
+
+    .projectSectionContainer {
+        max-width: 90%;
+    }
+
+    /* ============================================
+        Projects Details view media query
+    =============================================== */
+
+    .projectDetailsContainer.glass-card {
         height: 90%;
         gap: 2rem;
+        max-width: 90%;
     }
 
     .projectDetailsContainer {
@@ -57,7 +67,6 @@
         padding: 0rem 0.3rem;
         overflow-x: auto;
         overflow-y: hidden;
-        /* border: 1px solid red; */
     }
 
     .detailsTabWrapper {
@@ -111,175 +120,57 @@
     .skillPartition {
         display: none;
     }
-}
 
-@media (max-width: 810px) {
-    .hamburgerIcon {
-        display: block;
-    }
+    /* ============================================
+        Skill view media query
+    =============================================== */
 
-    .hamburgerMenu {
-        display: flex;
-    }
-
-    .menuBar {
-        opacity: 0;
-    }
-
-    .rootContainer {
-        height: 100%;
-    }
-
-    .slide-position-1 {}
-
-    .slide-position-2 {
-        transform: translate(-25%, -53%) scale(0.7);
-        width: 90%;
-    }
-
-    .slide-position-3 {
-        transform: translate(-75%, -53%) scale(0.7);
-        width: 90%;
-    }
-}
-
-@media (min-width: 811px) {
-    .rootContainer.hideElementWithScale {
-        transform: scale(1);
-        opacity: 1;
-    }
-
-    .menuBar.hideElementWithScale {
-        transform: scale(1) translate(-50%, 0%);
-        opacity: 1;
-    }
-}
-
-@media (max-width: 840px) {
-    .projectSliderWrapper {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 750px) {
-
-    .projectWrapperRow3,
-    .dv2 {
-        display: none;
-    }
-
-    .projectSliderWrapper {
-        gap: 3rem;
-    }
-
-    .slide-position-2,
-    .slide-position-3 {
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(0.7);
-        --slider-transition-speed: 0s;
-    }
-}
-
-@media (max-width: 560px) {
-
-
-    .glass-card {
-        height: 100%;
-        gap: 2rem;
-        min-width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        border-radius: 0;
-    }
-
-    .navButtons {
-        width: 5rem;
-        position: static;
-        transform: translate(0, 0);
-        padding: 0;
-    }
-
-    .navButton {
-        width: 2rem;
-        height: 2rem;
-        background-size: 3rem;
-    }
-
-    .leftNav:hover {
-        width: 2rem;
-        height: 2rem;
-        background-size: 3rem;
-    }
-
-    .rightNav:hover {
-        width: 2rem;
-        height: 2rem;
-        background-size: 3rem;
-    }
-
-    .slide-position-2 {
-        transform: translate(-35%, -53%) scale(0.7);
-        width: 90%;
-    }
-
-    .slide-position-3 {
-        transform: translate(-65%, -53%) scale(0.7);
-        width: 90%;
-    }
-
-    .projectGrid {
-        height: 260px;
+    .techSkillContainer {
+        height: 80%;
     }
 
     .techSkillContent {
-        height: auto;
         overflow-y: auto;
     }
-}
 
-@media (max-width: 431px) {
-
-
-    .projectTitleSectionContainer {
-        gap: 0;
+    .skillGroupWrapper {
+        flex-direction: column;
+        gap: 1rem;
     }
 
-    .section-heading {
-        font-size: 1.5rem;
-    }
-
-    .section-sub-heading {
-        font-size: 0.9rem;
-    }
-
-    .projectSliderWrapper {
-        gap: 2rem;
-    }
-
-    .navButton {
-        width: 1.5rem;
-        height: 1.5rem;
-        background-size: 2.5rem;
-    }
-
-    .navButtons {
-        width: 4rem;
-    }
-
-    .projectBoxWrapper {
-        width: 90%;
-    }
-
-    .projectGrid {
-        height: 260px;
-    }
-
-    .projectWrapperRow3,
-    .dv2 {
+    .skillPartition {
         display: none;
     }
-}
 
-/* ======================================== */
+    /* ============================================
+        Contact view media query
+    =============================================== */
+
+    .contactSectionContainer {
+        gap: 0.5rem !important;
+    }
+
+    .contactContent {
+        text-align: center;
+    }
+
+    .contactDetails {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem 0.5rem;
+    }
+
+    /* ============================================
+        Credits view media query
+    =============================================== */
+
+    .creditDetailsContainer {
+        height: 90%;
+    }
+
+    .creditDetailsContent {
+        overflow-y: auto;
+        justify-content: flex-start;
+    }
+
+}

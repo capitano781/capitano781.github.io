@@ -4,39 +4,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/ico" href="./assets/images/icons/webIcon/webIcon180.ico" sizes="16×16">
+  <link rel="icon" type="image/ico" href="./assets/images/icons/webIcon/webIcon180.ico" sizes="24×24">
+  <link rel="icon" type="image/ico" href="./assets/images/icons/webIcon/webIcon180.ico" sizes="32×32">
+  <link rel="icon" type="image/ico" href="./assets/images/icons/webIcon/webIcon180.ico" sizes="48×48">
+  <link rel="icon" type="image/ico" href="./assets/images/icons/webIcon/webIcon180.ico" sizes="64×64">
+  <link rel="icon" type="image/ico" href="./assets/images/icons/webIcon/webIcon180.ico" sizes="96×96">
+  <link rel="icon" type="image/ico" href="./assets/images/icons/webIcon/webIcon180.ico" sizes="128×128">
   <link rel="stylesheet" href="/styles/style.css" />
   <link rel="stylesheet" href="/styles/styleUtilities.css" />
   <link rel="stylesheet" href="/styles/mediaQuery.css" />
+  <link rel="stylesheet" href="/styles/spinner.css">
+  <link rel="stylesheet" href="/styles/bgAnimation.css">
   <script type="module" src="scripts/script.js"></script>
   <title>Capitano781 | MERN Stack Developer</title>
 </head>
 
 <body class="calm-blue">
-  <div class="loaderOverlay hideElementWithScale" id="loaderOverlay">
-    <div class="loaderBg"></div>
+  <div class="loaderOverlay" id="loaderOverlay">
     <div class="glass-card">
-      <div class="innerGlass">
-        <div class="spinner"></div>
+      <div class="loaderContent section-heading" id="loaderContent">
+        LOADING
+        <span class="loaderDot dot-1"></span>
+        <span class="loaderDot dot-2"></span>
+        <span class="loaderDot dot-3"></span>
+        <span class="loaderDot dot-4"></span>
       </div>
     </div>
-    <!-- <div class="neubrutalist-card"></div> -->
   </div>
-  <div class="bg-video-control" id="bgVideoControl"></div>
-  <div class="bg-video">
+  <div class="bg-video-control hideElement" id="bgVideoControl"></div>
+  <div class="bg-video hideElement">
     <video class="" id="bgVideo" autoplay muted loop playsinline>
-      <source src="/assets/video/vid1.webm" type="video/mp4" />
+      <!-- <source src="/assets/video/vid1.webm" type="video/mp4" /> -->
+      <!-- <source src="/assets/video/vid7" type="video/mp4" /> -->
     </video>
-    <div class="background-wrapper ">
-      <!-- <div class="background-grid"></div> -->
-    </div>
     <div class="bg-overlay"></div>
   </div>
-  <div class="background-box hideElement">
-    <div class="background-gridBox-1 gridBox"></div>
-    <div class="background-gridBox-2 gridBox"></div>
-    <div class="background-gridBox-3 gridBox"></div>
-    <div class="background-gridBox-4 gridBox"></div>
-    <div class="background-gridBox-5 gridBox"></div>
+  <div class="css-background">
+    <div class="background-container">
+      <div class="halos-container">
+        <div class="center-ring" id="center-ring"></div>
+        <div class="halo halo-1" id="halo-1">
+          <div class="sub-halo sub-halo-1"></div>
+        </div>
+        <div class="halo halo-2" id="halo-2">
+          <div class="sub-halo sub-halo-2"></div>
+        </div>
+        <div class="halo halo-3" id="halo-3">
+          <div class="sub-halo sub-halo-3"></div>
+        </div>
+        <div class="halo halo-4" id="halo-4">
+          <div class="sub-halo sub-halo-4"></div>
+        </div>
+        <div class="halo halo-5" id="halo-5">
+          <div class="sub-halo sub-halo-5"></div>
+        </div>
+        <div class="halo halo-6" id="halo-6">
+          <div class="sub-halo sub-halo-6"></div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="hamburgerIcon" id="hamburgerIcon">
     <div class="line l-up"></div>
@@ -72,7 +99,7 @@
     <button class="imageGalleryLargeViewCancel btn-cross" id="imageGalleryLargeViewCancel"></button>
   </div>
   <main class="rootContainer hideElementWithScale" id="rootContainer">
-    <section class="view header activeSection" id="home">
+    <section class="view header" id="home">
       <section class="headerWrapper" id="headerWrapper">
         <div class="headerContainer glass-card" id="headerContainer">
           <div class="headerTitle" id="headerTitle">
@@ -125,8 +152,13 @@
                     <div class="projectMadeWithLabel secondary-text">
                       Made with:
                     </div>
-                    <div class="projectMadeWithItems">
-                      <div class="projectMadeWithItem label-highlight">
+                    <div class="projectMadeWithItems" id="projectMadeWithItems">
+                      <template id="projectMadeWithItemTemplate">
+                        <div class="projectMadeWithItem label-highlight" id="projectMadeWithItem">
+                          Javascript
+                        </div>
+                      </template>
+                      <!-- <div class="projectMadeWithItem label-highlight">
                         Javascript
                       </div>
                       <div class="projectMadeWithItem label-highlight">
@@ -141,7 +173,7 @@
                       </div>
                       <div class="projectMadeWithItem label-highlight">
                         Google Fonts
-                      </div>
+                      </div> -->
                     </div>
                   </div>
                 </div>
@@ -212,9 +244,9 @@
               </div>
               <div class="linksViewContrainer hideElement" id="linksViewContrainer">
                 <template id="linksViewTemplate">
-                  <a href="" target="_blank" rel="" class="linksViewWrapper" id="linksViewWrapper">
+                  <a href="" target="_blank" rel="noopener noreferrer" class="linksViewWrapper" id="linksViewWrapper">
                     <div class="linkView secondary-text" id="linkView"></div>
-                    <div class="linkIcon"></div>
+                    <div class="linkIcon" id="projectLinks"></div>
                   </a>
                 </template>
               </div>
@@ -253,9 +285,12 @@
           </div>
         </div>
         <div class="aboutContent glass-card-content custom-scrollbar" id="aboutContent">
-          <template id="aboutSummeryDescription">
-            <div class="aboutSummeryDescriptionWrapper secondary-text" id="aboutSummeryDescriptionWrapper"></div>
-          </template>
+          <div class="aboutSummeryContent" id="aboutSummeryContent">
+            <template id="aboutSummeryDescription">
+              <div class="aboutSummeryDescriptionWrapper secondary-text" id="aboutSummeryDescriptionWrapper"></div>
+            </template>
+          </div>
+          <button id="creditsLink" class="creditsLink btn-glass btn-glass-small"></button>
         </div>
       </div>
     </section>
@@ -267,12 +302,86 @@
           </div>
         </div>
         <div class="contactContent glass-card-content custom-scrollbar" id="contactContent">
-          <template class="contactDescription" id="contactDescription">
-            <div class="contactDescriptionWrapper secondary-text" id="contactDescriptionWrapper">
-              <span class="contactText" id="contactText"></span>
-              <a class="contactLink highlight-secondary-text" id="contactLink" href="" target="_blank"></a>
-            </div>
-          </template>
+          <div class="contactText secondary-text" id="contactText"></div>
+          <div class="contactDetails" id="contactDetails">
+            <template class="contactDescription" id="contactDescription">
+              <div class="contactDescriptionWrapper secondary-text" id="contactDescriptionWrapper">
+                <template id="externalLinkTemplate">
+                  <a href="" target="_blank" rel="noopener noreferrer" class="linksViewWrapper" id="contactLink">
+                    <div class="linkView secondary-text" id="contactLinkText"></div>
+                    <div class="" id="contactDescriptionIcon"></div>
+                  </a>
+                </template>
+                <template id="downloadDocTemplate">
+                  <a href="" download target="_blank" rel="noopener noreferrer" class="linksViewWrapper"
+                    id="contactLink">
+                    <div class="linkView secondary-text" id="contactLinkText"></div>
+                    <div class="" id="contactDescriptionIcon"></div>
+                  </a>
+                </template>
+              </div>
+            </template>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="view creditDetails" id="credit">
+      <div class="creditDetailsContainer glass-card">
+        <button class="creditDetailsCancel" id="creditDetailsCancel">
+          <div class="btn-cross" id="projectDetailsCancelImg"></div>
+        </button>
+        <div class="glass-card-title-section" id="creditDetailsHeader">
+          <div class="glass-card-title-wrap" id="creditDetailsTitleContainer">
+            <div class="section-heading section-heading-small" id="creditDetailsTitle"></div>
+          </div>
+        </div>
+        <div class="creditDetailsContent glass-card-content custom-scrollbar" id="creditDetailsContent">
+          <div class="creditDetailsContentWrapper" id="creditDetailsContentWrapper">
+
+            <template id="creditPlainTextTemplate">
+              <div class="creditPlainTextWrapper">
+                <span class="creditPlainTextPrimary highlight-secondary-text" id="creditPlainTextPrimary"></span>
+                <span class="creditPlainTextSecondary secondary-text" id="creditPlainTextSecondary"></span>
+              </div>
+            </template>
+
+            <template id="creditBulletPointsTemplate">
+              <div class="creditBulletPointsWrapper" id="creditBulletPointsWrapper">
+                <template id="creditSingleBulletTemplate">
+                  <div class="creditSingleBulletTemplateWrapper" id="creditSingleBulletTemplateWrapper">
+                    <span class="creditPlainTextBulletIcon"></span>
+                    <span class="creditBulletPointsPrimary highlight-secondary-text"
+                      id="creditBulletPointsPrimary"></span>
+                    <span class="creditBulletPointsSecondary secondary-text" id="creditBulletPointsSecondary"></span>
+                  </div>
+                </template>
+              </div>
+            </template>
+
+            <template id="creditLinksTemplate">
+              <div class="creditLinksWrapper" id="creditLinksWrapper">
+
+                <div class="creditSectionLabel secondary-text" id="creditSectionLabel"></div>
+
+                <div class="creditSectionContent" id="creditSectionContent">
+
+                  <template id="creditSectionContentTemplate">
+                    <div class="creditSectionContentWrapper" id="creditSectionContentWrapper">
+
+                      <a href="" target="_blank" rel="noopener noreferrer"
+                        class="creditLink linksViewWrapper linksViewWrapper-small" id="creditLink">
+                        <div class="linkView secondary-text" id="contactLinkText"></div>
+                        <div class="" id="creditLinkIcon"></div>
+                      </a>
+
+                    </div>
+                  </template>
+
+                </div>
+              </div>
+            </template>
+
+          </div>
         </div>
       </div>
     </section>

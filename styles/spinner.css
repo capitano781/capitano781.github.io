@@ -1,0 +1,63 @@
+.loaderOverlay {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--vh-100);
+    width: var(--vw-100);
+    top: var(--space-0);
+    left: var(--space-0);
+    background: #101f25c9;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: fixed;
+    background-attachment: fixed;
+    overflow: hidden;
+    z-index: var(--loaderOverlay);
+}
+
+.loaderContent {}
+
+.loaderDot {
+    background: var(--cb-accent);
+    display: inline-block;
+    height: 27px;
+    width: 15px;
+    transform: skewX(-17deg);
+    opacity: 0.1;
+    animation: dotAnimation 1.2s linear 0s infinite normal none;
+}
+
+.dot-1 {
+    animation-delay: 0.25s;
+}
+
+.dot-2 {
+    animation-delay: 0.50s;
+}
+
+.dot-3 {
+    animation-delay: 0.75s;
+}
+
+.dot-4 {
+    animation-delay: 1s;
+}
+
+@keyframes dotAnimation {
+    0% {
+        background: var(--cb-accent-ocean-green);
+        opacity: 1;
+    }
+
+    /* 25% {
+        background: var(--cb-accent);
+    } */
+
+    100% {
+        background: var(--cb-accent);
+        opacity: 0.1;
+    }
+}

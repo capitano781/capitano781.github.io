@@ -1,0 +1,311 @@
+{
+    "Header_Title": {
+        "Header_Title_Part1": "Hi, I am ",
+        "Header_Title_Part2": "Capitano-781"
+    },
+    "Header_Tag": "Lorem, ipsum doldipisicing elit",
+    "Header_Description": "Lorem, ipsum doldipisicing eliteaLorem, ipsum doldipisicing eliteaLorem, ipsum doldipisicing eliteaLorem, ipsum doldipisicing eliteaLorem, ipsum doldipisicing elitea",
+    "Header_ViewWorkButtonLabel": "Lorem, ipsum doldipisicing elitea",
+    "Header_Image_Url": "/assets/images/illustrations/RE.png",
+    "Project_Section": {
+        "Title": "PROJECTS",
+        "Secondary_Title": "Lorem, ipsum doldipisicing eliteaLorem, ipsum doldipisicing elitea",
+        "Projects": [
+            {
+                "Title": "Lorem, ipsum doldipisicing elitea",
+                "OnelineDescription": "Lorem, ipsum doldipisicing elitea",
+                "indexPageButtonLabel": "Learn more",
+                "backToHomeButtonLabel": "Back to Portfolio",
+                "BriefDescription": "A robust tool for calculating Value at Risk (VaR) for an UST (United States Treasury) Portfolio, employing a C# thick client GUI with a Python FastAPI server backend and SQL Server database. This application helps investors analyze and optimize their portfolio's market risk.",
+                "madeWith": [
+                    "HTML",
+                    "CSS",
+                    "Javascript"
+                ],
+                "sections": [
+                    {
+                        "title": "Overview",
+                        "iconUrl": "icons/overview.svg",
+                        "type": "plainList",
+                        "content": [
+                            {
+                                "primaryText": "",
+                                "secondaryText": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi odio rem perferendis, ex repellendus suscipit exercitationem labore fugit assumenda! Dolorum vel architecto quos repellendus, eum doloremque error pariatur modi natus?"
+                            },
+                            {
+                                "primaryText": "Point about something:",
+                                "secondaryText": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi odio rem perferendis, ex repellendus sdis, ex repellendus sdis, ex repellendus suscipit exercitationem labore fugit assumenda! Dolorum vel architecto quos repellendus, eum doloremque error pariatur modi natus?"
+                            },
+                            {
+                                "primaryText": "Point about something:",
+                                "secondaryText": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi odio rem perferendis"
+                            },
+                            {
+                                "primaryText": "Point about something:",
+                                "secondaryText": "Lorem, ips sit amet consectetur. Nisi odio rem perferendis"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Features",
+                        "iconUrl": "icons/feature.svg",
+                        "type": "plainList",
+                        "content": [
+                            {
+                                "primaryText": "C# Thick Client GUI",
+                                "secondaryText": "User-friendly interface for easy portfolio construction, data input, and result visualization."
+                            },
+                            {
+                                "primaryText": "Python FastAPI Backend:",
+                                "secondaryText": "High-performance API for serving VaR calculations and data retrieval."
+                            },
+                            {
+                                "primaryText": "SQL Server Database:",
+                                "secondaryText": "Secure and scalable data storage for instrument data, portfolio information, and historical market data."
+                            },
+                            {
+                                "primaryText": "Comprehensive VaR Calculations:",
+                                "secondaryText": "Supports Historical Simulation and Parametric VaR methodologies with adjustable confidence levels."
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Tech stack",
+                        "iconUrl": "icons/techStack.svg",
+                        "type": "largeIconTextBoxList",
+                        "content": [
+                            "HTML",
+                            "CSS",
+                            "Javascript"
+                        ]
+                    },
+                    {
+                        "title": "ScreenShots",
+                        "iconUrl": "icons/screenshot.svg",
+                        "type": "imageGallery",
+                        "content": [
+                            {
+                                "src": "screenshots/hero_page.png",
+                                "label": "Home"
+                            },
+                            {
+                                "src": "screenshots/projects_page.png",
+                                "label": "Projects"
+                            },
+                            {
+                                "src": "screenshots/skill_page.png",
+                                "label": "Skills"
+                            },
+                            {
+                                "src": "screenshots/about_page.png",
+                                "label": "About me"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Links",
+                        "iconUrl": "icons/linkTab.svg",
+                        "type": "linksView",
+                        "content": [
+                            {
+                                "link": "https://www.google.com",
+                                "label": "Source Code Link",
+                                "iconType": "sourceCode"
+                            },
+                            {
+                                "link": "https://www.google.com",
+                                "label": "demo link",
+                                "iconType": "liveLink"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "About_Section": {
+        "Title": "About me",
+        "Descriptions": [
+            {
+                "DescriptionPara": "I’m a [Frontend Engineer] with 6 years of IT experience and [3+ years] working with [React.js], focused on building [scalable], maintainable user interfaces. I enjoy working with [component-driven architecture], [state management], and [clean UI systems] while integrating [REST APIs] in real-world applications."
+            },
+            {
+                "DescriptionPara": "Currently, I work on enterprise-scale [React.js] applications and complex legacy codebases. I’m also expanding into the [MERN] stack through personal projects, aiming to grow as a [product-focused engineer] who builds reliable and scalable solutions."
+            }
+        ],
+        "Credit_Button": "About this Portfolio project"
+    },
+    "Technical_Skills_Section": {
+        "Title": "Technical Skills",
+        "Categories": [
+            {
+                "Category": "Frontend",
+                "Descriptions": [
+                    "JavaScript (ES6+)",
+                    "HTML5",
+                    "CSS3",
+                    "React.js",
+                    "React Hooks",
+                    "Redux",
+                    "Responsive Design",
+                    "Bootstrap"
+                ]
+            },
+            {
+                "Category": "Backend",
+                "Descriptions": [
+                    "Node.js",
+                    "Express.js",
+                    "REST APIs"
+                ]
+            },
+            {
+                "Category": "Database",
+                "Descriptions": [
+                    "MongoDB",
+                    "SQL"
+                ]
+            },
+            {
+                "Category": "Tools & Workflow",
+                "Descriptions": [
+                    "Git",
+                    "GitHub",
+                    "Postman",
+                    "Chrome DevTools",
+                    "VS Code",
+                    "AI-assisted Debugging",
+                    "Figma"
+                ]
+            },
+            {
+                "Category": "Methodologies",
+                "Descriptions": [
+                    "Agile",
+                    "Scrum"
+                ]
+            }
+        ]
+    },
+    "Contact_Section": {
+        "Title": "Contact",
+        "Description": "Open to impactful front-end opportunities and meaningful collaborations.",
+        "Content": [
+            {
+                "link": "mailto:el.capitano781@gmail.com",
+                "hyperlink_Label_Text": "Email Me",
+                "type": "externalLink",
+                "iconType": "emailIcon"
+            },
+            {
+                "link": "assets/documents/SK_Draft3.pdf",
+                "hyperlink_Label_Text": "Download Resume",
+                "type": "downloadDoc",
+                "iconType": "downloadIcon"
+            },
+            {
+                "link": "https://github.com/capitano781",
+                "hyperlink_Label_Text": "View GitHub",
+                "type": "externalLink",
+                "iconType": "githubIcon"
+            }
+        ]
+    },
+    "Credit_Section": {
+        "Title": "Portfolio Overview",
+        "Contents": [
+            {
+                "type": "plainText",
+                "primaryText": "",
+                "secondaryText": "This portfolio is a [modular single-page application] built with [vanilla JavaScript], [HTML], and [CSS], combining a distinctive HUD-inspired interface with clean, maintainable architecture."
+            },
+            {
+                "type": "bulletPoints",
+                "pointsContent": [
+                    {
+                        "primaryText": "Dynamic Rendering",
+                        "secondaryText": "Content is driven by structured JSON and template cloning."
+                    },
+                    {
+                        "primaryText": "State-Controlled Navigation",
+                        "secondaryText": "Sections and components update through centralized UI state."
+                    },
+                    {
+                        "primaryText": "Modular Structure",
+                        "secondaryText": "Logic is separated into focused modules for clarity and scalability."
+                    },
+                    {
+                        "primaryText": "Custom 3D Interface",
+                        "secondaryText": "Built with pure CSS using perspective, depth layering, and animated transitions."
+                    },
+                    {
+                        "primaryText": "Performance-Conscious Design",
+                        "secondaryText": "GPU-friendly transforms and controlled rendering ensure smooth interaction."
+                    }
+                ]
+            },
+            {
+                "type": "plainText",
+                "primaryText": "",
+                "secondaryText": "The project emphasizes on strong frontend fundamentals and thoughtful system design without external frameworks."
+            },
+            {
+                "type": "creditLinks",
+                "label": "Inspired by",
+                "contentLinks": [
+                    {
+                        "type": "link",
+                        "linkURL": "https://isladjan.com/about/",
+                        "linkLabel": "isladjan",
+                        "iconType": "isladjan"
+                    },
+                    {
+                        "type": "link",
+                        "linkURL": "https://www.behance.net/gallery/191798165/Portfolio-2024",
+                        "linkLabel": "Apixdo",
+                        "iconType": "apixdo"
+                    }
+                ]
+            },
+            {
+                "type": "creditLinks",
+                "label": "Resources",
+                "contentLinks": [
+                    {
+                        "type": "link",
+                        "linkURL": "https://www.svgrepo.com/",
+                        "linkLabel": "SVG repo",
+                        "iconType": "svgrepo"
+                    },
+                    {
+                        "type": "link",
+                        "linkURL": "https://fonts.google.com/",
+                        "linkLabel": "Google Fonts",
+                        "iconType": "googleFonts"
+                    },
+                    {
+                        "type": "link",
+                        "linkURL": "https://www.pexels.com/",
+                        "linkLabel": "Pexels",
+                        "iconType": "pexels"
+                    },
+                    {
+                        "type": "link",
+                        "linkURL": "https://simpleicons.org/",
+                        "linkLabel": "Simple Icons",
+                        "iconType": "simpleIcons"
+                    },
+                    {
+                        "type": "link",
+                        "linkURL": "https://devicon.dev/",
+                        "linkLabel": "Devicons",
+                        "iconType": "devicons"
+                    }
+                ]
+            }
+        ]
+    },
+    "Footer_Section": {
+        "copyrightText": "© 2026 Capitano781. All rights reserved."
+    }
+}
