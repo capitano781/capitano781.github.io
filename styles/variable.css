@@ -73,25 +73,27 @@
   /* ************************
     z-index values
   *********************** */
-  --bg-video-control-button: 50;
-  --bg-video: -4;
-  --background-wrapper: -1;
-  --background-box: -2;
-  --loaderOverlay: -1;
-  --menuItem-main: 1;
-  --menuSlider: -1;
+  --imageGalleryLargeView: 101;
   --hamburgerIcon: 100;
   --hamburgerMenu: 99;
-  --view: 1;
+  --bg-video-control-button: 50;
   --navButton: 20;
-  --detailsContentContainerWrapper: 0;
+  --navButtons: 10;
   --slide-position-1: 10;
   --slide-position-2: 9;
-  --slide-position-2: 8;
+  --slide-position-3: 9;
   --send-to-back-deck: 7;
   --activeContent-projectDetail-content: 5;
   --activeSection: 2;
-  --imageGalleryLargeView: 101;
+  --view: 1;
+  --detailsContentContainerWrapper: 0;
+  --background-wrapper: -1;
+  --loaderOverlay: -1;
+  --menuItem-main: 1;
+  --menuSlider: -1;
+  --css-background: -2;
+  --background-box: -2;
+  --bg-video: -2;
 
 
   /* Fonts */
@@ -155,7 +157,27 @@
   --radius-lg: 12px;
   --radius-full: 9999px;
 
+  /* Percentag */
+  --p-neg-300: -300%;
+  --p-neg-50: -50%;
+  --p-0: 0%;
+  --p-7: 7%;
+  --p-10: 10%;
+  --p-20: 20%;
+  --p-30: 30%;
+  --p-40: 40%;
+  --p-50: 50%;
+  --p-60: 60%;
+  --p-70: 70%;
+  --p-80: 80%;
+  --p-85: 85%;
+  --p-90: 90%;
+  --p-100: 100%;
+  --p-170: 170%;
+  --p-300: 300%;
+
   /* Spacing */
+  --space-0: 0;
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
@@ -173,6 +195,9 @@
   --mar-section: var(--space-6);
 
   /* pixel sizing */
+  --px-neg-20: -20px;
+  --px-neg-16: -16px;
+  --px-neg-4: -4px;
   --px-0: 0px;
   --px-0-5: 0.5px;
   --px-1: 1px;
@@ -189,15 +214,59 @@
   --px-20: 20px;
   --px-24: 24px;
   --px-27: 27px;
+  --px-30: 30px;
   --px-32: 32px;
+  --px-120: 120px;
+  --px-304: 304px;
+  --px-1000: 1000px;
 
-  /* View port sizing */
+  /* View port Width sizing */
   --vw-1: 1vw;
   --vw-2: 2vw;
   --vw-3: 3vw;
   --vw-4: 4vw;
   --vw-5: 5vw;
   --vw-6: 6vw;
+  --vw-100: 100vw;
+
+  /* View port Height sizing */
+  --vh-1: 1vh;
+  --vh-2: 2vh;
+  --vh-3: 3vh;
+  --vh-4: 4vh;
+  --vh-5: 5vh;
+  --vh-6: 6vh;
+  --vh-100: 100vh;
+
+  /* Decimal sizing */
+  --dc-0: 0;
+  --dc-0-1: 0.1;
+  --dc-0-2: 0.2;
+  --dc-0-3: 0.3;
+  --dc-0-4: 0.4;
+  --dc-0-5: 0.5;
+  --dc-0-6: 0.6;
+  --dc-0-7: 0.7;
+  --dc-0-8: 0.8;
+  --dc-0-9: 0.9;
+  --dc-1: 1;
+  --dc-1-1: 1.1;
+  --dc-1-2: 1.2;
+
+  /* Angle units */
+  --deg-neg-45: -45deg;
+  --deg-0: 0deg;
+  --deg-10: 10deg;
+  --deg-20: 20deg;
+  --deg-30: 30deg;
+  --deg-40: 40deg;
+  --deg-45: 45deg;
+  --deg-50: 50deg;
+  --deg-60: 60deg;
+  --deg-70: 70deg;
+  --deg-80: 80deg;
+  --deg-90: 90deg;
+  --deg-100: 100deg;
 }
 
 [data-theme="dark"] {}
