@@ -1,7 +1,7 @@
 {
     "Header_Title": {
         "Header_Title_Part1": "Hi, I am ",
-        "Header_Title_Part2": "Capitano-781"
+        "Header_Title_Part2": "Sohail K. Shaikh"
     },
     "Header_Tag": "Frontend Engineer | MERN Stack",
     "Header_Description": "I build scalable React applications and maintainable UI systems that prioritize clean architecture, performance, and real-world product needs.",
@@ -399,7 +399,7 @@
         "Description": "Open to impactful front-end opportunities and meaningful collaborations.",
         "Content": [
             {
-                "link": "mailto:el.capitano781@gmail.com",
+                "link": "mailto:el.sohailkshaikh117@gmail.com",
                 "hyperlink_Label_Text": "Email Me",
                 "type": "externalLink",
                 "iconType": "emailIcon"
