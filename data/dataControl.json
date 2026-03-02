@@ -6,7 +6,7 @@
     "Header_Tag": "Frontend Engineer | MERN Stack",
     "Header_Description": "I build scalable React applications and maintainable UI systems that prioritize clean architecture, performance, and real-world product needs.",
     "Header_ViewWorkButtonLabel": "View my work",
-    "Header_Image_Url": "assets/images/illustrations/RE.png",
+    "Header_Image_Url": "/assets/images/illustrations/RE.png",
     "Project_Section": {
         "Title": "PROJECTS",
         "Secondary_Title": "A mix of personal projects and work I’ve contributed to.",

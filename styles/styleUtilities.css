@@ -84,7 +84,7 @@
   width: 40px;
   background: var(--transparent);
   border: none;
-  background: url(assets/images/icons/cross.svg) center center / 150% no-repeat;
+  background: url(../assets/images/icons/cross.svg) center center / 150% no-repeat;
 }
 
 .linksViewWrapper {
@@ -119,91 +119,91 @@
 .linkIcon {
   height: 30px;
   width: 30px;
-  background: url(assets/images/icons/link.svg) center center / 90% no-repeat;
+  background: url(../assets/images/icons/link.svg) center center / 90% no-repeat;
   transform: translateY(-1px);
 }
 
 .downloadIcon {
   height: 30px;
   width: 30px;
-  background: url(assets/images/icons/download.svg) center center / 90% no-repeat;
+  background: url(../assets/images/icons/download.svg) center center / 90% no-repeat;
   transform: translateY(-1px);
 }
 
 .emailIcon {
   height: 30px;
   width: 30px;
-  background: url(assets/images/icons/email.svg) center center / 90% no-repeat;
+  background: url(../assets/images/icons/email.svg) center center / 90% no-repeat;
   transform: translateY(-1px);
 }
 
 .githubIcon {
   height: 30px;
   width: 30px;
-  background: url(assets/images/icons/github.svg) center center / 90% no-repeat;
+  background: url(../assets/images/icons/github.svg) center center / 90% no-repeat;
   transform: translateY(-1px);
 }
 
 .svgrepo {
   height: 25px;
   width: 25px;
-  background: url(assets/images/icons/svgrepo.svg) center center / 90% no-repeat;
+  background: url(../assets/images/icons/svgrepo.svg) center center / 90% no-repeat;
   transform: translateY(-1px);
 }
 
 .googleFonts {
   height: 20px;
   width: 20px;
-  background: url(assets/images/icons/googleFonts.svg) center center / 90% no-repeat;
+  background: url(../assets/images/icons/googleFonts.svg) center center / 90% no-repeat;
   transform: translateY(-1px);
 }
 
 .pexels {
   height: 20px;
   width: 20px;
-  background: url(assets/images/icons/pexels.svg) center center / 90% no-repeat;
+  background: url(../assets/images/icons/pexels.svg) center center / 90% no-repeat;
   transform: translateY(-1px);
 }
 
 .isladjan {
   height: 20px;
   width: 20px;
-  background: url(assets/images/icons/isladjan.svg) center center / 90% no-repeat;
+  background: url(../assets/images/icons/isladjan.svg) center center / 90% no-repeat;
   transform: translateY(-1px);
 }
 
 .apixdo {
   height: 25px;
   width: 25px;
-  background: url(assets/images/icons/apixdo.svg) center center / 90% no-repeat;
+  background: url(../assets/images/icons/apixdo.svg) center center / 90% no-repeat;
   transform: translateY(0px);
 }
 
 .simpleIcons {
   height: 20px;
   width: 20px;
-  background: url(assets/images/icons/simpleIcons.svg) center center / 90% no-repeat;
+  background: url(../assets/images/icons/simpleIcons.svg) center center / 90% no-repeat;
   transform: translateY(-1px);
 }
 
 .devicons {
   height: 20px;
   width: 20px;
-  background: url(assets/images/icons/devicons.svg) center center / 90% no-repeat;
+  background: url(../assets/images/icons/devicons.svg) center center / 90% no-repeat;
   transform: translateY(1px);
 }
 
 .sourceCode {
   height: 26px;
   width: 26px;
-  background: url(assets/images/icons/sourceCode.svg) center center / 90% no-repeat;
+  background: url(../assets/images/icons/sourceCode.svg) center center / 90% no-repeat;
   transform: translateY(-1px);
 }
 
 .liveLink {
   height: 30px;
   width: 30px;
-  background: url(assets/images/icons/liveLink.svg) center center / 90% no-repeat;
+  background: url(../assets/images/icons/liveLink.svg) center center / 90% no-repeat;
   transform: translateY(0px);
 }
 

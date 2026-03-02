@@ -19,13 +19,13 @@
 }
 
 html {
-  cursor: url('assets/images/illustrations/mouse.svg'), auto;
+  cursor: url('../assets/images/illustrations/mouse.svg'), auto;
 }
 
 button:hover,
 a:hover,
 .hamburgerIcon:hover {
-  cursor: url('assets/images/illustrations/mousePointer.svg'), pointer;
+  cursor: url('../assets/images/illustrations/mousePointer.svg'), pointer;
 }
 
 button {
@@ -88,7 +88,7 @@ body {
   /* background-color: #020e14a3; */
   /* background-color: #1402025c; */
   background-color: var(--video-background-overlay);
-  /* background: url(assets/images/bg/un1.jpg) center center/cover; */
+  /* background: url(../assets/images/bg/un1.jpg) center center/cover; */
 }
 
 /* ====================================================
@@ -434,7 +434,7 @@ body {
   height: 3rem;
   width: 3rem;
   z-index: 20;
-  background: url('assets/images/illustrations/navIcon.svg') no-repeat center/contain;
+  background: url('../assets/images/illustrations/navIcon.svg') no-repeat center/contain;
   background-size: 4rem;
   transform: translate(0, 0);
   opacity: 0.5;
@@ -442,7 +442,7 @@ body {
 }
 
 .navButton:hover {
-  background: url('assets/images/illustrations/navIcon.svg') no-repeat center/contain;
+  background: url('../assets/images/illustrations/navIcon.svg') no-repeat center/contain;
   opacity: 0.7;
   transition: transform 0.2s ease opacity 0.5s ease;
   background-size: 4rem;
@@ -690,7 +690,7 @@ body {
 }
 
 .detailsTabIcon {
-  /* background: url('assets/images/icons/feature.svg'); */
+  /* background: url('../assets/images/icons/feature.svg'); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto;
@@ -778,7 +778,7 @@ body {
 }
 
 .plainListBulletIcon {
-  background: url('assets/images/icons/plainListBullet3.svg') center / contain no-repeat;
+  background: url('../assets/images/icons/plainListBullet3.svg') center / contain no-repeat;
   height: var(--space-4);
   width: var(--space-4);
   margin: 0px 3px 0 var(--space-0);
@@ -851,7 +851,7 @@ body {
   height: var(--p-100);
   border-radius: 5px;
   box-shadow: inset 3px 3px 7px 0px #125e80ab, inset -3px -3px var(--px-20) 0px #106f6a;
-  cursor: url('assets/images/illustrations/mousePointer.svg'), pointer;
+  cursor: url('../assets/images/illustrations/mousePointer.svg'), pointer;
 }
 
 .imageGalleryLabel {}
@@ -1157,7 +1157,7 @@ body {
 }
 
 .creditPlainTextBulletIcon {
-  background: url('assets/images/icons/plainListBullet3.svg') center / contain no-repeat;
+  background: url('../assets/images/icons/plainListBullet3.svg') center / contain no-repeat;
   height: var(--space-4);
   width: var(--space-4);
   margin: 0px 3px 0 var(--space-0);
