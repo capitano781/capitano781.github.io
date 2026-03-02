@@ -13,7 +13,7 @@ export const CONFIG = {
   LOADER_DELAY: 1400, // milliseconds
   DATA_FILE_PATH: './data/dataControl.json',
   ERROR_FALLBACK_TEXT: 'Data Plug Error',
-  IMAGE_FILE_URL_INTERNAL: '/assets/images/',
+  IMAGE_FILE_URL_INTERNAL: 'assets/images/',
   IMAGE_FILE_URL_ATTR: 'center center / 90% no-repeat',
   TAB_IMAGE_FILE_URL_ATTR: 'center center / 65% no-repeat',
 };
