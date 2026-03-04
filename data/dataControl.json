@@ -334,7 +334,7 @@
         "Title": "About Me",
         "Descriptions": [
             {
-                "DescriptionPara": "I’m a [Frontend Engineer] with 6 years of IT experience, including over 5 years working with [React.js]. I focus on building structured user interfaces with a strong emphasis on [component-driven architecture], [state management], and clean system design. I enjoy turning complex requirements into predictable, reliable interfaces."
+                "DescriptionPara": "I’m a [Frontend Engineer] with 6 years of IT experience, including over 5 years working with [React.js]. I focus on building structured user interfaces with a strong emphasis on [component-driven architecture], [state management], and clean system design. I enjoy turning complex requirements into predictable, reliable systems and interfaces."
             },
             {
                 "DescriptionPara": "Currently, I work on enterprise-scale React applications and large legacy codebases. Alongside my frontend work, I’m expanding into the [MERN stack] through personal projects to strengthen my backend fundamentals and grow as a product-focused engineer."
