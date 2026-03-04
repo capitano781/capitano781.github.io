@@ -18,16 +18,12 @@ const setContactSectionData = (Contact_Section) => {
     if (isArrayDataValid(Contact_Section?.Content))
         Contact_Section.Content.forEach((Content) => {
 
-            const contactDescriptionTemplateClone = getElementTemplateClone(elements.contactDescriptionTemplate, SELECTORS.contactDescription);
-
-            // const contactDescriptionWrapper = getTemplateElementChild(contactDescriptionTemplateClone, SELECTORS.contactDescriptionWrapper);
-
             let internalTemplate = '';
 
             if (Content?.type === 'externalLink') {
-                internalTemplate = getTemplateElementChild(contactDescriptionTemplateClone, SELECTORS.externalLinkTemplate);
+                internalTemplate = elements.externalLinkTemplate;
             } else if (Content?.type === 'downloadDoc') {
-                internalTemplate = getTemplateElementChild(contactDescriptionTemplateClone, SELECTORS.downloadDocTemplate);
+                internalTemplate = elements.downloadDocTemplate;
             }
 
             const internalTemplateClone = getElementTemplateClone(internalTemplate, SELECTORS.externalLinkTemplate);
@@ -38,9 +34,8 @@ const setContactSectionData = (Contact_Section) => {
 
             addClassName(getTemplateElementChild(internalTemplateClone, SELECTORS.contactDescriptionIcon), Content.iconType);
 
-            contactDescriptionTemplateClone.appendChild(internalTemplateClone);
+            elements.contactDescriptionWrapper.appendChild(internalTemplateClone);
 
-            elements.contactDetails.appendChild(contactDescriptionTemplateClone);
         });
 };
 
