@@ -54,8 +54,9 @@ export const loadPreRenderDomElements = () => {
     elements.creditLinksTemplate = getElement(SELECTORS.creditLinksTemplate);
     elements.creditDetailsCancel = getElement(SELECTORS.creditDetailsCancel);
 
-    elements.contactDetails = getElement(SELECTORS.contactDetails);
-    elements.contactDescriptionTemplate = getElement(SELECTORS.contactDescription);
+    elements.contactDescriptionWrapper = getElement(SELECTORS.contactDescriptionWrapper);
+    elements.externalLinkTemplate = getElement(SELECTORS.externalLinkTemplate);
+    elements.downloadDocTemplate = getElement(SELECTORS.downloadDocTemplate);
 
     elements.detailsTabsContainer = getElement(SELECTORS.detailsTabsContainer);
     elements.detailsTabTemplate = getElement(SELECTORS.detailsTabTemplate);
