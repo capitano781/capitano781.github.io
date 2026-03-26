@@ -403,7 +403,7 @@
                 "iconType": "emailIcon"
             },
             {
-                "link": "assets/documents/SK_Draft3.pdf",
+                "link": "assets/documents/SK_Resume.pdf",
                 "hyperlink_Label_Text": "Download Resume",
                 "type": "downloadDoc",
                 "iconType": "downloadIcon"
