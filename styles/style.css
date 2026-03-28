@@ -755,6 +755,7 @@ body {
   justify-content: center;
   display: none;
   color: red;
+  margin-right: 1.5rem;
 }
 
 .detailsContent {
@@ -1092,6 +1093,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: var(--space-5);
 }
 

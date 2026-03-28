@@ -446,7 +446,8 @@
   color: var(--text-secondary-accent);
   font-family: var(--ff-base);
   text-shadow: var(--text-primary-shadow);
-  font-size: clamp(0.9rem, 2vw, 0.95rem);
+  /* font-size: clamp(0.9rem, 2vw, 0.95rem); */
+  font-size: var(--space-3-2);
   font-weight: var(--fw-medium);
 }
 
@@ -454,7 +455,8 @@
   color: var(--text-tertiary-accent);
   font-family: var(--ff-base);
   text-shadow: var(--text-primary-shadow);
-  font-size: clamp(0.9rem, 2vw, 0.95rem);
+  /* font-size: clamp(0.9rem, 2vw, 0.95rem); */
+  font-size: var(--space-3-2);
   font-weight: var(--fw-light);
 }
 

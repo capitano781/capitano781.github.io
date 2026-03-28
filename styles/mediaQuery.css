@@ -107,6 +107,10 @@
         height: 100%;
     }
 
+    /* ============================================
+        Skill view media query
+    =============================================== */
+
     .techSkillContent {
         height: 500px;
         overflow-y: auto;
@@ -173,4 +177,97 @@
         justify-content: flex-start;
     }
 
+}
+
+@media (max-height: 780px) {
+
+    /* ============================================
+        Projects view media query
+    =============================================== */
+
+    .projectGrid {
+        height: 330px;
+    }
+
+    .projectWrapperRow3 {
+        display: none;
+    }
+
+    .projectWrapperRow4 {
+        margin-top: var(--space-5);
+    }
+
+    /* ============================================
+        Projects Details view media query
+    =============================================== */
+
+    .projectDetailsContainer.glass-card {
+        height: 80%;
+    }
+
+    /* ============================================
+        Skill view media query
+    =============================================== */
+
+    .techSkillContainer {
+        height: 80%;
+    }
+
+    .techSkillContent {
+        overflow-y: auto;
+    }
+
+    /* ============================================
+        About section media query
+    =============================================== */
+
+    .aboutMeContainer {
+        height: 80%;
+    }
+
+    .aboutContent {
+        overflow-y: auto;
+        justify-content: flex-start;
+    }
+
+    /* ============================================
+        Credits view media query
+    =============================================== */
+
+    .creditDetailsContainer {
+        height: 80%;
+    }
+
+    .creditDetailsContent {
+        overflow-y: auto;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-height: 660px) {
+    /* ============================================
+        Projects view media query
+    =============================================== */
+
+    .projectGrid {
+        height: 260px;
+    }
+
+    .projectWrapperRow4 {
+        margin-top: var(--space-4);
+    }
+
+    .slide-position-1,
+    .slide-position-2,
+    .slide-position-3 {
+        width: 85%;
+    }
+
+    /* ============================================
+        Projects Details view media query
+    =============================================== */
+
+    .projectDetailsWrapper {
+        height: 315px;
+    }
 }
