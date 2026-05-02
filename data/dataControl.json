@@ -315,13 +315,13 @@
                         "type": "linksView",
                         "content": [
                             {
-                                "link": "_#",
-                                "label": "Source Code Link [Coming soon...]",
+                                "link": "https://github.com/Sohailkshaikh-117/structured-notes-api",
+                                "label": "Source Code Link",
                                 "iconType": "sourceCode"
                             },
                             {
                                 "link": "_#",
-                                "label": "demo link [Coming soon...]",
+                                "label": "Demo link [Coming soon...]",
                                 "iconType": "liveLink"
                             }
                         ]
